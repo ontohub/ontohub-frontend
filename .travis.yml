@@ -1,0 +1,25 @@
+dist: trusty
+language: node_js
+sudo: false
+
+node_js:
+  - "6"
+  - "7"
+
+cache:
+  directories:
+    - "/home/travis/.yarn-cache"
+
+before_install:
+  - "yarn --version"
+
+install:
+  - "yarn install --pure-lockfile --no-emoji"
+  - "yarn run bower install"
+
+script:
+  - "yarn test"
+
+after_script:
+  - "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
+  - "cat coverage/lcov.info | node_modules/codeclimate-test-reporter/bin/codeclimate.js"
