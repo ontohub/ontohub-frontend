@@ -7,16 +7,16 @@ const { RSVP: { Promise } } = Ember;
 
 export default function(name, options = {}) {
   module(name, {
-    beforeEach() {
+    beforeEach(...args) {
       this.application = startApp();
 
       if (options.beforeEach) {
-        return options.beforeEach.apply(this, arguments);
+        return options.beforeEach.apply(this, args);
       }
     },
 
-    afterEach() {
-      let afterEach = options.afterEach && options.afterEach.apply(this, arguments);
+    afterEach(...args) {
+      let afterEach = options.afterEach && options.afterEach.apply(this, args);
       return Promise.resolve(afterEach).then(() => destroyApp(this.application));
     }
   });
