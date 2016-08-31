@@ -1,0 +1,26 @@
+language: node_js
+sudo: false
+
+node_js:
+  - "5"
+  - "6"
+
+cache:
+  directories:
+    - node_modules
+    - bower_components
+
+before_install:
+  - "npm config set spin false"
+  - "npm --version"
+  - "phantomjs --version"
+
+install:
+  - "npm install"
+  - "bower install"
+
+script:
+  - "COVERAGE=true npm test"
+
+after_script:
+  - "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
