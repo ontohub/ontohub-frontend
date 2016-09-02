@@ -1,0 +1,8 @@
+:global(.page-content) {
+  min-height: 100vh;
+  margin: 0 auto;
+  margin-top: (-$topbar-height) - $footer-height;
+  box-sizing: border-box;
+  padding-top: $topbar-height + $footer-height;
+  padding-bottom: 5rem;
+}

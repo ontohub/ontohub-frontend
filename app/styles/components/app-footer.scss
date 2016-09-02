@@ -1,0 +1,30 @@
+.app-footer {
+  background-color: $light-gray;
+  height: $footer-height;
+  border-top: 1px solid $medium-gray;
+  color: $dark-gray;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  padding: 1rem 0;
+
+  .app-footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    column-count: 3;
+    column-rule: 1px solid $medium-gray;
+    column-gap: 3rem;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      list-style-type: none;
+
+      a, span {
+        display: block;
+        color: $dark-gray;
+      }
+    }
+  }
+}

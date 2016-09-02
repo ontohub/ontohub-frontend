@@ -1,0 +1,33 @@
+.top-bar {
+  background-color: $topbar-background;
+
+  :global(.top-bar) {
+    max-width: 800px;
+    margin: 0 auto;
+    color: $light-gray;
+    height: $topbar-height;
+  }
+
+  a {
+    color: $light-gray;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    height: 3rem;
+    margin-top: 0.4rem;
+
+    &::before {
+      width: 3rem;
+      height: 3rem;
+      margin-top: -0.4rem;
+      content: ' ';
+      display: inline-block;
+      margin-right: 0.5em;
+      background: url('/assets/ontohub.svg');
+      vertical-align: middle;
+    }
+  }
+}
