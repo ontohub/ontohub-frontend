@@ -1,0 +1,10 @@
+.top-route-header {
+  background-color: $light-gray;
+  padding: 1rem;
+  border-bottom: 1px solid $medium-gray;
+
+  .content {
+    width: 800px;
+    margin: 1rem auto;
+  }
+}
