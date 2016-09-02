@@ -1,10 +1,36 @@
 .top-route-header {
   background-color: $light-gray;
-  padding: 1rem;
+  padding-top: 1rem;
   border-bottom: 1px solid $medium-gray;
 
   .content {
     width: 800px;
-    margin: 1rem auto;
+    margin: 0 auto;
+  }
+
+  :global(.tabs) {
+    background-color: transparent;
+    border: none;
+    margin-top: 2rem;
+    margin-bottom: -1px;
+
+    :global(.tabs-title) a {
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-bottom: 0;
+      font-size: 1rem;
+      padding: 1em 2em;
+      color: $secondary-color;;
+
+      &:hover {
+        background-color: $medium-gray;
+      }
+
+      &[aria-selected='true'] {
+        border-color: $medium-gray;
+        background-color: $white;
+        color: $black;
+      }
+    }
   }
 }
