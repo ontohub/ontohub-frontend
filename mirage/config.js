@@ -23,7 +23,7 @@ export default function() {
   this.get('/repositories/:id');
   this.post('/repositories', function(schema, request) {
     let attrs = this.normalizedRequestAttrs();
-    attrs['slug'] = attrs.name;
+    attrs['slug'] = attrs.name.split(' ').join('-');
     attrs['id'] = attrs.slug;
 
     return schema.repositories.create(attrs);

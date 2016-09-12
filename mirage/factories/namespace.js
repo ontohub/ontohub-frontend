@@ -2,6 +2,10 @@ import { Factory, faker } from 'ember-cli-mirage';
 
 export default Factory.extend({
   name() { return faker.lorem.words(); },
-  slug() { return faker.lorem.word(); },
+  slug() {
+    if(this.name) {
+      return this.name.split(' ').join('-');
+    }
+  },
   id() { return this.slug; }
 });

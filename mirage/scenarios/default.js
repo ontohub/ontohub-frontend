@@ -1,7 +1,9 @@
+import _ from 'lodash';
+
 export default function(server) {
 
-  let namespace = server.create('namespace');
-  server.createList('repository', 10, { namespace });
+  let namespaces = server.createList('namespace', 5);
+  _.map(namespaces, (ns) => server.createList('repository', 5, { namespace: ns }));
 
   /*
     Seed your development database using your factories.
