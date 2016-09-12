@@ -1,7 +1,7 @@
 import { Factory, faker } from 'ember-cli-mirage';
 
 export default Factory.extend({
-  name() { return faker.lorem.word(); },
-  slug() { return this.name; },
+  name() { return faker.internet.userName(); },
+  slug() { return faker.helpers.slugify(this.name); },
   id() { return this.slug; }
 });
