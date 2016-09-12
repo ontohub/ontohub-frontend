@@ -12,7 +12,9 @@ module.exports = {
     "no-eval": ["error"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
-    "max-len": ["warn", 100],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "max-len": ["warn", 80],
     "no-mixed-spaces-and-tabs": ["error"],
     "no-trailing-spaces": ["error"],
     "object-curly-spacing": ["error", "always"],
@@ -23,9 +25,8 @@ module.exports = {
     "no-confusing-arrow": ["warn"],
     "no-const-assign": ["error"],
     "no-var": ["error"],
-    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+    "prefer-arrow-callback": ["warn", { "allowNamedFunctions": true }],
     "prefer-rest-params": ["error"],
-    "require-yield": ["error"],
     "template-curly-spacing": ["error"]
   }
 };
