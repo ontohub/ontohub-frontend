@@ -1,4 +1,7 @@
-export default function(/* server */) {
+export default function(server) {
+
+  let namespace = server.create('namespace');
+  server.createList('repository', 10, { namespace });
 
   /*
     Seed your development database using your factories.
