@@ -1,19 +1,24 @@
 import { expect } from 'chai';
 import { describeModel, it } from 'ember-mocha';
+import Ember from 'ember';
 
 describeModel(
   'namespace',
   'Unit | Model | namespace',
   {
-    // Specify the other units that are required for this test.
-      needs: []
+    needs: ['model:repository']
   },
   function() {
-    // Replace this with your real tests.
-    it('exists', function() {
-      let model = this.subject();
-      // var store = this.store();
-      expect(model).to.be.ok;
+    it('has a name', function() {
+      let model = this.subject({ name: 'Foobar' });
+      expect(model.get('name')).to.equal('Foobar');
+    });
+
+    it('has many repositories', function() {
+      let model = this.store().modelFor('namespace');
+      let relationship = Ember.get(model, 'relationshipsByName').get('repositories');
+      expect(relationship.key).to.equal('repositories');
+      expect(relationship.kind).to.equal('hasMany');
     });
   }
 );
