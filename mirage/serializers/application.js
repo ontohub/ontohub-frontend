@@ -1,4 +1,5 @@
 import { JSONAPISerializer } from 'ember-cli-mirage';
+import Ember from 'ember';
 const underscore = Ember.String.underscore;
 
 export default JSONAPISerializer.extend({
