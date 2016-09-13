@@ -1,6 +1,9 @@
 export default function() {
 
+  this.passthrough('/write-coverage');
+
   this.urlPrefix = 'http://localhost:3000';
+
   // this.namespace = '';
   // this.timing = 400;
 
