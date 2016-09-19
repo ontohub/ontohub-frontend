@@ -1,8 +1,13 @@
-:global(.page-content) {
+:global(.page-wrapper) {
   box-sizing: border-box;
   margin: 0 auto;
   margin-top: (-$topbar-height) - $footer-height;
   min-height: 100vh;
   padding-bottom: 5rem;
   padding-top: $topbar-height + $footer-height;
+}
+
+:global(.page-content) {
+  margin: 0 auto;
+  max-width: 800px;
 }
