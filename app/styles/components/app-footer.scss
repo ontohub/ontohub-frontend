@@ -1,19 +1,19 @@
 .app-footer {
   background-color: $light-gray;
-  height: $footer-height;
   border-top: 1px solid $medium-gray;
-  color: $dark-gray;
-  font-size: 0.8rem;
   box-sizing: border-box;
+  color: $dark-gray;
+  font-size: .8rem;
+  height: $footer-height;
   padding: 1rem 0;
 
   .app-footer-content {
-    max-width: 800px;
-    margin: 0 auto;
     background-color: $light-gray;
     column-count: 2;
-    column-rule: 1px solid $medium-gray;
     column-gap: 3rem;
+    column-rule: 1px solid $medium-gray;
+    margin: 0 auto;
+    max-width: 800px;
 
     ul {
       margin: 0;
@@ -21,11 +21,12 @@
 
     li {
       list-style-type: none;
-      padding: 0.2em 0;
+      padding: .2em 0;
 
-      a, span {
-        display: block;
+      a,
+      span {
         color: $dark-gray;
+        display: block;
       }
     }
   }
