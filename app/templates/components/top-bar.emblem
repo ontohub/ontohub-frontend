@@ -1,0 +1,7 @@
+.top-bar
+  .top-bar-title
+    h1 = link-to 'Ontohub' 'index'
+    .top-bar-left
+      ul.dropdown.menu
+    .top-bar-right
+      ul.dropdown.menu

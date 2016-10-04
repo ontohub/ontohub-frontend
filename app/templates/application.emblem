@@ -1,0 +1,6 @@
+= top-bar
+
+.page-content
+  = outlet
+
+= app-footer
