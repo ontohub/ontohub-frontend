@@ -6,8 +6,8 @@ import {
 } from 'ember-mocha';
 
 describeModule(
-  'route:namespace/index',
-  'NamespaceIndexRoute',
+  'route:namespace/show',
+  'NamespaceShowRoute',
   {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']

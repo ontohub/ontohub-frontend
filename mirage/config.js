@@ -7,11 +7,9 @@ export default function() {
   // this.namespace = '';
   // this.timing = 400;
 
-  this.get('/namespaces');
   this.get('/namespaces/:id', (schema, request) => {
     let namespace = schema.namespaces.find(request.params.id);
-
-    return namespace.repositories;
+    return namespace;
   });
 
   this.get('/repositories');

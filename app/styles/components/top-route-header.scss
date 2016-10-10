@@ -8,6 +8,14 @@
     max-width: 800px;
   }
 
+  h1 {
+    @each $size, $headers in $header-sizes {
+      @include breakpoint($size) {
+        font-size: rem-calc(map-get($headers, 'h3'));
+      }
+    }
+  }
+
   :global(.tabs) {
     background-color: transparent;
     border: 0;
