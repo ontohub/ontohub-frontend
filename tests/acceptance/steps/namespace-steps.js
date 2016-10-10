@@ -8,14 +8,9 @@ import { expect } from 'chai';
 
 export default function() {
   return steps()
-    .then('I should find a file', (next) => {
-      // Add your own assert library
-      next();
-    })
-
     .given('there is a namespace', (next) => {
       server.loadFixtures('namespaces');
-      //the data needed are in the fixtures
+      // the data needed are in the fixtures
       next();
     })
 
