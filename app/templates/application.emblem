@@ -1,6 +1,9 @@
 = top-bar
 
-.page-content
-  = outlet
+.page-wrapper
+  = top-route-header
+    = liquid-outlet 'top-route-header'
+  .page-content
+    = outlet
 
 = app-footer
