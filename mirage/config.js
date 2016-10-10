@@ -14,6 +14,17 @@ export default function() {
     return namespace.repositories;
   });
 
+  this.get('/repositories');
+  this.get('/repositories/:id');
+  this.post('/repositories', (schema) => {
+    let attrs = this.normalizedRequestAttrs();
+    attrs['slug'] = attrs.name.split(' ').join('-');
+    attrs['id'] = attrs.slug;
+
+    return schema.repositories.create(attrs);
+  });
+  this.del('/repositories/:id');
+
   /*
     Shorthand cheatsheet:
 
