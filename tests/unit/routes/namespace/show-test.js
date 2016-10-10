@@ -12,6 +12,7 @@ describeModule(
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
   },
+  // eslint-disable-next-line prefer-arrow-callback
   function() {
     it('exists', function() {
       let route = this.subject();

@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 import steps from './steps';
 import { expect } from 'chai';
 
@@ -12,7 +14,6 @@ export default function() {
     })
 
     .given('there is a namespace', (next) => {
-      // eslint-disable-next-line no-undef
       server.loadFixtures('namespaces');
       //the data needed are in the fixtures
       next();
