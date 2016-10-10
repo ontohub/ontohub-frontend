@@ -9,6 +9,7 @@ describeModel(
     // Specify the other units that are required for this test.
     needs: ['model:namespace']
   },
+  // eslint-disable-next-line prefer-arrow-callback
   function() {
     it('has a name', function() {
       let model = this.subject();
@@ -17,7 +18,8 @@ describeModel(
 
     it('belongs to a namespace', function() {
       let model = this.store().modelFor('repository');
-      let relationship = Ember.get(model, 'relationshipsByName').get('namespace');
+      let relationship = Ember.get(model, 'relationshipsByName').
+        get('namespace');
       expect(relationship.key).to.equal('namespace');
       expect(relationship.kind).to.equal('belongsTo');
     });

@@ -8,7 +8,7 @@ export default function() {
   // this.timing = 400;
 
   this.get('/namespaces');
-  this.get('/namespaces/:id', function(schema, request) {
+  this.get('/namespaces/:id', (schema, request) => {
     let namespace = schema.namespaces.find(request.params.id);
 
     return namespace.repositories;
@@ -16,7 +16,7 @@ export default function() {
 
   this.get('/repositories');
   this.get('/repositories/:id');
-  this.post('/repositories', function(schema) {
+  this.post('/repositories', (schema) => {
     let attrs = this.normalizedRequestAttrs();
     attrs['slug'] = attrs.name.split(' ').join('-');
     attrs['id'] = attrs.slug;

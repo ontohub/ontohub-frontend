@@ -17,7 +17,8 @@ describeModel(
 
     it('has many repositories', function() {
       let model = this.store().modelFor('namespace');
-      let relationship = Ember.get(model, 'relationshipsByName').get('repositories');
+      let relationship = Ember.get(model, 'relationshipsByName').
+        get('repositories');
       expect(relationship.key).to.equal('repositories');
       expect(relationship.kind).to.equal('hasMany');
     });
