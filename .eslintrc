@@ -1,4 +1,4 @@
-module.exports = {
+{
   root: true,
   parserOptions: {
     ecmaVersion: 6,
@@ -29,4 +29,4 @@ module.exports = {
     "prefer-rest-params": ["error"],
     "template-curly-spacing": ["error"]
   }
-};
+}
