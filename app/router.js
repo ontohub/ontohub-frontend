@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(() => {
-  this.route('namespace', function() {});
+  this.route('namespace.show', { path: ':namespace_id' }, function() {});
 });
 
 export default Router;
