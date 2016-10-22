@@ -18,6 +18,9 @@
   },
   "author": "",
   "license": "AGPL-3.0",
+  "dependencies": {
+    "bower": "^1.7.9"
+  },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
     "broccoli-clean-css": "^1.1.0",
