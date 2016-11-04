@@ -1,0 +1,24 @@
+form#repository_new
+  fieldset#repository_new_name
+    .input-group
+      select.input-group-field
+        option User
+        option Another user
+      span.input-group-label
+        | /
+      = input class = "input-group-field" type = "text" placeholder = "Name"
+  fieldset#repository_new_description
+    = input type = "text" placeholder = "Description"
+  fieldset#repository_new_content_type.fieldset
+    legend Content type
+    ul
+      li = radio-choice radio-name = "content_type" icon = "fa-bug" label = "Ontology" help-text = "This is an ontology"
+      li = radio-choice radio-name = "content_type" icon = "fa-female" label = "Model" help-text = "This is a model"
+      li = radio-choice radio-name = "content_type" icon = "fa-hand-spock-o" label = "Specification" help-text = "This is a specification"
+  fieldset#repository_new_access.fieldset
+      legend Access
+      ul
+        li = radio-choice radio-name = "access" icon = "fa-lock" label = "Private" help-text = "No one can see your repository except you allow them to see"
+        li = radio-choice radio-name = "access" icon = "fa-unlock-alt" label = "Public" help-text = "veryone can see your repository but only chosen ones can commit"
+  fieldset#repository_new_submit
+    = input class = "float-right success button" type = "submit"
