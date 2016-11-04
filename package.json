@@ -18,7 +18,7 @@
   },
   "author": "",
   "license": "AGPL-3.0",
-  "devDependencies": {
+  "dependencies": {
     "broccoli-asset-rev": "^2.4.2",
     "broccoli-clean-css": "^1.1.0",
     "codeclimate-test-reporter": "^0.3.3",
@@ -53,5 +53,7 @@
     "liquid-fire": "0.25.0",
     "loader.js": "^4.0.1",
     "postcss-scss": "^0.3.0"
+  },
+  "devDependencies": {
   }
 }
