@@ -8,7 +8,7 @@ ul
     |  &mdash; based on open source software
   li
     b Flexible
-    |  &mdash; supporting a wide range of logic formats
+    |  &mdash; supporting OWL, UML, FOL/TPTP, HOL/THF, and more
   li
     b Distributed
     |  &mdash; OMS alignments, mappings, networks, combinations using 
