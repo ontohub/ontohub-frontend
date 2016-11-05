@@ -1,0 +1,15 @@
+.search-result {
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 1em;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    color: $dark-gray;
+  }
+}

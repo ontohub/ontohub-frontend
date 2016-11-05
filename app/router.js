@@ -15,6 +15,7 @@ Router.map(function() {
       this.route('show', { path: '' });
     });
   });
+  this.route('search-result', { path: 'search' });
 });
 
 export default Router;
