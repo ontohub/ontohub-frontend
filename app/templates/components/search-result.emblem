@@ -1,2 +1,2 @@
 h1 = link-to name route result
-p = description
+p.help-text = description

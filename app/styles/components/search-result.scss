@@ -12,4 +12,10 @@
   p {
     color: $dark-gray;
   }
+
+  &:last-of-type {
+    p {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -1,15 +1,19 @@
 .row.collapse
   .medium-3.columns
-    = zf-tabs class="vertical"
+    = zf-tabs class="vertical" id="search-result-tabs" data-tabs="true"
       li.tabs-title.is-active
-        a href="#search-result-repositories" aria-selected="true" Repositories ({{model.repositories.length}})
+        a href="#search-result-repositories" aria-selected="true"
+          | Repositories
+          span.hollow.badge.float-right = model.repositories.length
       li.tabs-title
-        a href="#search-result-users" Users ({{model.users.length}})
+        a href="#search-result-users"
+          | Users
+          span.hollow.badge.float-right = model.users.length
   .medium-9.columns
     .tabs-content data-tabs-content="search-result-tabs"
       .tabs-panel.is-active#search-result-repositories
         = each model.repositories as |repo|
           = search-result name = repo.id description = repo.description route = 'namespace.show' result = repo.namespace
       .tabs-panel#search-result-users
-        | Foobar
+        | No users found.
 
