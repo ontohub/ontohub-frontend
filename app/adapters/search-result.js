@@ -1,7 +1,7 @@
 import ApplicationAdapter from './application';
 
 export default ApplicationAdapter.extend({
-  pathForType(_type) {
+  pathForType() {
     return 'search';
   }
 })
