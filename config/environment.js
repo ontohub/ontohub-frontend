@@ -20,7 +20,10 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.host = 'http://localhost:3000'
+    ENV.host = 'http://localhost:3000';
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    }
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
