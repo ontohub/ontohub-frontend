@@ -10,6 +10,10 @@ Router.map(function() {
   this.route('namespace.repository.new', { path: 'new' });
   this.route('namespace', { path: ':namespace_id' }, function() {
     this.route('show', { path: '' });
+
+    this.route('repository', { path: ':repository_id' }, function() {
+      this.route('show', { path: '' });
+    });
   });
 });
 

@@ -1,0 +1,6 @@
+h1
+  = model.namespace.name
+  |  / 
+  = model.name
+
+p.help-text = model.description
