@@ -1,0 +1,6 @@
+div.warning.callout
+  h4 Please note:
+  p
+    | This is the preview version of Ontohub. It is still in a very early stage of development and does not yet include much functionality. To use the stable version of Ontohub, please visit 
+    a href="https://ontohub.org" ontohub.org
+    | .

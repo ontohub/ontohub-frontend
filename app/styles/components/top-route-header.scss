@@ -16,6 +16,11 @@
     }
   }
 
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+  }
+
   :global(.tabs) {
     background-color: transparent;
     border: 0;
