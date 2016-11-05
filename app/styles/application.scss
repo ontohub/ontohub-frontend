@@ -12,3 +12,7 @@
   max-width: 800px;
   padding-top: 2rem;
 }
+
+:global(.vertical.tabs) {
+  margin-right: -1px;
+}
