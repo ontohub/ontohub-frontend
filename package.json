@@ -21,10 +21,10 @@
   "dependencies": {
     "broccoli-asset-rev": "^2.4.2",
     "broccoli-clean-css": "^1.1.0",
-    "codeclimate-test-reporter": "^0.3.3",
+    "codeclimate-test-reporter": "^0.4.0",
     "coveralls": "^2.11.12",
     "ember-ajax": "^2.0.1",
-    "ember-cli": "2.8.0",
+    "ember-cli": "2.9.1",
     "ember-cli-app-version": "^2.0.0",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-code-coverage": "0.2.2",
@@ -35,7 +35,7 @@
     "ember-cli-htmlbars": "^1.0.3",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.4.0",
-    "ember-cli-mirage": "0.2.1",
+    "ember-cli-mirage": "0.2.3",
     "ember-cli-mocha": "0.10.4",
     "ember-cli-release": "^0.2.9",
     "ember-cli-sass": "^5.5.1",
@@ -43,16 +43,16 @@
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-cli-yadda": "0.0.6",
-    "ember-css-modules": "0.4.4",
+    "ember-css-modules": "0.5.0",
     "ember-data": "^2.7.0",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
-    "ember-lodash": "0.0.10",
+    "ember-lodash": "0.0.11",
     "ember-resolver": "^2.0.3",
-    "ember-welcome-page": "^1.0.1",
-    "liquid-fire": "0.25.0",
+    "ember-welcome-page": "^2.0.1",
+    "liquid-fire": "0.26.4",
     "loader.js": "^4.0.1",
-    "postcss-scss": "^0.3.0"
+    "postcss-scss": "^0.4.0"
   },
   "devDependencies": {
   }
