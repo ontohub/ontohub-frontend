@@ -9,7 +9,6 @@
     "ember-mocha-adapter": "^0.3.1",
     "yadda": "^0.22.1",
     "pretender": "^1.4.1",
-    "Faker": "~3.1.0",
-    "faker": "Faker#^3.1.0"
+    "Faker": "~3.1.0"
   }
 }
