@@ -3,7 +3,7 @@
     h1 = link-to 'Ontohub' 'index'
   .top-bar-left
     ul.dropdown.menu
-      li = link-to 'Search' 'search-result'
+      = outlet 'search-bar'
   .top-bar-right
     ul.dropdown.menu
       li = link-to 'namespace.repository.new' title = 'New repository'

@@ -1,19 +1,36 @@
 .row.collapse
   .medium-3.columns
-    = zf-tabs class="vertical" id="search-result-tabs" data-tabs="true"
+    ul.vertical.tabs#search-result-tabs
       li.tabs-title.is-active
-        a href="#search-result-repositories" aria-selected="true"
+        = link-to 'search-result' (query-params type='repositories') class=(if typeRepositories 'active')
           | Repositories
           span.hollow.badge.float-right = model.repositories.length
       li.tabs-title
-        a href="#search-result-users"
+        = link-to 'search-result' (query-params type='oms')
+          | OMS
+          span.hollow.badge.float-right 0
+      li.tabs-title
+        = link-to 'search-result' (query-params type='users')
           | Users
           span.hollow.badge.float-right = model.users.length
   .medium-9.columns
-    .tabs-content data-tabs-content="search-result-tabs"
-      .tabs-panel.is-active#search-result-repositories
-        = each model.repositories as |repo|
-          = search-result name = repo.id description = repo.description route = 'namespace.show' result = repo.namespace
-      .tabs-panel#search-result-users
-        | No users found.
-
+    .tab-content
+      #results
+        = if typeRepositories
+          = if model.repositories
+            = each model.repositories as |repo|
+              = search-result name = repo.id description = repo.description route = 'namespace.show' result = repo.namespace
+          = else
+            h1.text-center No repository found.
+        = if typeOMS
+            = if model.oms
+              = each model.oms as |oms|
+                = oms
+            = else
+              h1.text-center No OMS found.
+        = if typeUsers
+            = if model.users
+              = each model.users as |user|
+                = user
+            = else
+              h1.text-center No users found.

@@ -5,8 +5,16 @@
     margin-bottom: 1em;
   }
 
+  & > *:last-child {
+    margin-bottom: 1rem;
+  }
+
   h1 {
-    font-size: 1.5rem;
+    @each $size, $headers in $header-sizes {
+      @include breakpoint($size) {
+        font-size: rem-calc(map-get($headers, 'h5'));
+      }
+    }
   }
 
   p {

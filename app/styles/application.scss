@@ -28,8 +28,11 @@
     padding: 1em;
     transition: .2s all;
 
-    &:focus,
-    &[aria-selected='true'] {
+    &:focus {
+      background: transparent;
+    }
+
+    &:global(.active) {
       background: transparent;
       font-weight: bold;
 
@@ -45,6 +48,15 @@
   }
 }
 
-:global(.tabs-content) {
+:global(.tab-content) {
+  padding: 1rem;
   border: 1px solid $light-gray;
+
+  h1 {
+    @each $size, $headers in $header-sizes {
+      @include breakpoint($size) {
+        font-size: rem-calc(map-get($headers, 'h5'));
+      }
+    }
+  }
 }
