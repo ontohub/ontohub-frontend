@@ -1,4 +1,4 @@
-/*jshint node:true*/
+/* eslint-disable no-undef */
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
@@ -8,6 +8,7 @@ module.exports = function(defaults) {
     'ember-cli-foundation-6-sass': {
       'foundationJs': 'all'
     },
+    'hinting': (process.env.EMBER_ENV === 'test'),
     'cssModules': {
       'intermediateOutputPath': 'app/styles/app.scss',
       'extension': 'scss',
