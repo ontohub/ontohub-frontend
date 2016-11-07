@@ -9,7 +9,6 @@
 
 :global(.page-content) {
   margin: 0 auto;
-  padding-top: 2rem;
   max-width: 800px;
   padding-top: 2rem;
 }
@@ -17,21 +16,22 @@
 :global(.hollow.badge) {
   background: transparent;
   border: 1px solid $primary-color;
+  border-radius: 1em;
   color: $primary-color;
   min-width: 1.8em;
-  border-radius: 1em;
 }
 
 :global(.vertical.tabs) {
-  margin-right: -1px;
   margin-right: 1rem;
 
   a {
     padding: 1em;
-    transition: 0.2s all;
-    &:focus, &[aria-selected='true'] {
-      font-weight: bold;
+    transition: .2s all;
+
+    &:focus,
+    &[aria-selected='true'] {
       background: transparent;
+      font-weight: bold;
 
       :global(.hollow.badge) {
         background: $primary-color;
@@ -39,6 +39,7 @@
       }
     }
   }
+
   li:not(:last-of-type) {
     border-bottom: 1px solid $light-gray;
   }
