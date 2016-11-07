@@ -1,0 +1,15 @@
+h1 Welcome to Ontohub!
+
+p.help-text Repositories and proof tools for Ontologies, Models and Specifications (OMS)
+
+ul
+  li
+    b Open
+    | &thinsp;&mdash;&thinsp;based on open source software
+  li
+    b Flexible
+    | &thinsp;&mdash;&thinsp;supporting OWL, UML, FOL/TPTP, HOL/THF, and more
+  li
+    b Distributed
+    | &thinsp;&mdash;&thinsp;OMS alignments, mappings, networks, combinations using 
+    a href="http://dol-omg.org/" DOL
