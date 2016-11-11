@@ -17,7 +17,8 @@ before_install:
   - "phantomjs --version"
 
 install:
-  - "npm install"
+  - "npm install -g yarn bower"
+  - "yarn install --pure-lockfile --no-emoji"
   - "bower install"
 
 script:
