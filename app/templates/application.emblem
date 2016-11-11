@@ -1,3 +1,4 @@
+= title 'Ontohub' prepend=true separator=' · '
 = top-bar
 
 .page-wrapper
