@@ -8,7 +8,7 @@ node_js:
 
 cache:
   directories:
-    - node_modules
+    - "/home/travis/.yarn-cache"
     - bower_components
 
 before_install:
@@ -17,7 +17,8 @@ before_install:
   - "phantomjs --version"
 
 install:
-  - "npm install"
+  - "npm install -g yarn bower"
+  - "yarn install --pure-lockfile --no-emoji"
   - "bower install"
 
 script:
