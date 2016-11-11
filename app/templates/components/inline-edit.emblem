@@ -1,0 +1,6 @@
+= if isEditing
+  form{action "exitEditing" on="submit"}
+    = yield
+= else
+  span{action "enterEditing"}
+    = value

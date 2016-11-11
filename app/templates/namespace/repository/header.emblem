@@ -3,4 +3,5 @@ h1
   |  / 
   = model.name
 
-p.help-text = model.description
+= inline-edit value = model.description action = 'saveRepository' obj = model
+  = input value = model.description type = "text"
