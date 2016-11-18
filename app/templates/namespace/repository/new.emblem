@@ -2,8 +2,7 @@ form#repository_new
   fieldset#repository_new_name
     .input-group
       select.input-group-field
-        option User
-        option Another user
+        option = model.name
       span.input-group-label
         | /
       = input class = "input-group-field" type = "text" placeholder = "Name"
