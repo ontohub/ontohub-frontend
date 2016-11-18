@@ -1,11 +1,14 @@
 :global(.top-route-header) {
   background-color: $light-gray;
   border-bottom: 1px solid $medium-gray;
-  padding-top: 1rem;
 
   .content {
     margin: 0 auto;
     max-width: 800px;
+
+    :global(& > .liquid-container > .liquid-child) {
+      padding: 1rem;
+    }
   }
 
   h1 {
