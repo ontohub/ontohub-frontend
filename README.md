@@ -9,7 +9,7 @@ The Ontohub web UI for the end user.
 
 ## Run the frontend
 
-To run the frontend, the backend has to be started and listen
+To run the frontend, the [backend](https://github.com/ontohub/ontohub-backend) has to be started and listen
 on `localhost` port 3000. Then the frontend can be started in development mode
 with `ember serve`. The frontend is then reachable from the browser via
 `localhost` port 4200.
