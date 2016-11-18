@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  localClassNames: 'inline-edit',
   actions: {
     enterEditing() {
       this.set('isEditing', true);

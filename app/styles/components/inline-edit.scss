@@ -1,7 +1,9 @@
-span:hover::before {
-  content: "\f040";
-  font-family: "FontAwesome";
-  position: absolute;
-  margin-left: -1rem;
-  color: $dark-gray;
+.inline-edit {
+  span:hover::before {
+    content: "\f040";
+    font-family: "FontAwesome";
+    position: absolute;
+    margin-left: -1rem;
+    color: $dark-gray;
+  }
 }
