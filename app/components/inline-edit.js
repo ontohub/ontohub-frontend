@@ -13,7 +13,7 @@ export default Ember.Component.extend({
       this.set('isEditing', false);
       this.sendAction('action', this.get('model'));
     },
-    cancelEditing(currentValue) {
+    cancelEditing() {
       this.set('isEditing', false);
       this.get('model').rollbackAttributes();
       return false;
