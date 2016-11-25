@@ -6,4 +6,7 @@
         button.success.button = fa-icon 'fa-floppy-o' size = 'lg'
 = else
   span{action "enterEditing"}
-    = value
+    = if value
+      = value
+    = else
+      = yield

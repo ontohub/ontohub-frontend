@@ -4,3 +4,4 @@ h1
   = link-to model.name 'namespace.repository' model
 
 = inline-edit value = model.description action = 'saveRepository' model = model
+  | Enter the description here
