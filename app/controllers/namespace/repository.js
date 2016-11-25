@@ -4,7 +4,6 @@ export default Ember.Controller.extend({
   actions: {
     saveRepository(obj) {
       obj.save();
-      //model.set(field, value);
     }
   }
 });

@@ -51,6 +51,7 @@
     "ember-load-initializers": "~0.5.1",
     "ember-lodash": "0.0.11",
     "ember-page-title": "3.0.10",
+    "ember-radio-button": "1.0.7",
     "ember-resolver": "~2.1.0",
     "liquid-fire": "0.26.4",
     "loader.js": "~4.0.1",

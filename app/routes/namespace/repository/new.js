@@ -1,8 +1,12 @@
 import Ember from 'ember';
+import RSVP from 'rsvp';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findRecord('namespace', 'ada');
+    return RSVP.hash({
+      namespace: this.store.findRecord('namespace', 'ada'),
+      repository: this.store.createRecord('repository', {})
+    })
   },
   renderTemplate() {
     this.render();

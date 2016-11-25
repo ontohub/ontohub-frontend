@@ -8,5 +8,9 @@ export default Ember.Route.extend({
       namespace: ns,
       repositories: repos
     });
+  },
+  setupController(controller, model) {
+    model.namespace.hasMany('repositories').reload();
+    controller.set('model', model);
   }
 });
