@@ -1,3 +1,4 @@
 = radio-button name = radio-name groupValue = groupValue value = value
-label {{fa-icon icon}} {{label}}
-.help-text {{help-text}}
+  = fa-icon icon
+  = label
+  .help-text {{help-text}}

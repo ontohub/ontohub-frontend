@@ -1,5 +1,3 @@
-
-
 form#repository_new
   fieldset#repository_new_name
     .input-group
