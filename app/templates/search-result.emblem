@@ -23,7 +23,7 @@
         = if typeRepositories
           = if model.repositories
             = each model.repositories as |repo|
-              = search-result icon = "lock" title = repo.id route = 'namespace.repository.show' thing = repo
+              = search-result "lock" repo.id 'namespace.repository.show' repo.namespace.id repo.repoSlug
                 p.help-text = repo.description
                 span.label = repo.content_type
           = else
@@ -37,7 +37,7 @@
         = if typeUsers
           = if model.users
             = each model.users as |user|
-              = search-result icon = "user" title = user.name route = 'namespace.show' thing = user
+              = search-result "user" user.name 'namespace.show' user.id
                 p
                   = user.namespace.repositories.length
                   |  repositories

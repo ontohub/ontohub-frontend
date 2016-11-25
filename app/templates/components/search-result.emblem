@@ -1,5 +1,6 @@
 h1
   = fa-icon icon
   |  
-  = link-to title route thing
+  = link-to params=routeParams
+    = title
 = yield
