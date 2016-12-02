@@ -2,8 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    let ns = this.modelFor('namespace');
-    return this.store.find('repository', `${ns.id}/${params.repository_id}`);
+    let namespace = this.modelFor('namespace');
+    let repo_id = [namespace.id, params.repository_id].join('/');
+    return this.store.find('repository', repo_id);
   },
   renderTemplate() {
     this.render();

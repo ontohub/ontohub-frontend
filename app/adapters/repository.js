@@ -1,13 +1,13 @@
 import ApplicationAdapter from './application';
 
 export default ApplicationAdapter.extend({
-  urlForFindRecord(id, modelName, snapshot) {
+  urlForFindRecord(id) {
     return this._urlForRecord(id);
   },
-  urlForUpdateRecord(id, modelName, snapshot) {
+  urlForUpdateRecord(id) {
     return this._urlForRecord(id);
   },
-  urlForDeleteRecord(id, modelName, snapshot) {
+  urlForDeleteRecord(id) {
     return this._urlForRecord(id);
   },
   _urlForRecord(id) {

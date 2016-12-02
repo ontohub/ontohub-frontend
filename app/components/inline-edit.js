@@ -6,6 +6,7 @@ export default Ember.Component.extend({
     enterEditing() {
       this.set('isEditing', true);
       Ember.run.scheduleOnce('afterRender', this, function() {
+        // eslint-disable-next-line no-undef
         $(`#${this.elementId} .input-group-field`).focus();
       });
     },

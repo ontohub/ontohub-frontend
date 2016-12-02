@@ -1,12 +1,13 @@
 .radio-choice {
   vertical-align: middle;
+
   i {
     //float: left;
     font-size: 2.5em;
-    margin-right: 10px;
     margin-bottom: -12px;
-    width: 1em;
+    margin-right: 10px;
     text-align: center;
+    width: 1em;
   }
 
   :global(.help-text) {
