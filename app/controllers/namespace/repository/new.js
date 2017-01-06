@@ -11,9 +11,9 @@ export default Ember.Controller.extend({
       repo.set('content_type', this.get('content_type'));
       repo.set('public_access', this.get('public_access'));
       repo.save().then((repo) => {
-        let _slugs = repo.id.split('/');
-        this.transitionToRoute('namespace.repository.show', _slugs[0],
-          _slugs[1]);
+        let _splitId = repo.id.split('/');
+        this.transitionToRoute('namespace.repository.show', _splitId[0],
+          _splitId[1]);
       });
       return false;
     }

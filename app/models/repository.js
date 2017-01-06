@@ -8,12 +8,12 @@ export default DS.Model.extend({
   "content_type": DS.attr('string'),
   "public_access": DS.attr('boolean'),
 
-  repoSlug: Ember.computed('id', function() {
+  repoId: Ember.computed('id', function() {
     let f = this.get('id').split('/');
     return f[1];
   }),
 
-  splitRepoSlug: function() {
+  splitSlug: function() {
     return this.get('id').split('/');
   }
 });
