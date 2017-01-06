@@ -1,0 +1,15 @@
+.radio-choice {
+  vertical-align: middle;
+
+  i {
+    font-size: 2.5em;
+    margin-bottom: -12px;
+    margin-right: 10px;
+    text-align: center;
+    width: 1em;
+  }
+
+  :global(.help-text) {
+    margin-left: 5em;
+  }
+}

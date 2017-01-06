@@ -1,0 +1,16 @@
+:global(#repository_new) ul {
+  list-style-type: none;
+}
+
+:global(#repository_new_name) {
+  select {
+    flex-grow: 0;
+    width: 10em;
+  }
+
+  :global(.input-group-label) {
+    background: transparent;
+    border: 0;
+    font-size: 1.5em;
+  }
+}

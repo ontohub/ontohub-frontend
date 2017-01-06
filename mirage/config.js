@@ -13,11 +13,11 @@ export default function() {
   });
 
   this.get('/repositories');
-  this.get('/repositories/:id');
+  this.get('/repositories/:namespace_id/:id');
   this.post('/repositories', (schema) => {
     let attrs = this.normalizedRequestAttrs();
-    attrs['slug'] = attrs.name.split(' ').join('-');
-    attrs['id'] = attrs.slug;
+    let slug = attrs.name.split(' ').join('-');
+    attrs['id'] = slug;
 
     return schema.repositories.create(attrs);
   });

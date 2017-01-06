@@ -1,0 +1,12 @@
+= if isEditing
+  form{action "exitEditing" on="submit"}
+    .input-group
+      = input class = 'input-group-field' value = value type = 'text' escape-press = 'cancelEditing' autofocus = 'autofocus'
+      .input-group-button
+        button.success.button = fa-icon 'fa-floppy-o' size = 'lg'
+= else
+  span{action "enterEditing"}
+    = if value
+      = value
+    = else
+      = yield
