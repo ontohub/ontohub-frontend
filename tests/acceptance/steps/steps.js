@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 import yadda from '../../helpers/yadda';
 
 export default function() {

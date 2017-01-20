@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 import steps from './steps';
 import { expect } from 'chai';
 
