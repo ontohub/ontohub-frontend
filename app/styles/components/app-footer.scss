@@ -8,13 +8,13 @@
   padding: 1rem 0;
 
   .app-footer-content {
-    padding: 0 1rem 1rem 1rem;
     background-color: $light-gray;
     column-gap: 3rem;
     column-rule: 1px solid $medium-gray;
     column-width: calc(400px - 2.5rem);
     margin: 0 auto;
     max-width: 800px;
+    padding: 0 1rem 1rem;
 
     ul {
       margin: 0;

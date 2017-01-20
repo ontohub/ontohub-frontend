@@ -4,8 +4,8 @@
 
   .content {
     margin: 0 auto;
-    padding: 0 1rem;
     max-width: 800px;
+    padding: 0 1rem;
 
     :global(& > .liquid-container > .liquid-child) {
       padding: 1rem;

@@ -15,7 +15,7 @@ export default Ember.Route.extend({
       outlet: 'top-route-header'
     });
   },
-  resetController(controller, isExiting, transition) {
+  resetController(controller) {
     controller.set('type', null);
     controller.set('q', null);
   }
