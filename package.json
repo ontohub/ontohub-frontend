@@ -50,6 +50,7 @@
     "ember-css-modules": "0.6.4",
     "ember-data": "2.11.0",
     "ember-export-application-global": "~1.1.1",
+    "ember-font-awesome": "~2.2.0",
     "ember-load-initializers": "0.6.3",
     "ember-lodash": "4.17.0",
     "ember-page-title": "3.1.5",
@@ -59,8 +60,5 @@
     "loader.js": "4.1.0",
     "npm-check-updates": "~2.8.6",
     "postcss-scss": "~0.4.0"
-  },
-  "dependencies": {
-    "ember-font-awesome": "^2.2.0"
   }
 }

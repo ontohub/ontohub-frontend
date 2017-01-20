@@ -2739,7 +2739,7 @@ ember-export-application-global@~1.1.1:
   dependencies:
     ember-cli-babel "^5.1.10"
 
-ember-font-awesome@^2.2.0:
+ember-font-awesome@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/ember-font-awesome/-/ember-font-awesome-2.2.0.tgz#8b7b5e4b1b5ff2b865b09331b9bf5506fb0c3c1e"
   dependencies:
