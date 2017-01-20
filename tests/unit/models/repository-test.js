@@ -6,7 +6,7 @@ import Ember from 'ember';
 describe('Unit | Model | repository', () => {
   setupModelTest('repository', {
     // Specify the other units that are required for this test.
-    needs: ['model:namespace']
+    needs: ['model:user']
   });
 
   it('has a name', function() {
@@ -14,11 +14,11 @@ describe('Unit | Model | repository', () => {
     expect(model).to.be.ok;
   });
 
-  it('belongs to a namespace', function() {
+  it('belongs to a user', function() {
     let model = this.store().modelFor('repository');
     let relationship = Ember.get(model, 'relationshipsByName').
-      get('namespace');
-    expect(relationship.key).to.equal('namespace');
+      get('owner');
+    expect(relationship.key).to.equal('owner');
     expect(relationship.kind).to.equal('belongsTo');
   });
 });

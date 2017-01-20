@@ -6,5 +6,5 @@
       = outlet 'search-bar'
   .top-bar-right
     ul.dropdown.menu
-      li = link-to 'namespace.repository.new' title = 'New repository'
+      li = link-to 'organizationalUnit.repository.new' title = 'New repository'
         = fa-icon 'fa-plus'
