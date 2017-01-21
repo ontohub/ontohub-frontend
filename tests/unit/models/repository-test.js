@@ -6,7 +6,7 @@ import Ember from 'ember';
 describe('Unit | Model | repository', () => {
   setupModelTest('repository', {
     // Specify the other units that are required for this test.
-    needs: ['model:user']
+    needs: ['model:organizationalUnit']
   });
 
   it('has a name', function() {

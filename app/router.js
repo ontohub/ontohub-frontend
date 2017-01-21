@@ -8,7 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('organizationalUnit.repository.new', { path: 'new' });
-  this.route('organizationalUnit', { path: ':organizational_unit_id' }, function() {
+  this.route('organizationalUnit', {
+    path: ':organizational_unit_id'
+  }, function() {
     this.route('show', { path: '' });
 
     this.route('repository', { path: ':repository_id' }, function() {

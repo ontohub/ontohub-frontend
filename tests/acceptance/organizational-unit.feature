@@ -1,6 +1,6 @@
-Feature: Namespace
+Feature: OrganizationalUnit
 
-  Scenario: Show namespace name
-  Given there is a namespace
-  When I visit a namespace page
-  Then I should see the namespace name
+  Scenario: Show organizational unit name
+  Given there is an organizational unit
+  When I visit an organizational unit page
+  Then I should see the organizational unit name

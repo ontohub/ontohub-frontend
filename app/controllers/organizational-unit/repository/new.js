@@ -12,7 +12,8 @@ export default Ember.Controller.extend({
       repo.set('publicAccess', this.get('publicAccess'));
       repo.save().then((repo) => {
         let _splitId = repo.id.split('/');
-        this.transitionToRoute('organizationalUnit.repository.show', _splitId[0],
+        this.transitionToRoute('organizationalUnit.repository.show',
+          _splitId[0],
           _splitId[1]);
       });
       return false;
