@@ -5,10 +5,9 @@
   .content {
     margin: 0 auto;
     max-width: 800px;
-    padding: 0 1rem;
 
     :global(& > .liquid-container > .liquid-child) {
-      padding: 1rem;
+      padding: 1rem 0;
     }
   }
 
@@ -28,7 +27,7 @@
   :global(.tabs) {
     background-color: transparent;
     border: 0;
-    margin-bottom: -1px;
+    margin-bottom: calc(-1rem - 1px);
     margin-top: 2rem;
 
     :global(.tabs-title) a {
@@ -43,11 +42,15 @@
         background-color: $medium-gray;
       }
 
-      &[aria-selected='true'] {
+      :global(&.active), &[aria-selected='true'] {
         background-color: $white;
         border-color: $medium-gray;
         color: $black;
       }
     }
   }
+  :global(.liquid-container), :global(.liquid-child) {
+    overflow: visible;
+  }
 }
+

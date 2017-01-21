@@ -1,1 +1,13 @@
 h1 = model.name
+
+ul.tabs
+  li.tabs-title.is-active
+    = link-to 'organizationalUnit.show' model (query-params tab='repositories') class=(if tabRepositories 'active')
+      | Repositories (
+      = model.repositories.length
+      | )
+  li.tabs-title
+    = link-to 'organizationalUnit.show' model (query-params tab='members') class=(if tabMembers 'active')
+      | Members (
+      = model.members.length
+      | )

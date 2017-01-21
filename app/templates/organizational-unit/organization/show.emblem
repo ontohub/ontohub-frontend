@@ -1,9 +1,13 @@
-h4 Members
-ul
+= if tabRepositories
+  = each model.repositories as |repo|
+    = if repo.publicAccess
+      = search-result 'unlock-alt' repo.id 'organizationalUnit.repository.show' repo.owner.id repo.repoId
+        p.help-text = repo.description
+        span.label = repo.contentType
+    = else
+      = search-result 'lock' repo.id 'organizationalUnit.repository.show' repo.owner.id repo.repoId
+        p.help-text = repo.description
+        span.label = repo.contentType
+= if tabMembers
   = each model.members as |member|
-    li = link-to member.name 'organizationalUnit.show' member
-
-h4 Repositories
-ul
-  = each model.repositories as |repository|
-    li = link-to repository.name 'organizationalUnit.repository.show' repository.repoId
+    = search-result "user" member.name 'organizationalUnit.show' member

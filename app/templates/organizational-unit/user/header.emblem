@@ -1,8 +1,20 @@
 h1
-  = gravatar-image email=model.email defaultImage='identicon' size=100 retina=true title=model.name class='avatar'
+  = gravatar-image email=model.email defaultImage='identicon' size=75 retina=true title=model.name class='avatar'
   |  
   = model.name
   span.help-text
     |  (
     = model.email
     | )
+
+ul.tabs
+  li.tabs-title.is-active
+    = link-to 'organizationalUnit.show' model (query-params tab='repositories') class=(if tabRepositories 'active')
+      | Repositories (
+      = model.repositories.length
+      | )
+  li.tabs-title
+    = link-to 'organizationalUnit.show' model (query-params tab='organizations') class=(if tabOrganizations 'active')
+      | Organizations (
+      = model.organizations.length
+      | )
