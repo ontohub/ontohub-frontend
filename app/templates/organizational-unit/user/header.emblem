@@ -10,11 +10,13 @@ h1
 ul.tabs
   li.tabs-title.is-active
     = link-to 'organizationalUnit.show' model (query-params tab='repositories') class=(if tabRepositories 'active')
-      | Repositories (
+      = fa-icon "hdd-o"
+      |  Repositories (
       = model.repositories.length
       | )
   li.tabs-title
     = link-to 'organizationalUnit.show' model (query-params tab='organizations') class=(if tabOrganizations 'active')
-      | Organizations (
+      = fa-icon "users"
+      |  Organizations (
       = model.organizations.length
       | )
