@@ -5,12 +5,12 @@ export default Ember.Route.extend({
     return this.get('store').queryRecord('search-result', { q: '' });
   },
   renderTemplate() {
-    this.render();
+    this.render('search/show');
     this.render('empty', {
       into: 'application',
       outlet: 'search-bar'
     });
-    this.render('search-header', {
+    this.render('search/header', {
       into: 'application',
       outlet: 'top-route-header'
     });

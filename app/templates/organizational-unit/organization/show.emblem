@@ -1,5 +1,9 @@
-= title model.name
-ol
+h4 Members
+ul
+  = each model.members as |member|
+    li = link-to member.name 'organizationalUnit.show' member
+
+h4 Repositories
+ul
   = each model.repositories as |repository|
-    = log repository.repoId
     li = link-to repository.name 'organizationalUnit.repository.show' repository.repoId

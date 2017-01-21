@@ -1,0 +1,9 @@
+h4 Member of
+ul
+  = each model.organizations as |organization|
+    li = link-to organization.name 'organizationalUnit.show' organization
+
+h4 Repositories
+ul
+  = each model.repositories as |repository|
+    li = link-to repository.name 'organizationalUnit.repository.show' repository.repoId

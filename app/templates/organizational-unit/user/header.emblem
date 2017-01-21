@@ -1,0 +1,8 @@
+h1
+  = gravatar-image email=model.email defaultImage='identicon' size=100 retina=true title=model.name class='avatar'
+  |  
+  = model.name
+  span.help-text
+    |  (
+    = model.email
+    | )
