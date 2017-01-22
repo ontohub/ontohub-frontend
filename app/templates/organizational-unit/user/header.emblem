@@ -11,12 +11,10 @@ ul.tabs
   li.tabs-title.is-active
     = link-to 'organizationalUnit.show' model (query-params tab='repositories') class=(if tabRepositories 'active')
       = fa-icon "hdd-o"
-      |  Repositories (
-      = model.repositories.length
-      | )
+      |  Repositories
+      span.badge.float-right = model.repositories.length
   li.tabs-title
     = link-to 'organizationalUnit.show' model (query-params tab='organizations') class=(if tabOrganizations 'active')
       = fa-icon "users"
-      |  Organizations (
-      = model.organizations.length
-      | )
+      |  Organizations
+      span.badge.float-right = model.organizations.length

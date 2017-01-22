@@ -13,13 +13,17 @@
   padding-top: 2rem;
 }
 
-:global(.hollow.badge) {
-  background: transparent;
+:global(.badge) {
   border: 1px solid $primary-color;
   border-radius: 1em;
-  color: $primary-color;
   min-width: 1.8em;
+
+  :global(&.hollow) {
+    background: transparent;
+    color: $primary-color;
+  }
 }
+
 
 :global(.vertical.tabs) {
   margin-right: 1rem;

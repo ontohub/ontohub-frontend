@@ -28,14 +28,14 @@
     background-color: transparent;
     border: 0;
     margin-bottom: calc(-1rem - 1px);
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     :global(.tabs-title) a {
       border: 1px solid transparent;
       border-bottom: 0;
       box-sizing: border-box;
-      color: $secondary-color;
       font-size: 1rem;
+      opacity: .6;
       padding: 1em 2em;
 
       &:hover {
@@ -46,6 +46,11 @@
         background-color: $white;
         border-color: $medium-gray;
         color: $black;
+        opacity: 1;
+      }
+
+      :global(.badge) {
+        margin-left: 1em;
       }
     }
   }
