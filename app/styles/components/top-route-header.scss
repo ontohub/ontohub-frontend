@@ -13,9 +13,9 @@
 
   :global(img.avatar) {
     $size: 100px;
-    position: absolute;
-    margin-left: calc(-#{$size} - 1rem);
     height: $size;
+    margin-left: calc(-#{$size} - 1rem);
+    position: absolute;
     width: $size;
 
     + h2 {
@@ -26,9 +26,9 @@
   :global(h1 + img.avatar) {
     margin-top: -2.875rem;
 
-    & + h2 {
-      margin-top: -.5rem;
+    + h2 {
       margin-bottom: -.5rem;
+      margin-top: -.5rem;
     }
   }
 
@@ -84,6 +84,7 @@
       }
     }
   }
+
   :global(.liquid-container), :global(.liquid-child) {
     overflow: visible;
   }
