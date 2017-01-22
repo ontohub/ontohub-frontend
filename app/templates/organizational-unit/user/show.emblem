@@ -1,11 +1,11 @@
 = if tabRepositories
   = each model.repositories as |repo|
     = if repo.publicAccess
-      = search-result 'unlock-alt' repo.id 'organizationalUnit.repository.show' repo.owner.id repo.repoId
+      = search-result 'unlock-alt' repo.name 'organizationalUnit.repository.show' repo.owner.id repo.repoId
         p.help-text = repo.description
         span.label = repo.contentType
     = else
-      = search-result 'lock' repo.id 'organizationalUnit.repository.show' repo.owner.id repo.repoId
+      = search-result 'lock' repo.name 'organizationalUnit.repository.show' repo.owner.id repo.repoId
         p.help-text = repo.description
         span.label = repo.contentType
 
