@@ -11,10 +11,40 @@
     }
   }
 
+  :global(img.avatar) {
+    $size: 110px;
+    position: absolute;
+    margin-left: calc(-#{$size} - 1rem);
+    height: $size;
+    width: $size;
+
+    & + h2 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  :global(h1 + img.avatar) {
+    margin-top: -3rem;
+
+    & + h2 {
+      margin-top: -0.5rem;
+      margin-bottom: -0.5rem;
+    }
+  }
+
   h1 {
     @each $size, $styles in $header-styles {
       @include breakpoint($size) {
         font-size: rem-calc(map-get(map-get($styles, 'h4'), 'font-size'));
+      }
+    }
+  }
+
+  h2 {
+    @each $size, $styles in $header-styles {
+      @include breakpoint($size) {
+        font-size: rem-calc(map-get(map-get($styles, 'h5'), 'font-size'));
+        color: lighten($black, 20%);
       }
     }
   }

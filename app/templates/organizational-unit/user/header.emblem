@@ -1,11 +1,7 @@
-h1
-  = gravatar-image email=model.email defaultImage='identicon' size=75 retina=true title=model.name class='avatar'
-  |  
-  = model.name
-  span.help-text
-    |  (
-    = model.email
-    | )
+= if model.realName
+  h1 = model.realName
+= gravatar-image email=model.email defaultImage='identicon' size=75 retina=true title=model.name class='avatar'
+h2 = model.name
 
 ul.tabs
   li.tabs-title.is-active
