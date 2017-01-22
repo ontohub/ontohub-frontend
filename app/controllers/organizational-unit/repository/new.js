@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  content_type: "ontology",
-  public_access: true,
+  contentType: "ontology",
+  publicAccess: true,
   actions: {
     submitNewRepo: function() {
       let model = this.get('model');
