@@ -15,5 +15,8 @@ export default Ember.Route.extend({
         outlet: 'top-route-header'
       });
     }
+  },
+  resetController(controller) {
+    controller.set('tab', 'repositories');
   }
 });
