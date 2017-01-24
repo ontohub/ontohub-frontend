@@ -6,7 +6,7 @@
         = link-to 'search-result' (query-params type='repositories') class=(if typeRepositories 'active')
           = fa-icon "hdd-o"
           |  Repositories
-          span.hollow.badge.float-right = model.repositories.length
+          span.hollow.badge.float-right = model.repositoriesCount
       li.tabs-title
         = link-to 'search-result' (query-params type='oms') class=(if typeOMS 'active')
           = fa-icon "code"
@@ -16,7 +16,7 @@
         = link-to 'search-result' (query-params type='users') class=(if typeUsers 'active')
           = fa-icon "users"
           |  Users
-          span.hollow.badge.float-right = model.users.length
+          span.hollow.badge.float-right = model.organizationalUnitsCount
   .medium-9.columns
     .tab-content
       #results
@@ -40,8 +40,8 @@
           = else
             h1.text-center No OMS found.
         = if typeUsers
-          = if model.users
-            = each model.users as |user|
-              = search-result "user" user.name 'organizationalUnit.show' user.id
+          = if model.organizationalUnits
+            = each model.organizationalUnits as |orgUnit|
+              = search-result "user" orgUnit.name 'organizationalUnit.show' orgUnit.id
           = else
             h1.text-center No users found.
