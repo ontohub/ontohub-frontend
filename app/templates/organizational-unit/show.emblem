@@ -1,5 +1,0 @@
-= title model.name
-ol
-  = each model.repositories as |repository|
-    = log repository.repoId
-    li = link-to repository.name 'organizationalUnit.repository.show' repository.repoId

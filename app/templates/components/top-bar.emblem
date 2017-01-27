@@ -2,9 +2,11 @@
   .top-bar-title
     h1 = link-to 'Ontohub' 'index'
   .top-bar-left
-    ul.dropdown.menu
+    ul.menu
       = outlet 'search-bar'
   .top-bar-right
-    ul.dropdown.menu
-      li = link-to 'organizationalUnit.repository.new' title = 'New repository'
-        = fa-icon 'fa-plus'
+    = zf-dropdown-menu disableHover=true clickOpen=true
+      li
+        a = fa-icon 'fa-plus'
+        ul.menu
+          li = link-to 'New repository' 'organizationalUnit.repository.new' title = 'New repository'

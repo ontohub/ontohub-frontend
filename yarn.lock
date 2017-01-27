@@ -2422,6 +2422,13 @@ ember-cli-get-dependency-depth@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-get-dependency-depth/-/ember-cli-get-dependency-depth-1.0.0.tgz#e0afecf82a2d52f00f28ab468295281aec368d11"
 
+ember-cli-gravatar@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-gravatar/-/ember-cli-gravatar-3.8.0.tgz#8a2591e009c245241971932f9f4bd71641ba2262"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-cli-htmlbars "^1.0.3"
+
 ember-cli-head@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ember-cli-head/-/ember-cli-head-0.1.1.tgz#3c13b4a36dda025141907ef281cdd210319b310f"

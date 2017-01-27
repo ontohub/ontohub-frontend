@@ -5,10 +5,30 @@
   .content {
     margin: 0 auto;
     max-width: 800px;
-    padding: 0 1rem;
 
     :global(& > .liquid-container > .liquid-child) {
-      padding: 1rem;
+      padding: 1rem 0;
+    }
+  }
+
+  :global(img.avatar) {
+    $size: 100px;
+    height: $size;
+    margin-left: calc(-#{$size} - 1rem);
+    position: absolute;
+    width: $size;
+
+    + h2 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  :global(h1 + img.avatar) {
+    margin-top: -2.875rem;
+
+    + h2 {
+      margin-bottom: -.5rem;
+      margin-top: -.5rem;
     }
   }
 
@@ -16,6 +36,15 @@
     @each $size, $styles in $header-styles {
       @include breakpoint($size) {
         font-size: rem-calc(map-get(map-get($styles, 'h4'), 'font-size'));
+      }
+    }
+  }
+
+  h2 {
+    @each $size, $styles in $header-styles {
+      @include breakpoint($size) {
+        color: lighten($black, 20%);
+        font-size: rem-calc(map-get(map-get($styles, 'h5'), 'font-size'));
       }
     }
   }
@@ -28,26 +57,36 @@
   :global(.tabs) {
     background-color: transparent;
     border: 0;
-    margin-bottom: -1px;
-    margin-top: 2rem;
+    margin-bottom: calc(-1rem - 1px);
+    margin-top: 1rem;
 
     :global(.tabs-title) a {
       border: 1px solid transparent;
       border-bottom: 0;
       box-sizing: border-box;
-      color: $secondary-color;
       font-size: 1rem;
-      padding: 1em 2em;
+      opacity: .6;
+      padding: .75em 1em;
 
       &:hover {
         background-color: $medium-gray;
       }
 
-      &[aria-selected='true'] {
+      :global(&.active), &[aria-selected='true'] {
         background-color: $white;
         border-color: $medium-gray;
         color: $black;
+        opacity: 1;
+      }
+
+      :global(.badge) {
+        margin-left: 1em;
       }
     }
   }
+
+  :global(.liquid-container), :global(.liquid-child) {
+    overflow: visible;
+  }
 }
+
