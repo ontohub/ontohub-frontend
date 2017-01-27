@@ -1,9 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['type', 'q'],
+  queryParams: ['type', 'q', 'content'],
   type: null,
   q: null,
+  content: null,
 
   typeRepositories: Ember.computed('type', function() {
     let type = this.get('type');

@@ -2,12 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return Ember.RSVP.hash({
-      results: 2,
-      repositories: this.get('store').query('search-result', { q: '' }),
-      users: [],
-      oms: []
-    });
+    return this.get('store').queryRecord('search-result', { q: '' });
   },
   renderTemplate() {
     this.render();

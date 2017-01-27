@@ -1,2 +1,5 @@
-h1 = link-to name route result
-p.help-text = description
+h1
+  = fa-icon icon
+  |  
+  = link-to title route thing
+= yield
