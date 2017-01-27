@@ -7,13 +7,13 @@ export default function() {
   // this.namespace = '';
   // this.timing = 400;
 
-  this.get('/namespaces/:id', (schema, request) => {
-    let namespace = schema.namespaces.find(request.params.id);
-    return namespace;
+  this.get('/organizational_units/:id', (schema, request) => {
+    let orgUnit = schema.organizationalUnits.find(request.params.id);
+    return orgUnit;
   });
 
   this.get('/repositories');
-  this.get('/repositories/:namespace_id/:id');
+  this.get('/repositories/:organizational_unit_id/:id');
   this.post('/repositories', (schema) => {
     let attrs = this.normalizedRequestAttrs();
     let slug = attrs.name.split(' ').join('-');

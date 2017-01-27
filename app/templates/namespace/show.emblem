@@ -1,4 +1,0 @@
-= title model.name
-ol
-  = each model.repositories as |repository|
-    li = link-to repository.name 'namespace.repository.show' repository.repoSlug

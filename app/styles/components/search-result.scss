@@ -1,0 +1,29 @@
+.search-result {
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 1em;
+  }
+
+  > *:last-child {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    @each $size, $styles in $header-styles {
+      @include breakpoint($size) {
+        font-size: rem-calc(map-get(map-get($styles, 'h5'), 'font-size'));
+      }
+    }
+  }
+
+  p {
+    color: $dark-gray;
+  }
+
+  &:last-of-type {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

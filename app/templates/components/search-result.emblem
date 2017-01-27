@@ -1,0 +1,6 @@
+h1
+  = fa-icon icon
+  |  
+  = link-to params=routeParams
+    = title
+= yield

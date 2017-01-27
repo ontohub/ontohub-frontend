@@ -1,0 +1,1 @@
+li = link-to 'Search' 'search-result' (query-params type=null q=null)

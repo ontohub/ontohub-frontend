@@ -1,0 +1,24 @@
+form#repository_new
+  fieldset#repository_new_name
+    .input-group
+      select.input-group-field
+        option = model.organizationalUnit.name
+      span.input-group-label
+        | /
+      = input value = model.repository.name class = "input-group-field" type = "text" placeholder = "Name"
+  fieldset#repository_new_description
+    = input value = model.repository.description type = "text" placeholder = "Description"
+  fieldset#repository_new_content_type.fieldset
+    legend Content type
+
+    ul
+      li = radio-choice value="ontology" groupValue=contentType radio-name = "contentType" icon = "fa-bug" label = "Ontology" help-text = "This repository contains mainly ontologies"
+      li = radio-choice value="model" groupValue=contentType radio-name = "contentType" icon = "fa-female" label = "Model" help-text = "This repository contains mainly models"
+      li = radio-choice value="specification" groupValue=contentType radio-name = "contentType" icon = "fa-hand-spock-o" label = "Specification" help-text = "This repository contains mainly specifications"
+  fieldset#repository_new_access.fieldset
+      legend Access
+      ul
+        li = radio-choice value=true groupValue=publicAccess icon = "fa-unlock-alt" label = "Public" help-text = "Everyone can see this repository but only you can make changes"
+        li = radio-choice value=false groupValue=publicAccess icon = "fa-lock" label = "Private" help-text = "Only you can see this repository"
+  fieldset#repository_new_submit
+    button.float-right.success.button{action "submitNewRepo"} Save

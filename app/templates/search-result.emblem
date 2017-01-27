@@ -1,0 +1,47 @@
+= title "Search"
+.row.collapse
+  .medium-3.columns
+    ul.vertical.tabs#search-result-tabs
+      li.tabs-title.is-active
+        = link-to 'search-result' (query-params type='repositories') class=(if typeRepositories 'active')
+          = fa-icon "hdd-o"
+          |  Repositories
+          span.hollow.badge.float-right = model.repositoriesCount
+      li.tabs-title
+        = link-to 'search-result' (query-params type='oms') class=(if typeOMS 'active')
+          = fa-icon "code"
+          |  OMS
+          span.hollow.badge.float-right 0
+      li.tabs-title
+        = link-to 'search-result' (query-params type='users') class=(if typeUsers 'active')
+          = fa-icon "users"
+          |  Users
+          span.hollow.badge.float-right = model.organizationalUnitsCount
+  .medium-9.columns
+    .tab-content
+      #results
+        = if typeRepositories
+          = if model.repositories
+            = each model.repositories as |repo|
+              = if repo.publicAccess
+                = search-result 'unlock-alt' repo.id 'organizationalUnit.repository.show' repo.owner.id repo.repoId
+                  p.help-text = repo.description
+                  span.label = repo.contentType
+              = else
+                = search-result 'lock' repo.id 'organizationalUnit.repository.show' repo.owner.id repo.repoId
+                  p.help-text = repo.description
+                  span.label = repo.contentType
+          = else
+            h1.text-center No repository found.
+        = if typeOMS
+          = if model.oms
+            = each model.oms as |oms|
+              = oms
+          = else
+            h1.text-center No OMS found.
+        = if typeUsers
+          = if model.organizationalUnits
+            = each model.organizationalUnits as |orgUnit|
+              = search-result "user" orgUnit.name 'organizationalUnit.show' orgUnit.id
+          = else
+            h1.text-center No users found.

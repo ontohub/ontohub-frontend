@@ -12,3 +12,51 @@
   max-width: 800px;
   padding-top: 2rem;
 }
+
+:global(.hollow.badge) {
+  background: transparent;
+  border: 1px solid $primary-color;
+  border-radius: 1em;
+  color: $primary-color;
+  min-width: 1.8em;
+}
+
+:global(.vertical.tabs) {
+  margin-right: 1rem;
+
+  a {
+    padding: 1em;
+    transition: .2s all;
+
+    &:focus {
+      background: transparent;
+    }
+
+    &:global(.active) {
+      background: transparent;
+      font-weight: bold;
+
+      :global(.hollow.badge) {
+        background: $primary-color;
+        color: $white;
+      }
+    }
+  }
+
+  li:not(:last-of-type) {
+    border-bottom: 1px solid $light-gray;
+  }
+}
+
+:global(.tab-content) {
+  border: 1px solid $light-gray;
+  padding: 1rem;
+
+  h1 {
+    @each $size, $styles in $header-styles {
+      @include breakpoint($size) {
+        font-size: rem-calc(map-get(map-get($styles, 'h5'), 'font-size'));
+      }
+    }
+  }
+}

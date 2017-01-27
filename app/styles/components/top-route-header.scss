@@ -5,6 +5,7 @@
   .content {
     margin: 0 auto;
     max-width: 800px;
+    padding: 0 1rem;
 
     :global(& > .liquid-container > .liquid-child) {
       padding: 1rem;
@@ -14,7 +15,7 @@
   h1 {
     @each $size, $styles in $header-styles {
       @include breakpoint($size) {
-        font-size: rem-calc(map-get(map-get($styles, 'h3'), 'font-size'));
+        font-size: rem-calc(map-get(map-get($styles, 'h4'), 'font-size'));
       }
     }
   }
