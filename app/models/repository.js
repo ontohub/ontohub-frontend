@@ -1,12 +1,14 @@
 import Ember from 'ember';
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-  name: DS.attr('string'),
+import loadedSchema from 'ontohub-frontend/schema/models/repository_model';
+import { JsonSchemaModel } from 'ember-json-schema';
+
+let schema = loadedSchema;
+let schemaModel = JsonSchemaModel.generate(schema);
+
+export default DS.Model.extend(schemaModel, {
   owner: DS.belongsTo('organizationalUnit'),
-  description: DS.attr('string'),
-  publicAccess: DS.attr('boolean'),
-  contentType: DS.attr('string'),
   repoId: Ember.computed('id', function() {
     let f = this.get('id').split('/');
     return f[1];
