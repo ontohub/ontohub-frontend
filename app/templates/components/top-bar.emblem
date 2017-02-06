@@ -10,3 +10,18 @@
         a = fa-icon 'fa-plus'
         ul.menu
           li = link-to 'New repository' 'organizationalUnit.repository.new' title = 'New repository'
+      li
+        a = fa-icon 'fa-sign-in'
+        ul.menu
+          form#login{action 'signin' on = 'submit'}
+            .input-group
+              = input id = 'username' class = 'input-group-text' placeholder = 'Username'
+            .input-group
+              = input id = 'password' class = 'input-group-text' type = 'password' placeholder = 'Password'
+            = input type = 'submit' value = 'Sign in' class = 'button'
+            / a href='RouteToRegistration'
+            /  = fa-icon 'fa-user-plus'
+            /  |  Need an account?
+      li
+        if loggedIn
+          a = fa-icon 'fa-sign-out'

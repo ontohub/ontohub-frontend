@@ -32,6 +32,9 @@
     }
   }
 
+  :global(.menu) {
+    width: auto;
+  }
 
   :global(.menu > li > a img),
   :global(.menu > li > a i),
@@ -95,6 +98,26 @@
         background-color: $primary-color;
         color: $white;
       }
+    }
+  }
+
+  :global(form#login) {
+    width: auto;
+    margin: 0.5em;
+
+    input {
+      width: 250px;
+      max-width: inherit;
+      margin-right: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:hover {
+      background-color: transparent;
+      color: $primary-color;
     }
   }
 }
