@@ -1,13 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  authenticatedUser: Ember.inject.service(),
   contentType: "ontology",
   publicAccess: true,
   actions: {
     submitNewRepo: function() {
-      let model = this.get('model');
-      let repo = model.repository;
-      repo.set('owner', model.organizationalUnit);
+      let repo = this.get('model');
+      repo.set('owner', this.get('authenticatedUser.authenticatedUser'));
       repo.set('contentType', this.get('contentType'));
       repo.set('publicAccess', this.get('publicAccess'));
       repo.save().then((repo) => {
