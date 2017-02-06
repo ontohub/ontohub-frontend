@@ -6,22 +6,30 @@
       = outlet 'search-bar'
   .top-bar-right
     = zf-dropdown-menu disableHover=true clickOpen=true
-      li
-        a = fa-icon 'fa-plus'
-        ul.menu
-          li = link-to 'New repository' 'organizationalUnit.repository.new' title = 'New repository'
-      li
-        a = fa-icon 'fa-sign-in'
-        ul.menu
-          form#login{action 'signin' on = 'submit'}
-            .input-group
-              = input id = 'username' class = 'input-group-text' placeholder = 'Username'
-            .input-group
-              = input id = 'password' class = 'input-group-text' type = 'password' placeholder = 'Password'
-            = input type = 'submit' value = 'Sign in' class = 'button'
-            / a href='RouteToRegistration'
-            /  = fa-icon 'fa-user-plus'
-            /  |  Need an account?
-      li
-        if loggedIn
-          a = fa-icon 'fa-sign-out'
+      li.is-dropdown-submenu-parent.opens-left role="menuitem"
+        = if session.isAuthenticated
+          a = fa-icon 'fa-plus'
+          ul.menu.submenu.is-dropdown-submenu.vertical.first-sub
+            li = link-to 'New repository' 'organizationalUnit.repository.new' title = 'New repository'
+      li.is-dropdown-submenu-parent.opens-left role="menuitem"
+        = if session.isAuthenticated
+          a = gravatar-image email=authenticatedUser.authenticatedUser.email defaultImage='identicon' size=24 retina=true title=authenticatedUser.authenticatedUser.name class='avatar'
+          ul.menu.submenu.is-dropdown-submenu.vertical.first-sub 
+            li: span
+              | Signed in as 
+              b = authenticatedUser.authenticatedUser.name
+            li = link-to 'Your profile' 'organizationalUnit.show' authenticatedUser.authenticatedUser.name
+            li: hr
+            li: a{action 'signout'} Sign out
+        = else
+          a = fa-icon 'fa-sign-in'
+          ul.menu.submenu.is-dropdown-submenu.vertical.first-sub
+            form#login{action 'signin' on = 'submit'}
+              .input-group
+                = input id = 'username' class = 'input-group-text' placeholder = 'Username' value=identification
+              .input-group
+                = input id = 'password' class = 'input-group-text' type = 'password' placeholder = 'Password' value=password
+              = input type = 'submit' value = 'Sign in' class = 'button'
+              / a href='RouteToRegistration'
+              /  = fa-icon 'fa-user-plus'
+              /  |  Need an account?

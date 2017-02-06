@@ -1,14 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  localClassNames: 'top-bar',
   session: Ember.inject.service(),
-  actions: {
-    signin: function() {
-      var credentials = this.getProperties('username', 'password'),
-        authenticator = 'authenticator:jwt';
+  authenticatedUser: Ember.inject.service(),
 
-      this.get('session').authenticate(authenticator, credentials);
+  localClassNames: 'top-bar',
+
+  identification: "ada",
+  password: "changeme",
+  actions: {
+    signin() {
+      let credentials = this.getProperties('identification', 'password');
+
+      this.get('session').authenticate('authenticator:jwt', credentials);
+    },
+    signout() {
+      this.get('session').invalidate();
     }
   }
 });
