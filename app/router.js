@@ -18,6 +18,7 @@ Router.map(function() {
     });
   });
   this.route('search-result', { path: 'search' });
+  this.route('login');
 });
 
 export default Router;
