@@ -6,16 +6,22 @@ export default Ember.Component.extend({
 
   localClassNames: 'top-bar',
 
+  isLoading: false,
   identification: "ada",
   password: "changeme",
   actions: {
     signin() {
       let credentials = this.getProperties('identification', 'password');
 
-      this.get('session').authenticate('authenticator:jwt', credentials);
+      let promise = this.get('session').authenticate('authenticator:jwt', credentials);
+      this.send('loading', promise);
     },
     signout() {
       this.get('session').invalidate();
+    },
+    loading(data) {
+      this.set('isLoading', true);
+      data.finally(() => this.set('isLoading', false));
     }
   }
 });

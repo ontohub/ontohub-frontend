@@ -30,6 +30,8 @@
               .input-group
                 = input id = 'password' class = 'input-group-text' type = 'password' placeholder = 'Password' value=password
               = input type = 'submit' value = 'Sign in' class = 'button'
+              = if isLoading
+                div.loading Signing in...
               / a href='RouteToRegistration'
               /  = fa-icon 'fa-user-plus'
               /  |  Need an account?
