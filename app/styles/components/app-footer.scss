@@ -24,10 +24,16 @@
       list-style-type: none;
       padding: .2em 0;
 
-      a,
+      > * {
+        display: block;
+      }
+
       span {
         color: $dark-gray;
-        display: block;
+      }
+
+      a {
+        color: darken($dark-gray, 20%);
       }
     }
   }
