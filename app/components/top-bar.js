@@ -18,10 +18,19 @@ export default Ember.Component.extend({
     },
     signout() {
       this.get('session').invalidate();
+      this.send('restoreDropDown');
     },
     loading(data) {
       this.set('isLoading', true);
-      data.finally(() => this.set('isLoading', false));
+      data.finally(() => {
+        this.set('isLoading', false);
+        this.send('restoreDropDown');
+      });
+    },
+    restoreDropDown() {
+      let dropDownElement = Ember.$('.dropdown.menu > li.is-dropdown-submenu-parent.is-active');
+      dropDownElement.attr('data-is-click', false);
+      dropDownElement.removeClass('is-active');
     }
   }
 });
