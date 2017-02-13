@@ -11,8 +11,8 @@ export default ApplicationAdapter.extend({
     return this._urlForRecord(id);
   },
   _urlForRecord(id) {
-    let host = this.get('host');
-    let url = `/repositories/${id}`;
+    let host = this.get('host'),
+        url = `/repositories/${id}`;
     if(host) {
       url = `${host}${url}`;
     }

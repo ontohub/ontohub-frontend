@@ -11,9 +11,9 @@ export default Ember.Component.extend({
   password: "changeme",
   actions: {
     signin() {
-      let credentials = this.getProperties('identification', 'password');
-
-      let promise = this.get('session').authenticate('authenticator:jwt', credentials);
+      let credentials = this.getProperties('identification', 'password'),
+          promise =
+            this.get('session').authenticate('authenticator:jwt', credentials);
       this.send('loading', promise);
     },
     signout() {
