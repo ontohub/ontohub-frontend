@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="222.91281"
-   height="132.11064"
-   viewBox="0 0 222.91281 132.11064"
+   height="222.91281"
+   viewBox="0 0 222.91281 222.91281"
    version="1.1"
    id="svg3389"
    inkscape:version="0.91 r13725"
@@ -40,7 +40,7 @@
      id="namedview3400"
      showgrid="false"
      inkscape:zoom="1.2056723"
-     inkscape:cx="-168.01548"
+     inkscape:cx="-292.8421"
      inkscape:cy="-126.28628"
      inkscape:window-x="0"
      inkscape:window-y="24"
@@ -61,24 +61,24 @@
      style="opacity:1;fill:#000000;fill-opacity:0.95294118;stroke:#000000;stroke-width:1.05381179;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      id="path3434-93-5-3"
      cx="111.26015"
-     cy="28.427795"
+     cy="69.229973"
      rx="27.115074"
      ry="27.90089" />
   <path
      style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 94.162483,31.023976 c -38.71011,38.73712 -38.73008,38.35583 -38.73008,38.35583"
+     d="m 94.162483,71.82614 c -38.71011,38.73712 -38.73008,38.35583 -38.73008,38.35583"
      id="path3529-3"
      inkscape:connector-curvature="0" />
   <ellipse
      style="opacity:1;fill:#000000;fill-opacity:0.95294118;stroke:#000000;stroke-width:0.79028445;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      id="path3434-93-5-3-3-6"
      cx="53.846699"
-     cy="71.039314"
+     cy="111.84148"
      rx="20.334393"
      ry="20.923698" />
   <g
      id="g4386"
-     transform="translate(-214.14212,-100.14981)">
+     transform="translate(-214.14212,-59.347642)">
     <ellipse
        ry="16.411768"
        rx="15.949538"
@@ -94,12 +94,12 @@
   </g>
   <path
      style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 125.43265,31.023976 c 38.71011,38.73711 38.73008,38.35582 38.73008,38.35582"
+     d="m 125.43265,71.82614 c 38.71011,38.73711 38.73008,38.35582 38.73008,38.35582"
      id="path3529-3-6"
      inkscape:connector-curvature="0" />
   <g
      id="g4415"
-     transform="translate(-229.07155,-96.832162)">
+     transform="translate(-229.07155,-56.029993)">
     <ellipse
        transform="scale(-1,1)"
        ry="16.411768"
@@ -115,7 +115,7 @@
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <g
-     transform="translate(-97.711317,-97.40565)"
+     transform="translate(-97.711317,-56.603481)"
      id="g4386-2">
     <ellipse
        ry="16.411768"
@@ -131,7 +131,7 @@
        style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <g
-     transform="translate(-348.09861,-97.405645)"
+     transform="translate(-348.09861,-56.603476)"
      id="g4415-3">
     <ellipse
        transform="scale(-1,1)"
@@ -151,7 +151,7 @@
      style="opacity:1;fill:#000000;fill-opacity:0.95294118;stroke:#000000;stroke-width:0.79028445;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      id="path3434-93-5-3-3-6-9"
      cx="167.38774"
-     cy="70.483452"
+     cy="111.28561"
      rx="20.334393"
      ry="20.923698" />
 </svg>

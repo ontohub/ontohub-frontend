@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="73.982536mm"
-   height="84.448494mm"
-   viewBox="0 0 262.14284 299.22695"
+   width="84.448486mm"
+   height="84.448486mm"
+   viewBox="0 0 299.22691 299.22692"
    id="svg4474"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -42,7 +42,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="379.49928"
+     inkscape:cx="55.745388"
      inkscape:cy="44.887321"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -78,16 +78,16 @@
        id="rect5204"
        width="247.14285"
        height="97.85714"
-       x="413.17981"
+       x="431.17981"
        y="216.64792" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 413.53696,252.21935 c 246.42858,-1.42857 246.42858,-1.42857 246.42858,-1.42857"
+       d="m 431.53696,252.21935 c 246.42858,-1.42857 246.42858,-1.42857 246.42858,-1.42857"
        id="path5206"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#EmptyTriangleOutL)"
-       d="m 536.76995,396.07207 c -0.0467,-76.09316 -0.0467,-76.09316 -0.0467,-76.09316"
+       d="m 554.76995,396.07207 c -0.0467,-76.09316 -0.0467,-76.09316 -0.0467,-76.09316"
        id="path5206-8-6-2-3"
        inkscape:connector-curvature="0" />
     <rect
@@ -95,11 +95,11 @@
        id="rect5204-1"
        width="247.14285"
        height="97.85714"
-       x="413.17981"
+       x="431.17981"
        y="403.01773" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 413.53696,438.58916 c 246.42858,-1.42857 246.42858,-1.42857 246.42858,-1.42857"
+       d="m 431.53696,438.58916 c 246.42858,-1.42857 246.42858,-1.42857 246.42858,-1.42857"
        id="path5206-9"
        inkscape:connector-curvature="0" />
   </g>
