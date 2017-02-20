@@ -1,0 +1,8 @@
+h1
+  = gravatar-image email=org.id defaultImage='identicon' size=44 retina=true title=org.name class='icon'
+  |  
+  = link-to 'organizationalUnit.show' org
+    = org.id
+    |  (
+    = org.name
+    | )

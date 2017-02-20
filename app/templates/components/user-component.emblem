@@ -1,0 +1,4 @@
+h1 
+  = gravatar-image email=user.email defaultImage='identicon' size=44 retina=true title=user.name class='icon'
+  |  
+  = link-to user.name 'organizationalUnit.show' user

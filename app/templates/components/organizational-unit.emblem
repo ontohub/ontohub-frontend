@@ -1,0 +1,4 @@
+= if isUser
+  = user-component user=orgUnit
+= else
+  = organization-component org=orgUnit
