@@ -7,12 +7,12 @@
   .top-bar-right
     = zf-dropdown-menu disableHover=true clickOpen=true
       li.is-dropdown-submenu-parent.opens-left role="menuitem"
-        = if session.isAuthenticated
+        = if isAuthenticated
           a = fa-icon 'fa-plus'
           ul.menu.submenu.is-dropdown-submenu.vertical.first-sub
             li = link-to 'New repository' 'organizationalUnit.repository.new' title = 'New repository'
       li.is-dropdown-submenu-parent.opens-left role="menuitem"
-        = if session.isAuthenticated
+        = if isAuthenticated
           a = gravatar-image email=authenticatedUser.authenticatedUser.email defaultImage='identicon' size=24 retina=true title=authenticatedUser.authenticatedUser.name class='avatar'
           ul.menu.submenu.is-dropdown-submenu.vertical.first-sub 
             li: span

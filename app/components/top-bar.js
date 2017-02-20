@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  session: Ember.inject.service(),
   authenticatedUser: Ember.inject.service(),
 
   localClassNames: 'top-bar',
@@ -11,14 +10,13 @@ export default Ember.Component.extend({
   password: "changeme",
   actions: {
     signin() {
-      let credentials = this.getProperties('identification', 'password'),
-          promise =
-            this.get('session').authenticate('authenticator:jwt', credentials);
-      this.send('loading', promise);
+      let { identification,
+            password } = this.getProperties('identification', 'password');
+      this.get('signInCallback')(identification, password,
+          (promise) => this.send('loading', promise));
     },
     signout() {
-      this.get('session').invalidate();
-      this.send('restoreDropDown');
+      this.get('signOutCallback')(() => this.send('restoreDropDown'));
     },
     loading(data) {
       this.set('isLoading', true);
