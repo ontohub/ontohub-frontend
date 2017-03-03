@@ -7,5 +7,11 @@ export default Ember.Route.extend({
       into: 'application',
       outlet: 'search-bar'
     })
+  },
+  actions: {
+    sessionChanged() {
+      this.store.unloadAll();
+      this.refresh();
+    }
   }
 });

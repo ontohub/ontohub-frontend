@@ -8,10 +8,12 @@ export default Ember.Controller.extend({
       let credentials = { identification, password },
           promise =
             this.get('session').authenticate('authenticator:jwt', credentials);
+      this.send('sessionChanged');
       callback(promise);
     },
     signout(callback = null) {
       this.get('session').invalidate();
+      this.send('sessionChanged');
       callback();
     }
   }
