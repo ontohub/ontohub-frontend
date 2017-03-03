@@ -15,8 +15,8 @@ export default function() {
   this.get('/repositories');
   this.get('/repositories/:organizational_unit_id/:id');
   this.post('/repositories', (schema) => {
-    let attrs = this.normalizedRequestAttrs();
-    let slug = attrs.name.split(' ').join('-');
+    let attrs = this.normalizedRequestAttrs(),
+        slug = attrs.name.split(' ').join('-');
     attrs['id'] = slug;
 
     return schema.repositories.create(attrs);

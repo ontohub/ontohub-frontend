@@ -15,8 +15,8 @@ describe('Unit | Model | repository', () => {
   });
 
   it('belongs to a user', function() {
-    let model = this.store().modelFor('repository');
-    let relationship = Ember.get(model, 'relationshipsByName').
+    let model = this.store().modelFor('repository'),
+        relationship = Ember.get(model, 'relationshipsByName').
       get('owner');
     expect(relationship.key).to.equal('owner');
     expect(relationship.kind).to.equal('belongsTo');

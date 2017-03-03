@@ -32,6 +32,9 @@
     }
   }
 
+  :global(.menu) {
+    width: auto;
+  }
 
   :global(.menu > li > a img),
   :global(.menu > li > a i),
@@ -86,9 +89,18 @@
       z-index: 0;
     }
 
+    > li > a,
+    > li > span {
+      padding: .5em 1em;
+    }
+
+    > li > hr {
+      margin: .5em 0;
+      padding: 0;
+    }
+
     a {
       color: $black;
-      padding: .5em 1em;
       z-index: 9;
 
       &:hover {
@@ -96,5 +108,43 @@
         color: $white;
       }
     }
+  }
+
+  :global(form#login) {
+    margin: .5em 1em;
+    width: auto;
+
+    input {
+      margin-right: 0;
+      max-width: inherit;
+      width: 250px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:hover {
+      background-color: transparent;
+      color: $primary-color;
+    }
+
+    :global(div.loading) {
+      background-color: $transparent-white;
+      height: 100%;
+      left: 0;
+      line-height: 10em;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  img {
+    height: 24px;
+    margin-bottom: -4px;
+    margin-top: -4px;
+    width: 24px;
   }
 }

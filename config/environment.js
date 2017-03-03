@@ -47,5 +47,15 @@ module.exports = function(environment) {
 
   }
 
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: `${ENV.host}/users/sign_in`,
+    identificationField: 'name',
+    tokenPropertyName: 'data.attributes.token'
+  }
+
+  ENV['ember-simple-auth'] = {
+    authorizer: 'authorizer:token'
+  };
+
   return ENV;
 };

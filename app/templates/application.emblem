@@ -1,5 +1,5 @@
 = title 'Ontohub' prepend=true separator=' · '
-= top-bar
+= top-bar signInCallback=(action 'signin') signOutCallback=(action 'signout') isAuthenticated=session.isAuthenticated
 
 .page-wrapper
   = top-route-header

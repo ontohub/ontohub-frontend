@@ -2,12 +2,12 @@ form#repository_new
   fieldset#repository_new_name
     .input-group
       select.input-group-field
-        option = model.organizationalUnit.name
+        option = authenticatedUser.authenticatedUser.name
       span.input-group-label
         | /
-      = input value = model.repository.name class = "input-group-field" type = "text" placeholder = "Name"
+      = input value = model.name class = "input-group-field" type = "text" placeholder = "Name"
   fieldset#repository_new_description
-    = input value = model.repository.description type = "text" placeholder = "Description"
+    = input value = model.description type = "text" placeholder = "Description"
   fieldset#repository_new_content_type.fieldset
     legend Content type
 
