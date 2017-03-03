@@ -1,0 +1,7 @@
+:global(.repository) {
+  @include list-item;
+
+  p {
+    margin-left: 4.5rem;
+  }
+}

@@ -1,0 +1,10 @@
+h1 
+  = content-icon contentType=repo.contentType
+  = link-to 'organizationalUnit.repository.show' repo.owner.id repo.repoId
+    = repo.id
+    = unless repo.publicAccess
+      |  
+      span.warning.label
+        = fa-icon 'lock'
+        |  Private
+p.help-text = repo.description

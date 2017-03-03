@@ -23,14 +23,7 @@
         = if typeRepositories
           = if model.repositories
             = each model.repositories as |repo|
-              = if repo.publicAccess
-                = search-result 'unlock-alt' repo.id 'organizationalUnit.repository.show' repo.owner.id repo.repoId
-                  p.help-text = repo.description
-                  span.label = repo.contentType
-              = else
-                = search-result 'lock' repo.id 'organizationalUnit.repository.show' repo.owner.id repo.repoId
-                  p.help-text = repo.description
-                  span.label = repo.contentType
+              = repository-component repo=repo
           = else
             h1.text-center No repository found.
         = if typeOMS
@@ -42,6 +35,6 @@
         = if typeUsers
           = if model.organizationalUnits
             = each model.organizationalUnits as |orgUnit|
-              = search-result "user" orgUnit.name 'organizationalUnit.show' orgUnit.id
+              = organizational-unit orgUnit=orgUnit
           = else
             h1.text-center No users found.
