@@ -6,18 +6,12 @@ import { expect } from 'chai';
 
 export default function() {
   return steps()
-    .given('there is an organizational unit', (next) => {
-      server.loadFixtures('organizational-units');
-      // the data needed are in the fixtures
-      next();
-    })
-
-    .when('I visit an organizational unit page', (next) => {
+    .when('I visit a user page', (next) => {
       visit('/freddy-fazbear');
       andThen(() => next());
     })
 
-    .then('I should see the organizational unit name', (next) => {
+    .then('I should see the user name', (next) => {
       const element = find('.top-route-header h1');
       expect(element.text()).to.equal('Freddy Fazbear');
       next();

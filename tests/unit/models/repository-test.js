@@ -9,6 +9,11 @@ describe('Unit | Model | repository', () => {
     needs: ['model:organizationalUnit']
   });
 
+  it('returns the correct repository slug', function() {
+    let model = this.subject({ id: 'freddy-fazbear/some-repo' });
+    expect(model.get('repoId')).to.equal('some-repo');
+  });
+
   it('has a name', function() {
     let model = this.subject();
     expect(model).to.be.ok;
