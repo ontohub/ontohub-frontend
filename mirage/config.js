@@ -8,8 +8,10 @@ export default function() {
   // this.timing = 400;
 
   this.get('/organizational_units/:id', (schema, request) => {
-    let orgUnit = schema.organizationalUnits.find(request.params.id);
-    return orgUnit;
+    let organization = schema.organizations.find(request.params.id);
+    let user = schema.users.find(request.params.id);
+
+    return (organization || user);
   });
 
   this.get('/version', () =>
@@ -26,8 +28,17 @@ export default function() {
       }
     })
   )
-  this.get('/repositories');
-  this.get('/repositories/:organizational_unit_id/:id');
+
+  this.post('/users');
+  this.get('/users/:id');
+  this.del('/users/:id');
+  this.put('/users/:id');
+
+  this.post('/organizations');
+  this.get('/organizations/:id');
+  this.del('/organizations/:id');
+  this.put('/organizations/:id');
+
   this.post('/repositories', (schema) => {
     let attrs = this.normalizedRequestAttrs(),
         slug = attrs.name.split(' ').join('-');
@@ -35,7 +46,17 @@ export default function() {
 
     return schema.repositories.create(attrs);
   });
-  this.del('/repositories/:id');
+  this.get('/repositories/:orgUnit/:id', (schema, request) => {
+    let repoId = [request.params.orgUnit, request.params.id].join('/');
+    let repository = schema.repositories.find(repoId);
+
+    return repository;
+  });
+  this.del('/repositories/:orgUnit/:id', (schema, request) => {
+    let repoId = [request.params.orgUnit, request.params.id].join('/');
+    schema.repositories.find(repoId).destroy();
+  });
+  this.put('/repositories/:orgUnit/id');
 
   /*
     Shorthand cheatsheet:
