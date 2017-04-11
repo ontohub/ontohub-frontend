@@ -7,6 +7,8 @@ module.exports = function(defaults) {
     // Add options here
     'babel': {
       'optional': ['es6.spec.symbols'],
+    },
+    'ember-cli-babel': {
       'includePolyfill': true
     },
     'ember-cli-foundation-6-sass': {
