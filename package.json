@@ -65,5 +65,8 @@
     "loader.js": "^4.2.3",
     "npm-check-updates": "^2.10.5",
     "postcss-scss": "^0.4.1"
+  },
+  "dependencies": {
+    "bower": "^1.8.0"
   }
 }

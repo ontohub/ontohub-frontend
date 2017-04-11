@@ -1103,6 +1103,10 @@ bower-endpoint-parser@0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/bower-endpoint-parser/-/bower-endpoint-parser-0.2.2.tgz#00b565adbfab6f2d35addde977e97962acbcb3f6"
 
+bower@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/bower/-/bower-1.8.0.tgz#55dbebef0ad9155382d9e9d3e497c1372345b44a"
+
 boxen@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/boxen/-/boxen-0.3.1.tgz#a7d898243ae622f7abb6bb604d740a76c6a5461b"
@@ -1172,7 +1176,7 @@ broccoli-autoprefixer@^4.1.0:
     object-assign "^4.0.1"
     postcss "^5.0.4"
 
-broccoli-babel-transpiler@^5.5.0, broccoli-babel-transpiler@^5.6.0, broccoli-babel-transpiler@^5.6.2:
+broccoli-babel-transpiler@^5.5.0, broccoli-babel-transpiler@^5.6.2:
   version "5.6.2"
   resolved "https://registry.yarnpkg.com/broccoli-babel-transpiler/-/broccoli-babel-transpiler-5.6.2.tgz#958c72e43575b2f0a862a5096dba1ce1ebc7d74d"
   dependencies:
@@ -2630,16 +2634,6 @@ ember-cli-autoprefixer@0.6.0:
     broccoli-autoprefixer "^4.1.0"
     lodash "^4.0.0"
 
-ember-cli-babel@5.1.10:
-  version "5.1.10"
-  resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-5.1.10.tgz#d403f178aab602e1337c403c5a58c0200a8969aa"
-  dependencies:
-    broccoli-babel-transpiler "^5.6.0"
-    broccoli-funnel "^1.0.0"
-    clone "^1.0.2"
-    ember-cli-version-checker "^1.0.2"
-    resolve "^1.1.2"
-
 ember-cli-babel@^5.1.10, ember-cli-babel@^5.1.3, ember-cli-babel@^5.1.5, ember-cli-babel@^5.1.6, ember-cli-babel@^5.1.7, ember-cli-babel@^5.1.9, ember-cli-babel@^5.2.1, ember-cli-babel@^5.2.4:
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-5.2.4.tgz#5ce4f46b08ed6f6d21e878619fb689719d6e8e13"
@@ -2920,18 +2914,7 @@ ember-cli-release@~1.0.0-beta.2:
     semver "^4.3.1"
     silent-error "^1.0.0"
 
-ember-cli-sass@^6.0.0:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-sass/-/ember-cli-sass-6.1.1.tgz#75bff704bfe785df35ec4450af18a08a442c3192"
-  dependencies:
-    broccoli-funnel "^1.0.0"
-    broccoli-merge-trees "^1.1.0"
-    broccoli-sass-source-maps "^2.0.0"
-    ember-cli-babel "5.1.10"
-    ember-cli-version-checker "^1.0.2"
-    merge "^1.2.0"
-
-ember-cli-sass@~6.1.2:
+ember-cli-sass@^6.0.0, ember-cli-sass@~6.1.2:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/ember-cli-sass/-/ember-cli-sass-6.1.2.tgz#537217511b3d57d3f0e0073fb2ccbca4e07fce34"
   dependencies:
