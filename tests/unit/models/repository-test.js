@@ -6,7 +6,7 @@ import Ember from 'ember';
 describe('Unit | Model | repository', () => {
   setupModelTest('repository', {
     // Specify the other units that are required for this test.
-    needs: ['model:organizationalUnit']
+    needs: ['model:user', 'model:organization']
   });
 
   it('returns the correct repository slug', function() {
@@ -19,11 +19,21 @@ describe('Unit | Model | repository', () => {
     expect(model).to.be.ok;
   });
 
-  it('belongs to a user', function() {
-    let model = this.store().modelFor('repository'),
-        relationship = Ember.get(model, 'relationshipsByName').
-      get('owner');
-    expect(relationship.key).to.equal('owner');
-    expect(relationship.kind).to.equal('belongsTo');
+  describe('belongs to', () => {
+    it('a user', function() {
+      let model = this.store().modelFor('repository'),
+          relationship = Ember.get(model, 'relationshipsByName').
+        get('ownerUser');
+      expect(relationship.key).to.equal('ownerUser');
+      expect(relationship.kind).to.equal('belongsTo');
+    });
+
+    it('an organization', function() {
+      let model = this.store().modelFor('repository'),
+          relationship = Ember.get(model, 'relationshipsByName').
+        get('ownerOrganization');
+      expect(relationship.key).to.equal('ownerOrganization');
+      expect(relationship.kind).to.equal('belongsTo');
+    });
   });
 });
