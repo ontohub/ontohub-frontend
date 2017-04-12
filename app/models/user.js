@@ -1,4 +1,3 @@
-// import DS from 'ember-data';
 import OrganizationalUnitModel from './organizational-unit';
 
 import schema from 'ontohub-frontend/schemas/models/user_model';
