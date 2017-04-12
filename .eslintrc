@@ -10,7 +10,9 @@
     'mocha': true
   },
   globals: {
-    "server": true
+    "server": true,
+    "visit": true,
+    "andThen": true
   },
   rules: {
     "arrow-body-style": ["error"],
