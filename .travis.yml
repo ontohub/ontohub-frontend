@@ -13,13 +13,13 @@ before_install:
   - "npm config set spin false"
   - "npm --version"
   - "phantomjs --version"
-
-install:
-  - "npm install -g yarn bower"
-  - "yarn install --pure-lockfile --no-emoji"
-  - "bower install"
   - "git clone https://github.com/ontohub/ontohub-backend ../ontohub-backend"
   - "ln -s $(readlink -f ../ontohub-backend/spec/support/api/schemas) app/schemas"
+  - "ls -la app/schemas"
+
+install:
+  - "yarn install --pure-lockfile --no-emoji"
+  - "yarn run bower install"
 
 script:
   - "npm test"
