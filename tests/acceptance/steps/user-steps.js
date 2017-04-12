@@ -12,7 +12,7 @@ export default function() {
     })
 
     .then('I should see the user name', (next) => {
-      const element = find('.top-route-header h1');
+      const element = find('.top-route-header h2');
       expect(element.text()).to.equal('Freddy Fazbear');
       next();
     });

@@ -3,7 +3,7 @@
 // export default function(server) {
 export default function() {
 
-  // server.loadFixtures('users');
+  server.loadFixtures();
   // let users = server.createList('user', 5);
   // _.each(users, (user) => server.createList('repository',
   //                                           5,

@@ -10,17 +10,17 @@ describe('Unit | Model | user', () => {
   });
 
   it('has many repositories', function() {
-    let model = this.store().modelFor('user');
-    let relationship = Ember.get(model, 'relationshipsByName').
-      get('repositories');
+    let model = this.store().modelFor('user'),
+        relationship = Ember.get(model, 'relationshipsByName').
+                             get('repositories');
     expect(relationship.key).to.equal('repositories');
     expect(relationship.kind).to.equal('hasMany');
   });
 
   it('has many organizations', function() {
-    let model = this.store().modelFor('user');
-    let relationship = Ember.get(model, 'relationshipsByName').
-      get('organizations');
+    let model = this.store().modelFor('user'),
+        relationship = Ember.get(model, 'relationshipsByName').
+                             get('organizations');
     expect(relationship.key).to.equal('organizations');
     expect(relationship.kind).to.equal('hasMany');
   });

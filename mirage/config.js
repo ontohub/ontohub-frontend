@@ -8,8 +8,8 @@ export default function() {
   // this.timing = 400;
 
   this.get('/organizational_units/:id', (schema, request) => {
-    let organization = schema.organizations.find(request.params.id);
-    let user = schema.users.find(request.params.id);
+    let user = schema.users.find(request.params.id),
+        organization = schema.organizations.find(request.params.id);
 
     return (organization || user);
   });
@@ -47,8 +47,8 @@ export default function() {
     return schema.repositories.create(attrs);
   });
   this.get('/repositories/:orgUnit/:id', (schema, request) => {
-    let repoId = [request.params.orgUnit, request.params.id].join('/');
-    let repository = schema.repositories.find(repoId);
+    let repoId = [request.params.orgUnit, request.params.id].join('/'),
+        repository = schema.repositories.find(repoId);
 
     return repository;
   });
