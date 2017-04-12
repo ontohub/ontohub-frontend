@@ -67,9 +67,13 @@
     "liquid-fire": "^0.27.2",
     "loader.js": "^4.2.3",
     "npm-check-updates": "^2.10.5",
-    "postcss-scss": "^0.4.1"
+    "postcss-scss": "^0.4.1",
+    "yadda": "0.17.10"
   },
   "dependencies": {
     "bower": "^1.8.0"
+  },
+  "resolutions": {
+    "yadda": "0.17.10"
   }
 }
