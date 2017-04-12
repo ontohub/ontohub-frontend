@@ -19,7 +19,7 @@ install:
   - "yarn install --pure-lockfile --no-emoji"
   - "bower install"
   - "git clone https://github.com/ontohub/ontohub-backend ../ontohub-backend"
-  - "ln -s ../ontohub-backend/spec/support/api/schemas app/schemas"
+  - "ln -s $(readlink -f ../ontohub-backend/spec/support/api/schemas) app/schemas"
 
 script:
   - "npm test"
