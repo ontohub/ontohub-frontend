@@ -8,6 +8,19 @@ module.exports = {
   ],
   "launch_in_dev": [
     "PhantomJS",
+    "Chromium",
     "Chrome"
-  ]
+  ],
+  "browser_args": {
+    "Chromium": [
+      "--headless",
+      "--disable-gpu",
+      "--remote-debugging-port=9222"
+    ],
+    "Chrome": [
+      "--headless",
+      "--disable-gpu",
+      "--remote-debugging-port=9222"
+    ]
+  }
 };
