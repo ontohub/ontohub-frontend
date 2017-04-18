@@ -20,14 +20,12 @@ export default ApplicationSerializer.extend({
     return this._super(store, primaryModelClass, payload, id, requestType);
   },
   serialize(snapshot, options) {
-    console.log(snapshot);
     let json = this._super(snapshot, options);
     let relationships = json.data.relationships;
     let owner = (relationships['owner_user'] || relationships['owner_organization']);
     relationships['owner'] = owner;
     delete relationships['owner_user'];
     delete relationships['owner_organization'];
-    console.log(json);
     return json;
   }
 });

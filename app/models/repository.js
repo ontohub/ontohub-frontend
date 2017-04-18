@@ -16,14 +16,10 @@ export default DS.Model.extend(schemaModel, {
     set(key, value) {
       if(value.constructor.modelName === 'user') {
         this.set('ownerUser', value);
-        console.log("ownerUser was set.");
       } else if(value.constructor.modelName === 'organization') {
         this.set('ownerOrganization', value);
-        console.log("ownerOrganization was set.");
       }
 
-      console.log("owner was set to ", value);
-      console.log(this);
       return value;
     }
   }),
