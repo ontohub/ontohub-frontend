@@ -7,7 +7,9 @@ export default Ember.Controller.extend({
   actions: {
     submitNewRepo: function() {
       let repo = this.get('model');
-      repo.set('owner', this.get('authenticatedUser.authenticatedUser'));
+      this.get('authenticatedUser.authenticatedUser').then((user) => {
+        repo.set('owner', user);
+      });
       repo.set('contentType', this.get('contentType'));
       repo.set('publicAccess', this.get('publicAccess'));
       repo.save().then((repo) => {
