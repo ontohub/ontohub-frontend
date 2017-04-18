@@ -53,15 +53,22 @@ export default function() {
   this.del('/organizations/:id');
   this.put('/organizations/:id');
 
-  this.post('/repositories', (schema, request) => function() {
-    console.log(request);
-    let attrs = this.normalizedRequestAttrs(),
-    //     slug = attrs.name.split(' ').join('-');
-    // attrs['id'] = slug;
+  this.post('/repositories', function(schema, request) {
+    let originalRequest = JSON.parse(request.requestBody),
+        owner = originalRequest.data.relationships.owner.data,
+        attrs = this.normalizedRequestAttrs(),
+        slug = attrs.name.split(' ').join('-');
+
+    attrs.id = `${owner.id}/${slug}`;
+
+    if(owner.type === 'users') {
+      attrs.ownerUserId = owner.id;
+    } else if(owner.type === 'organizations') {
+      attrs.ownerOrganizationId = owner.id;
+    }
+    delete attrs.ownerId;
 
     return schema.repositories.create(attrs);
-    // return new Mirage.Response(500, {}, {});
-    // return { "hello": "test" };
   });
   this.get('/repositories/:orgUnit/:id', (schema, request) => {
     let repoId = [request.params.orgUnit, request.params.id].join('/'),
