@@ -9,20 +9,26 @@ export default function() {
     .given('there is a repository', (next) => {
       next();
     })
-
-    .when('I visit a repository page', (next) => {
-      visit('/freddy-fazbear/bonnie-the-bunny');
-      andThen(() => next());
+    .when('I click on the description', (next) => {
+      click('.top-route-header span');
+      andThen(next);
     })
-
-    .then('I should see the repository name "$repoName"', (next, repoName) => {
+    .when('I fill in the field with "$string"', (str, next) => {
+      fillIn('.top-route-header input', str);
+      andThen(next);
+    })
+    .when('I click on the save button', (next) => {
+      click('.top-route-header button');
+      andThen(next);
+    })
+    .then('I should see the repository name "$name"', (name, next) => {
       const element = find('.top-route-header h1');
-      expect(element.text()).to.equal(repoName());
+      expect(element.text()).to.equal(name);
       next();
     })
-    .then('I should see the repository description "$string"', (next, repoDescription) => {
-      const element = find('.top-route-header h1');
-      expect(element.text()).to.equal(repoDescription());
+    .then('I should see the repository description "$description"', (description, next) => {
+      const element = find('.top-route-header span');
+      expect(element.text()).to.equal(description);
       next();
     });
 }

@@ -4,21 +4,14 @@ import {
   authenticateSession
 } from "ontohub-frontend/tests/helpers/ember-simple-auth";
 
-const dictionary = new yadda.Dictionary()
-  .define("url", /(.+)/)
-  .define("repoName", /(.+ \/ .+)/)
-  .define("string", /(.+)/);
-
 export default function() {
   return yadda.localisation.English
-    .library(dictionary)
-    .given("there is a user", (next) => {
+    .library()
+    .given('there is a user named "$name"', function(name, next) {
+      this.ctx.user = server.create('user', { name });
       next();
     })
-    .given("I am not logged in", (next) => {
-      next();
-    })
-    .given("I am logged in", (next) => {
+    .given("the user is logged in", (next) => {
       authenticateSession(Application, {
         data: {
           id: "authenticationtoken",
@@ -32,8 +25,13 @@ export default function() {
       });
       next();
     })
-    .when("I visit the new repository page", (next) => {
-      visit("/new");
+    .given('the user owns a repository named "$name" with the description "$description"', function(name, description, next) {
+      let user = this.ctx.user;
+      this.ctx.repository = server.create('repository', { name, description, ownerUser: user });
+      next();
+    })
+    .when("I visit $url", (url, next) => {
+      visit(url);
       andThen(next);
     })
     .when("I fill in the form", (next) => {
