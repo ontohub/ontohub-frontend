@@ -30,20 +30,19 @@ export default function() {
   )
 
   this.post('/users');
-  this.post('/users/sign_in', (schema, request) => {
-    return {
-      "data": {
-        "attributes": {
-          "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ1c2VyX2lkIjoiYWRhIiwiZXhwIjoxNDkyNjAwOTkxfQ.fepsfgUuzVhCYRoqD25AjnoD1Hj96WvF1B35-w2jEt7iONi-k7mk-YXhSaXOUiVMQGLT4Xl22Dlekf-STxLz3A"
-        },
-        "id": "authenticationtoken",
-        "type": "authentication_tokens"
+  this.post('/users/sign_in', () => ({
+    "data": {
+      "attributes": {
+        // eslint-disable-next-line max-len
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ1c2VyX2lkIjoiYWRhIiwiZXhwIjoxNDkyNjAwOTkxfQ.fepsfgUuzVhCYRoqD25AjnoD1Hj96WvF1B35-w2jEt7iONi-k7mk-YXhSaXOUiVMQGLT4Xl22Dlekf-STxLz3A"
       },
-      "jsonapi": {
-        "version": "1.0"
-      }
-    };
-  });
+      "id": "authenticationtoken",
+      "type": "authentication_tokens"
+    },
+    "jsonapi": {
+      "version": "1.0"
+    }
+  }));
   this.get('/users/:id');
   this.del('/users/:id');
   this.put('/users/:id');

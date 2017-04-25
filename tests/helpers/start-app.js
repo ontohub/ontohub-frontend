@@ -15,5 +15,7 @@ export default function startApp(attrs) {
     application.injectTestHelpers();
   });
 
+  window.Application = application;
+
   return application;
 }

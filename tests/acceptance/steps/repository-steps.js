@@ -15,9 +15,14 @@ export default function() {
       andThen(() => next());
     })
 
-    .then('I should see the repository name', (next) => {
+    .then('I should see the repository name "$repoName"', (next, repoName) => {
       const element = find('.top-route-header h1');
-      expect(element.text()).to.equal('Freddy Fazbear / Bonnie Bunny');
+      expect(element.text()).to.equal(repoName());
+      next();
+    })
+    .then('I should see the repository description "$string"', (next, repoDescription) => {
+      const element = find('.top-route-header h1');
+      expect(element.text()).to.equal(repoDescription());
       next();
     });
 }
