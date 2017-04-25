@@ -79,7 +79,22 @@ export default function() {
     let repoId = [request.params.orgUnit, request.params.id].join('/');
     schema.repositories.find(repoId).destroy();
   });
-  this.put('/repositories/:orgUnit/id');
+  this.patch('/repositories/:orgUnit/:id', function(schema, request) {
+    let repoId = [request.params.orgUnit, request.params.id].join('/'),
+        repo = schema.repositories.find(repoId),
+        attrs = this.normalizedRequestAttrs();
+
+    if(repo.ownerUserId) {
+      attrs.ownerUserId = repo.ownerUserId;
+    } else if(repo.ownerOrganizationId) {
+      attrs.ownerOrganizationId = repo.ownerUserId;
+    }
+
+    delete attrs.ownerId;
+    attrs.id = repo.id;
+
+    return repo.update(attrs);
+  });
 
   /*
     Shorthand cheatsheet:
