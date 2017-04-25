@@ -12,9 +12,9 @@ form#repository_new
     legend Content type
 
     ul
-      li = radio-choice value="ontology" groupValue=contentType radio-name = "contentType" icon = "fa-bug" label = "Ontology" help-text = "This repository contains mainly ontologies"
-      li = radio-choice value="model" groupValue=contentType radio-name = "contentType" icon = "fa-female" label = "Model" help-text = "This repository contains mainly models"
-      li = radio-choice value="specification" groupValue=contentType radio-name = "contentType" icon = "fa-hand-spock-o" label = "Specification" help-text = "This repository contains mainly specifications"
+      li = radio-choice value="ontology" groupValue=contentType radio-name = "contentType" icon-image = "ontology" label = "Ontology" help-text = "This repository contains mainly ontologies"
+      li = radio-choice value="model" groupValue=contentType radio-name = "contentType" icon-image = "model" label = "Model" help-text = "This repository contains mainly models"
+      li = radio-choice value="specification" groupValue=contentType radio-name = "contentType" icon-image = "specification" label = "Specification" help-text = "This repository contains mainly specifications"
   fieldset#repository_new_access.fieldset
       legend Access
       ul

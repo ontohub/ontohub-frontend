@@ -1,4 +1,7 @@
 = radio-button name = radio-name groupValue = groupValue value = value
-  = fa-icon icon
+  if icon-image
+    = content-icon icon-image=icon-image
+  else if icon
+    = fa-icon icon
   = label
   .help-text {{help-text}}
