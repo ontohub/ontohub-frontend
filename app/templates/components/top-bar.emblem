@@ -13,16 +13,16 @@
             li = link-to 'New repository' 'organizationalUnit.repository.new' title = 'New repository'
       li.is-dropdown-submenu-parent.opens-left role="menuitem"
         = if isAuthenticated
-          a = gravatar-image email=authenticatedUser.authenticatedUser.email defaultImage='identicon' size=24 retina=true title=authenticatedUser.authenticatedUser.name class='avatar'
-          ul.menu.submenu.is-dropdown-submenu.vertical.first-sub 
+          a#user_menu_link = gravatar-image email=authenticatedUser.authenticatedUser.email defaultImage='identicon' size=24 retina=true title=authenticatedUser.authenticatedUser.name class='avatar'
+          ul.menu.submenu.is-dropdown-submenu.vertical.first-sub
             li: span
-              | Signed in as 
+              | Signed in as
               b = authenticatedUser.authenticatedUser.name
             li = link-to 'Your profile' 'organizationalUnit.show' authenticatedUser.authenticatedUser.name
             li: hr
             li: a{action 'signout'} Sign out
         = else
-          a = fa-icon 'fa-sign-in'
+          a#sign_in_menu_link = fa-icon 'fa-sign-in'
           ul.menu.submenu.is-dropdown-submenu.vertical.first-sub
             form#login{action 'signin' on = 'submit'}
               .input-group
