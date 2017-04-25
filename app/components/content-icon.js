@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   tagName: 'img',
   classNames: ['icon'],
   attributeBindings: ['src'],
-  src: Ember.computed('contentType', function() {
-    return `/assets/${this.get('contentType')}-icon.svg`;
+  src: Ember.computed('icon-image', function() {
+    return `/assets/${this.get('icon-image')}-icon.svg`;
   })
 });

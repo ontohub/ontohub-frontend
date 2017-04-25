@@ -1,9 +1,9 @@
-h1 
-  = content-icon contentType=repo.contentType
+h1
+  = content-icon icon-image=repo.contentType
   = link-to 'organizationalUnit.repository.show' repo.owner.id repo.repoId
     = repo.id
     = unless repo.publicAccess
-      |  
+      |
       span.warning.label
         = fa-icon 'lock'
         |  Private
