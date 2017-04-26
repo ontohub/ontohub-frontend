@@ -8,6 +8,9 @@ export default Ember.Route.extend({
       outlet: 'search-bar'
     })
   },
+  model() {
+    return this.get('store').find('version', 'version');
+  },
   actions: {
     sessionChanged() {
       this.store.unloadAll();

@@ -23,12 +23,19 @@ module.exports = function(environment) {
     ENV.host = 'http://localhost:3000';
     ENV['ember-cli-mirage'] = {
       enabled: false
-    }
+    };
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.versionConfig = {
+      tag: '0.0.0',
+      commitsSinceTagMin: 65,
+      commitsSinceTagMax: null,
+      commit: null,
+      full: null
+    };
   }
 
   if (environment === 'test') {
@@ -41,10 +48,23 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.versionConfig = {
+      tag: '0.0.0',
+      commitsSinceTagMin: 65,
+      commitsSinceTagMax: null,
+      commit: null,
+      full: null
+    };
   }
 
   if (environment === 'production') {
-
+    ENV.versionConfig = {
+      tag: '0.0.0',
+      commitsSinceTagMin: null,
+      commitsSinceTagMax: null,
+      commit: null,
+      full: null
+    };
   }
 
   ENV['ember-simple-auth-token'] = {
