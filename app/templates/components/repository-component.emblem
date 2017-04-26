@@ -1,5 +1,5 @@
 h1
-  = content-icon icon-image=repo.contentType
+  = content-icon iconImage=repo.contentType
   = link-to 'organizationalUnit.repository.show' repo.owner.id repo.repoId
     = repo.id
     = unless repo.publicAccess
