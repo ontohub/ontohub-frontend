@@ -12,6 +12,20 @@ export default function() {
     return orgUnit;
   });
 
+  this.get('/version', () =>
+    ({
+      data: {
+        attributes: {
+          commit: '21e9779',
+          commits_since_tag: 65,
+          full: '0.0.0-65-g21e9779',
+          tag: '0.0.0'
+        },
+        id: 'version',
+        type: 'versions'
+      }
+    })
+  )
   this.get('/repositories');
   this.get('/repositories/:organizational_unit_id/:id');
   this.post('/repositories', (schema) => {

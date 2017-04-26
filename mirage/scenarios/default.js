@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 export default function(server) {
-
+  server.loadFixtures('versions');
   server.loadFixtures('namespaces');
   let namespaces = server.createList('namespace', 5);
   _.each(namespaces, (ns) => server.createList('repository',
