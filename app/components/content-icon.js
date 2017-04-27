@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   classNames: ['icon'],
   attributeBindings: ['src'],
   src: Ember.computed('iconImage', function() {
-    return `/assets/${this.get('iconImage')}-icon.svg`;
-  })
+    return this.get('iconImage') ?
+      `/assets/${this.get('iconImage')}-icon.svg` : ''
+  }),
 });
