@@ -7,5 +7,7 @@ import { JsonSchemaModel } from 'ember-json-schema'
 const schemaModel = JsonSchemaModel.generate(schema)
 
 export default OrganizationalUnitModel.extend(schemaModel, {
-  organizations: DS.hasMany('organization')
+  organizations: DS.hasMany('organization'),
+  // The captcha is only used for signing up:
+  captcha: DS.attr('string')
 })

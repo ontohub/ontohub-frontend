@@ -36,6 +36,7 @@ module.exports = function(environment) {
       commit: null,
       full: null
     }
+    ENV.recaptcha_site_key = '6LewQh8UAAAAAMok-W-6CiQN5buROVD3uRaaKJWU'
   }
 
   if (environment === 'test') {
@@ -64,7 +65,8 @@ module.exports = function(environment) {
       commitsSinceTagMax: null,
       commit: null,
       full: null
-    }
+    },
+    ENV.recaptcha_site_key = '6LdKSR8UAAAAANuiYuJcuJRQm4Go-dQh0he82vpU'
   }
 
   ENV['ember-simple-auth-token'] = {

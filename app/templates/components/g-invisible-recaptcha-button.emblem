@@ -1,0 +1,1 @@
+button.float-right.success.button.g-recaptcha{action "onSubmit"} data-sitekey="{{siteKey}}" {{text}}

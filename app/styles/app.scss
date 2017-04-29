@@ -5,4 +5,4 @@ $transparent-white: rgba(255, 255, 255, .5);
 $global-flexbox: true;
 
 @import 'foundation-sites/foundation';
-@include foundation-everything;
+@include foundation-everything(true);

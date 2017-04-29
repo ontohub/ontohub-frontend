@@ -1,0 +1,26 @@
+form#user_new{action 'initializeRecaptcha'}
+  div.row.align-center
+    div.column.small-12.medium-6.large-6
+      fieldset#user_new_name
+        = input value = name type = "text" placeholder = "User Name" autofocus = true
+  div.row.align-center
+    div.column.small-12.medium-6.large-6
+      fieldset#user_new_real_name
+        = input value = realName type = "text" placeholder = "Real Name"
+  div.row.align-center
+    div.column.small-12.medium-6.large-6
+      fieldset#user_email
+        = input value = email type = "email" placeholder = "Email"
+  div.row.align-center
+    div.column.small-12.medium-6.large-6
+      fieldset#user_password
+        = input value = password type = "password" placeholder = "Password"
+  div.row.align-center
+    div.column.small-12.medium-6.large-6
+      fieldset#user_password_confirmation
+        = input value = passwordConfirmation type = "password" placeholder = "Confirm the Password"
+  div.row.align-center
+    div.column.small-12.medium-6.large-6
+      fieldset#user_new_submit
+        button#user_new_submit_button.float-right.success.button{action 'validateRecaptcha'} Sign Up
+        div.g-recaptcha data-sitekey='{{siteKey}}' data-callback='recaptchaCallback' data-size='invisible'
