@@ -12,13 +12,14 @@ form#repository_new
     legend Content type
 
     ul
-      li = radio-choice value="ontology" groupValue=contentType radio-name = "contentType" icon = "fa-bug" label = "Ontology" help-text = "This repository contains mainly ontologies"
-      li = radio-choice value="model" groupValue=contentType radio-name = "contentType" icon = "fa-female" label = "Model" help-text = "This repository contains mainly models"
-      li = radio-choice value="specification" groupValue=contentType radio-name = "contentType" icon = "fa-hand-spock-o" label = "Specification" help-text = "This repository contains mainly specifications"
+      li = radio-choice value="ontology" groupValue=contentType radioName = "contentType" iconImage = "ontology" label = "Ontology" helpText = "This repository contains mainly ontologies"
+      li = radio-choice value="model" groupValue=contentType radioName = "contentType" iconImage = "model" label = "Model" helpText = "This repository contains mainly models"
+      li = radio-choice value="specification" groupValue=contentType radioName = "contentType" iconImage = "specification" label = "Specification" helpText = "This repository contains mainly specifications"
+      li = radio-choice value="mathematical" groupValue=contentType radioName = "contentType" iconImage = "mathematical" label = "Mathematical" helpText = "This repository contains mainly mathematical theories"
   fieldset#repository_new_access.fieldset
       legend Access
       ul
-        li = radio-choice value=true groupValue=publicAccess icon = "fa-unlock-alt" label = "Public" help-text = "Everyone can see this repository but only you can make changes"
-        li = radio-choice value=false groupValue=publicAccess icon = "fa-lock" label = "Private" help-text = "Only you can see this repository"
+        li = radio-choice value=true groupValue=publicAccess icon = "fa-unlock-alt" label = "Public" helpText = "Everyone can see this repository but only you can make changes"
+        li = radio-choice value=false groupValue=publicAccess icon = "fa-lock" label = "Private" helpText = "Only you can see this repository"
   fieldset#repository_new_submit
     button.float-right.success.button{action "submitNewRepo"} Save
