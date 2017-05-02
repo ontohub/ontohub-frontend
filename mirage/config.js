@@ -1,5 +1,6 @@
-export default function() {
+import _ from 'lodash';
 
+export default function() {
   this.passthrough('/write-coverage');
 
   this.urlPrefix = 'http://localhost:3000';
@@ -11,36 +12,58 @@ export default function() {
     let user = schema.users.find(request.params.id),
         organization = schema.organizations.find(request.params.id);
 
-    return (organization || user);
+    return organization || user;
   });
 
-  this.get('/version', () =>
-    ({
-      data: {
-        attributes: {
-          commit: '21e9779',
-          commits_since_tag: 65,
-          full: '0.0.0-65-g21e9779',
-          tag: '0.0.0'
+  this.get('/version', () => ({
+    data: {
+      attributes: {
+        commit: '21e9779',
+        commits_since_tag: 65,
+        full: '0.0.0-65-g21e9779',
+        tag: '0.0.0'
+      },
+      id: 'version',
+      type: 'versions'
+    }
+  }));
+
+  this.get('/search', function(schema) {
+    let users = this.serialize(schema.users.all()).data,
+        organizations = this.serialize(schema.organizations.all()).data,
+        repositories = this.serialize(schema.repositories.all()).data,
+        attributes = {
+          id: 'search_result',
+          repositoriesCount: repositories.length,
+          organizationalUnitsCount: users.length + organizations.length,
+          resultsCount: repositories.length + users.length + organizations.length,
+          organizationIds: _.map(organizations, (o) => o.id),
+          userIds: _.map(users, (o) => o.id),
+          repositoryIds: _.map(repositories, (o) => o.id)
         },
-        id: 'version',
-        type: 'versions'
-      }
-    })
-  )
+        result = this.serialize(schema.searchResults.new(attributes)),
+        relOrganizations = result.data.relationships.organizations,
+        relUsers = result.data.relationships.users;
+    result.data.relationships.organizational_units = {
+      data: _.concat(relUsers.data, relOrganizations.data)
+    };
+    delete result.data.relationships.users;
+    delete result.data.relationships.organizations;
+    return result;
+  });
 
   this.post('/users');
   this.post('/users/sign_in', () => ({
-    "data": {
-      "attributes": {
+    data: {
+      attributes: {
         // eslint-disable-next-line max-len
-        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ1c2VyX2lkIjoiYWRhIiwiZXhwIjoxNDkyNjAwOTkxfQ.fepsfgUuzVhCYRoqD25AjnoD1Hj96WvF1B35-w2jEt7iONi-k7mk-YXhSaXOUiVMQGLT4Xl22Dlekf-STxLz3A"
+        token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ1c2VyX2lkIjoiYWRhIiwiZXhwIjoxNDkyNjAwOTkxfQ.fepsfgUuzVhCYRoqD25AjnoD1Hj96WvF1B35-w2jEt7iONi-k7mk-YXhSaXOUiVMQGLT4Xl22Dlekf-STxLz3A'
       },
-      "id": "authenticationtoken",
-      "type": "authentication_tokens"
+      id: 'authenticationtoken',
+      type: 'authentication_tokens'
     },
-    "jsonapi": {
-      "version": "1.0"
+    jsonapi: {
+      version: '1.0'
     }
   }));
   this.get('/users/:id');
@@ -60,9 +83,9 @@ export default function() {
 
     attrs.id = `${owner.id}/${slug}`;
 
-    if(owner.type === 'users') {
+    if (owner.type === 'users') {
       attrs.ownerUserId = owner.id;
-    } else if(owner.type === 'organizations') {
+    } else if (owner.type === 'organizations') {
       attrs.ownerOrganizationId = owner.id;
     }
     delete attrs.ownerId;
@@ -84,9 +107,9 @@ export default function() {
         repo = schema.repositories.find(repoId),
         attrs = this.normalizedRequestAttrs();
 
-    if(repo.ownerUserId) {
+    if (repo.ownerUserId) {
       attrs.ownerUserId = repo.ownerUserId;
-    } else if(repo.ownerOrganizationId) {
+    } else if (repo.ownerOrganizationId) {
       attrs.ownerOrganizationId = repo.ownerUserId;
     }
 
