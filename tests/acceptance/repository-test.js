@@ -2,6 +2,7 @@ import { describe, it, beforeEach, afterEach } from 'mocha';
 import { expect } from 'chai';
 import startApp from '../helpers/start-app';
 import destroyApp from '../helpers/destroy-app';
+import { authenticateSession } from 'ontohub-frontend/tests/helpers/ember-simple-auth';
 
 describe('Acceptance | repository', () => {
   let application;
@@ -48,5 +49,21 @@ describe('Acceptance | repository', () => {
         expect(find('span', header).text()).to.equal(newDescription);
       });
     });
-  })
+  });
+
+  describe('New repository page', () => {
+    beforeEach(() => {
+      authenticateSession(Application, {
+        data: {
+          id: "authenticationtoken",
+          type: "authentication_tokens",
+          attributes: {
+            // eslint-disable-next-line max-len
+            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ1c2VyX2lkIjoiYWRhIiwiZXhwIjoxNDkzMTkyNjAyfQ._vLn9KCMOfhTls26mRW_3Z322UmxsIidzLiE7uPJGCpTf_NluBiWbXCe-6ifyloR61VKjJU4kwF4-4-zEasSPw"
+          }
+        },
+        jsonapi: { version: "1.0" }
+      });
+    });
+  });
 });
