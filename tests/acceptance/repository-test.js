@@ -2,7 +2,9 @@ import { describe, it, beforeEach, afterEach } from 'mocha';
 import { expect } from 'chai';
 import startApp from '../helpers/start-app';
 import destroyApp from '../helpers/destroy-app';
-import { authenticateSession } from 'ontohub-frontend/tests/helpers/ember-simple-auth';
+import {
+  authenticateSession
+} from 'ontohub-frontend/tests/helpers/ember-simple-auth';
 
 describe('Acceptance | repository', () => {
   let application;
@@ -32,7 +34,9 @@ describe('Acceptance | repository', () => {
             name = find('h1', header),
             description = find('span', header);
 
-      expect(name.text()).to.equal(`${this.test.repository.name} / ${this.test.user.name}`);
+      expect(name.text()).to.equal(
+        `${this.test.repository.name} / ${this.test.user.name}`
+      );
       expect(description.text()).to.equal(this.test.repository.description);
     });
 
@@ -52,17 +56,44 @@ describe('Acceptance | repository', () => {
   });
 
   describe('New repository page', () => {
-    beforeEach(() => {
+    beforeEach(function() {
+      this.currentTest.user = server.create('user', { name: 'Ada' });
       authenticateSession(Application, {
         data: {
-          id: "authenticationtoken",
-          type: "authentication_tokens",
+          id: 'authenticationtoken',
+          type: 'authentication_tokens',
           attributes: {
             // eslint-disable-next-line max-len
-            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ1c2VyX2lkIjoiYWRhIiwiZXhwIjoxNDkzMTkyNjAyfQ._vLn9KCMOfhTls26mRW_3Z322UmxsIidzLiE7uPJGCpTf_NluBiWbXCe-6ifyloR61VKjJU4kwF4-4-zEasSPw"
+            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ1c2VyX2lkIjoiYWRhIiwiZXhwIjoxNDkzMTkyNjAyfQ._vLn9KCMOfhTls26mRW_3Z322UmxsIidzLiE7uPJGCpTf_NluBiWbXCe-6ifyloR61VKjJU4kwF4-4-zEasSPw'
           }
         },
-        jsonapi: { version: "1.0" }
+        jsonapi: { version: '1.0' }
+      });
+      visit('/new');
+    });
+
+    it('Displays the available namespaces', function() {
+      const namespaceField = find('#repository_new_name select');
+      expect(namespaceField.text()).to.equal(this.test.user.name);
+    });
+
+    it('Creates a new repository and redirects', function() {
+      const name = 'some repo',
+            description = 'This is the repository description',
+            expectedId = `${this.test.user.id}/some-repo`;
+      fillIn('#repository_new_name input', name);
+      fillIn('#repository_new_description input', description);
+      click('label:contains(Model)');
+      click('label:contains(Private)');
+      click('#repository_new_submit button');
+      andThen(() => {
+        const repo = server.db.repositories[0];
+        expect(repo.contentType).to.equal('model');
+        expect(repo.publicAccess).to.be.false;
+        expect(repo.name).to.equal(name);
+        expect(repo.id).to.equal(expectedId);
+        expect(repo.description).to.equal('This is the repository description');
+        expect(currentURL()).to.equal(`/${expectedId}`);
       });
     });
   });
