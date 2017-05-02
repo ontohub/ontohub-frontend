@@ -11,6 +11,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
+    "devtest": "ember test --serve",
     "check-upgrade": "npm-check-updates",
     "upgrade": "npm-check-updates -u"
   },
@@ -49,7 +50,6 @@
     "ember-cli-sri": "~2.1.0",
     "ember-cli-test-loader": "^2.1.0",
     "ember-cli-uglify": "~1.2.0",
-    "ember-cli-yadda": "0.2.1",
     "ember-css-modules": "^0.6.5",
     "ember-data": "^2.12.1",
     "ember-export-application-global": "^2.0.0",
