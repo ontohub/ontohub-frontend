@@ -9,12 +9,12 @@
       li.is-dropdown-submenu-parent.opens-left role="menuitem"
         = if isAuthenticated
           a#new_menu_link = fa-icon 'fa-plus'
-          ul.menu.submenu.is-dropdown-submenu.vertical.first-sub
+          ul.menu.submenu.is-dropdown-submenu.vertical.first-sub id="new_menu"
             li = link-to 'New repository' 'organizationalUnit.repository.new' title = 'New repository'
       li.is-dropdown-submenu-parent.opens-left role="menuitem"
         = if isAuthenticated
           a#user_menu_link = gravatar-image email=authenticatedUser.authenticatedUser.email defaultImage='identicon' size=24 retina=true title=authenticatedUser.authenticatedUser.name class='avatar'
-          ul.menu.submenu.is-dropdown-submenu.vertical.first-sub
+          ul.menu.submenu.is-dropdown-submenu.vertical.first-sub id="user_menu"
             li: span
               | Signed in as
               b = authenticatedUser.authenticatedUser.name
