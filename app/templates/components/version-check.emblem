@@ -1,0 +1,5 @@
+div.version-check
+  if isIncompatible
+    div.alert.callout#version-mismatch
+      h4 Version mismatch!
+      p The version of the backend does not match the version required by the frontend!

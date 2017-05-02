@@ -1,4 +1,5 @@
 = title 'Ontohub' prepend=true separator=' · '
+= version-check version=model versionConfig=versionConfig
 = top-bar signInCallback=(action 'signin') signOutCallback=(action 'signout') isAuthenticated=session.isAuthenticated
 
 .page-wrapper
