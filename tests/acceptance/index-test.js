@@ -3,22 +3,36 @@ import { expect } from 'chai';
 import startApp from '../helpers/start-app';
 import destroyApp from '../helpers/destroy-app';
 
-describe('Acceptance | index', function() {
+describe('Acceptance | index', () => {
   let application;
 
-  beforeEach(function() {
+  beforeEach(() => {
     application = startApp();
+    visit('/');
   });
 
-  afterEach(function() {
+  afterEach(() => {
     destroyApp(application);
   });
 
-  it('can visit /index', function() {
-    visit('/index');
+  it('can visit /', () => {
+    expect(currentURL()).to.equal('/');
+  });
 
-    return andThen(() => {
-      expect(currentURL()).to.equal('/index');
-    });
+  it('shows the welcome message', () => {
+    const header = find('.top-route-header'),
+          heading = find('h1', header),
+          subheading = find('p.help-text', header);
+
+    expect(heading.text()).to.equal('Welcome to Ontohub!');
+    // eslint-disable-next-line max-len
+    expect(subheading.text()).to.equal('Repositories and proof tools for Ontologies, Models and Specifications (OMS)');
+  });
+
+  it('shows the development note', () => {
+    const warning = find('.page-content .warning.callout'),
+          heading = find('h4', warning);
+
+    expect(heading.text()).to.equal('Please note:');
   });
 });
