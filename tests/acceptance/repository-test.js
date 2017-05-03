@@ -58,7 +58,7 @@ describe('Acceptance | repository', () => {
   describe('New repository page', () => {
     beforeEach(function() {
       this.currentTest.user = server.create('user', { name: 'Ada' });
-      authenticateSession(Application, {
+      authenticateSession(application, {
         data: {
           id: 'authenticationtoken',
           type: 'authentication_tokens',

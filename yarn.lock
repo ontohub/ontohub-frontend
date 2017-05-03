@@ -3021,15 +3021,6 @@ ember-cli-version-checker@^1.0.2, ember-cli-version-checker@^1.1.4, ember-cli-ve
   dependencies:
     semver "^5.3.0"
 
-ember-cli-yadda@0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-yadda/-/ember-cli-yadda-0.2.1.tgz#42e45ac26b5f9f28c6aaea27afefc75233509fdb"
-  dependencies:
-    broccoli-filter "^1.2.2"
-    ember-cli-babel "^5.1.5"
-    inflected "^1.1.6"
-    yadda "*"
-
 ember-cli@^2.12.1:
   version "2.12.1"
   resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-2.12.1.tgz#33dd9341677f67f29bc0e286b129877ee15e5bcb"
@@ -4558,10 +4549,6 @@ indexof@0.0.1:
 infinity-agent@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/infinity-agent/-/infinity-agent-2.0.3.tgz#45e0e2ff7a9eb030b27d62b74b3744b7a7ac4216"
-
-inflected@^1.1.6:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/inflected/-/inflected-1.1.7.tgz#c393df6e28472d0d77b3082ec3aa2091f4bc96f9"
 
 inflection@^1.7.0, inflection@^1.7.1, inflection@^1.8.0:
   version "1.12.0"
@@ -8819,10 +8806,6 @@ xtend@^4.0.0, xtend@~4.0.0, xtend@~4.0.1:
 y18n@^3.2.0, y18n@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-
-yadda@*, yadda@0.17.10:
-  version "0.17.10"
-  resolved "https://registry.yarnpkg.com/yadda/-/yadda-0.17.10.tgz#50dd5ec8e2a366e19efada18b84ef9a2450a0363"
 
 yallist@^2.0.0:
   version "2.1.2"
