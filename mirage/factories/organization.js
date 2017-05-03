@@ -9,10 +9,9 @@ const schemaModel = SchemaFactory.generate(schema);
 export default Factory.extend(Object.assign({}, schemaModel, {
 // export default Factory.extend({
   name(i) {
-    return `Organization${i}`;
+    return `Organization ${i}`;
   },
   id() {
-    return _.lowerCase(faker.helpers.slugify(this.name));
-  },
-  repositoryIds: []
+    return faker.helpers.slugify(_.lowerCase(this.name));
+  }
 }));

@@ -7,6 +7,9 @@ import schema from 'ontohub-frontend/schemas/models/user_model';
 const schemaModel = SchemaFactory.generate(schema);
 
 export default Factory.extend(Object.assign({}, schemaModel, {
+  name(i) {
+    return `User ${i}`
+  },
   id() {
     return faker.helpers.slugify(_.lowerCase(this.name));
   }

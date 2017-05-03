@@ -35,7 +35,7 @@ describe('Acceptance | repository', () => {
             description = find('span', header);
 
       expect(name.text()).to.equal(
-        `${this.test.repository.name} / ${this.test.user.name}`
+        `${this.test.user.name} / ${this.test.repository.name}`
       );
       expect(description.text()).to.equal(this.test.repository.description);
     });

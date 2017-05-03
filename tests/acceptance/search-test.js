@@ -71,5 +71,14 @@ describe('Acceptance | search', () => {
         expect(results.children()).to.have.length(this.test.organizationalUnitCount);
       });
     });
+
+    it('resets the tabs correctly upon re-entering page', function() {
+      click('a:contains(Users)');
+      click('a:contains(Ontohub)');
+      click('a:contains(Search)');
+      andThen(() => {
+        expect(currentURL()).to.equal('/search');
+      })
+    });
   });
 });

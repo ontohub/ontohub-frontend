@@ -71,5 +71,17 @@ describe('Acceptance | organization', () => {
         });
       });
     });
-  })
+
+    it('resets the tabs correctly upon re-entering page', function() {
+      const membersTab = find('.top-route-header .tabs a:contains(Members)');
+      click(membersTab);
+      click(`.page-content a:contains(${this.test.members[0].name})`);
+      click('a:contains(Organizations)');
+      click(`.page-content a:contains(${this.test.organization.name})`);
+      andThen(() => {
+        expect(currentURL()).to.not.equal(`/${this.test.organization.id}?tab=members`)
+        expect(currentURL()).to.equal(`/${this.test.organization.id}`)
+      });
+    });
+  });
 });

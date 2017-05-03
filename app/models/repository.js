@@ -11,7 +11,12 @@ export default DS.Model.extend(schemaModel, {
   ownerOrganization: DS.belongsTo('organization'),
   owner: Ember.computed('ownerUser', 'ownerOrganization', {
     get() {
-      return (this.get('ownerUser') || this.get('ownerOrganization'));
+      if(this.get('ownerUser').content) {
+        return this.get('ownerUser');
+      } else {
+        return this.get('ownerOrganization');
+      }
+      // return (this.get('ownerUser') || this.get('ownerOrganization'));
     },
     set(key, value) {
       if(value.constructor.modelName === 'user') {

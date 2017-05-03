@@ -8,6 +8,11 @@ export default Ember.Service.extend({
         session = this.get('session.data.authenticated.data.attributes'),
         tokenData = {};
 
+    /*
+     * We can't test the sessions directly because of problems with the mirage
+     * AJAX handler
+     */
+    /* istanbul ignore else */
     if(session && Object.keys(session).length > 0) {
       tokenData = authenticator.getTokenData(session.token);
     }
