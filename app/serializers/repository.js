@@ -1,26 +1,43 @@
 import ApplicationSerializer from './application';
+import _ from 'lodash';
 
 export default ApplicationSerializer.extend({
 
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
-    let owner = payload.data.relationships.owner;
+    let data = payload.data,
+        isArray = true;
+    if(!Array.isArray(data)) {
+      data = [payload.data];
+      isArray = false;
+    }
+    data = _.map(data, (d) => {
+      let owner = d.relationships.owner;
 
-    /*
-     * We can't test this with mirage, as we send `owner_user` or
-     * `owner_organization` instead of `owner`
-     */
-    /* istanbul ignore if */
-    if(owner) {
-      let type = owner.data.type;
+      /*
+      * We can't test this with mirage, as we send `owner_user` or
+      * `owner_organization` instead of `owner`
+      */
+      /* istanbul ignore if */
+      if(owner) {
+        let type = owner.data.type;
 
-      if(type === 'users') {
-        payload.data.relationships.owner_user = owner;
-      } else if(type === 'organizations') {
-        payload.data.relationships.owner_organization = owner;
+        if(type === 'users') {
+          d.relationships.owner_user = owner;
+        } else if(type === 'organizations') {
+          d.relationships.owner_organization = owner;
+        }
+
+        delete d.relationships.owner;
       }
 
-      delete payload.data.relationships.owner;
+      return d;
+    });
+
+    if(!isArray) {
+      data = data[0];
     }
+
+    payload.data = data;
 
     return this._super(store, primaryModelClass, payload, id, requestType);
   },
