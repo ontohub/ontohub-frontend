@@ -20,8 +20,14 @@ describe('Acceptance | user', () => {
       const organizationCount = 1,
             repositoryCount = 2,
             user = server.create('user'),
-            organizations = server.createList('organization', organizationCount, { memberIds: [user.id] }),
-            repositories = server.createList('repository', repositoryCount, { ownerUserId: user.id }),
+            organizations = server.createList(
+              'organization',
+              organizationCount,
+              { memberIds: [user.id] }),
+            repositories = server.createList(
+              'repository',
+              repositoryCount,
+              { ownerUserId: user.id }),
             testData = {
               user,
               organizations,
@@ -62,12 +68,16 @@ describe('Acceptance | user', () => {
     });
 
     it('displays the organizations', function() {
-      const organizationsTab = find('.top-route-header .tabs a:contains(Organizations)');
+      const organizationsTab = find(
+        '.top-route-header .tabs a:contains(Organizations)'
+      );
       click(organizationsTab);
       andThen(() => {
         const container = find('.page-content');
 
-        expect(container.children()).to.have.length(this.test.organizationCount);
+        expect(container.children()).to.have.length(
+          this.test.organizationCount
+        );
         _.map(_.zip(container.children(), this.test.organizations), (e) => {
           expect(find('h1', e[0]).text()).to.contain(e[1].name);
         });
@@ -75,14 +85,18 @@ describe('Acceptance | user', () => {
     });
 
     it('resets the tabs correctly upon re-entering page', function() {
-      const organizationsTab = find('.top-route-header .tabs a:contains(Organizations)');
+      const organizationsTab = find(
+        '.top-route-header .tabs a:contains(Organizations)'
+      );
       click(organizationsTab);
       click(`.page-content a:contains(${this.test.organizations[0].name})`);
       click('a:contains(Members)');
       click(`.page-content a:contains(${this.test.user.name})`);
       andThen(() => {
-        expect(currentURL()).to.not.equal(`/${this.test.user.id}?tab=organizations`)
-        expect(currentURL()).to.equal(`/${this.test.user.id}`)
+        expect(currentURL()).to.not.equal(
+          `/${this.test.user.id}?tab=organizations`
+        );
+        expect(currentURL()).to.equal(`/${this.test.user.id}`);
       });
     });
   });

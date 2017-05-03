@@ -6,8 +6,11 @@ import schema from 'ontohub-frontend/schemas/models/repository_model';
 
 const schemaModel = SchemaFactory.generate(schema);
 
-export default Factory.extend(Object.assign({}, schemaModel, {
-  id() {
-    return `${this.ownerUserId || this.ownerOrganizationId}/${faker.helpers.slugify(_.lowerCase(this.name))}`;
-  }
-}));
+export default Factory.extend(
+  Object.assign({}, schemaModel, {
+    id() {
+      let slug = faker.helpers.slugify(_.lowerCase(this.name));
+      return `${this.ownerUserId || this.ownerOrganizationId}/${slug}`;
+    }
+  })
+);

@@ -20,8 +20,12 @@ describe('Acceptance | organization', () => {
       const memberCount = 3,
             repositoryCount = 2,
             members = server.createList('user', memberCount),
-            organization = server.create('organization', { memberIds: _.map(members, (u) => u.id) }),
-            repositories = server.createList('repository', repositoryCount, { ownerOrganizationId: organization.id }),
+            organization = server.create('organization', {
+              memberIds: _.map(members, (u) => u.id)
+            }),
+            repositories = server.createList('repository', repositoryCount, {
+              ownerOrganizationId: organization.id
+            }),
             testData = {
               organization,
               members,
@@ -79,8 +83,10 @@ describe('Acceptance | organization', () => {
       click('a:contains(Organizations)');
       click(`.page-content a:contains(${this.test.organization.name})`);
       andThen(() => {
-        expect(currentURL()).to.not.equal(`/${this.test.organization.id}?tab=members`)
-        expect(currentURL()).to.equal(`/${this.test.organization.id}`)
+        expect(currentURL()).to.not.equal(
+          `/${this.test.organization.id}?tab=members`
+        );
+        expect(currentURL()).to.equal(`/${this.test.organization.id}`);
       });
     });
   });

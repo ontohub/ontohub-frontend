@@ -43,7 +43,10 @@ describe('Unit | Model | repository', () => {
       expect(relationship.key).to.equal('ownerOrganization');
       expect(relationship.kind).to.equal('belongsTo');
       Ember.run(() => {
-        let org = this.store().createRecord('organization', { id: 'some-organization' }),
+        let org = this.store().createRecord(
+                    'organization',
+                    { id: 'some-organization' }
+                  ),
             subj = this.subject();
         subj.set('owner', org);
         expect(subj.get('ownerOrganization.id')).to.equal(org.id);

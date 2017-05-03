@@ -36,6 +36,7 @@ export default function() {
           id: 'search_result',
           repositoriesCount: repositories.length,
           organizationalUnitsCount: users.length + organizations.length,
+          // eslint-disable-next-line max-len
           resultsCount: repositories.length + users.length + organizations.length,
           organizationIds: _.map(organizations, (o) => o.id),
           userIds: _.map(users, (o) => o.id),

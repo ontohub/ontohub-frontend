@@ -21,9 +21,11 @@ describe('Acceptance | search', () => {
             organizationCount = 2,
             repositoryCount = 20,
             users = server.createList('user', userCount),
-            organizations = server.createList('organization', organizationCount, {
-              ownerId: _.sample(users).id
-            }),
+            organizations = server.createList(
+              'organization',
+              organizationCount,
+              { ownerId: _.sample(users).id }
+            ),
             userRepositories = server.createList(
           'repository',
           repositoryCount / 2,
@@ -44,7 +46,7 @@ describe('Acceptance | search', () => {
       visit('/search');
     });
 
-    it('displays general search information', function() {
+    it('displays general search information', () => {
       const header = find('.top-route-header'),
             name = find('h1', header);
 
@@ -57,10 +59,10 @@ describe('Acceptance | search', () => {
       expect(results.children()).to.have.length(this.test.repositoryCount);
       let repoNames = _.map(this.test.repositories, (r) => r.attrs.id);
       _.map(results.children(), (r) => {
-        // Extract repository name without "Private" if repository is private
+        // Extract repository name without 'Private' if repository is private
         let name = find('h1 a', r)[0].childNodes[0].nodeValue;
-        expect(name).to.be.oneOf(repoNames)
-      })
+        expect(name).to.be.oneOf(repoNames);
+      });
     });
 
     it('shows the found organizational units', function() {
@@ -68,17 +70,19 @@ describe('Acceptance | search', () => {
       andThen(() => {
         const results = find('#results');
 
-        expect(results.children()).to.have.length(this.test.organizationalUnitCount);
+        expect(results.children()).to.have.length(
+          this.test.organizationalUnitCount
+        );
       });
     });
 
-    it('resets the tabs correctly upon re-entering page', function() {
+    it('resets the tabs correctly upon re-entering page', () => {
       click('a:contains(Users)');
       click('a:contains(Ontohub)');
       click('a:contains(Search)');
       andThen(() => {
         expect(currentURL()).to.equal('/search');
-      })
+      });
     });
   });
 });
