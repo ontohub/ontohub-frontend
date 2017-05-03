@@ -49,6 +49,7 @@
     "ember-cli-sri": "~2.1.0",
     "ember-cli-test-loader": "^2.1.0",
     "ember-cli-uglify": "~1.2.0",
+    "ember-cp-validations": "^3.3.1",
     "ember-css-modules": "^0.6.5",
     "ember-data": "^2.13.1",
     "ember-export-application-global": "^2.0.0",
