@@ -8,6 +8,7 @@ export default Ember.Controller.extend({
     })
   }.on('init'),
   siteKey: config.recaptcha_site_key,
+  application: Ember.inject.controller(),
 
   submitNewUser(token) {
     let user = this.get('model')
@@ -15,7 +16,12 @@ export default Ember.Controller.extend({
     user.validate().then(({ validations }) => {
       if (validations.get('isValid')) {
         user.save().then((user) => {
-          this.transitionToRoute('organizationalUnit.show', user)
+          // sign in the user
+          this.get('application').
+            send('signin', user.get('id'), user.get('password'), () => {
+              // open the user's profile page
+              this.transitionToRoute('organizationalUnit.show', user)
+            })
         })
       }
       return false
