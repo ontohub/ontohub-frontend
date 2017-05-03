@@ -11,13 +11,16 @@ const schemaModel = JsonSchemaModel.generate(schema),
         name: {
           description: 'Username',
           validators: [
+            validator('ds-error'),
             validator('presence', { presence: true, ignoreBlank: true }),
             validator('length', { min: 3, max: 100 }),
-            validator('username-available', { debounce: 500 })]
+            validator('username-available', { debounce: 500 })
+          ]
         },
         password: {
           description: 'Password',
           validators: [
+            validator('ds-error'),
             validator('presence', { presence: true, ignoreBlank: true }),
             validator('length', { min: 10, max: 128 })
           ]
@@ -25,6 +28,7 @@ const schemaModel = JsonSchemaModel.generate(schema),
         passwordConfirmation: {
           description: 'Password Confirmation',
           validators: [
+            validator('ds-error'),
             validator('presence', { presence: true, ignoreBlank: true }),
             validator('confirmation', {
               on: 'password',
@@ -36,6 +40,7 @@ const schemaModel = JsonSchemaModel.generate(schema),
         email: {
           description: 'Email',
           validators: [
+            validator('ds-error'),
             validator('presence', { presence: true, ignoreBlank: true }),
             validator('format', { type: 'email' })
           ]

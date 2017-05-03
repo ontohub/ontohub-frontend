@@ -22,6 +22,12 @@ export default Ember.Controller.extend({
               // open the user's profile page
               this.transitionToRoute('organizationalUnit.show', user)
             })
+        }).catch(() => {
+          /* eslint-disable no-undef */
+          // This variable is defined as soon as `loadPlugin` has a value
+          // (which is as soon as the page has loaded).
+          grecaptcha.reset()
+          /* eslint-enable no-undef */
         })
       }
       return false
@@ -38,8 +44,8 @@ export default Ember.Controller.extend({
     },
     validateRecaptcha() {
       /* eslint-disable no-undef */
-      // This variable is defined as soon as `loadPlugin` has a value (which is
-      // as soon as the page has loaded).
+      // This variable is defined as soon as `loadPlugin` has a value
+      // (which is as soon as the page has loaded).
       grecaptcha.execute()
       /* eslint-enable no-undef */
     }
