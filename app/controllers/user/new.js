@@ -11,16 +11,15 @@ export default Ember.Controller.extend({
 
   submitNewUser(token) {
     let user = this.get('model')
-    user.set('name', this.get('name'))
-    user.set('realName', this.get('realName'))
-    user.set('email', this.get('email'))
-    user.set('password', this.get('password'))
-    user.set('passwordConfirmation', this.get('passwordConfirmation'))
     user.set('captcha', token)
-    user.save().then((user) => {
-      this.transitionToRoute('organizationalUnit.show', user)
+    user.validate().then(({ validations }) => {
+      if (validations.get('isValid')) {
+        user.save().then((user) => {
+          this.transitionToRoute('organizationalUnit.show', user)
+        })
+      }
+      return false
     })
-    return false;
   },
 
   actions: {
