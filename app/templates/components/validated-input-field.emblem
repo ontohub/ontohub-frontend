@@ -1,5 +1,4 @@
 = input class=errorClass value=value type=type placeholder=placeholder autofocus=autofocus
 if showErrorMessage
   if (v-get model attribute 'isInvalid')
-    span.form-error.is-visible
-      v-get model attribute 'message'
+    = validated-input-message model=model attribute=attribute updateErrorClass=updateErrorClass

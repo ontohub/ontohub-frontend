@@ -1,0 +1,2 @@
+span.form-error.is-visible
+  v-get model attribute 'message'
