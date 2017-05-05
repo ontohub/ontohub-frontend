@@ -10,5 +10,11 @@ export default Ember.Route.extend({
       into: 'application',
       outlet: 'top-route-header'
     })
+  },
+  actions: {
+    // This removes the sign-up page from the browser history
+    transitionToUserProfile(user) {
+      this.replaceWith('organizationalUnit.show', user)
+    }
   }
 })

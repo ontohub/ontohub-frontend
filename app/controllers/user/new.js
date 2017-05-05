@@ -18,9 +18,11 @@ export default Ember.Controller.extend({
         user.save().then((user) => {
           // sign in the user
           this.get('application').
-            send('signin', user.get('id'), user.get('password'), () => {
+            send('signin', user.get('id'), user.get('password'), (promise) => {
               // open the user's profile page
-              this.transitionToRoute('organizationalUnit.show', user)
+              promise.then(() => {
+                this.send('transitionToUserProfile', user)
+              })
             })
         }).catch(() => {
           /* eslint-disable no-undef */
