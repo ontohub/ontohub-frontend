@@ -17,6 +17,13 @@ const schemaModel = JsonSchemaModel.generate(schema),
             validator('username-available', { debounce: 500 })
           ]
         },
+        realName: {
+          description: 'Real Name',
+          validators: [
+            validator('ds-error'),
+            validator('length', { max: 100 }),
+          ]
+        },
         password: {
           description: 'Password',
           validators: [
