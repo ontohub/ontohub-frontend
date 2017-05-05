@@ -1,49 +1,24 @@
 form#user_new{action 'initializeRecaptcha'}
-  div.row.align-right
+  div.row.align-center
     div.column.small-12.medium-6.large-6
       fieldset#user_new_name
-        = input value = model.name type = "text" placeholder = "User Name" autofocus = true key-up = (action (mut showNameError) true) focus-out = (action (mut showNameError) true)
-    div.column.small-12.medium-3.large-3
-      if showNameError
-        if (v-get model 'name' 'isInvalid')
-          div.validation-error
-            v-get model 'name' 'message'
-  div.row.align-right
+        = validated-input-field model=model attribute='name' value=model.name type="text" placeholder="User Name" autofocus=true showErrorOnKeyUp=true
+  div.row.align-center
     div.column.small-12.medium-6.large-6
       fieldset#user_new_real_name
-        = input value = model.realName type = "text" placeholder = "Real Name (optional)" focus-out = (action (mut showRealNameError) true)
-    div.column.small-12.medium-3.large-3
-      if showRealNameError
-        if (v-get model 'realName' 'isInvalid')
-          div.validation-error
-            v-get model 'realName' 'message'
-  div.row.align-right
+        = validated-input-field model=model attribute='realName' value=model.realName type="text" placeholder="Real Name (optional)"
+  div.row.align-center
     div.column.small-12.medium-6.large-6
       fieldset#user_email
-        = input value = model.email type = "email" placeholder = "Email" focus-out = (action (mut showEmailError) true)
-    div.column.small-12.medium-3.large-3
-      if showEmailError
-        if (v-get model 'email' 'isInvalid')
-          div.validation-error
-            v-get model 'email' 'message'
-  div.row.align-right
+        = validated-input-field model=model attribute='email' value=model.email type="email" placeholder="Email"
+  div.row.align-center
     div.column.small-12.medium-6.large-6
       fieldset#user_password
-        = input value = model.password type = "password" placeholder = "Password" focus-out = (action (mut showPasswordError) true)
-    div.column.small-12.medium-3.large-3
-      if showPasswordError
-        if (v-get model 'password' 'isInvalid')
-          div.validation-error
-            v-get model 'password' 'message'
-  div.row.align-right
+        = validated-input-field model=model attribute='password' value=model.password type="password" placeholder="Password"
+  div.row.align-center
     div.column.small-12.medium-6.large-6
       fieldset#user_password_confirmation
-        = input value = model.passwordConfirmation type = "password" placeholder = "Confirm the Password" focus-out = (action (mut showPasswordConfirmationError) true)
-    div.column.small-12.medium-3.large-3
-      if showPasswordConfirmationError
-        if (v-get model 'passwordConfirmation' 'isInvalid')
-          div.validation-error
-            v-get model 'passwordConfirmation' 'message'
+        = validated-input-field model=model attribute='passwordConfirmation' value=model.passwordConfirmation dependOn=model.password type="password" placeholder="Confirm the Password"
   div.row.align-center
     div.column.small-12.medium-6.large-6
       fieldset#user_new_submit

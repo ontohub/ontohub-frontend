@@ -1,0 +1,75 @@
+// Adapted from Foundation for Sites by ZURB
+// and adjusted for success
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+// Inspired by bower_components/foundation-sites/scss/forms/_error.scss
+
+/// Background color to use for valid text inputs.
+/// @type Color
+$input-background-valid: get-color(success) !default;
+
+/// Color to use for labels of valid inputs.
+/// @type Color
+$form-label-color-valid: get-color(success) !default;
+
+/// Default font color for form success text.
+/// @type Color
+$input-success-color: get-color(success) !default;
+
+/// Default font size for form success text.
+/// @type Number
+$input-success-font-size: rem-calc(12) !default;
+
+/// Default font weight for form success text.
+/// @type Keyword
+$input-success-font-weight: $global-weight-bold !default;
+
+/// Styles the background and border of an input field to have an success state.
+///
+/// @param {Color} $background [$success-color] - Color to use for the background and border.
+/// @param {Number} $background-lighten [10%] - Lightness level of the background color.
+@mixin form-input-success(
+  $background: $input-background-valid,
+  $background-lighten: 10%
+) {
+  &:not(:focus) {
+    border-color: $background;
+    background-color: mix($background, $white, $background-lighten);
+    &::placeholder {
+      color: $background;
+    }
+  }
+}
+
+/// Adds success styles to a form element, using the values in the settings file.
+@mixin form-success {
+  display: block;
+  margin-top: $form-spacing * -0.5;
+  margin-bottom: $form-spacing;
+
+  font-size: $input-success-font-size;
+  font-weight: $input-success-font-weight;
+  color: $input-success-color;
+}
+
+@mixin foundation-form-success {
+  // Sucess class for valid inputs
+  .is-valid-input {
+    @include form-input-success;
+  }
+
+  // Sucess class for labels of valid outputs
+  .is-valid-label {
+    color: $form-label-color-valid;
+  }
+
+  // Form success element
+  .form-success {
+    @include form-success;
+
+    &.is-visible {
+      display: block;
+    }
+  }
+}

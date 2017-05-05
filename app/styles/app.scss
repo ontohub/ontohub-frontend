@@ -6,3 +6,6 @@ $global-flexbox: true;
 
 @import 'foundation-sites/foundation';
 @include foundation-everything(true);
+
+@import 'form-success';
+@include foundation-form-success;
