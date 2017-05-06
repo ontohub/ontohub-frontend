@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
             send('signin', user.get('id'), user.get('password'), (promise) => {
               // open the user's profile page
               promise.then(() => {
-                this.send('transitionToUserProfile', user)
+                this.send('transitionToUserProfile', user.get('id'))
               })
             })
         }).catch(() => {
