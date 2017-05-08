@@ -1,0 +1,43 @@
+Ontohub 2.0 Frontend Documentation
+
+Diese Dokumentation beschäftigt sich mit dem Frontend von “Ontohub 2.0”, 
+und beschreibt dessen grundlegendes Konzept und Aufbau. Wir wollen somit 
+einen kurzen Überblick über die neue Benutzeroberfläche und der erreichbaren 
+Funktionen geben. Die Website “Ontohub.org” soll durch ein schlichtes und 
+übersichtliches Design verbessert werden. Der Nutzer soll durch dieses 
+neue Konzept alle wichtigen Funktionen schneller erreichen können. 
+Damit wird die Benutzerfreundlichkeit erhöht.
+
+Beim öffnen der Website soll der Nutzer auf eine übersichtliche Landingpage gelangen, 
+hier wird erstmals in angemeldete und unangemeldete User unterschieden.
+Für unangemeldete Nutzer wird auf der Landingpage die beliebtesten (nach Aufrufen, etc.) 
+und die kürzlich geupdatete Repositories/ Ontologien angezeigt. 
+Nach einer Anmeldung werden dazu auch noch die wichtigsten eigenen Repositories 
+(die der Nutzer beispielsweise als letztes aufgerufen hat) aufgelistet.
+Im oberen Bereich der Website soll eine Menüzeile angezeigt werden, 
+die die wichtigsten Shortcuts zu den wichtigsten Funktionen (wie … ), 
+und eine Login Funktion auf der rechten Seite bereitstellt. 
+Unter Anderem auch eine ausführliche Suchfunktion, die mit Hilfe einer ausklappbaren Eingabezeile 
+und Filterfunktion dargestellt werden soll.
+
+Es gibt verschiedene Views auf Repositories, Ontologien und Files. 
+Diese sollen alle ähnlich aufgebaut sein, sodass die Nutzung und die Navigation 
+zwischen diesen vereinfacht wird. Die Inhalte werden so dargestellt, 
+wie die Rechte des Owners es bestimmen. Als unangemeldeter Nutzer bekommt man beispielsweise 
+nur die grundlegende Übersicht und Zugriff auf die Daten und hat somit nur Leserechte.
+Im Bearbeitungsmodus für die OMS (Ontologies, Modifikations, Spezifikations) wird auf eine 
+modulare Ansicht gesetzt. Damit kann der Nutzer selbst entscheiden welche Funktionen er benötigt 
+und diese über ausklappbare Tabs aufrufen. So ist es möglich das Editor-Feld allein anzeigen zu lassen, 
+oder aber auch die Theorem-Beweis-Funktion als Tab daneben. Somit ist es möglich schnellen Zugriff 
+auf beliebige Funktionen zu gewährleisten (Auswahl der Tabs auf der rechten Seite der Website).
+Zudem soll auf der linken Seite ein festintegrierter Filebrowser vorhanden sein, den man ein- 
+und ausklappen kann. Hier wird ein Verzeichnisbaum angezeigt, der das navigieren durch Repositories 
+und verschiedene Files der Ontologien ermöglicht. Es ist auch vorstellbar, dass in diesem Filebrowser 
+die Möglichkeit besteht, sich Favoriten anzeigen zu lassen.
+Funktionen wie die Suche, Commit, Compare oder Versions sollen mit Pop-Ups dargestellt werden, 
+es wird also das Bild ausgegraut und darüber wird der Funktionsdialog mit den Einstellungen dazu angezeigt. 
+Danach wird dies einfach wieder ausgeblendet. Diese Funktion soll die häufigen Seitenwechsel eingrenzen.
+
+Insgesamt soll ein einheitliches Design erstellt werden, in dem neue Funktionen schnell 
+hinzugefügt werden können, ohne dass die Seitenstruktur geändert wird.
+
