@@ -2,9 +2,7 @@ import { describe, it, beforeEach, afterEach } from 'mocha';
 import { expect } from 'chai';
 import startApp from '../helpers/start-app';
 import destroyApp from '../helpers/destroy-app';
-import {
-  authenticateSession
-} from 'ontohub-frontend/tests/helpers/ember-simple-auth';
+import { signIn } from '../helpers/session';
 
 describe('Acceptance | repository', () => {
   let application;
@@ -58,17 +56,7 @@ describe('Acceptance | repository', () => {
   describe('New repository page', () => {
     beforeEach(function() {
       this.currentTest.user = server.create('user', { name: 'Ada' });
-      authenticateSession(application, {
-        data: {
-          id: 'authenticationtoken',
-          type: 'authentication_tokens',
-          attributes: {
-            // eslint-disable-next-line max-len
-            token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJ1c2VyX2lkIjoiYWRhIiwiZXhwIjoxNDkzMTkyNjAyfQ._vLn9KCMOfhTls26mRW_3Z322UmxsIidzLiE7uPJGCpTf_NluBiWbXCe-6ifyloR61VKjJU4kwF4-4-zEasSPw'
-          }
-        },
-        jsonapi: { version: '1.0' }
-      });
+      signIn(application);
       visit('/new');
     });
 
