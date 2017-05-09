@@ -61,7 +61,7 @@ describe('Acceptance | repository', () => {
     });
 
     it('displays the available namespaces', function() {
-      const namespaceField = find('#repository_new_name select');
+      const namespaceField = find('#repository-new-name select');
       expect(namespaceField.text()).to.equal(this.test.user.name);
     });
 
@@ -69,11 +69,11 @@ describe('Acceptance | repository', () => {
       const name = 'some repo',
             description = 'This is the repository description',
             expectedId = `${this.test.user.id}/some-repo`;
-      fillIn('#repository_new_name input', name);
-      fillIn('#repository_new_description input', description);
+      fillIn('#repository-new-name input', name);
+      fillIn('#repository-new-description input', description);
       click('label:contains(Model)');
       click('label:contains(Private)');
-      click('#repository_new_submit button');
+      click('#repository-new-submit button');
       andThen(() => {
         const repo = server.db.repositories[0];
         expect(repo.contentType).to.equal('model');
