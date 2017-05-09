@@ -60,12 +60,12 @@ describe('Acceptance | repository', () => {
       visit('/new');
     });
 
-    it('Displays the available namespaces', function() {
+    it('displays the available namespaces', function() {
       const namespaceField = find('#repository_new_name select');
       expect(namespaceField.text()).to.equal(this.test.user.name);
     });
 
-    it('Creates a new repository and redirects', function() {
+    it('creates a new repository and redirects', function() {
       const name = 'some repo',
             description = 'This is the repository description',
             expectedId = `${this.test.user.id}/some-repo`;
