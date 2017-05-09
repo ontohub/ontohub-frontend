@@ -15,29 +15,46 @@ und die kürzlich geupdatete Repositories/ Ontologien angezeigt.
 Nach einer Anmeldung werden dazu auch noch die wichtigsten eigenen Repositories 
 (die der Nutzer beispielsweise als letztes aufgerufen hat) aufgelistet.
 Im oberen Bereich der Website soll eine Menüzeile angezeigt werden, 
-die die wichtigsten Shortcuts zu den wichtigsten Funktionen (wie … ), 
-und eine Login Funktion auf der rechten Seite bereitstellt. 
-Unter Anderem auch eine ausführliche Suchfunktion, die mit Hilfe einer ausklappbaren Eingabezeile 
-und Filterfunktion dargestellt werden soll.
+die zum Beispiel eine Suchfunktion, die je nach Ort (global, this organisation/user, repository) 
+suchen soll, und eine Login Funktion auf der rechten Seite bereitstellt. 
+Unter Anderem gibt es auch eine ausführliche Suchfunktion, die mit Hilfe einer ausklappbaren 
+Eingabezeile und Filterfunktion neben der einfachen Suche dargestellt werden soll.
 
-Es gibt verschiedene Views auf Repositories, Ontologien und Files. 
-Diese sollen alle ähnlich aufgebaut sein, sodass die Nutzung und die Navigation 
-zwischen diesen vereinfacht wird. Die Inhalte werden so dargestellt, 
+Es soll ein Standard View für alle Zugriffe vorhanden sein, die aus zwei modularen Tabs besteht.
+Auf der linken Seite wird der Filebrowser als Verzeichnisbaum dargestellt und auf der rechten Seite 
+die Beschreibung/ Inhalt von den Repositories/ OMS. 
+Dazu können die unten genannten Funktionen dazu geschaltet werden, sodass der User sich 
+seine eigene View erstellen kann und sowohl die Nutzung als auch die Navigation vereinfacht wird. 
+Zum Beispiel gibt es 3 Fenster, für diese kann der Nutzer dann beliebig entscheiden, 
+welche der verschiedene Funktionen er sehen möchte.
+
+Die Inhalte werden so dargestellt, 
 wie die Rechte des Owners es bestimmen. Als unangemeldeter Nutzer bekommt man beispielsweise 
 nur die grundlegende Übersicht und Zugriff auf die Daten und hat somit nur Leserechte.
-Im Bearbeitungsmodus für die OMS (Ontologies, Modifikations, Spezifikations) wird auf eine 
-modulare Ansicht gesetzt. Damit kann der Nutzer selbst entscheiden welche Funktionen er benötigt 
-und diese über ausklappbare Tabs aufrufen. So ist es möglich das Editor-Feld allein anzeigen zu lassen, 
-oder aber auch die Theorem-Beweis-Funktion als Tab daneben. Somit ist es möglich schnellen Zugriff 
-auf beliebige Funktionen zu gewährleisten (Auswahl der Tabs auf der rechten Seite der Website).
-Zudem soll auf der linken Seite ein festintegrierter Filebrowser vorhanden sein, den man ein- 
-und ausklappen kann. Hier wird ein Verzeichnisbaum angezeigt, der das navigieren durch Repositories 
-und verschiedene Files der Ontologien ermöglicht. Es ist auch vorstellbar, dass in diesem Filebrowser 
+
+Es ist auch vorstellbar, dass im dargestellten Filebrowser 
 die Möglichkeit besteht, sich Favoriten anzeigen zu lassen.
 Funktionen wie die Suche, Commit, Compare oder Versions sollen mit Pop-Ups dargestellt werden, 
 es wird also das Bild ausgegraut und darüber wird der Funktionsdialog mit den Einstellungen dazu angezeigt. 
-Danach wird dies einfach wieder ausgeblendet. Diese Funktion soll die häufigen Seitenwechsel eingrenzen.
+Danach wird dies einfach wieder ausgeblendet. Diese Umsetzung soll die häufigen Seitenwechsel eingrenzen.
 
 Insgesamt soll ein einheitliches Design erstellt werden, in dem neue Funktionen schnell 
 hinzugefügt werden können, ohne dass die Seitenstruktur geändert wird.
+
+
+Funktionen als Tabs:
+- Filebrowser
+- Quelltext
+- Inhalt
+- Metadaten
+- Theorem Beweis
+- OMS Graph
+- Übersetzung
+
+Funktionen als PopUp:
+- Commit
+- erweiterte Suche mit Filter
+- Compare
+- Versionsmanagement/ Diff
+- schneller Zugriff auf Fehlermeldungen
 
