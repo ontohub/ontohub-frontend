@@ -52,11 +52,15 @@ const schemaModel = JsonSchemaModel.generate(schema),
             validator('format', { type: 'email' })
           ]
         }
-      }),
-      mixin = Object.assign({}, schemaModel, Validations)
+      })
 
-export default OrganizationalUnitModel.extend(mixin, {
+export default OrganizationalUnitModel.extend(schemaModel, Validations, {
   organizations: DS.hasMany('organization'),
+
+  // The passwordis only used for signing in and signing up:
+  password: DS.attr('string'),
+  // The passwordConfirmation is only used for signing up:
+  passwordConfirmation: DS.attr('string'),
   // The captcha is only used for signing up:
   captcha: DS.attr('string')
 })
