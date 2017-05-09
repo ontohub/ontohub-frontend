@@ -12,7 +12,9 @@ export default Ember.Route.extend({
     return this.get('store').find('version', 'version');
   },
   actions: {
-    sessionChanged() {
+    sessionChanged: /* istanbul ignore next */
+    // This is not testable, see `services/authenticated-user.js`
+    function() {
       this.store.unloadAll();
       this.refresh();
     }

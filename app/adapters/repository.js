@@ -13,6 +13,10 @@ export default ApplicationAdapter.extend({
   _urlForRecord(id) {
     let host = this.get('host'),
         url = `/repositories/${id}`;
+    /*
+     * This is configuration specific and can't be tested
+     */
+    /* istanbul ignore else */
     if(host) {
       url = `${host}${url}`;
     }

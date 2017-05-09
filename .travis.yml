@@ -10,17 +10,18 @@ cache:
     - "/home/travis/.yarn-cache"
 
 before_install:
-  - "npm config set spin false"
-  - "npm --version"
+  - "yarn --version"
   - "phantomjs --version"
+  - "git clone https://github.com/ontohub/ontohub-backend ../ontohub-backend"
+  - "ln -s $(readlink -f ../ontohub-backend/spec/support/api/schemas) app/schemas"
+  - "ls -la app/schemas"
 
 install:
-  - "npm install -g yarn bower"
   - "yarn install --pure-lockfile --no-emoji"
-  - "bower install"
+  - "yarn run bower install"
 
 script:
-  - "npm test"
+  - "yarn test"
 
 after_script:
   - "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"

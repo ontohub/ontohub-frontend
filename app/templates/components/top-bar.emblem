@@ -18,7 +18,7 @@
             li: span
               | Signed in as
               b = authenticatedUser.authenticatedUser.name
-            li = link-to 'Your profile' 'organizationalUnit.show' authenticatedUser.authenticatedUser.name
+            li = link-to 'Your profile' 'organizationalUnit.show' authenticatedUser.authenticatedUser.id
             li: hr
             li: a{action 'signout'} Sign out
         = else

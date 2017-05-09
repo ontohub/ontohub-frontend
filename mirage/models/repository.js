@@ -1,5 +1,6 @@
 import { Model, belongsTo } from 'ember-cli-mirage';
 
 export default Model.extend({
-  owner: belongsTo('organizationalUnit')
+  ownerOrganization: belongsTo('organization'),
+  ownerUser: belongsTo('user')
 });
