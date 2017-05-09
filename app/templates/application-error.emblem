@@ -1,0 +1,8 @@
+= log model.errors
+h1#error-title
+  | Error 
+  = model.errors.0.status
+p#error-description The server responded with an error
+ul#error-links
+  li = link-to "Home" "index"
+  li: a{action "back"} Go back

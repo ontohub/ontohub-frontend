@@ -112,3 +112,22 @@
 :global(img.avatar) {
   border-radius: .25rem;
 }
+
+:global(h1#error-title) {
+  color: #999;
+  margin-top: 30vh;
+  text-align: center;
+}
+:global(p#error-description) {
+  text-align: center;
+}
+:global(ul#error-links) {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    padding: 0.5em;
+  }
+}
