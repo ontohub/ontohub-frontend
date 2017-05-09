@@ -19,23 +19,22 @@ describe('Acceptance | search', () => {
     beforeEach(function() {
       const userCount = 5,
             organizationCount = 2,
-            repositoryCount = 20,
+            repositoryCount = 2 * 10,
             users = server.createList('user', userCount),
             organizations = server.createList(
               'organization',
-              organizationCount,
-              { ownerId: _.sample(users).id }
+              organizationCount
             ),
             userRepositories = server.createList(
-          'repository',
-          repositoryCount / 2,
-          { ownerUserId: _.sample(users).id }
-        ),
+              'repository',
+              repositoryCount / 2,
+              { ownerUserId: _.sample(users).id }
+            ),
             organizationRepositories = server.createList(
-          'repository',
-          repositoryCount / 2,
-          { ownerOrganizationId: _.sample(organizations).id }
-        ),
+              'repository',
+              repositoryCount / 2,
+              { ownerOrganizationId: _.sample(organizations).id }
+            ),
             testData = {
               organizationalUnitCount: userCount + organizationCount,
               organizationalUnits: _.concat(users, organizations),
@@ -62,6 +61,16 @@ describe('Acceptance | search', () => {
         // Extract repository name without 'Private' if repository is private
         let name = find('h1 a', r)[0].childNodes[0].nodeValue;
         expect(name).to.be.oneOf(repoNames);
+      });
+    });
+
+    it('shows that no OMS were found', () => {
+      click('a:contains(OMS)');
+
+      andThen(() => {
+        const results = find('#results');
+
+        expect(results.text()).to.equal('No OMS found.');
       });
     });
 

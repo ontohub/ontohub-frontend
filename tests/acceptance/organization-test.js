@@ -21,7 +21,7 @@ describe('Acceptance | organization', () => {
             repositoryCount = 2,
             members = server.createList('user', memberCount),
             organization = server.create('organization', {
-              memberIds: _.map(members, (u) => u.id)
+              members: members
             }),
             repositories = server.createList('repository', repositoryCount, {
               ownerOrganizationId: organization.id
@@ -39,18 +39,18 @@ describe('Acceptance | organization', () => {
 
     it('displays general organization information', function() {
       const header = find('.top-route-header'),
-            username = find('h1', header);
+            username = find('h1', header).text();
 
-      expect(username.text()).to.equal(this.test.organization.name);
+      expect(username).to.equal(this.test.organization.name);
     });
 
     it('displays the number of repositories and members', function() {
       const tabs = find('.top-route-header .tabs'),
-            repositoryTab = find('li:contains(Repositories)', tabs),
-            membersTab = find('li:contains(Members)', tabs);
+            repositoryTab = find('li:contains(Repositories)', tabs).text(),
+            membersTab = find('li:contains(Members)', tabs).text();
 
-      expect(repositoryTab.text()).to.contain(this.test.repositoryCount);
-      expect(membersTab.text()).to.contain(this.test.memberCount);
+      expect(repositoryTab).to.contain(this.test.repositoryCount);
+      expect(membersTab).to.contain(this.test.memberCount);
     });
 
     it('displays the repositories', function() {
@@ -83,9 +83,6 @@ describe('Acceptance | organization', () => {
       click('a:contains(Organizations)');
       click(`.page-content a:contains(${this.test.organization.name})`);
       andThen(() => {
-        expect(currentURL()).to.not.equal(
-          `/${this.test.organization.id}?tab=members`
-        );
         expect(currentURL()).to.equal(`/${this.test.organization.id}`);
       });
     });

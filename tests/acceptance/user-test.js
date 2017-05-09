@@ -93,9 +93,6 @@ describe('Acceptance | user', () => {
       click('a:contains(Members)');
       click(`.page-content a:contains(${this.test.user.name})`);
       andThen(() => {
-        expect(currentURL()).to.not.equal(
-          `/${this.test.user.id}?tab=organizations`
-        );
         expect(currentURL()).to.equal(`/${this.test.user.id}`);
       });
     });

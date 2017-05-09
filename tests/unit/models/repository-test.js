@@ -5,7 +5,6 @@ import Ember from 'ember';
 
 describe('Unit | Model | repository', () => {
   setupModelTest('repository', {
-    // Specify the other units that are required for this test.
     needs: ['model:user', 'model:organization']
   });
 
@@ -28,11 +27,11 @@ describe('Unit | Model | repository', () => {
       expect(relationship.kind).to.equal('belongsTo');
       Ember.run(() => {
         let user = this.store().createRecord('user', { id: 'somebody' }),
-            subj = this.subject();
-        subj.set('owner', user);
-        expect(subj.get('ownerUser.id')).to.equal(user.id);
-        expect(subj.get('ownerOrganization.id')).to.be.undefined;
-        expect(subj.get('owner.id')).to.equal(user.id);
+            subject = this.subject();
+        subject.set('owner', user);
+        expect(subject.get('ownerUser.id')).to.equal(user.id);
+        expect(subject.get('ownerOrganization.id')).to.be.undefined;
+        expect(subject.get('owner.id')).to.equal(user.id);
       });
     });
 
@@ -47,11 +46,11 @@ describe('Unit | Model | repository', () => {
                     'organization',
                     { id: 'some-organization' }
                   ),
-            subj = this.subject();
-        subj.set('owner', org);
-        expect(subj.get('ownerOrganization.id')).to.equal(org.id);
-        expect(subj.get('ownerUser.id')).to.be.undefined;
-        expect(subj.get('owner.id')).to.equal(org.id);
+            subject = this.subject();
+        subject.set('owner', org);
+        expect(subject.get('ownerOrganization.id')).to.equal(org.id);
+        expect(subject.get('ownerUser.id')).to.be.undefined;
+        expect(subject.get('owner.id')).to.equal(org.id);
       });
     });
   });

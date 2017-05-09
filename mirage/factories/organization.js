@@ -7,7 +7,6 @@ import schema from 'ontohub-frontend/schemas/models/organization_model';
 const schemaModel = SchemaFactory.generate(schema);
 
 export default Factory.extend(Object.assign({}, schemaModel, {
-// export default Factory.extend({
   name(i) {
     return `Organization ${i}`;
   },

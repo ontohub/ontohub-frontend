@@ -16,7 +16,6 @@ export default DS.Model.extend(schemaModel, {
       } else {
         return this.get('ownerOrganization');
       }
-      // return (this.get('ownerUser') || this.get('ownerOrganization'));
     },
     set(key, value) {
       if(value.constructor.modelName === 'user') {
