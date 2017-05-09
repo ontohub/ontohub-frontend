@@ -26,10 +26,11 @@ export default Ember.Component.extend({
       })
     },
     restoreDropDown() {
-      let dropDownElement =
-        Ember.$('.dropdown.menu > li.is-dropdown-submenu-parent.is-active')
+      let dropDownElement = this.$('.dropdown.menu .is-active'),
+          otherDropDownElements = this.$('.dropdown.menu .js-dropdown-active')
       dropDownElement.attr('data-is-click', false)
       dropDownElement.removeClass('is-active')
+      otherDropDownElements.removeClass('js-dropdown-active')
     }
   }
 })

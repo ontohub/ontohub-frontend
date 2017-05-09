@@ -5,7 +5,7 @@
     ul.menu
       = outlet 'search-bar'
   .top-bar-right
-    = zf-dropdown-menu disableHover=true clickOpen=true
+    = zf-dropdown-menu disableHover=true clickOpen=true id='user-menu'
       li.is-dropdown-submenu-parent.opens-left role="menuitem"
         = if isAuthenticated
           a#new_menu_link = fa-icon 'fa-plus'
@@ -32,6 +32,6 @@
               = input type = 'submit' value = 'Sign in' class = 'button'
               = if isLoading
                 div.loading Signing in...
-              = link-to 'user.new'
+              = link-to 'user.new' invokeAction='restoreDropDown'
                 = fa-icon 'fa-user-plus'
                 | Need an account?
