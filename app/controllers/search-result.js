@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
 export default Ember.Controller.extend({
   queryParams: ['type', 'q', 'content'],
@@ -7,15 +7,15 @@ export default Ember.Controller.extend({
   content: null,
 
   typeRepositories: Ember.computed('type', function() {
-    let type = this.get('type');
-    return (type == 'repositories') || (type == null);
+    let type = this.get('type')
+    return (type == 'repositories') || (type == null)
   }),
 
   typeOMS: Ember.computed('type', function() {
-    return (this.get('type') == 'oms');
+    return (this.get('type') == 'oms')
   }),
 
   typeUsers: Ember.computed('type', function() {
-    return (this.get('type') == 'users');
+    return (this.get('type') == 'users')
   })
-});
+})

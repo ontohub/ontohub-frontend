@@ -1,19 +1,19 @@
-import { describe, it, beforeEach, afterEach } from 'mocha';
-import { expect } from 'chai';
-import startApp from '../helpers/start-app';
-import destroyApp from '../helpers/destroy-app';
-import _ from 'lodash';
+import { describe, it, beforeEach, afterEach } from 'mocha'
+import { expect } from 'chai'
+import startApp from '../helpers/start-app'
+import destroyApp from '../helpers/destroy-app'
+import _ from 'lodash'
 
 describe('Acceptance | search', () => {
-  let application;
+  let application
 
   beforeEach(() => {
-    application = startApp();
-  });
+    application = startApp()
+  })
 
   afterEach(() => {
-    destroyApp(application);
-  });
+    destroyApp(application)
+  })
 
   describe('Search page', () => {
     beforeEach(function() {
@@ -40,58 +40,58 @@ describe('Acceptance | search', () => {
               organizationalUnits: _.concat(users, organizations),
               repositoryCount,
               repositories: _.concat(userRepositories, organizationRepositories)
-            };
-      Object.assign(this.currentTest, testData);
-      visit('/search');
-    });
+            }
+      Object.assign(this.currentTest, testData)
+      visit('/search')
+    })
 
     it('displays general search information', () => {
       const header = find('.top-route-header'),
-            name = find('h1', header);
+            name = find('h1', header)
 
-      expect(name.text()).to.equal('All repositories');
-    });
+      expect(name.text()).to.equal('All repositories')
+    })
 
     it('shows the found repositories', function() {
-      const results = find('#results');
+      const results = find('#results')
 
-      expect(results.children()).to.have.length(this.test.repositoryCount);
-      let repoNames = _.map(this.test.repositories, (r) => r.attrs.id);
+      expect(results.children()).to.have.length(this.test.repositoryCount)
+      let repoNames = _.map(this.test.repositories, (r) => r.attrs.id)
       _.map(results.children(), (r) => {
         // Extract repository name without 'Private' if repository is private
-        let name = find('h1 a', r)[0].childNodes[0].nodeValue;
-        expect(name).to.be.oneOf(repoNames);
-      });
-    });
+        let name = find('h1 a', r)[0].childNodes[0].nodeValue
+        expect(name).to.be.oneOf(repoNames)
+      })
+    })
 
     it('shows that no OMS were found', () => {
-      click('a:contains(OMS)');
+      click('a:contains(OMS)')
 
       andThen(() => {
-        const results = find('#results');
+        const results = find('#results')
 
-        expect(results.text()).to.equal('No OMS found.');
-      });
-    });
+        expect(results.text()).to.equal('No OMS found.')
+      })
+    })
 
     it('shows the found organizational units', function() {
-      click('a:contains(Users)');
+      click('a:contains(Users)')
       andThen(() => {
-        const results = find('#results');
+        const results = find('#results')
 
         expect(results.children()).to.have.length(
           this.test.organizationalUnitCount
-        );
-      });
-    });
+        )
+      })
+    })
 
     it('resets the tabs correctly upon re-entering page', () => {
-      click('a:contains(Users)');
-      click('a:contains(Ontohub)');
-      click('a:contains(Search)');
+      click('a:contains(Users)')
+      click('a:contains(Ontohub)')
+      click('a:contains(Search)')
       andThen(() => {
-        expect(currentURL()).to.equal('/search');
-      });
-    });
-  });
-});
+        expect(currentURL()).to.equal('/search')
+      })
+    })
+  })
+})

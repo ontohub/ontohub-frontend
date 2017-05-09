@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
 export default Ember.Service.extend({
   store: Ember.inject.service('store'),
@@ -6,7 +6,7 @@ export default Ember.Service.extend({
   tokenData: Ember.computed('session.data.authenticated', function() {
     let authenticator = Ember.getOwner(this).lookup('authenticator:jwt'),
         session = this.get('session.data.authenticated.data.attributes'),
-        tokenData = {};
+        tokenData = {}
 
     /*
      * We can't test the sessions directly because of problems with the mirage
@@ -14,12 +14,12 @@ export default Ember.Service.extend({
      */
     /* istanbul ignore else */
     if(session && Object.keys(session).length > 0) {
-      tokenData = authenticator.getTokenData(session.token);
+      tokenData = authenticator.getTokenData(session.token)
     }
 
-    return tokenData;
+    return tokenData
   }),
   authenticatedUser: Ember.computed('tokenData', function() {
-    return this.get('store').find('user', this.get('tokenData.user_id'));
+    return this.get('store').find('user', this.get('tokenData.user_id'))
   })
-});
+})

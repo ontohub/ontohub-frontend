@@ -42,6 +42,7 @@
     "one-var": ["error", "always"],
     "prefer-arrow-callback": ["warn", { "allowNamedFunctions": true }],
     "prefer-rest-params": ["error"],
+    "semi": ["warn", "never"],
     "semi-spacing": ["error"],
     "template-curly-spacing": ["error"]
   }

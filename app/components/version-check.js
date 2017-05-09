@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
 export default Ember.Component.extend({
   isIncompatible: Ember.computed('version', 'versionConfig', function() {

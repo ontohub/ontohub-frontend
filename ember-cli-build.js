@@ -1,9 +1,8 @@
-/* eslint-disable no-undef */
-/* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+/* eslint-env node */
+let EmberApp = require('ember-cli/lib/broccoli/ember-app')
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  let app = new EmberApp(defaults, {
     // Add options here
     'babel': {
       'optional': ['es6.spec.symbols'],
@@ -22,7 +21,7 @@ module.exports = function(defaults) {
         'syntax': require('postcss-scss')
       }
     }
-  });
+  })
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -37,5 +36,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
-};
+  return app.toTree()
+}

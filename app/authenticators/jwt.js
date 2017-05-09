@@ -1,4 +1,4 @@
-import Jwt from 'ember-simple-auth-token/authenticators/jwt';
+import Jwt from 'ember-simple-auth-token/authenticators/jwt'
 
 export default Jwt.extend({
   getAuthenticateData: /* istanbul ignore next */
@@ -9,8 +9,8 @@ export default Jwt.extend({
         [this.passwordField]: credentials.password,
         [this.identificationField]: credentials.identification
       }
-    };
+    }
 
-    return authentication;
+    return authentication
   }
-});
+})

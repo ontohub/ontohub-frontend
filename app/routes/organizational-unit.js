@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.find('organizationalUnit', params.organizational_unit_id);
+    return this.store.find('organizationalUnit', params.organizational_unit_id)
   }
-});
+})

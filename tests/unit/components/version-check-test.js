@@ -1,6 +1,6 @@
-import { expect } from 'chai';
-import { describe, it } from 'mocha';
-import { setupComponentTest } from 'ember-mocha';
+import { expect } from 'chai'
+import { describe, it } from 'mocha'
+import { setupComponentTest } from 'ember-mocha'
 
 describe('Unit | Component | version check', () => {
   setupComponentTest('version-check', {

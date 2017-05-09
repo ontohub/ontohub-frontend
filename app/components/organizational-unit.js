@@ -1,8 +1,8 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
 export default Ember.Component.extend({
   classNames: ['organizational-unit'],
   isUser: Ember.computed('orgUnit', function() {
-    return this.get('orgUnit').constructor.modelName === 'user';
+    return this.get('orgUnit').constructor.modelName === 'user'
   })
-});
+})
