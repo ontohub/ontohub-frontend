@@ -1,4 +1,4 @@
-= log model.errors
+= title 'Error · Ontohub'
 h1#error-title
   | Error 
   = model.errors.0.status
