@@ -114,13 +114,16 @@
 }
 
 :global(h1#error-title) {
-  color: #999;
+  $error-font-color: #999;
+  color: $error-font-color;
   margin-top: 30vh;
   text-align: center;
 }
+
 :global(p#error-description) {
   text-align: center;
 }
+
 :global(ul#error-links) {
   margin: 0;
   padding: 0;
@@ -128,6 +131,6 @@
 
   li {
     display: inline-block;
-    padding: 0.5em;
+    padding: .5em;
   }
 }
