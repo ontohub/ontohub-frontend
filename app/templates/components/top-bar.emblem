@@ -8,30 +8,33 @@
     = zf-dropdown-menu disableHover=true clickOpen=true id='user-menu'
       li.is-dropdown-submenu-parent.opens-left role="menuitem"
         = if isAuthenticated
-          a#new_menu_link = fa-icon 'fa-plus'
+          a#new-menu-link = fa-icon 'fa-plus'
           ul#new-menu.menu.submenu.is-dropdown-submenu.vertical.first-sub
             li = link-to 'New repository' 'organizationalUnit.repository.new' title = 'New repository'
       li.is-dropdown-submenu-parent.opens-left role="menuitem"
         = if isAuthenticated
-          a#user_menu_link = gravatar-image email=authenticatedUser.authenticatedUser.email defaultImage='identicon' size=24 retina=true title=authenticatedUser.authenticatedUser.name class='avatar'
+          a#user-menu-link = gravatar-image email=authenticatedUser.authenticatedUser.email defaultImage='identicon' size=24 retina=true title=authenticatedUser.authenticatedUser.name class='avatar'
           ul#user-menu.menu.submenu.is-dropdown-submenu.vertical.first-sub
             li: span
-              | Signed in as
+              | Signed in as 
               b = authenticatedUser.authenticatedUser.name
             li = link-to 'Your profile' 'organizationalUnit.show' authenticatedUser.authenticatedUser.id
             li: hr
             li: a{action 'signout'} Sign out
         = else
-          a#sign_in_menu_link = fa-icon 'fa-sign-in'
+          a#sign-in-menu-link = fa-icon 'fa-sign-in'
           ul.menu.submenu.is-dropdown-submenu.vertical.first-sub
-            form#login{action 'signin' on = 'submit'}
-              .input-group
-                = input id = 'username' class = 'input-group-text' placeholder = 'Username' value=identification
-              .input-group
-                = input id = 'password' class = 'input-group-text' type = 'password' placeholder = 'Password' value=password
-              = input type = 'submit' value = 'Sign in' class = 'button'
-              = if isLoading
-                div.loading Signing in...
+            li
+              form#login{action 'signin' on = 'submit'}
+                .input-group
+                  = input id = 'username' class = 'input-group-text' placeholder = 'Username' value=identification
+                .input-group
+                  = input id = 'password' class = 'input-group-text' type = 'password' placeholder = 'Password' value=password
+                = input type = 'submit' value = 'Sign in' class = 'button'
+                = if isLoading
+                  div.loading Signing in...
+            hr
+            li
               = link-to 'user.new' invokeAction='restoreDropDown'
                 = fa-icon 'fa-user-plus'
                 | Need an account?
