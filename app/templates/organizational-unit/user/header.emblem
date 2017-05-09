@@ -4,12 +4,12 @@
 h2 = model.name
 
 ul.tabs
-  li#profile_repositories_tab.tabs-title.is-active
+  li#profile-repositories-tab.tabs-title.is-active
     = link-to 'organizationalUnit.show' model (query-params tab='repositories') class=(if tabRepositories 'active')
       = fa-icon "hdd-o"
       |  Repositories
       span.badge.float-right = model.repositories.length
-  li#profile_organizations_tab.tabs-title
+  li#profile-organizations-tab.tabs-title
     = link-to 'organizationalUnit.show' model (query-params tab='organizations') class=(if tabOrganizations 'active')
       = fa-icon "users"
       |  Organizations
