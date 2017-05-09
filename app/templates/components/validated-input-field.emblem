@@ -1,4 +1,6 @@
-= input class=errorClass value=value type=type placeholder=placeholder autofocus=autofocus
+label.show-for-sr class=errorClassLabel
+  placeholder
+= input class=errorClassInput value=value type=type placeholder=placeholder autofocus=autofocus
 if showErrorMessage
   if (v-get model attribute 'isInvalid')
     = validated-input-message model=model attribute=attribute updateErrorClass=updateErrorClass

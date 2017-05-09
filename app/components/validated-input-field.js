@@ -30,16 +30,21 @@ export default Ember.Component.extend({
         get(`model.validations.attrs.${this.get('attribute')}.isInvalid`)
     }),
 
-  errorClass: Ember.computed('errorClassUpdater',
-    'value', 'dependOn', function() {
-      if (this.get('showErrorClass') && this.get('isInvalid')) {
-        return 'is-invalid-input'
-      } else if (this.get('showSuccessClass') && !this.get('isInvalid')) {
-        return 'is-valid-input'
-      } else {
-        return null
-      }
-    }),
+  errorClassLabel: Ember.computed('errorClass', function() {
+    if (this.get('errorClass')) {
+      return `${this.get('errorClass')}-label`
+    } else {
+      return null
+    }
+  }),
+
+  errorClassInput: Ember.computed('errorClass', function() {
+    if (this.get('errorClass')) {
+      return `${this.get('errorClass')}-input`
+    } else {
+      return null
+    }
+  }),
 
   // private attributes
   showErrorMessage: false,
@@ -60,5 +65,15 @@ export default Ember.Component.extend({
   },
   focusOut() {
     this.set('showErrorMessage', true)
-  }
+  },
+  errorClass: Ember.computed('errorClassUpdater',
+    'value', 'dependOn', function() {
+      if (this.get('showErrorClass') && this.get('isInvalid')) {
+        return 'is-invalid'
+      } else if (this.get('showSuccessClass') && !this.get('isInvalid')) {
+        return 'is-valid'
+      } else {
+        return null
+      }
+    }),
 })
