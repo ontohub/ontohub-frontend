@@ -1,6 +1,6 @@
 import Ember from 'ember'
 import DS from 'ember-data'
-import ENV from "../config/environment"
+import ENV from '../config/environment'
 import SimpleAuthData from 'ember-simple-auth/mixins/data-adapter-mixin'
 const { underscore, pluralize } = Ember.String
 

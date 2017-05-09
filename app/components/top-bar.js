@@ -6,8 +6,8 @@ export default Ember.Component.extend({
   localClassNames: 'top-bar',
 
   isLoading: false,
-  identification: "ada",
-  password: "changeme",
+  identification: 'ada',
+  password: 'changeme',
   actions: {
     signin() {
       let { identification,
