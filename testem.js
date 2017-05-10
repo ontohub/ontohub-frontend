@@ -4,8 +4,11 @@ module.exports = {
   "framework": "mocha",
   "test_page": "tests/index.html?hidepassed",
   "disable_watching": true,
+  "ignore_missing_launchers": true,
   "launch_in_ci": [
-    "PhantomJS"
+    "PhantomJS",
+    "Chromium",
+    "Chrome"
   ],
   "launch_in_dev": [
     "PhantomJS",
