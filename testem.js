@@ -5,6 +5,7 @@ let config = {
   "test_page": "tests/index.html?hidepassed",
   "disable_watching": true,
   "ignore_missing_launchers": true,
+  "parallel": 3,
   "launch_in_ci": [
     "PhantomJS",
     "Chromium",
