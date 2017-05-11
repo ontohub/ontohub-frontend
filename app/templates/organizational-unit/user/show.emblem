@@ -13,3 +13,23 @@
   = each model.organizations as |organization|
     = search-result "users" organization.name 'organizationalUnit.show' organization
 
+= if isMyProfile
+  = if tabSettings
+    = zf-accordion
+      li.accordion-item.is-active data-accordion-item=true
+        a.accordion-title Delete my profile
+        div.accordion-content data-tab-content=true
+          div.alert.callout
+            h4 Caution!
+            p Deleting the profile cannot be undone!
+            p If you delete your profile,
+            ul
+              li you will not be able to sign in anymore
+              li your user name will be made available for other users to sign up
+              li every repository in your namespace will be deleted including all OMS and repository data
+            hr
+            p Please re-enter your credentials if you are absolutely sure to delete your profile.
+          form#delete-my-profile-form{action 'deleteMyProfile' on='submit'}
+            = input value=deleteUserName type="text" placeholder="User Name"
+            = input value=deleteUserPassword type="password" placeholder="Password"
+            = input type='submit' value='Delete my profile' class='button alert' disabled=deletionFormIsInvalid

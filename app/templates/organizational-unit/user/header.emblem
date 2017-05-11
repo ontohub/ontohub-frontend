@@ -14,3 +14,8 @@ ul.tabs
       = fa-icon "users"
       |  Organizations
       span.badge.float-right = model.organizations.length
+  = if isMyProfile
+    li.tabs-title
+      = link-to 'organizationalUnit.show' model (query-params tab='settings') class=(if tabSettings 'active')
+        = fa-icon "cog"
+        |  Settings
