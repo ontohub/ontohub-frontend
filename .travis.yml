@@ -10,6 +10,8 @@ cache:
     - "/home/travis/.yarn-cache"
 
 before_install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
   - "yarn --version"
   - "phantomjs --version"
   - "git clone https://github.com/ontohub/ontohub-backend ../ontohub-backend"
