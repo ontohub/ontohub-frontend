@@ -1,38 +1,38 @@
-import { describe, it, beforeEach, afterEach } from 'mocha';
-import { expect } from 'chai';
-import startApp from '../helpers/start-app';
-import destroyApp from '../helpers/destroy-app';
+import { describe, it, beforeEach, afterEach } from 'mocha'
+import { expect } from 'chai'
+import startApp from '../helpers/start-app'
+import destroyApp from '../helpers/destroy-app'
 
 describe('Acceptance | index', () => {
-  let application;
+  let application
 
   beforeEach(() => {
-    application = startApp();
-    visit('/');
-  });
+    application = startApp()
+    visit('/')
+  })
 
   afterEach(() => {
-    destroyApp(application);
-  });
+    destroyApp(application)
+  })
 
   it('can visit /', () => {
-    expect(currentURL()).to.equal('/');
-  });
+    expect(currentURL()).to.equal('/')
+  })
 
   it('shows the welcome message', () => {
     const header = find('.top-route-header'),
           heading = find('h1', header),
-          subheading = find('p.help-text', header);
+          subheading = find('p.help-text', header)
 
-    expect(heading.text()).to.equal('Welcome to Ontohub!');
+    expect(heading.text()).to.equal('Welcome to Ontohub!')
     // eslint-disable-next-line max-len
-    expect(subheading.text()).to.equal('Repositories and proof tools for Ontologies, Models and Specifications (OMS)');
-  });
+    expect(subheading.text()).to.equal('Repositories and proof tools for Ontologies, Models and Specifications (OMS)')
+  })
 
   it('shows the development note', () => {
     const warning = find('.page-content .warning.callout'),
-          heading = find('h4', warning);
+          heading = find('h4', warning)
 
-    expect(heading.text()).to.equal('Please note:');
-  });
-});
+    expect(heading.text()).to.equal('Please note:')
+  })
+})

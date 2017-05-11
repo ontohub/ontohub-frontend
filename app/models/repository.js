@@ -1,10 +1,10 @@
-import Ember from 'ember';
-import DS from 'ember-data';
+import Ember from 'ember'
+import DS from 'ember-data'
 
-import schema from 'ontohub-frontend/schemas/models/repository_model';
-import { JsonSchemaModel } from 'ember-json-schema';
+import schema from 'ontohub-frontend/schemas/models/repository_model'
+import { JsonSchemaModel } from 'ember-json-schema'
 
-const schemaModel = JsonSchemaModel.generate(schema);
+const schemaModel = JsonSchemaModel.generate(schema)
 
 export default DS.Model.extend(schemaModel, {
   ownerUser: DS.belongsTo('user'),
@@ -12,23 +12,23 @@ export default DS.Model.extend(schemaModel, {
   owner: Ember.computed('ownerUser', 'ownerOrganization', {
     get() {
       if(this.get('ownerUser').content) {
-        return this.get('ownerUser');
+        return this.get('ownerUser')
       } else {
-        return this.get('ownerOrganization');
+        return this.get('ownerOrganization')
       }
     },
     set(key, value) {
       if(value.constructor.modelName === 'user') {
-        this.set('ownerUser', value);
+        this.set('ownerUser', value)
       } else if(value.constructor.modelName === 'organization') {
-        this.set('ownerOrganization', value);
+        this.set('ownerOrganization', value)
       }
 
-      return value;
+      return value
     }
   }),
   repoId: Ember.computed('id', function() {
-    let f = this.get('id').split('/');
-    return f[1];
+    let f = this.get('id').split('/')
+    return f[1]
   }),
-});
+})

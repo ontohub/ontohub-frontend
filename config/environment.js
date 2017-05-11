@@ -1,8 +1,7 @@
 /* eslint-env node */
-/* eslint no-var: "off" */
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'ontohub-frontend',
     environment: environment,
     rootURL: '/',
@@ -18,13 +17,13 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
-  };
+  }
 
   if (environment === 'development') {
-    ENV.host = 'http://localhost:3000';
+    ENV.host = 'http://localhost:3000'
     ENV['ember-cli-mirage'] = {
       enabled: false
-    };
+    }
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -36,26 +35,26 @@ module.exports = function(environment) {
       commitsSinceTagMax: null,
       commit: null,
       full: null
-    };
+    }
   }
 
   if (environment === 'test') {
     // Testem prefers this...
     ENV.host = 'http://localhost:3000'
-    ENV.locationType = 'none';
+    ENV.locationType = 'none'
 
     // keep test console output quieter
-    ENV.APP.LOG_ACTIVE_GENERATION = false;
-    ENV.APP.LOG_VIEW_LOOKUPS = false;
+    ENV.APP.LOG_ACTIVE_GENERATION = false
+    ENV.APP.LOG_VIEW_LOOKUPS = false
 
-    ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.rootElement = '#ember-testing'
     ENV.versionConfig = {
       tag: '0.0.0',
       commitsSinceTagMin: 65,
       commitsSinceTagMax: null,
       commit: null,
       full: null
-    };
+    }
   }
 
   if (environment === 'production') {
@@ -65,7 +64,7 @@ module.exports = function(environment) {
       commitsSinceTagMax: null,
       commit: null,
       full: null
-    };
+    }
   }
 
   ENV['ember-simple-auth-token'] = {
@@ -76,7 +75,7 @@ module.exports = function(environment) {
 
   ENV['ember-simple-auth'] = {
     authorizer: 'authorizer:token'
-  };
+  }
 
-  return ENV;
-};
+  return ENV
+}
