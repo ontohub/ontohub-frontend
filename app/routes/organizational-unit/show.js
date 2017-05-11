@@ -2,7 +2,7 @@ import Ember from 'ember'
 
 export default Ember.Route.extend({
   renderTemplate(controller, model) {
-    if(model.constructor.modelName === 'user'){
+    if(model.constructor.modelName === 'user') {
       this.render('organizationalUnit/user/show')
       this.render('organizationalUnit/user/header', {
         into: 'application',
