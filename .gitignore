@@ -15,4 +15,4 @@ npm-debug.log
 testem.log
 /app/schemas
 .vscode
-.env
+testem.local.js
