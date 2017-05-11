@@ -7,9 +7,7 @@ let config = {
   "ignore_missing_launchers": true,
   "parallel": 3,
   "launch_in_ci": [
-    "PhantomJS",
-    "Chromium",
-    "Chrome"
+    "PhantomJS"
   ],
   "launch_in_dev": [
     "PhantomJS",
@@ -33,6 +31,10 @@ let config = {
 if (process.env.TRAVIS) {
   config.browser_args.Chromium.push('--no-sandbox')
   config.browser_args.Chrome.push('--no-sandbox')
+}
+
+if (process.env.LAUNCHERS) {
+  config.launch_in_ci = process.env.LAUNCHERS.split(' ')
 }
 
 module.exports = config
