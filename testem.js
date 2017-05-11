@@ -1,6 +1,6 @@
 /* eslint-env node */
 
-module.exports = {
+let config = {
   "framework": "mocha",
   "test_page": "tests/index.html?hidepassed",
   "disable_watching": true,
@@ -28,3 +28,10 @@ module.exports = {
     ]
   }
 }
+
+if (process.env.TRAVIS) {
+  config.browser_args.Chromium.push('--no-sandbox')
+  config.browser_args.Chrome.push('--no-sandbox')
+}
+
+module.exports = config
