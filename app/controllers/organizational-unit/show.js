@@ -2,9 +2,10 @@ import Ember from 'ember'
 
 export default Ember.Controller.extend({
   authenticatedUser: Ember.inject.service(),
+  session: Ember.inject.service(),
   queryParams: ['tab', 'settingsMenu'],
   tab: 'repositories',
-  settingsMenu: 'account',
+  settingsMenu: 'profile',
 
   tabRepositories: Ember.computed('tab', function() {
     let tab = this.get('tab')
@@ -28,9 +29,9 @@ export default Ember.Controller.extend({
       this.get('model.id'))
   }),
 
-  settingsMenuAccount: Ember.computed('settingsMenu', function() {
+  settingsMenuProfile: Ember.computed('settingsMenu', function() {
     let settingsMenu = this.get('settingsMenu')
-    return (settingsMenu == 'account') || (settingsMenu == null)
+    return (settingsMenu == 'profile') || (settingsMenu == null)
   }),
   settingsMenuDeleteProfile: Ember.computed('settingsMenu', function() {
     return this.get('settingsMenu') == 'deleteProfile'
@@ -47,6 +48,11 @@ export default Ember.Controller.extend({
   actions: {
     setSettingsMenu(targetMenu) {
       this.set('settingsMenu', targetMenu)
+    },
+    deleteUser() {
+      this.get('model').destroyRecord()
+      this.get('session').invalidate()
+      this.transitionToRoute('index')
     }
   }
 })

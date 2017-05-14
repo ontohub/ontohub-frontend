@@ -2,13 +2,15 @@ import Ember from 'ember'
 
 export default Ember.Component.extend({
   authenticatedUser: Ember.inject.service(),
-  deleteUserName: '',
-  deleteUserPassword: '',
+  session: Ember.inject.service(),
+
+  enteredName: '',
+  enteredPassword: '',
   areCredentialsValid: false,
-  deletionFormIsFilledIn: Ember.computed('deleteUserName', 'deleteUserPassword',
+  deletionFormIsFilledIn: Ember.computed('enteredName', 'enteredPassword',
     function() {
-      const filledIn = !!this.get('deleteUserName') &&
-        !!this.get('deleteUserPassword')
+      const filledIn = !!this.get('enteredName') &&
+        !!this.get('enteredPassword')
       if (filledIn) {
         this.validateCredentialsDebounced()
       }
@@ -20,25 +22,23 @@ export default Ember.Component.extend({
   validateCredentials() {
     this.set('areCredentialsValid', false)
     let promise = this.get('authenticatedUser').
-      validatePassword(this.get('user.name'), this.get('deleteUserPassword'))
+      validatePassword(this.get('user.name'), this.get('enteredPassword'))
     promise.then((_data, _textStatus, jqXHR) => {
       this.set('areCredentialsValid', jqXHR.status == 201)
     }, (jqXHR) => {
       this.set('areCredentialsValid', jqXHR.status == 201)
     })
   },
-  deletionFormIsInvalid: Ember.computed('deleteUserName', 'deleteUserPassword',
+  deletionFormIsInvalid: Ember.computed('enteredName', 'enteredPassword',
     'areCredentialsValid', function() {
       return !(this.get('deletionFormIsFilledIn') &&
-        this.get('deleteUserName') === this.get('user.name') &&
+        this.get('enteredName') === this.get('user.name') &&
         this.get('areCredentialsValid'))
     }),
 
   actions: {
     deleteMyProfile() {
-      this.get('user').destroyRecord()
-      this.get('session').invalidate()
-      this.transitionToRoute('index')
+      this.get('onDelete')()
     }
   }
 })
