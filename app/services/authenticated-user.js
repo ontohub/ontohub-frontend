@@ -1,4 +1,5 @@
 import Ember from 'ember'
+import ENV from '../config/environment'
 
 export default Ember.Service.extend({
   store: Ember.inject.service('store'),
@@ -21,5 +22,13 @@ export default Ember.Service.extend({
   }),
   authenticatedUser: Ember.computed('tokenData', function() {
     return this.get('store').find('user', this.get('tokenData.user_id'))
-  })
+  }),
+  validatePassword(username, password) {
+    const promise = Ember.$.ajax({
+      data: { user: { name: username, password: password } },
+      method: 'POST',
+      url: `${ENV.host}/users/sign_in`
+    })
+    return promise
+  }
 })
