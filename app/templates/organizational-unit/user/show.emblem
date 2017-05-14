@@ -16,7 +16,24 @@
 = if isMyProfile
   = if tabSettings
     = zf-accordion
-      li.accordion-item.is-active data-accordion-item=true
+      li.accordion-item{action 'setSettingsMenu' 'account'} data-accordion-item=true class=settingsMenuAccount:is-active
+        a.accordion-title Account
+        div.accordion-content data-tab-content=true
+          p Not implemented yet.
+          p In the future, you can change your Real Name, Email and Password in this place.
+      li.accordion-item{action 'setSettingsMenu' 'deleteProfile'} data-accordion-item=true class=settingsMenuDeleteProfile:is-active
         a.accordion-title Delete my profile
         div.accordion-content data-tab-content=true
           = delete-current-user user=model
+      li.accordion-item{action 'setSettingsMenu' 'dummy1'} data-accordion-item=true class=settingsMenuDummy1:is-active
+        a.accordion-title Dummy 1
+        div.accordion-content data-tab-content=true
+          p This is just a dummy.
+      li.accordion-item{action 'setSettingsMenu' 'dummy2'} data-accordion-item=true class=settingsMenuDummy2:is-active
+        a.accordion-title Dummy 2
+        div.accordion-content data-tab-content=true
+          p There's nothing to see here.
+      li.accordion-item{action 'setSettingsMenu' 'dummy3'} data-accordion-item=true class=settingsMenuDummy3:is-active
+        a.accordion-title Dummy 3
+        div.accordion-content data-tab-content=true
+          p No, really... Absolutely nothing.
