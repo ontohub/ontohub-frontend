@@ -49,6 +49,9 @@ export default Ember.Controller.extend({
     setSettingsMenu(targetMenu) {
       this.set('settingsMenu', targetMenu)
     },
+    validateUserName(username) {
+      return username == this.get('model.name')
+    },
     deleteUser() {
       this.get('model').destroyRecord()
       this.get('session').invalidate()

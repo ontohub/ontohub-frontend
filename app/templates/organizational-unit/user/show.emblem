@@ -24,15 +24,25 @@
       li.accordion-item{action 'setSettingsMenu' 'deleteProfile'} data-accordion-item=true class=settingsMenuDeleteProfile:is-active
         a.accordion-title Delete my profile
         div.accordion-content data-tab-content=true
-          = delete-current-user user=model onDelete=(action 'deleteUser')
-      li.accordion-item{action 'setSettingsMenu' 'dummy1'} data-accordion-item=true class=settingsMenuDummy1:is-active
-        a.accordion-title Dummy 1
-        div.accordion-content data-tab-content=true
-          p This is just a dummy.
-      li.accordion-item{action 'setSettingsMenu' 'dummy2'} data-accordion-item=true class=settingsMenuDummy2:is-active
-        a.accordion-title Dummy 2
-        div.accordion-content data-tab-content=true
-          p There's nothing to see here.
+          div.alert.callout
+            h4 Caution!
+            p Deleting the profile cannot be undone!
+            p If you delete your profile,
+            ul
+              li you will not be able to sign in anymore
+              li your user name will be made available for other users to sign up
+              li every repository in your namespace will be deleted including all OMS and repository data
+            hr
+            p Please re-enter your credentials if you are absolutely sure to delete your profile.
+            = confirm-user-credentials buttonText='Delete my profile' buttonClass='alert' onConfirm=(action 'deleteUser') precondition=(action 'validateUserName')
+        li.accordion-item{action 'setSettingsMenu' 'dummy1'} data-accordion-item=true class=settingsMenuDummy1:is-active
+          a.accordion-title Dummy 1
+          div.accordion-content data-tab-content=true
+            p This is just a dummy.
+        li.accordion-item{action 'setSettingsMenu' 'dummy2'} data-accordion-item=true class=settingsMenuDummy2:is-active
+          a.accordion-title Dummy 2
+          div.accordion-content data-tab-content=true
+            p There's nothing to see here.
       li.accordion-item{action 'setSettingsMenu' 'dummy3'} data-accordion-item=true class=settingsMenuDummy3:is-active
         a.accordion-title Dummy 3
         div.accordion-content data-tab-content=true
