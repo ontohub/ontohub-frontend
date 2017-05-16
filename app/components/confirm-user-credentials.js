@@ -3,24 +3,23 @@ import Ember from 'ember'
 export default Ember.Component.extend({
   authenticatedUser: Ember.inject.service(),
 
-  enteredName: '',
-  enteredPassword: '',
+  username: '',
+  password: '',
   areCredentialsValid: false,
 
-  formIsFilledIn: Ember.computed('enteredName', 'enteredPassword', function() {
-    const filledIn = !!this.get('enteredName') &&
-      !!this.get('enteredPassword')
+  formIsFilledIn: Ember.computed('username', 'password', function() {
+    const filledIn = !!this.get('username') &&
+      !!this.get('password')
     if (filledIn) {
       this.validateCredentialsDebounced()
     }
     return filledIn
   }),
 
-  dataIsInvalid: Ember.computed('enteredName', 'enteredPassword',
-    'areCredentialsValid', function() {
+  dataIsInvalid: Ember.computed('username', 'password', 'areCredentialsValid',
+    function() {
       const isPreconditionMet =
-        this.get('precondition')(this.get('enteredName'),
-                                 this.get('enteredPassword'))
+        this.get('precondition')(this.get('username'), this.get('password'))
       return !(this.get('formIsFilledIn') && isPreconditionMet &&
         this.get('areCredentialsValid'))
     }),
@@ -31,13 +30,10 @@ export default Ember.Component.extend({
   },
 
   validateCredentials() {
-    let promise = this.get('authenticatedUser').
-      validatePassword(this.get('enteredName'), this.get('enteredPassword'))
-    promise.then((_data, _textStatus, jqXHR) => {
-      this.set('areCredentialsValid', jqXHR.status == 201)
-    }, (jqXHR) => {
-      this.set('areCredentialsValid', jqXHR.status == 201)
-    })
+    this.get('authenticatedUser').
+      validatePassword(this.get('username'), this.get('password')).
+      then(() => { this.set('areCredentialsValid', true) }).
+      catch(() => { this.set('areCredentialsValid', false) })
   },
 
   actions: {

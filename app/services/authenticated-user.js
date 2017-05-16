@@ -2,8 +2,9 @@ import Ember from 'ember'
 import ENV from '../config/environment'
 
 export default Ember.Service.extend({
-  store: Ember.inject.service('store'),
-  session: Ember.inject.service('session'),
+  ajax: Ember.inject.service(),
+  store: Ember.inject.service(),
+  session: Ember.inject.service(),
   tokenData: Ember.computed('session.data.authenticated', function() {
     let authenticator = Ember.getOwner(this).lookup('authenticator:jwt'),
         session = this.get('session.data.authenticated.data.attributes'),
@@ -24,11 +25,8 @@ export default Ember.Service.extend({
     return this.get('store').find('user', this.get('tokenData.user_id'))
   }),
   validatePassword(username, password) {
-    const promise = Ember.$.ajax({
-      data: { user: { name: username, password: password } },
-      method: 'POST',
-      url: `${ENV.host}/users/sign_in`
+    return this.get('ajax').post(`${ENV.host}/users/sign_in`, {
+      data: { user: { name: username, password: password } }
     })
-    return promise
   }
 })
