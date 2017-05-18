@@ -8,7 +8,7 @@ const schemaModel = SchemaFactory.generate(schema)
 
 export default Factory.extend(Object.assign({}, schemaModel, {
   name(i) {
-    return `User ${i}`
+    return `user-${i}`
   },
   id() {
     return faker.helpers.slugify(_.lowerCase(this.name))

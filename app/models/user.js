@@ -14,6 +14,12 @@ const schemaModel = JsonSchemaModel.generate(schema),
             validator('ds-error'),
             validator('presence', { presence: true, ignoreBlank: true }),
             validator('length', { min: 3, max: 100 }),
+            validator('format', {
+              regex: /^[a-z0-9][a-z0-9\_\-]*[a-z0-9]$/,
+              message: '{description} must start and end with a lower case ' +
+                       'letter or number, and only contain lower case ' +
+                       'letters, numbers "-" and "_"'
+            }),
             validator('username-available', { debounce: 500 })
           ]
         },
