@@ -3,7 +3,7 @@ import config from  '../../config/environment'
 
 export default Ember.Controller.extend({
   loadPlugin: function() {
-    if(!Ember.testing && !config.recaptcha_disable) {
+    if (this.get('withCaptcha')) {
       Ember.run.scheduleOnce('afterRender', this, () => {
         Ember.$.getScript('https://www.google.com/recaptcha/api.js')
       })
@@ -11,6 +11,9 @@ export default Ember.Controller.extend({
   }.on('init'),
   siteKey: config.recaptcha_site_key,
   application: Ember.inject.controller(),
+  withCaptcha: Ember.computed('config.recaptcha_disable', () =>
+    !(config.recaptcha_disable || Ember.testing)
+  ),
 
   submitNewUser(token) {
     let user = this.get('model')
@@ -27,12 +30,14 @@ export default Ember.Controller.extend({
               })
             })
         }).catch(() => {
-          if (!Ember.testing && !config.recaptcha_disable) {
+          if (this.get('withCaptcha')) {
             /* eslint-disable no-undef */
             // This variable is defined as soon as `loadPlugin` has a value
             // (which is as soon as the page has loaded).
             grecaptcha.reset()
             /* eslint-enable no-undef */
+          } else {
+            this.set('showCaptchaErrorMessage', true)
           }
         })
       }
@@ -49,12 +54,15 @@ export default Ember.Controller.extend({
       }
     },
     validateRecaptcha() {
-      if (!Ember.testing && !config.recaptcha_disable) {
+      if (this.get('withCaptcha')) {
         /* eslint-disable no-undef */
         // This variable is defined as soon as `loadPlugin` has a value
         // (which is as soon as the page has loaded).
         grecaptcha.execute()
         /* eslint-enable no-undef */
+      } else {
+        this.set('model.captcha', false)
+        this.submitNewUser(null)
       }
     }
   }

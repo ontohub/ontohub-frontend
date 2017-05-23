@@ -19,12 +19,11 @@ form#user-new{action 'initializeRecaptcha'}
     div.column.small-12.medium-6.large-6
       fieldset#user-password-confirmation
         = validated-input-field model=model attribute='passwordConfirmation' value=model.passwordConfirmation dependOn=model.password type="password" placeholder="Confirm the Password"
-if showErrorMessage
-  if (v-get model 'captcha' 'isInvalid')
+  if showCaptchaErrorMessage
     div.row.align-center
       div.column.small-12.medium-6.large-6
         span.form-error.is-visible
-          | Captcha verification failed.
+          | Captcha verification failed. Please try again.
   div.row.align-center
     div.column.small-12.medium-6.large-6
       fieldset#user-new-submit

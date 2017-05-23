@@ -37,7 +37,7 @@ module.exports = function(environment) {
       full: null
     }
     ENV.recaptcha_site_key = '6LewQh8UAAAAAMok-W-6CiQN5buROVD3uRaaKJWU',
-    ENV.recaptcha_disable = process.env.DISABLE_CAPTCHA
+    ENV.recaptcha_disable = process.env.DISABLE_CAPTCHA == 'true'
   }
 
   if (environment === 'test') {
@@ -57,7 +57,7 @@ module.exports = function(environment) {
       commit: null,
       full: null
     }
-    ENV.recaptcha_disable = false
+    ENV.recaptcha_disable = true
   }
 
   if (environment === 'production') {
