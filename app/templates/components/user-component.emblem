@@ -1,4 +1,9 @@
 h1 
-  = gravatar-image email=user.email defaultImage='identicon' size=44 retina=true title=user.name class='icon'
+  = gravatar-image email=user.email defaultImage='identicon' size=44 retina=true title=user.id class='icon'
   |  
-  = link-to user.name 'organizationalUnit.show' user
+  = link-to 'organizationalUnit.show' user
+    = user.id
+    if user.realName
+      |  (
+      = user.realName
+      | )

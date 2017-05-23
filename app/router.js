@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 })
 
 Router.map(function() {
-  this.route('user.new', { path: 'users/sign_up' })
+  this.route('user.new', { path: 'users/sign-up' })
   this.route('organizationalUnit.repository.new', { path: 'new' })
   this.route('organizationalUnit', {
     path: ':organizational_unit_id'

@@ -1,26 +1,32 @@
-form#user_new{action 'initializeRecaptcha'}
+form#user-new{action 'initializeRecaptcha'}
   div.row.align-center
     div.column.small-12.medium-6.large-6
-      fieldset#user_new_name
+      fieldset#user-new-name
         = validated-input-field model=model attribute='name' value=model.name type="text" placeholder="User Name" autofocus=true showErrorOnKeyUp=true
   div.row.align-center
     div.column.small-12.medium-6.large-6
-      fieldset#user_new_real_name
+      fieldset#user-new-real-name
         = validated-input-field model=model attribute='realName' value=model.realName type="text" placeholder="Real Name (optional)"
   div.row.align-center
     div.column.small-12.medium-6.large-6
-      fieldset#user_email
+      fieldset#user-email
         = validated-input-field model=model attribute='email' value=model.email type="email" placeholder="Email"
   div.row.align-center
     div.column.small-12.medium-6.large-6
-      fieldset#user_password
+      fieldset#user-password
         = validated-input-field model=model attribute='password' value=model.password type="password" placeholder="Password"
   div.row.align-center
     div.column.small-12.medium-6.large-6
-      fieldset#user_password_confirmation
+      fieldset#user-password-confirmation
         = validated-input-field model=model attribute='passwordConfirmation' value=model.passwordConfirmation dependOn=model.password type="password" placeholder="Confirm the Password"
+if showErrorMessage
+  if (v-get model 'captcha' 'isInvalid')
+    div.row.align-center
+      div.column.small-12.medium-6.large-6
+        span.form-error.is-visible
+          | Captcha verification failed.
   div.row.align-center
     div.column.small-12.medium-6.large-6
-      fieldset#user_new_submit
-        button#user_new_submit_button.float-right.success.button{action 'validateRecaptcha'} disabled={v-get model 'isInvalid'} Sign Up
+      fieldset#user-new-submit
+        button#user-new-submit-button.float-right.success.button{action 'validateRecaptcha'} disabled={v-get model 'isInvalid'} Sign Up
         div.g-recaptcha data-sitekey='{{siteKey}}' data-callback='recaptchaCallback' data-size='invisible'

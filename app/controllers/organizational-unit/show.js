@@ -24,10 +24,11 @@ export default Ember.Controller.extend({
     return (this.get('tab') == 'settings')
   }),
 
-  isMyProfile: Ember.computed('authenticatedUser', 'model', function() {
-    return (this.get('authenticatedUser.tokenData.user_id') ==
-      this.get('model.id'))
-  }),
+  isMyProfile: Ember.computed('authenticatedUser.tokenData.user_id', 'model.id',
+    function() {
+      return (this.get('authenticatedUser.tokenData.user_id') ===
+        this.get('model.id'))
+    }),
 
   settingsMenuProfile: Ember.computed('settingsMenu', function() {
     let settingsMenu = this.get('settingsMenu')
@@ -45,17 +46,26 @@ export default Ember.Controller.extend({
   settingsMenuDummy3: Ember.computed('settingsMenu', function() {
     return this.get('settingsMenu') == 'dummy3'
   }),
+  _setSettingsMenu(targetMenu) {
+    this.set('settingsMenu', targetMenu)
+  },
+  _validateUserName(username) {
+    return username == this.get('model.id')
+  },
+  _deleteUser() {
+    this.get('model').destroyRecord()
+    this.get('session').invalidate()
+    this.transitionToRoute('index')
+  },
   actions: {
     setSettingsMenu(targetMenu) {
-      this.set('settingsMenu', targetMenu)
+      this._setSettingsMenu(targetMenu)
     },
     validateUserName(username) {
-      return username == this.get('model.name')
+      return this._validateUserName(username)
     },
     deleteUser() {
-      this.get('model').destroyRecord()
-      this.get('session').invalidate()
-      this.transitionToRoute('index')
+      this._deleteUser()
     }
   }
 })

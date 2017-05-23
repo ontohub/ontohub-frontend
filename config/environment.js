@@ -36,7 +36,8 @@ module.exports = function(environment) {
       commit: null,
       full: null
     }
-    ENV.recaptcha_site_key = '6LewQh8UAAAAAMok-W-6CiQN5buROVD3uRaaKJWU'
+    ENV.recaptcha_site_key = '6LewQh8UAAAAAMok-W-6CiQN5buROVD3uRaaKJWU',
+    ENV.recaptcha_disable = process.env.DISABLE_CAPTCHA
   }
 
   if (environment === 'test') {
@@ -56,6 +57,7 @@ module.exports = function(environment) {
       commit: null,
       full: null
     }
+    ENV.recaptcha_disable = false
   }
 
   if (environment === 'production') {
@@ -67,6 +69,7 @@ module.exports = function(environment) {
       full: null
     },
     ENV.recaptcha_site_key = '6LdKSR8UAAAAANuiYuJcuJRQm4Go-dQh0he82vpU'
+    ENV.recaptcha_disable = false
   }
 
   ENV['ember-simple-auth-token'] = {

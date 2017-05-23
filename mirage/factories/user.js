@@ -10,6 +10,9 @@ export default Factory.extend(Object.assign({}, schemaModel, {
   name(i) {
     return `user-${i}`
   },
+  email() {
+    return `${this.name}@example.com`
+  },
   id() {
     return faker.helpers.slugify(_.lowerCase(this.name))
   }

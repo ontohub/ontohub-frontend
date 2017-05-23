@@ -41,7 +41,7 @@ describe('Acceptance | organization', () => {
       const header = find('.top-route-header'),
             username = find('h1', header).text()
 
-      expect(username).to.equal(this.test.organization.name)
+      expect(username).to.equal(this.test.organization.id)
     })
 
     it('displays the number of repositories and members', function() {
@@ -71,7 +71,7 @@ describe('Acceptance | organization', () => {
 
         expect(container.children()).to.have.length(this.test.memberCount)
         _.map(_.zip(container.children(), this.test.members), (e) => {
-          expect(find('h1', e[0]).text()).to.contain(e[1].name)
+          expect(find('h1', e[0]).text()).to.contain(e[1].id)
         })
       })
     })
@@ -79,9 +79,9 @@ describe('Acceptance | organization', () => {
     it('resets the tabs correctly upon re-entering page', function() {
       const membersTab = find('.top-route-header .tabs a:contains(Members)')
       click(membersTab)
-      click(`.page-content a:contains(${this.test.members[0].name})`)
+      click(`.page-content a:contains(${this.test.members[0].id})`)
       click('a:contains(Organizations)')
-      click(`.page-content a:contains(${this.test.organization.name})`)
+      click(`.page-content a:contains(${this.test.organization.id})`)
       andThen(() => {
         expect(currentURL()).to.equal(`/${this.test.organization.id}`)
       })

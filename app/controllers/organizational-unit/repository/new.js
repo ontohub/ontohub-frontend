@@ -2,6 +2,7 @@ import Ember from 'ember'
 
 export default Ember.Controller.extend({
   authenticatedUser: Ember.inject.service(),
+  session: Ember.inject.service(),
   contentType: 'ontology',
   publicAccess: true,
   actions: {

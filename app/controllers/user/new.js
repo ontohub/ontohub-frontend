@@ -1,11 +1,13 @@
-import Ember from 'ember';
-import config from  '../../config/environment';
+import Ember from 'ember'
+import config from  '../../config/environment'
 
 export default Ember.Controller.extend({
   loadPlugin: function() {
-    Ember.run.scheduleOnce('afterRender', this, () => {
-      Ember.$.getScript('https://www.google.com/recaptcha/api.js')
-    })
+    if(!Ember.testing && !config.recaptcha_disable) {
+      Ember.run.scheduleOnce('afterRender', this, () => {
+        Ember.$.getScript('https://www.google.com/recaptcha/api.js')
+      })
+    }
   }.on('init'),
   siteKey: config.recaptcha_site_key,
   application: Ember.inject.controller(),
@@ -25,11 +27,13 @@ export default Ember.Controller.extend({
               })
             })
         }).catch(() => {
-          /* eslint-disable no-undef */
-          // This variable is defined as soon as `loadPlugin` has a value
-          // (which is as soon as the page has loaded).
-          grecaptcha.reset()
-          /* eslint-enable no-undef */
+          if (!Ember.testing && !config.recaptcha_disable) {
+            /* eslint-disable no-undef */
+            // This variable is defined as soon as `loadPlugin` has a value
+            // (which is as soon as the page has loaded).
+            grecaptcha.reset()
+            /* eslint-enable no-undef */
+          }
         })
       }
       return false
@@ -45,11 +49,13 @@ export default Ember.Controller.extend({
       }
     },
     validateRecaptcha() {
-      /* eslint-disable no-undef */
-      // This variable is defined as soon as `loadPlugin` has a value
-      // (which is as soon as the page has loaded).
-      grecaptcha.execute()
-      /* eslint-enable no-undef */
+      if (!Ember.testing && !config.recaptcha_disable) {
+        /* eslint-disable no-undef */
+        // This variable is defined as soon as `loadPlugin` has a value
+        // (which is as soon as the page has loaded).
+        grecaptcha.execute()
+        /* eslint-enable no-undef */
+      }
     }
   }
 })

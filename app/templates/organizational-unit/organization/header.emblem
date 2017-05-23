@@ -1,4 +1,4 @@
-h1 = model.name
+h1 = model.id
 
 ul.tabs
   li.tabs-title.is-active

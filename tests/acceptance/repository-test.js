@@ -33,7 +33,7 @@ describe('Acceptance | repository', () => {
             description = find('span', header)
 
       expect(name.text()).to.equal(
-        `${this.test.user.name} / ${this.test.repository.name}`
+        `${this.test.user.id} / ${this.test.repository.name}`
       )
       expect(description.text()).to.equal(this.test.repository.description)
     })
@@ -55,14 +55,14 @@ describe('Acceptance | repository', () => {
 
   describe('New repository page', () => {
     beforeEach(function() {
-      this.currentTest.user = server.create('user', { name: 'Ada' })
-      signIn(application)
+      this.currentTest.user = server.create('user', { name: 'ada' })
+      signIn(application, this.currentTest.user.id)
       visit('/new')
     })
 
     it('displays the available namespaces', function() {
       const namespaceField = find('#repository-new-name select')
-      expect(namespaceField.text()).to.equal(this.test.user.name)
+      expect(namespaceField.text()).to.equal(this.test.user.id)
     })
 
     it('creates a new repository and redirects', function() {

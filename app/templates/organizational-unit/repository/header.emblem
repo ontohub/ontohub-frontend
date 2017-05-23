@@ -1,5 +1,5 @@
 h1
-  = link-to model.owner.name 'organizationalUnit' model.owner
+  = link-to model.owner.id 'organizationalUnit' model.owner
   |  / 
   = link-to model.name 'organizationalUnit.repository' model.repository
 

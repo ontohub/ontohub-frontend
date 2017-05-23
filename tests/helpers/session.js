@@ -1,11 +1,11 @@
 import {
-  authenticateSession
+  authenticateSession,
 } from 'ontohub-frontend/tests/helpers/ember-simple-auth'
 
-export function signIn(application, username = 'ada') {
-  const userTokenData = btoa(`{"user_id":"${username}","exp":1493192602}`)
-
-  authenticateSession(application, {
+export function signIn(application, userId = 'ada') {
+  const exp = 1493192602,
+        userTokenData = btoa(`{"user_id":"${userId}","exp":${exp}}`)
+  let data = {
     data: {
       id: 'authenticationtoken',
       type: 'authentication_tokens',
@@ -15,5 +15,7 @@ export function signIn(application, username = 'ada') {
       }
     },
     jsonapi: { version: '1.0' }
-  })
+  }
+
+  authenticateSession(application, data)
 }

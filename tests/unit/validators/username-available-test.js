@@ -24,21 +24,21 @@ describe('Unit | Validator | UsernameAvailableValidator', () => {
     server.shutdown()
   })
 
-  // it('does not exist', (done) => {
-  //   validator.validate(`different-${model.name}`).then((message) => {
-  //     expect(message).to.be.true
-  //     done()
-  //   }).catch((error) => {
-  //     done(error)
-  //   })
-  // })
+  it('does not exist', (done) => {
+    validator.validate(`different-${model.name}`).then((message) => {
+      expect(message).to.be.true
+      done()
+    }).catch((reason) => {
+      done(reason)
+    })
+  })
 
-  // it('exists', (done) => {
-  //   validator.validate(model.name).then((message) => {
-  //     expect(message).to.eq('This name is already in use')
-  //     done()
-  //   }).catch((error) => {
-  //     done(error)
-  //   })
-  // })
+  it('exists', (done) => {
+    validator.validate(model.name).then((message) => {
+      expect(message).to.eq('This name is already registered')
+      done()
+    }).catch((reason) => {
+      done(reason)
+    })
+  })
 })

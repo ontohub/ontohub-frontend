@@ -10,4 +10,4 @@
         span.label = repo.contentType
 = if tabMembers
   = each model.members as |member|
-    = search-result "user" member.name 'organizationalUnit.show' member
+    = search-result "user" member.id 'organizationalUnit.show' member

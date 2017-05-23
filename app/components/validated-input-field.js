@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
 // This component represents an input field with validation.
 //

@@ -3,6 +3,7 @@ import _ from 'lodash'
 import { expect } from 'chai'
 import startApp from '../helpers/start-app'
 import destroyApp from '../helpers/destroy-app'
+import { signIn } from '../helpers/session'
 
 describe('Acceptance | user', () => {
   let application
@@ -20,6 +21,7 @@ describe('Acceptance | user', () => {
       const organizationCount = 1,
             repositoryCount = 2,
             user = server.create('user'),
+            otherUser = server.create('user'),
             organizations = server.createList(
               'organization',
               organizationCount,
@@ -30,6 +32,7 @@ describe('Acceptance | user', () => {
               { ownerUserId: user.id }),
             testData = {
               user,
+              otherUser,
               organizations,
               organizationCount,
               repositories,
@@ -44,7 +47,7 @@ describe('Acceptance | user', () => {
             realname = find('h1', header),
             username = find('h2', header)
 
-      expect(username.text()).to.equal(this.test.user.name)
+      expect(username.text()).to.equal(this.test.user.id)
       expect(realname.text()).to.equal(this.test.user.real_name)
     })
 
@@ -79,7 +82,7 @@ describe('Acceptance | user', () => {
           this.test.organizationCount
         )
         _.map(_.zip(container.children(), this.test.organizations), (e) => {
-          expect(find('h1', e[0]).text()).to.contain(e[1].name)
+          expect(find('h1', e[0]).text()).to.contain(e[1].id)
         })
       })
     })
@@ -89,11 +92,76 @@ describe('Acceptance | user', () => {
         '.top-route-header .tabs a:contains(Organizations)'
       )
       click(organizationsTab)
-      click(`.page-content a:contains(${this.test.organizations[0].name})`)
+      click(`.page-content a:contains(${this.test.organizations[0].id})`)
       click('a:contains(Members)')
-      click(`.page-content a:contains(${this.test.user.name})`)
+      click(`.page-content a:contains(${this.test.user.id})`)
       andThen(() => {
         expect(currentURL()).to.equal(`/${this.test.user.id}`)
+      })
+    })
+
+    describe('the settings tab while logged in', () => {
+      const settingsTabSelector = '.top-route-header .tabs a:contains(Settings)'
+      beforeEach(function () {
+        signIn(application, this.currentTest.user.id)
+      })
+
+      describe('when viewing the profile of another user', () => {
+        beforeEach(function () {
+          visit(`/${this.currentTest.otherUser.id}`)
+        })
+
+        it('is not displayed for other users', function() {
+          visit(`/${this.test.otherUser.id}`)
+          expect(find(settingsTabSelector)).to.have.length(0)
+        })
+      })
+
+      describe('when viewing the own profile', () => {
+        beforeEach(function () {
+          visit(`/${this.currentTest.user.id}`)
+        })
+
+        it('is displayed for the current user', () => {
+          expect(find(settingsTabSelector)).to.have.length(1)
+        })
+
+        describe('inside the settings tab', () => {
+          const profileContainerSelector = '#settings-menu-profile-container',
+                deleteProfileContainerSelector =
+                  '#settings-menu-delete-profile-container'
+          beforeEach(() => {
+            click(find(settingsTabSelector))
+          })
+
+          it('changes the url correctly', function() {
+            andThen(() => {
+              expect(currentURL()).
+                to.eq(`/${this.test.user.id}?tab=settings`)
+            })
+          })
+
+          it('defaults to the profile menu', () => {
+            expect(find(profileContainerSelector).is(':visible')).
+              to.be.true
+          })
+
+          it('does not show the delete profile menu', () => {
+            expect(find(deleteProfileContainerSelector).is(':visible')).
+              to.be.false
+          })
+
+          describe('inside the delete profile menu', () => {
+            it('changes the url correctly', function() {
+              click('#settings-menu-delete-profile')
+              andThen(() => {
+                const queryString = 'settingsMenu=deleteProfile&tab=settings'
+                expect(currentURL()).
+                  to.eq(`/${this.test.user.id}?${queryString}`)
+              })
+            })
+          })
+        })
       })
     })
   })
