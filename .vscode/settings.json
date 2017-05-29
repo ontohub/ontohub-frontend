@@ -1,0 +1,17 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/.vscode": true
+    },
+    "eslint.enable": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 2,
+    "prettier.semi": false
+  }
