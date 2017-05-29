@@ -1,28 +1,5 @@
 {
-  "root": true,
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
-  },
-  "extends": "eslint:recommended",
-  "env": {
-    "browser": true,
-    "mocha": true
-  },
-  "globals": {
-    "andThen": true,
-    "Application": true,
-    "click": true,
-    "currentPath": true,
-    "currentRoutePath": true,
-    "currentURL": true,
-    "fillIn": true,
-    "find": true,
-    "keyEvent": true,
-    "server": true,
-    "triggerEvent": true,
-    "visit": true
-  },
+  "extends": ["eslint:recommended", "react-app"],
   "rules": {
     "arrow-body-style": ["error"],
     "arrow-parens": ["warn", "always"],
