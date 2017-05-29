@@ -2,6 +2,7 @@
 /node_modules
 
 # testing
+/.chrome
 /coverage
 
 # production
