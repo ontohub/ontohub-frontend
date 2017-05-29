@@ -1,4 +1,9 @@
 // Place your settings in this file to overwrite default and user settings.
+// Recommended Plugins:
+// - ESLint
+// - Prettier - ESLint
+// - Debugger for Chrome
+// - Auto Close Tag
 {
     "editor.tabSize": 2,
     "files.insertFinalNewline": true,
