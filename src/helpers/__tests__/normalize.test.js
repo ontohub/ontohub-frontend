@@ -56,9 +56,7 @@ describe('normalize', () => {
         mockResponse = {
           data: {
             id: 'mock-response-1',
-            type: 'mock_responses',
-            attributes: {},
-            relationships: {}
+            type: 'mock_responses'
           }
         }
       })

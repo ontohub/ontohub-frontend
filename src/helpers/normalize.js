@@ -48,6 +48,7 @@ export const normalize = (json) => {
     throw JSON.stringify(_.get(json, 'errors'))
   }
 
+  /* istanbul ignore else */
   if (_.has(json, 'data')) {
     let data = _.get(json, 'data'), id = _.get(data, 'id')
 
