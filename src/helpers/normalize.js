@@ -4,9 +4,8 @@ import _ from 'lodash'
  * @param {object} attributes - a valid JSON API attributes object
  * @return {object}
  */
-const parseAttributes = (attributes) => {
-  return _.mapKeys(attributes, _.rearg(_.camelCase, [1, 0]))
-}
+const parseAttributes = (attributes) =>
+  _.mapKeys(attributes, _.rearg(_.camelCase, [1, 0]))
 
 /**
  * @param {object} relationships - a valid JSON API relationships object
@@ -34,15 +33,15 @@ const parseRelationships = (relationships) => {
  */
 export const normalize = (json) => {
   let attributes = {},
-    relationships = {},
-    keys = _.chain(json).keys().intersection(['errors', 'data']).value()
+      relationships = {},
+      keys = _.chain(json).keys().intersection(['errors', 'data']).value()
 
-  if(_.size(keys) !== 1) {
+  if (_.size(keys) !== 1) {
     let error = {
-      status: "500",
-      title: "Invalid JSON API document"
+      status: '500',
+      title: 'Invalid JSON API document'
     }
-    throw JSON.stringify(error);
+    throw JSON.stringify(error)
   }
 
   if (json.errors) {

@@ -16,7 +16,6 @@
     "no-trailing-spaces": ["error"],
     "no-var": ["error"],
     "object-curly-spacing": ["error", "always"],
-    "one-var": ["error", "always"],
     "prefer-arrow-callback": ["warn", { "allowNamedFunctions": true }],
     "prefer-rest-params": ["error"],
     "semi": ["warn", "never"],
