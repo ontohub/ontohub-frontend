@@ -17,7 +17,7 @@ install:
   - "yarn install --pure-lockfile --no-emoji"
 
 script:
-  - "yarn test"
+  - "yarn test -- --coverage"
 
 after_script:
   - "yarn run codecov"
