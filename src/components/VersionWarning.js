@@ -5,6 +5,9 @@ import semver from 'semver'
 
 class VersionWarning extends Component {
   render() {
+    if (this.props.loading) {
+      return null
+    }
     const validVersion = semver.satisfies(
       this.props.version,
       this.props.requirement
@@ -32,7 +35,8 @@ class VersionWarning extends Component {
 }
 
 VersionWarning.propTypes = {
-  version: PropTypes.string.isRequired,
+  version: PropTypes.string,
+  loading: PropTypes.bool,
   requirement: PropTypes.string.isRequired
 }
 

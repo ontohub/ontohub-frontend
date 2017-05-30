@@ -1,0 +1,1 @@
+export { getVersionQuery } from './version'
