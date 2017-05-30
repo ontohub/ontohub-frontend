@@ -8,6 +8,7 @@ let config = {
     production = {},
     test = {}
 
+/* istanbul ignore next */
 switch (process.env.NODE_ENV) {
 case 'development':
   Object.assign(config, development)
