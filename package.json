@@ -3,16 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
     "semantic-ui-css": "^2.2.10",
-    "semantic-ui-react": "^0.68.4"
+    "semantic-ui-react": "^0.68.4",
+    "semver": "^5.3.0"
   },
   "devDependencies": {
     "codecov": "^2.2.0",
+    "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
-    "react-scripts": "1.0.7"
+    "react-scripts": "1.0.7",
+    "react-test-renderer": "^15.5.4"
   },
   "scripts": {
     "start": "react-scripts start",

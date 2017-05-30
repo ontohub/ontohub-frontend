@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VersionWarning version does not satisfy requirement matches snapshot 1`] = `
+<Message
+  content={
+    <p>
+      Expected version
+       
+      <code>
+        v0.0.0-65
+      </code>
+       
+      to satisfy requirement
+       
+      <code>
+        &gt; v0.0.0-65
+      </code>
+      . Be aware that this may cause problems.
+    </p>
+  }
+  header="The connected backend does not meet the version requirement"
+  icon="warning sign"
+  negative={true}
+/>
+`;
