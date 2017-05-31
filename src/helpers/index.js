@@ -1,1 +1,2 @@
-export { normalize } from './normalize'
+export { normalize, inspect, toJSON, extractUserIdFromToken } from './normalize'
+export { withHeader } from './withHeader'

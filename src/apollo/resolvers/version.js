@@ -1,7 +1,5 @@
-import config from '../../config'
-import { normalize } from '../../helpers'
+import { Api } from '../api'
+import { normalize, toJSON } from '../../helpers'
 
 export const resolveBackendVersion = () =>
-  fetch(`${config.api.endpoint}/version`)
-    .then((response) => response.json())
-    .then(normalize)
+  Api.get('/version').then(toJSON).then(normalize)

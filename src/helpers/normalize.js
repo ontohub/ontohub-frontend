@@ -62,3 +62,26 @@ export const normalize = (json) => {
     return { id, ...attributes, ...relationships }
   }
 }
+/**
+ * @param {*} data
+ * @return {*}
+ */
+export const inspect = (data) => {
+  // eslint-disable-next-line no-console
+  console.log(data)
+  return data
+}
+
+/**
+ * @param {Response} response
+ * @return {object}
+ */
+export const toJSON = (response) => response.json()
+
+export const extractUserIdFromToken = (token) => {
+  try {
+    return JSON.parse(atob(token.split('.')[1])).user_id
+  } catch (e) {
+    return null
+  }
+}

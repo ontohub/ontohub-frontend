@@ -1,5 +1,5 @@
 import React from 'react'
-import withHeader from '../helpers/withHeader'
+import { withHeader } from '../helpers'
 import Header from './Header'
 import { Icon, List, Header as H, Message, Container } from 'semantic-ui-react'
 import { css, sizes } from '../styles'

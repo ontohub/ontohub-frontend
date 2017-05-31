@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import VersionWarning from './containers/VersionWarning'
-import { GlobalMenu, Home } from './components'
+import { VersionWarning, GlobalMenu } from './containers'
+import { Home } from './components'
 import { Switch, Route } from 'react-router-dom'
 import { css, sizes } from './styles'
 
