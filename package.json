@@ -29,5 +29,11 @@
     "lint": "eslint src/**/*.js",
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/*.js"
+    ]
   }
 }
