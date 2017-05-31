@@ -8,7 +8,7 @@ const GlobalMenuWithData = graphql(currentUserQuery, {
     ...props,
     loading: _.get(props, 'data.loading'),
     error: _.get(props, 'data.error'),
-    currentUser: console.log(props) || _.get(props, 'data.currentUser')
+    currentUser: _.get(props, 'data.currentUser')
   })
 })(GlobalMenu)
 
