@@ -1,5 +1,5 @@
 import React from 'react'
-import VersionWarning from '../VersionWarning'
+import { VersionWarning } from '..'
 import { ApolloProvider } from 'react-apollo'
 import { client } from '../../apollo'
 import { mount } from 'enzyme'
@@ -27,6 +27,6 @@ describe('VersionWarning Container', () => {
         <VersionWarning requirement={requirement} />
       </ApolloProvider>
     )
-    expect(fetch.mock.calls.length).toBe(1)
+    expect(global.fetch.mock.calls.length).toBe(1)
   })
 })

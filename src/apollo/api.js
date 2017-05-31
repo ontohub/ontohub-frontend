@@ -7,11 +7,12 @@ export const Api = {
         'Content-Type': 'application/vnd.api+json'
       }
     }
-    let authToken = localStorage.getItem('auth-token')
+    let authToken =
+      global.localStorage && global.localStorage.getItem('auth-token')
     if (authToken) {
       defaultOptions.headers.Authorization = `Bearer ${authToken}`
     }
-    return fetch(`${config.api.endpoint}${url}`, {
+    return global.fetch(`${config.api.endpoint}${url}`, {
       ...defaultOptions,
       ...options
     })

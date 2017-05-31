@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GlobalMenu matches the snapshot 1`] = `
+exports[`GlobalMenu signed in user matches the snapshot 1`] = `
 <div
   data-css-poy59o=""
 >
@@ -15,6 +15,48 @@ exports[`GlobalMenu matches the snapshot 1`] = `
     >
       Ontohub
     </a>
+    <div
+      className="right menu"
+    >
+      <div
+        className="item"
+        onClick={[Function]}
+      >
+        ada
+         (
+        ada@example.com
+        )
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`GlobalMenu signed out user matches the snapshot 1`] = `
+<div
+  data-css-poy59o=""
+>
+  <div
+    className="ui borderless inverted top fixed menu"
+    data-css-k2eqqe=""
+  >
+    <a
+      className="header item"
+      href="/"
+      onClick={[Function]}
+    >
+      Ontohub
+    </a>
+    <div
+      className="right menu"
+    >
+      <div
+        className="item"
+        onClick={[Function]}
+      >
+        Sign in
+      </div>
+    </div>
   </div>
 </div>
 `;
