@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GlobalMenu matches the snapshot 1`] = `
+<div
+  className=" jsxstyle0"
+  style={undefined}
+>
+  <div
+    className="ui borderless inverted top fixed menu jsxstyle1"
+    style={undefined}
+  >
+    <a
+      className="header item"
+      href="/"
+      onClick={[Function]}
+    >
+      Ontohub
+    </a>
+  </div>
+</div>
+`;

@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VersionWarning version does not satisfy requirement matches snapshot 1`] = `
-<Message
+exports[`VersionWarning version could not be determined shows an error message 1`] = `
+<WarningMessage
+  content="This could mean that the backend is currently offline"
+  header="Could not determine backend version"
+/>
+`;
+
+exports[`VersionWarning version does not satisfy requirement matches the snapshot 1`] = `
+<WarningMessage
   content={
     <p>
       Expected version
@@ -19,7 +26,20 @@ exports[`VersionWarning version does not satisfy requirement matches snapshot 1`
     </p>
   }
   header="The connected backend does not meet the version requirement"
+/>
+`;
+
+exports[`WarningMessage matches the snapshot 1`] = `
+<Message
+  as={[Function]}
+  borderRadius="0 !important"
+  bottom={0}
+  content="Message content"
+  header="Message header"
   icon="warning sign"
+  margin="-1px !important"
   negative={true}
+  position="fixed !important"
+  width="calc(100% + 2px) !important"
 />
 `;

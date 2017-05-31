@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home matches the snapshot 1`] = `
+<div
+  className="ui text container"
+>
+  <div
+    className="ui tiny icon warning message"
+  >
+    <i
+      aria-hidden="true"
+      className="announcement icon"
+    />
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        Development preview
+      </div>
+      You are currently viewing an early development version of the new Ontohub website. It does not yet include much functionality. To use the stable version of Ontohub, please visit
+       
+      <a
+        href="https://ontohub.org"
+      >
+        ontohub.org
+      </a>
+      .
+    </div>
+  </div>
+</div>
+`;
+
+exports[`HomeHeader matches the snapshot 1`] = `
+<div
+  className=" jsxstyle0"
+  style={undefined}
+>
+  <div
+    className=" jsxstyle1"
+    style={undefined}
+  >
+    <div
+      className="ui container jsxstyle2"
+      style={undefined}
+    >
+      <h2
+        className="ui inverted header"
+      >
+        Welcome to Ontohub
+      </h2>
+      <div
+        className="ui large list"
+        role="list"
+      >
+        <div
+          className="item"
+          data-value={undefined}
+          onClick={[Function]}
+          role="listitem"
+        >
+          <i
+            aria-hidden="true"
+            className="fork icon"
+          />
+          <div
+            className="content"
+          >
+            <div
+              className=" jsxstyle3"
+              style={undefined}
+            >
+              Open
+            </div>
+             — 
+            based on open source software
+          </div>
+        </div>
+        <div
+          className="item"
+          data-value={undefined}
+          onClick={[Function]}
+          role="listitem"
+        >
+          <i
+            aria-hidden="true"
+            className="code icon"
+          />
+          <div
+            className="content"
+          >
+            <div
+              className=" jsxstyle3"
+              style={undefined}
+            >
+              Flexible
+            </div>
+             — 
+            supporting OWL, UML, FOL/TPTP, HOL/THF, and more
+          </div>
+        </div>
+        <div
+          className="item"
+          data-value={undefined}
+          onClick={[Function]}
+          role="listitem"
+        >
+          <i
+            aria-hidden="true"
+            className="sitemap icon"
+          />
+          <div
+            className="content"
+          >
+            <div
+              className=" jsxstyle3"
+              style={undefined}
+            >
+              Distributed
+            </div>
+             — 
+            OMS alignments, mappings, networks, combinations using DOL
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

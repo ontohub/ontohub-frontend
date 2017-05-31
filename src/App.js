@@ -1,21 +1,19 @@
 import React, { Component } from 'react'
 import VersionWarning from './containers/VersionWarning'
-import logo from './logo.svg'
-import './App.css'
+import { GlobalMenu, Home } from './components'
+import { Switch, Route } from 'react-router-dom'
+import { Block } from 'jsxstyle'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Block position="relative" top={49} marginBottom={100}>
+        <GlobalMenu />
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
         <VersionWarning requirement={this.props.config.version} />
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Block>
     )
   }
 }
