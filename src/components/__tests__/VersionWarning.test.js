@@ -10,7 +10,7 @@ describe('VersionWarning', () => {
 
     it('is hidden', () => {
       const component = shallow(
-        <VersionWarning requirement={requirement} version={version}/>
+        <VersionWarning requirement={requirement} version={version} />
       )
       expect(component.getNode()).toBe(null)
     })
@@ -21,7 +21,7 @@ describe('VersionWarning', () => {
 
     it('matches snapshot', () => {
       const component = shallow(
-        <VersionWarning requirement={requirement} version={version}/>
+        <VersionWarning requirement={requirement} version={version} />
       )
       expect(component.getNode()).toMatchSnapshot()
     })

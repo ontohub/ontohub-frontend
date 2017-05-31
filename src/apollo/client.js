@@ -5,7 +5,8 @@ import { schema } from './schema'
 export const client = new ApolloClient({
   networkInterface: {
     query(req) {
-      const query = printAST(req.query), { operationName, variables = {} } = req
+      const query = printAST(req.query),
+            { operationName, variables = {} } = req
 
       return graphql(schema, query, null, null, variables, operationName)
     }

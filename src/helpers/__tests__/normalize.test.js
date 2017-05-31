@@ -47,8 +47,12 @@ describe('normalize', () => {
     })
 
     it('extracts relationships', () => {
-      expect(normalize(mockResponse)._parentResponse).toEqual('mock-response-0')
-      expect(normalize(mockResponse)._childResponses).toContain('mock-response-2')
+      expect(normalize(mockResponse)._parentResponse).toEqual(
+        'mock-response-0'
+      )
+      expect(normalize(mockResponse)._childResponses).toContain(
+        'mock-response-2'
+      )
     })
 
     describe('empty model', () => {
@@ -88,14 +92,16 @@ describe('normalize', () => {
     })
 
     it('throws the returned errors', () => {
-      expect(() => normalize(mockResponse)).toThrow("Resource not found")
+      expect(() => normalize(mockResponse)).toThrow('Resource not found')
     })
   })
 
   describe('invalid document', () => {
     it('rejects an empty document', () => {
       mockResponse = {}
-      expect(() => normalize(mockResponse)).toThrow("Invalid JSON API document")
+      expect(() => normalize(mockResponse)).toThrow(
+        'Invalid JSON API document'
+      )
     })
 
     it('rejects data and errors', () => {
@@ -103,14 +109,18 @@ describe('normalize', () => {
         data: {},
         errors: {}
       }
-      expect(() => normalize(mockResponse)).toThrow("Invalid JSON API document")
+      expect(() => normalize(mockResponse)).toThrow(
+        'Invalid JSON API document'
+      )
     })
 
     it('rejects only meta', () => {
       mockResponse = {
         meta: {}
       }
-      expect(() => normalize(mockResponse)).toThrow("Invalid JSON API document")
+      expect(() => normalize(mockResponse)).toThrow(
+        'Invalid JSON API document'
+      )
     })
   })
 })

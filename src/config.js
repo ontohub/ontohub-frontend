@@ -1,5 +1,5 @@
 let config = {
-      version: '>0.0.0-70',
+      version: '> 0.0.0-90',
       api: {
         endpoint: 'http://localhost:3000'
       }
