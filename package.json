@@ -5,6 +5,7 @@
   "dependencies": {
     "graphql-tag": "^2.2.1",
     "graphql-tools": "^0.11.0",
+    "jsxstyle": "^1.0.2",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-apollo": "^1.2.0",
