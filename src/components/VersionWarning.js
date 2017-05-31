@@ -1,20 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Message } from 'semantic-ui-react'
-import { Block } from 'jsxstyle'
+import { css } from '../styles'
 import semver from 'semver'
 
-const messageStyles = {
+const messageStyles = css({
   position: 'fixed !important',
   margin: '-1px !important',
   borderRadius: '0 !important',
   bottom: 0,
   width: 'calc(100% + 2px) !important'
-}
+})
 
 const WarningMessage = (props) => (
   <Message
-    as={Block}
     {...messageStyles}
     negative
     icon="warning sign"

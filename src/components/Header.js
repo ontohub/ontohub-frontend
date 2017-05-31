@@ -1,17 +1,22 @@
 import React from 'react'
-import { Block } from 'jsxstyle'
-import { colors, sizes } from '../styles'
+import { css, colors, sizes } from '../styles'
+
+const headerStyles = css({
+  backgroundColor: colors.dark,
+  color: `${colors.light} !important`,
+  marginBottom: '1em',
+  '& > div': {
+    maxWidth: sizes.contentWidth,
+    margin: 'auto'
+  }
+})
 
 const Header = (props) => (
-  <Block
-    backgroundColor={colors.dark}
-    color={`${colors.light} !important`}
-    marginBottom="1em"
-  >
-    <Block maxWidth={sizes.contentWidth} margin="auto">
+  <div {...headerStyles}>
+    <div>
       {props.children}
-    </Block>
-  </Block>
+    </div>
+  </div>
 )
 
 export default Header

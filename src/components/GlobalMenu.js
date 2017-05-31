@@ -1,30 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Menu } from 'semantic-ui-react'
-import { Block } from 'jsxstyle'
-import { sizes, colors } from '../styles'
+import { css, sizes, colors } from '../styles'
 
-const styles = {
+const styles = css({
   position: 'fixed',
   backgroundColor: colors.dark,
   width: '100%',
   top: 0,
   display: 'flex',
   justifyContent: 'center'
-}
+})
 
-const menuStyles = {
-  height: 50,
+const menuStyles = css({
+  height: sizes.menuHeight,
   width: `${sizes.contentWidth}px !important`,
   position: 'relative !important'
-}
+})
 
 const GlobalMenu = () => (
-  <Block {...styles}>
-    <Menu inverted borderless fixed="top" as={Block} {...menuStyles}>
+  <div {...styles}>
+    <Menu inverted borderless fixed="top" {...menuStyles}>
       <Menu.Item header as={Link} to="/">Ontohub</Menu.Item>
     </Menu>
-  </Block>
+  </div>
 )
 
 export default GlobalMenu

@@ -1,18 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches the snapshot 1`] = `
-<Block
-  backgroundColor="#1B1C1D"
-  color="rgba(255, 255, 255, 0.9) !important"
-  display="block"
-  marginBottom="1em"
+<div
+  data-css-e32ed5=""
 >
-  <Block
-    display="block"
-    margin="auto"
-    maxWidth={700}
-  >
+  <div>
     Header content
-  </Block>
-</Block>
+  </div>
+</div>
 `;

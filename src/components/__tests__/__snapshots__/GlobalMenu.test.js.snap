@@ -2,12 +2,11 @@
 
 exports[`GlobalMenu matches the snapshot 1`] = `
 <div
-  className=" jsxstyle0"
-  style={undefined}
+  data-css-poy59o=""
 >
   <div
-    className="ui borderless inverted top fixed menu jsxstyle1"
-    style={undefined}
+    className="ui borderless inverted top fixed menu"
+    data-css-k2eqqe=""
   >
     <a
       className="header item"

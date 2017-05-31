@@ -31,15 +31,10 @@ exports[`VersionWarning version does not satisfy requirement matches the snapsho
 
 exports[`WarningMessage matches the snapshot 1`] = `
 <Message
-  as={[Function]}
-  borderRadius="0 !important"
-  bottom={0}
   content="Message content"
+  data-css-5ccd9j=""
   header="Message header"
   icon="warning sign"
-  margin="-1px !important"
   negative={true}
-  position="fixed !important"
-  width="calc(100% + 2px) !important"
 />
 `;

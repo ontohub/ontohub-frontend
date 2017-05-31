@@ -2,13 +2,12 @@ import React from 'react'
 import withHeader from '../helpers/withHeader'
 import Header from './Header'
 import { Icon, List, Header as H, Message, Container } from 'semantic-ui-react'
-import { Block, Inline } from 'jsxstyle'
-import { sizes } from '../styles'
+import { css, sizes } from '../styles'
 
 const Bold = (props) => (
-  <Inline fontWeight="bold">
+  <span {...css({ fontWeight: 'bold' })}>
     {props.children}
-  </Inline>
+  </span>
 )
 
 const Item = ({ icon, header, content }) => (
@@ -22,7 +21,7 @@ const Item = ({ icon, header, content }) => (
 
 const HomeHeader = () => (
   <Header>
-    <Container as={Block} padding={sizes.headerPadding}>
+    <Container {...css({ padding: sizes.headerPadding })}>
       <H as="h2" inverted>Welcome to Ontohub</H>
       <List size="large">
         <Item
