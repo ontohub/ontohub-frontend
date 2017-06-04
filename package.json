@@ -19,6 +19,8 @@
     "codecov": "^2.2.0",
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
+    "flow-bin": "^0.47.0",
+    "flow-typed": "^2.1.2",
     "prettier-eslint-cli": "^3.6.1",
     "react-scripts": "1.0.7",
     "react-test-renderer": "^15.5.4"
@@ -27,6 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "flow": "flow",
     "lint": "eslint src/**/*.js",
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "eject": "react-scripts eject"

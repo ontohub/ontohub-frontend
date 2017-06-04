@@ -1,17 +1,13 @@
+// @flow
+
 import _ from 'lodash'
 
-/**
- * @param {object} attributes - a valid JSON API attributes object
- * @return {object}
- */
-const parseAttributes = (attributes) =>
+const parseAttributes = (attributes: { [string]: any }): { [string]: any } =>
   _.mapKeys(attributes, _.rearg(_.camelCase, [1, 0]))
 
-/**
- * @param {object} relationships - a valid JSON API relationships object
- * @return {object}
- */
-const parseRelationships = (relationships) => {
+const parseRelationships = (relationships: {
+  [string]: any
+}): { [string]: any } => {
   let mappedKeys = _.mapKeys(
     relationships,
     (val, key) => `_${_.camelCase(key)}`
@@ -27,14 +23,18 @@ const parseRelationships = (relationships) => {
   return mappedValues
 }
 
-/**
- * @param {object} json - A valid toplevel JSON API response
- * @return {object}
- */
-export const normalize = (json) => {
+export const normalize = (json: {
+  data?: {
+    attributes: { [string]: any },
+    relationships: any
+  }
+}) => {
   let attributes = {},
       relationships = {},
-      keys = _.chain(json).keys().intersection(['errors', 'data']).value()
+      keys: [string] = _.chain(json)
+      .keys()
+      .intersection(['errors', 'data'])
+      .value()
 
   if (_.size(keys) !== 1) {
     let error = {
@@ -62,23 +62,15 @@ export const normalize = (json) => {
     return { id, ...attributes, ...relationships }
   }
 }
-/**
- * @param {*} data
- * @return {*}
- */
-export const inspect = (data) => {
+export const inspect = (data: any) => {
   // eslint-disable-next-line no-console
   console.log(data)
   return data
 }
 
-/**
- * @param {Response} response
- * @return {object}
- */
-export const toJSON = (response) => response.json()
+export const toJSON = (response: Response) => response.json()
 
-export const extractUserIdFromToken = (token) => {
+export const extractUserIdFromToken = (token: string): ?string => {
   try {
     return JSON.parse(atob(token.split('.')[1])).user_id
   } catch (e) {

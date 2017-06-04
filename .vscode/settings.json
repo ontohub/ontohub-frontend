@@ -4,21 +4,25 @@
 // - Prettier - ESLint
 // - Debugger for Chrome
 // - Auto Close Tag
+// - Flow Language Support
 {
-    "editor.tabSize": 2,
-    "files.insertFinalNewline": true,
-    "files.exclude": {
-      "**/.git": true,
-      "**/.svn": true,
-      "**/.hg": true,
-      "**/CVS": true,
-      "**/.DS_Store": true,
-      "**/node_modules": true,
-      "**/.chrome": true,
-      "**/coverage": true
-    },
-    "eslint.enable": true,
-    "prettier.singleQuote": true,
-    "prettier.tabWidth": 2,
-    "prettier.semi": false
-  }
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.chrome": true,
+    "**/coverage": true
+  },
+  "javascript.validate.enable": false,
+  "flow.useNPMPackagedFlow": true,
+  "eslint.enable": true,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.semi": false
+}
