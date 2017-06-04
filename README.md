@@ -1,7 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+[![Travis branch](https://img.shields.io/travis/ontohub/ontohub-frontend/react.svg)](https://travis-ci.org/ontohub/ontohub-frontend)
+[![Codecov branch](https://img.shields.io/codecov/c/github/ontohub/ontohub-frontend/react.svg)](https://codecov.io/gh/ontohub/ontohub-frontend)
+[![GitHub issues](https://img.shields.io/github/issues/ontohub/ontohub-frontend.svg?maxAge=2592000)](https://waffle.io/ontohub/ontohub-backend?source=ontohub%2Fontohub-frontend)
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+# Ontohub frontend
 
 ## Table of Contents
 
