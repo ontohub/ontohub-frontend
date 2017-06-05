@@ -17,6 +17,7 @@ install:
   - "yarn install --pure-lockfile --no-emoji"
 
 script:
+  - "yarn flow"
   - "yarn test -- --coverage"
 
 after_script:

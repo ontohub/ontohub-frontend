@@ -1,8 +1,9 @@
+// @flow
+
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Message } from 'semantic-ui-react'
 import { css } from '../styles'
-import semver from 'semver'
+import { satisfies } from 'semver'
 
 const messageStyles = css({
   position: 'fixed !important',
@@ -12,18 +13,21 @@ const messageStyles = css({
   width: 'calc(100% + 2px) !important'
 })
 
-const WarningMessage = (props) => (
-  <Message
-    {...messageStyles}
-    negative
-    icon="warning sign"
-    {...props}
-  />
+const WarningMessage = (props: {}) => (
+  <Message {...messageStyles} negative icon="warning sign" {...props} />
 )
 
 export { WarningMessage }
 
 export class VersionWarning extends Component {
+  props: {
+    version: string,
+    loading?: boolean,
+    requirement: string
+  }
+  static defaultProps = {
+    version: ''
+  }
   render() {
     if (this.props.error) {
       return (
@@ -35,7 +39,7 @@ export class VersionWarning extends Component {
     }
     const validVersion =
       this.props.loading ||
-      semver.satisfies(this.props.version, this.props.requirement)
+      satisfies(this.props.version, this.props.requirement)
 
     return validVersion
       ? null
@@ -55,12 +59,6 @@ export class VersionWarning extends Component {
           }
         />
   }
-}
-
-VersionWarning.propTypes = {
-  version: PropTypes.string,
-  loading: PropTypes.bool,
-  requirement: PropTypes.string.isRequired
 }
 
 export default VersionWarning
