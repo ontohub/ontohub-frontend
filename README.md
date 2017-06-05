@@ -11,6 +11,7 @@
   - [Install the dependencies](#install-the-dependencies)
   - [Visual Studio Code](#visual-studio-code)
 - [Used technologies](#used-technologies)
+- [Directory structure](#directory-structure)
 - [Common Tasks](#common-tasks)
   - [Running the app in development mode](#running-the-app-in-development-mode)
   - [Run the tests](#run-the-tests)
@@ -65,6 +66,52 @@ You can install them via the Plugin Manager from inside the editor.
 
 **Tests**
 - [Jest](https://facebook.github.io/jest/)
+
+## Directory structure
+
+```
+src
+├── App.js
+├── apollo                # Apollo related files
+│   ├── client.js
+│   ├── queries
+│   │   └── ...
+│   ├── resolvers
+│   │   └── ...
+│   └── ...
+├── components            # General components
+│   ├── __tests__             # Component tests
+│   │   └── <...>.test.js
+│   └── ...
+├── containers            # General containers 
+│   └── ...
+├── helpers               # General helpers
+│   ├── __tests__             # Helper tests
+│   │   └── <...>.test.js
+│   └── ...
+└── scenes
+    ├── Home                  # View for `/`
+    │   ├── index.js
+    │   ├── index.test.js         # Scene specific tests
+    │   └── components            # Scene specific components
+    │       ├── __tests__             # Scene specific component tests
+    │       │   └── Header.test.js
+    │       │   └── <...>.test.js
+    │       ├── index.js
+    │       ├── Header.js
+    │       └── ...
+    ├── OrganizationalUnit    # View for `/:orgUnit`
+    │   ├── index.js
+    │   ├── components            # Scene specific components
+    │   │   └── ...
+    │   └── containers            # Scene specific containers
+    │       └── ...
+    ├── Repository            # View for `/:orgUnit/:repo`
+    │   ├── index.js
+    │   └── components            # Scene specific components
+    │       └── ...
+    └── ...
+```
 
 ## Common tasks
 
