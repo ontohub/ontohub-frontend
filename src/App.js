@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import { VersionWarning, GlobalMenu } from './containers'
-import { Home } from './components'
+import { Home } from './scenes'
 import { Switch, Route } from 'react-router-dom'
 import { css, sizes } from './styles'
 
