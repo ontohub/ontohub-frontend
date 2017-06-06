@@ -1,5 +1,5 @@
 import { Api } from '../api'
-import { client } from '../client'
+import client from '../client'
 import { getUserQuery } from '../queries'
 import { extractUserIdFromToken, toJSON, normalize } from '../../helpers'
 

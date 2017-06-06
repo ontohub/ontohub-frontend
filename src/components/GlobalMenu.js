@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Menu } from 'semantic-ui-react'
+import { Dropdown, Icon, Menu } from 'semantic-ui-react'
+import { LoginModal } from './LoginModal'
 import { css, sizes, colors } from '../styles'
+import Gravatar from 'react-gravatar'
 
 const styles = css({
   position: 'fixed',
@@ -18,17 +20,52 @@ const menuStyles = css({
   position: 'relative !important'
 })
 
-const GlobalMenu = ({ loading, error, currentUser }) => (
+const SignedInMenu = ({ me, onSignOut }) =>
+  <Menu.Menu position="right">
+    <Dropdown item text={<span><Icon name="plus" /></span>}>
+      <Dropdown.Menu>
+        <Dropdown.Header>
+          Create new...
+        </Dropdown.Header>
+        <Dropdown.Item as={Link} to="/new" content="Repository" />
+        <Dropdown.Item
+          as={Link}
+          to="/organizations/new"
+          content="Organization"
+        />
+      </Dropdown.Menu>
+    </Dropdown>
+    <Dropdown
+      item
+      text={
+        <span>
+          <Gravatar style={{ borderRadius: 2 }} size={24} md5={me.emailHash} />
+        </span>
+      }
+    >
+      <Dropdown.Menu>
+        <Dropdown.Header>
+          Signed in as {me.id}
+        </Dropdown.Header>
+        <Dropdown.Item as={Link} to={`/${me.id}`} content="Profile" />
+        <Dropdown.Divider />
+        <Dropdown.Item onClick={onSignOut} content="Sign out" />
+      </Dropdown.Menu>
+    </Dropdown>
+  </Menu.Menu>
+
+const SignedOutMenu = ({ onSignIn }) =>
+  <Menu.Menu position="right">
+    <LoginModal onSignIn={onSignIn} />
+  </Menu.Menu>
+
+const GlobalMenu = ({ loading, error, me, onSignIn, onSignOut }) =>
   <div {...styles}>
     <Menu inverted borderless fixed="top" {...menuStyles}>
       <Menu.Item header as={Link} to="/">Ontohub</Menu.Item>
-      <Menu.Menu position="right">
-        {(currentUser &&
-          <Menu.Item>{currentUser.id} ({currentUser.email})</Menu.Item>) ||
-          <Menu.Item>Sign in</Menu.Item>}
-      </Menu.Menu>
+      {(me && <SignedInMenu me={me} onSignOut={onSignOut} />) ||
+        <SignedOutMenu onSignIn={onSignIn} />}
     </Menu>
   </div>
-)
 
 export default GlobalMenu

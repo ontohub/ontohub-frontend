@@ -2,6 +2,7 @@
   "name": "ontohub-frontend",
   "version": "0.1.0",
   "private": true,
+  "license": "AGPL-3.0",
   "dependencies": {
     "glamor": "^2.20.25",
     "graphql-tag": "^2.2.1",
@@ -9,6 +10,7 @@
     "react": "^15.5.4",
     "react-apollo": "^1.2.0",
     "react-dom": "^15.5.4",
+    "react-gravatar": "^2.6.3",
     "react-router-dom": "^4.1.1",
     "semantic-ui-css": "^2.2.10",
     "semantic-ui-react": "^0.68.4",

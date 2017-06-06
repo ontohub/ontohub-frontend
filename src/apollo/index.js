@@ -1,2 +1,2 @@
-export { client } from './client'
+export { Client, LocalClient } from './client'
 export { Api } from './api'
