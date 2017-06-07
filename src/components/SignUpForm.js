@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import zxcvbn from 'zxcvbn'
 import _ from 'lodash'
 import Client from '../apollo/client'
 import validate from '../helpers/validations'
 import { gql } from 'react-apollo'
-import { Button, Form, Label } from 'semantic-ui-react'
+import { Button, Form, Label, Progress } from 'semantic-ui-react'
 
 const validations = [
   {
@@ -12,7 +13,7 @@ const validations = [
     text: 'Username must be at least 3 characters long'
   },
   {
-    validate: ({ username }) => /^[a-zA-Z0-9-]+$/.test(username),
+    validate: ({ username }) => /^[a-z0-9][a-z0-9-]*$/.test(username),
     field: 'username',
     text: 'Username must consist of a-z, A-Z, 0-9, -'
   },
@@ -48,6 +49,7 @@ export class SignUpForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      passwordScore: 0,
       error: false,
       errors: {}
     }
@@ -115,8 +117,31 @@ export class SignUpForm extends Component {
             <input
               type="password"
               ref={(input) => (this.password = input)}
+              onChange={(e) => {
+                let score = zxcvbn(e.target.value).score
+                this.setState({
+                  passwordScore: score
+                })
+              }}
               placeholder="Password"
               id="sign-up-password"
+            />
+            <Progress
+              attached="bottom"
+              title={`Password strength: ${[
+                'Very weak',
+                'Weak',
+                'Okay',
+                'Strong',
+                'Very strong'
+              ][this.state.passwordScore]}`}
+              style={{ marginTop: -3 }}
+              percent={this.state.passwordScore * 25}
+              color={
+                ['red', 'orange', 'yellow', 'olive', 'green'][
+                  this.state.passwordScore
+                ]
+              }
             />
             {this.state.errors.password &&
               <Label pointing color="red">
