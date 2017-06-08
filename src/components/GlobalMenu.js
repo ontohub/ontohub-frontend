@@ -56,7 +56,9 @@ const SignedInMenu = ({ me, onSignOut }) =>
 
 const SignedOutMenu = ({ onSignIn, signUpValidations }) =>
   <Menu.Menu position="right">
-    <LoginModal onSignIn={onSignIn} signUpValidations={signUpValidations} />
+    <Menu.Item>
+      <LoginModal onSignIn={onSignIn} signUpValidations={signUpValidations} />
+    </Menu.Item>
   </Menu.Menu>
 
 const GlobalMenu = ({

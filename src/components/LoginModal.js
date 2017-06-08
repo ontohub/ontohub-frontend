@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {
+  Button,
   Dimmer,
   Grid,
   Header,
@@ -43,11 +44,7 @@ export class LoginModal extends Component {
         dimmer="inverted"
         open={this.state.open}
         closeIcon
-        trigger={
-          <Menu.Item active color="blue">
-            <Icon name="sign in" /> Sign in
-          </Menu.Item>
-        }
+        trigger={<Button primary icon="sign in" content="Sign in" />}
       >
         <Modal.Header>Sign in</Modal.Header>
         <Modal.Content>
