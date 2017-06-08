@@ -1,2 +1,7 @@
-export { Client, LocalClient } from './client'
-export { Api } from './api'
+export { Client } from './client'
+export {
+  getVersionQuery,
+  signInMutation,
+  currentUserQuery,
+  getUserQuery
+} from './queries'

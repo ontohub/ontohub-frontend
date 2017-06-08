@@ -1,10 +1,7 @@
 import {
   ApolloClient,
-  printAST,
   createBatchingNetworkInterface
 } from 'react-apollo'
-import { graphql } from 'graphql'
-import { schema } from './schema'
 import config from '../config'
 
 const networkInterface = createBatchingNetworkInterface({
@@ -25,16 +22,6 @@ networkInterface.use([
     }
   }
 ])
-// export const LocalClient = new ApolloClient({
-//   networkInterface: {
-//     query(req) {
-//       const query = printAST(req.query),
-//             { operationName, variables = {} } = req
-
-//       return graphql(schema, query, null, null, variables, operationName)
-//     }
-//   }
-// })
 
 export const Client = new ApolloClient({
   networkInterface

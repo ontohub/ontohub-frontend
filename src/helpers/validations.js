@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import { gql } from 'react-apollo'
-import Client from '../apollo/client'
+import { Client } from '../apollo'
 
 export const userValidations = {
   username: [
@@ -37,6 +37,8 @@ const convertToIntermediate = (obj) =>
 const intermediateMap = (list, data) =>
   _.map(list, (f) => (_.isFunction(f) ? f(data) : f))
 
+const toErrorMessage = (name) => (str) => `${_.upperFirst(name)} ${str}`
+
 const convertFromIntermediate = (list) => {
   let idx = 0,
       acc = {}
@@ -45,7 +47,7 @@ const convertFromIntermediate = (list) => {
       .drop(idx + 2)
       .take(list[idx + 1])
       .filter((v) => v !== true)
-      .map((str) => `${_.upperFirst(list[idx])} ${str}`)
+      .map(toErrorMessage(list[idx]))
       .value()
     if (values.length > 0) {
       acc[list[idx]] = values
