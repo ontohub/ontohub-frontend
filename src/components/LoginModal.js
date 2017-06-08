@@ -70,6 +70,7 @@ export class LoginModal extends Component {
                   Don't have an account yet? Sign up now!
                 </Header>
                 <SignUpForm
+                  validations={this.props.signUpValidations}
                   onSubmit={this.onSignUpSubmit.bind(this)}
                   onSuccess={this.onClose.bind(this)}
                   onError={this.onError.bind(this)}

@@ -54,17 +54,27 @@ const SignedInMenu = ({ me, onSignOut }) =>
     </Dropdown>
   </Menu.Menu>
 
-const SignedOutMenu = ({ onSignIn }) =>
+const SignedOutMenu = ({ onSignIn, signUpValidations }) =>
   <Menu.Menu position="right">
-    <LoginModal onSignIn={onSignIn} />
+    <LoginModal onSignIn={onSignIn} signUpValidations={signUpValidations} />
   </Menu.Menu>
 
-const GlobalMenu = ({ loading, error, me, onSignIn, onSignOut }) =>
+const GlobalMenu = ({
+  loading,
+  error,
+  me,
+  onSignIn,
+  onSignOut,
+  signUpValidations
+}) =>
   <div {...styles}>
     <Menu inverted borderless fixed="top" {...menuStyles}>
       <Menu.Item header as={Link} to="/">Ontohub</Menu.Item>
       {(me && <SignedInMenu me={me} onSignOut={onSignOut} />) ||
-        <SignedOutMenu onSignIn={onSignIn} />}
+        <SignedOutMenu
+          onSignIn={onSignIn}
+          signUpValidations={signUpValidations}
+        />}
     </Menu>
   </div>
 

@@ -1,49 +1,7 @@
 import React, { Component } from 'react'
 import zxcvbn from 'zxcvbn'
-import _ from 'lodash'
-import Client from '../apollo/client'
-import validate from '../helpers/validations'
-import { gql } from 'react-apollo'
+import { validate } from '../helpers/validations'
 import { Button, Form, Label, Progress } from 'semantic-ui-react'
-
-const validations = [
-  {
-    validate: ({ username }) => username.length >= 3,
-    field: 'username',
-    text: 'Username must be at least 3 characters long'
-  },
-  {
-    validate: ({ username }) => /^[a-z0-9][a-z0-9-]*$/.test(username),
-    field: 'username',
-    text: 'Username must consist of a-z, A-Z, 0-9, -'
-  },
-  {
-    validate: ({ username }) =>
-      Client.query({
-        query: gql`query FetchUser($id: ID!) { organizationalUnit(id: $id) { id } }`,
-        variables: {
-          id: username
-        }
-      }).then((resp) => !resp.data.organizationalUnit),
-    field: 'username',
-    text: 'Username is already taken'
-  },
-  {
-    validate: ({ email }) => /^[^@]+@[^@]+$/.test(email),
-    field: 'email',
-    text: 'Email address must be valid'
-  },
-  {
-    validate: ({ password }) => password.length >= 10,
-    field: 'password',
-    text: 'Password must be at least 10 characters long'
-  },
-  {
-    validate: ({ password, passwordConfirm }) => password === passwordConfirm,
-    field: 'passwordConfirm',
-    text: 'Passwords must be equal'
-  }
-]
 
 export class SignUpForm extends Component {
   constructor(props) {
@@ -62,7 +20,7 @@ export class SignUpForm extends Component {
           password: this.password.value,
           passwordConfirm: this.passwordConfirm.value
         },
-        errors = validate(validations, fieldValues)
+        errors = validate(this.props.validations, fieldValues)
     errors.then((errors) => {
       this.setState({
         errors: errors
@@ -95,7 +53,9 @@ export class SignUpForm extends Component {
             />
             {this.state.errors.username &&
               <Label pointing color="red">
-                {this.state.errors.username.map((e) => <div>{e}</div>)}
+                {this.state.errors.username.map((e, i) =>
+                  <div key={i}>{e}</div>
+                )}
               </Label>}
           </Form.Field>
           <Form.Field error={!!this.state.errors.email}>
@@ -107,7 +67,7 @@ export class SignUpForm extends Component {
             />
             {this.state.errors.email &&
               <Label pointing color="red">
-                {this.state.errors.email.map((e) => <div>{e}</div>)}
+                {this.state.errors.email.map((e, i) => <div key={i}>{e}</div>)}
               </Label>}
           </Form.Field>
         </Form.Group>
@@ -145,7 +105,9 @@ export class SignUpForm extends Component {
             />
             {this.state.errors.password &&
               <Label pointing color="red">
-                {this.state.errors.password.map((e) => <div>{e}</div>)}
+                {this.state.errors.password.map((e, i) =>
+                  <div key={i}>{e}</div>
+                )}
               </Label>}
           </Form.Field>
           <Form.Field error={!!this.state.errors.passwordConfirm}>
@@ -158,7 +120,9 @@ export class SignUpForm extends Component {
             />
             {this.state.errors.passwordConfirm &&
               <Label pointing color="red">
-                {this.state.errors.passwordConfirm.map((e) => <div>{e}</div>)}
+                {this.state.errors.passwordConfirm.map((e, i) =>
+                  <div key={i}>{e}</div>
+                )}
               </Label>}
           </Form.Field>
         </Form.Group>

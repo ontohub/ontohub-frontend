@@ -2,6 +2,7 @@ import { Client } from '../apollo/client'
 import { currentUserQuery, signInMutation } from '../apollo/queries'
 import { compose, graphql } from 'react-apollo'
 import { GlobalMenu } from '../components'
+import { userValidations } from '../helpers/validations'
 import _ from 'lodash'
 
 const signOut = () => {
@@ -26,6 +27,8 @@ const GlobalMenuWithData = compose(
   }),
   graphql(signInMutation, {
     props: (props) => ({
+      ...props,
+      signUpValidations: userValidations,
       onSignIn: (username, password) =>
         props
           .mutate({
