@@ -22,7 +22,7 @@ const menuStyles = css({
 
 const SignedInMenu = ({ me, onSignOut }) =>
   <Menu.Menu position="right">
-    <Dropdown item text={<span><Icon name="plus" /></span>}>
+    <Dropdown item trigger={<span><Icon name="plus" /></span>}>
       <Dropdown.Menu>
         <Dropdown.Header>
           Create new...
@@ -37,7 +37,7 @@ const SignedInMenu = ({ me, onSignOut }) =>
     </Dropdown>
     <Dropdown
       item
-      text={
+      trigger={
         <span>
           <Gravatar style={{ borderRadius: 2 }} size={24} md5={me.emailHash} />
         </span>

@@ -127,6 +127,7 @@ export class SignUpForm extends Component {
           </Form.Field>
         </Form.Group>
         <Button
+          basic
           type="submit"
           icon="add user"
           content="Create account"

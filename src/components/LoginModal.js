@@ -1,14 +1,5 @@
 import React, { Component } from 'react'
-import {
-  Button,
-  Dimmer,
-  Grid,
-  Header,
-  Icon,
-  Loader,
-  Menu,
-  Modal
-} from 'semantic-ui-react'
+import { Button, Dimmer, Grid, Header, Loader, Modal } from 'semantic-ui-react'
 import SignInForm from './SignInForm'
 import SignUpForm from './SignUpForm'
 
@@ -41,7 +32,6 @@ export class LoginModal extends Component {
     return (
       <Modal
         size="small"
-        dimmer="inverted"
         open={this.state.open}
         closeIcon
         trigger={<Button primary icon="sign in" content="Sign in" />}
