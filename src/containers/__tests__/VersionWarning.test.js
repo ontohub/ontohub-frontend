@@ -1,32 +1,25 @@
 import React from 'react'
 import { VersionWarning } from '..'
-import { ApolloProvider } from 'react-apollo'
-import { client } from '../../apollo'
+import { MockedProvider } from 'react-apollo/lib/test-utils'
 import { mount } from 'enzyme'
+import { getVersionQuery as query } from '../../apollo/queries'
 
 describe('VersionWarning Container', () => {
-  let requirement = '> v0.0.0-65'
+  let requirement = '> v0.0.0-65',
+      mockedData = {
+        version: '0.0.0-83',
+        tag: '0.0.0'
+      }
 
   it('calls the API', () => {
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        json() {
-          return Promise.resolve({
-            data: {
-              attributes: {
-                tag: '0.0.0',
-                commits_since_tag: 80
-              }
-            }
-          })
-        }
-      })
-    )
     mount(
-      <ApolloProvider client={client}>
+      <MockedProvider
+        mocks={[
+          { request: { query, variables: {} }, result: { data: mockedData } }
+        ]}
+      >
         <VersionWarning requirement={requirement} />
-      </ApolloProvider>
+      </MockedProvider>
     )
-    expect(global.fetch.mock.calls.length).toBe(1)
   })
 })

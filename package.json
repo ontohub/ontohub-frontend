@@ -20,6 +20,7 @@
   "devDependencies": {
     "codecov": "^2.2.0",
     "enzyme": "^2.8.2",
+    "enzyme-to-json": "^1.5.1",
     "eslint": "^3.19.0",
     "flow-bin": "^0.47.0",
     "flow-typed": "^2.1.2",

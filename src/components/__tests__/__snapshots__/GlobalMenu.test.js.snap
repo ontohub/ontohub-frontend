@@ -2,30 +2,32 @@
 
 exports[`GlobalMenu signed in user matches the snapshot 1`] = `
 <div
-  data-css-poy59o=""
+  class="sc-bwzfXH gddeqL"
 >
   <div
-    className="ui borderless inverted top fixed menu"
-    data-css-k2eqqe=""
+    class="ui borderless inverted top fixed sc-bdVaJa bBQLuI menu"
   >
     <a
-      className="header item"
+      class="header item"
       href="/"
-      onClick={[Function]}
     >
       Ontohub
     </a>
     <div
-      className="right menu"
+      class="right menu"
     >
       <div
-        className="item"
-        onClick={[Function]}
+        class="item"
       >
-        ada
-         (
-        ada@example.com
-        )
+        <button
+          class="ui primary button"
+        >
+          <i
+            aria-hidden="true"
+            class="sign in icon"
+          />
+           Sign in
+        </button>
       </div>
     </div>
   </div>
@@ -34,27 +36,32 @@ exports[`GlobalMenu signed in user matches the snapshot 1`] = `
 
 exports[`GlobalMenu signed out user matches the snapshot 1`] = `
 <div
-  data-css-poy59o=""
+  class="sc-bwzfXH gddeqL"
 >
   <div
-    className="ui borderless inverted top fixed menu"
-    data-css-k2eqqe=""
+    class="ui borderless inverted top fixed sc-bdVaJa bBQLuI menu"
   >
     <a
-      className="header item"
+      class="header item"
       href="/"
-      onClick={[Function]}
     >
       Ontohub
     </a>
     <div
-      className="right menu"
+      class="right menu"
     >
       <div
-        className="item"
-        onClick={[Function]}
+        class="item"
       >
-        Sign in
+        <button
+          class="ui primary button"
+        >
+          <i
+            aria-hidden="true"
+            class="sign in icon"
+          />
+           Sign in
+        </button>
       </div>
     </div>
   </div>
