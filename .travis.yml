@@ -18,7 +18,7 @@ install:
 
 script:
   - "yarn flow"
-  - "yarn test -- --coverage"
+  - "yarn test -- --coverage --verbose"
 
 after_script:
   - "yarn run codecov"

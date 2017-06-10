@@ -25,30 +25,24 @@ export class SignUpForm extends Component {
     super(props)
     this.state = {
       passwordScore: 0,
-      error: false,
       errors: {}
     }
   }
   onSubmit(e) {
     e.preventDefault()
     let fieldValues = _.mapValues(this.fields, (f) => f.value),
-        errors = validate(this.props.validations, fieldValues)
-    errors.then((errors) => {
+        validationErrors = validate(this.props.validations, fieldValues)
+    return validationErrors.then((errors) => {
       this.setState({
         errors: errors
       })
 
-      if (errors === {}) {
-        return this.props.onSubmit(fieldValues).then(
-          () => {
-            this.setState({ error: false })
-            this.props.onSuccess()
-          },
-          () => {
-            this.setState({ error: true })
-            this.props.onError()
-          }
-        )
+      if (Object.keys(errors).length === 0) {
+        return this.props
+          .onSubmit(fieldValues)
+          .then(this.props.onSuccess, this.props.onError)
+      } else {
+        return this.props.onError()
       }
     })
   }

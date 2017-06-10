@@ -63,9 +63,8 @@ const convertFromIntermediate = (list) => {
   return acc
 }
 
-export const validate = (validations, data) =>
-  Promise.all(intermediateMap(convertToIntermediate(validations), data)).then(
-    convertFromIntermediate
-  )
+export const validate = (validations, data) => Promise.all(
+    intermediateMap(convertToIntermediate(validations), data)
+  ).then(convertFromIntermediate)
 
 export default validate
