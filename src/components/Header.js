@@ -1,21 +1,20 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
-import { colors, sizes } from '../styles'
 import styled from 'styled-components'
 
 const StyledHeader = styled.div`
-  background-color: ${colors.dark};
-  color: ${colors.light} !important;
+  background-color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.light} !important;
   margin-bottom: 1em;
 `
 
 const InnerHeader = styled.div`
-  max-width: ${sizes.contentWidth};
+  max-width: ${({ theme }) => theme.sizes.contentWidth};
   margin: auto;
 `
 
 export const PaddedContainer = styled(Container)`
-  padding: ${sizes.headerPadding}
+  padding: ${({ theme }) => theme.sizes.headerPadding}
 `
 
 export const Header = (props) =>

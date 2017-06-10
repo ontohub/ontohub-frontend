@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Dropdown, Icon, Menu } from 'semantic-ui-react'
 import { LoginModal } from './LoginModal'
-import { sizes, colors } from '../styles'
 import Gravatar from 'react-gravatar'
 import styled from 'styled-components'
 
@@ -48,8 +47,8 @@ const SignedOutMenu = ({ onSignIn, signUpValidations }) =>
   </Menu.Menu>
 
 const InnerMenu = styled(Menu)`
-  height: ${sizes.menuHeight};
-  width: ${sizes.contentWidth} !important;
+  height: ${({ theme }) => theme.sizes.menuHeight};
+  width: ${({ theme }) => theme.sizes.contentWidth} !important;
   position: relative !important;
 `
 
@@ -75,7 +74,7 @@ const GlobalMenu = ({
 
 const FixedGlobalMenu = styled(GlobalMenu)`
   position: fixed;
-  background-color: ${colors.dark};
+  background-color: ${({ theme }) => theme.colors.dark};
   width: 100%;
   top: 0;
   display: flex;
