@@ -17,17 +17,107 @@ exports[`GlobalMenu signed in user matches the snapshot 1`] = `
       class="right menu"
     >
       <div
-        class="item"
+        aria-expanded="false"
+        class="ui item dropdown"
+        role="listbox"
+        tabindex="0"
       >
-        <button
-          class="ui primary button"
-        >
+        <span>
           <i
             aria-hidden="true"
-            class="sign in icon"
+            class="plus icon"
           />
-           Sign in
-        </button>
+        </span>
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        />
+        <div
+          class="menu transition"
+        >
+          <div
+            class="header"
+          >
+            Create new...
+          </div>
+          <a
+            class="item"
+            href="/new"
+            role="option"
+          >
+            <span
+              class="text"
+            >
+              Repository
+            </span>
+          </a>
+          <a
+            class="item"
+            href="/organizations/new"
+            role="option"
+          >
+            <span
+              class="text"
+            >
+              Organization
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        aria-expanded="false"
+        class="ui item dropdown"
+        role="listbox"
+        tabindex="0"
+      >
+        <span>
+          <img
+            alt="Gravatar for undefined"
+            class="react-gravatar"
+            height="24"
+            src="//www.gravatar.com/avatar/3e3417d7ef77d5932a6734b916515ed5?d=retro&r=g&s=24"
+            srcset="//www.gravatar.com/avatar/3e3417d7ef77d5932a6734b916515ed5?d=retro&r=g&s=48 2x"
+            style="border-radius:2px;"
+            width="24"
+          />
+        </span>
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        />
+        <div
+          class="menu transition"
+        >
+          <div
+            class="header"
+          >
+            Signed in as ada
+          </div>
+          <a
+            class="item"
+            href="/ada"
+            role="option"
+          >
+            <span
+              class="text"
+            >
+              Profile
+            </span>
+          </a>
+          <div
+            class="divider"
+          />
+          <div
+            class="item"
+            role="option"
+          >
+            <span
+              class="text"
+            >
+              Sign out
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

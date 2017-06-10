@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginModal matches the snapshot 1`] = `
+<LoginModal
+  onSignIn={[Function]}
+  open={true}
+>
+  <Modal
+    closeIcon={true}
+    closeOnDimmerClick={true}
+    closeOnDocumentClick={false}
+    dimmer={true}
+    open={true}
+    size="small"
+    trigger={
+      <Button
+        as="button"
+        content="Sign in"
+        icon="sign in"
+        primary={true}
+      />
+    }
+  >
+    <Portal
+      className="ui page modals dimmer transition visible active"
+      closeOnDocumentClick={false}
+      closeOnEscape={true}
+      closeOnRootNodeClick={true}
+      mountNode={
+        <body
+          class="dimmable dimmed"
+        >
+          <div
+            class="ui page modals dimmer transition visible active"
+          >
+            <div
+              data-reactroot=""
+              class="ui small modal transition visible active"
+            >
+              <i
+                aria-hidden="true"
+                class="close icon"
+              />
+              <div
+                class="header"
+              >
+                Sign in
+              </div>
+              <div
+                class="content"
+              >
+                <div
+                  class="ui inverted dimmer"
+                >
+                  <div
+                    class="content"
+                  >
+                    <div
+                      class="center"
+                    >
+                      <div
+                        class="ui loader"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ui stackable internally celled divided grid"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="column"
+                    >
+                      <form
+                        class="ui form"
+                      >
+                        <div
+                          class="equal width fields"
+                        >
+                          <div
+                            class="field"
+                          >
+                            <label
+                              for="sign-in-username"
+                            >
+                              Username
+                            </label>
+                            <input
+                              placeholder="Username"
+                              id="sign-in-username"
+                              value="ada"
+                            />
+                          </div>
+                          <div
+                            class="field"
+                          >
+                            <label
+                              for="sign-in-password"
+                            >
+                              Password
+                            </label>
+                            <input
+                              type="password"
+                              placeholder="Password"
+                              id="sign-in-password"
+                              value="changemenow"
+                            />
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          class="ui primary button right floated"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="sign in icon"
+                          />
+                          <!-- react-text: 22 -->
+                          <!-- /react-text -->
+                          <!-- react-text: 23 -->
+                          Sign in
+                          <!-- /react-text -->
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="column"
+                    >
+                      <div
+                        class="ui center aligned header"
+                      >
+                        Don't have an account yet? Sign up now!
+                      </div>
+                      <form
+                        class="ui form"
+                      >
+                        <div
+                          class="equal width fields"
+                        >
+                          <div
+                            class="field"
+                          >
+                            <label
+                              for="sign-up-username"
+                            >
+                              Username
+                            </label>
+                            <input
+                              placeholder="Username"
+                              id="sign-up-username"
+                            />
+                          </div>
+                          <div
+                            class="field"
+                          >
+                            <label
+                              for="sign-up-email"
+                            >
+                              Email
+                            </label>
+                            <input
+                              placeholder="Email"
+                              id="sign-up-email"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="equal width fields"
+                        >
+                          <div
+                            class="field"
+                          >
+                            <label
+                              for="sign-up-password"
+                            >
+                              Password
+                            </label>
+                            <input
+                              type="password"
+                              placeholder="Password"
+                              id="sign-up-password"
+                            />
+                            <div
+                              title="Password strength: Very weak"
+                              class="ui red bottom attached progress"
+                              data-percent="0"
+                              style="margin-top: -3px;"
+                            >
+                              <div
+                                class="bar"
+                                style="width: 0%;"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="field"
+                          >
+                            <label
+                              for="sign-up-password-confirm"
+                            >
+                              Confirm Password
+                            </label>
+                            <input
+                              type="password"
+                              placeholder="Confirm Password"
+                              id="sign-up-password-confirm"
+                            />
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          class="ui basic secondary button right floated"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="add user icon"
+                          />
+                          <!-- react-text: 46 -->
+                          <!-- /react-text -->
+                          <!-- react-text: 47 -->
+                          Create account
+                          <!-- /react-text -->
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </body>
+      }
+      onClose={[Function]}
+      onMount={[Function]}
+      onOpen={[Function]}
+      onUnmount={[Function]}
+      open={true}
+      openOnTriggerClick={true}
+      trigger={
+        <Button
+          as="button"
+          content="Sign in"
+          icon="sign in"
+          primary={true}
+        />
+      }
+    >
+      <Button
+        as="button"
+        content="Sign in"
+        icon="sign in"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        primary={true}
+      >
+        <button
+          className="ui primary button"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <Icon
+            as="i"
+            name="sign in"
+          >
+            <i
+              aria-hidden="true"
+              className="sign in icon"
+            />
+          </Icon>
+           
+          Sign in
+        </button>
+      </Button>
+    </Portal>
+  </Modal>
+</LoginModal>
+`;

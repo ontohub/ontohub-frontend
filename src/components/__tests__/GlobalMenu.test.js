@@ -28,7 +28,9 @@ describe('GlobalMenu', () => {
           <ThemeProvider
             theme={{ colors: { dark: '#000' }, sizes: { menuHeight: '50px' } }}
           >
-            <GlobalMenu currentUser={{ id: 'ada', email: 'ada@example.com' }} />
+            <GlobalMenu
+              me={{ id: 'ada', emailHash: '3e3417d7ef77d5932a6734b916515ed5' }}
+            />
           </ThemeProvider>
         </Router>
       )
