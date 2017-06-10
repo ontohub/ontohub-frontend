@@ -11,7 +11,13 @@ export const userValidations = {
       'must consist of a-z, A-Z, 0-9, -',
     ({ username }) =>
       Client.query({
-        query: gql`query FetchUser($id: ID!) { organizationalUnit(id: $id) { id } }`,
+        query: gql`
+          query FetchUser($id: ID!) {
+            organizationalUnit(id: $id) {
+              id
+            }
+          }
+        `,
         variables: {
           id: username
         }

@@ -9,7 +9,7 @@
     "indent": ["error", 2, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }],
     "linebreak-style": ["error", "unix"],
     "max-len": ["warn", 80],
-    "no-confusing-arrow": ["warn"],
+    "no-confusing-arrow": ["warn", {"allowParens": true}],
     "no-const-assign": ["error"],
     "no-eval": ["error"],
     "no-mixed-spaces-and-tabs": ["error"],

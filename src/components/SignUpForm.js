@@ -2,8 +2,25 @@ import React, { Component } from 'react'
 import zxcvbn from 'zxcvbn'
 import { validate } from '../helpers/validations'
 import { Button, Form, Label, Progress } from 'semantic-ui-react'
+import _ from 'lodash'
+
+const PasswordStrengthBar = ({ score }) =>
+  <Progress
+    attached="bottom"
+    title={`Password strength: ${[
+      'Very weak',
+      'Weak',
+      'Okay',
+      'Strong',
+      'Very strong'
+    ][score]}`}
+    style={{ marginTop: -3 }}
+    percent={score * 25}
+    color={['red', 'orange', 'yellow', 'olive', 'green'][score]}
+  />
 
 export class SignUpForm extends Component {
+  fields = {}
   constructor(props) {
     super(props)
     this.state = {
@@ -14,12 +31,7 @@ export class SignUpForm extends Component {
   }
   onSubmit(e) {
     e.preventDefault()
-    let fieldValues = {
-          username: this.username.value,
-          email: this.email.value,
-          password: this.password.value,
-          passwordConfirm: this.passwordConfirm.value
-        },
+    let fieldValues = _.mapValues(this.fields, (f) => f.value),
         errors = validate(this.props.validations, fieldValues)
     errors.then((errors) => {
       this.setState({
@@ -47,7 +59,7 @@ export class SignUpForm extends Component {
           <Form.Field error={!!this.state.errors.username}>
             <label htmlFor="sign-up-username">Username</label>
             <input
-              ref={(input) => (this.username = input)}
+              ref={(input) => (this.fields.username = input)}
               placeholder="Username"
               id="sign-up-username"
             />
@@ -61,7 +73,7 @@ export class SignUpForm extends Component {
           <Form.Field error={!!this.state.errors.email}>
             <label htmlFor="sign-up-email">Email</label>
             <input
-              ref={(input) => (this.email = input)}
+              ref={(input) => (this.fields.email = input)}
               placeholder="Email"
               id="sign-up-email"
             />
@@ -76,7 +88,7 @@ export class SignUpForm extends Component {
             <label htmlFor="sign-up-password">Password</label>
             <input
               type="password"
-              ref={(input) => (this.password = input)}
+              ref={(input) => (this.fields.password = input)}
               onChange={(e) => {
                 let score = zxcvbn(e.target.value).score
                 this.setState({
@@ -86,23 +98,7 @@ export class SignUpForm extends Component {
               placeholder="Password"
               id="sign-up-password"
             />
-            <Progress
-              attached="bottom"
-              title={`Password strength: ${[
-                'Very weak',
-                'Weak',
-                'Okay',
-                'Strong',
-                'Very strong'
-              ][this.state.passwordScore]}`}
-              style={{ marginTop: -3 }}
-              percent={this.state.passwordScore * 25}
-              color={
-                ['red', 'orange', 'yellow', 'olive', 'green'][
-                  this.state.passwordScore
-                ]
-              }
-            />
+            <PasswordStrengthBar score={this.state.passwordScore} />
             {this.state.errors.password &&
               <Label pointing color="red">
                 {this.state.errors.password.map((e, i) =>
@@ -114,7 +110,7 @@ export class SignUpForm extends Component {
             <label htmlFor="sign-up-password-confirm">Confirm Password</label>
             <input
               type="password"
-              ref={(input) => (this.passwordConfirm = input)}
+              ref={(input) => (this.fields.passwordConfirm = input)}
               placeholder="Confirm Password"
               id="sign-up-password-confirm"
             />
