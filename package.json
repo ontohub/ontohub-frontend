@@ -32,7 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "flow": "flow",
-    "lint": "eslint src/**/*.js",
+    "lint": "eslint .",
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "eject": "react-scripts eject"
   },
