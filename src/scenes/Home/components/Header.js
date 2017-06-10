@@ -1,12 +1,11 @@
 import React from 'react'
-import { Container, Header as SemHeader, List } from 'semantic-ui-react'
-import { Header as GenHeader } from '../../../components'
+import { Header as SemHeader, List } from 'semantic-ui-react'
+import { Header as GenHeader, PaddedContainer } from '../../../components'
 import { Item } from '.'
-import { css, sizes } from '../../../styles'
 
 export const Header = () =>
   <GenHeader>
-    <Container {...css({ padding: sizes.headerPadding })}>
+    <PaddedContainer>
       <SemHeader as="h2" inverted>Welcome to Ontohub</SemHeader>
       <List size="large">
         <Item
@@ -25,7 +24,7 @@ export const Header = () =>
           content="OMS alignments, mappings, networks, combinations using DOL"
         />
       </List>
-    </Container>
+    </PaddedContainer>
   </GenHeader>
 
 export default Header

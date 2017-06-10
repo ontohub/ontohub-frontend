@@ -1,6 +1,10 @@
 import React from 'react'
 import { List } from 'semantic-ui-react'
-import { Bold } from '.'
+import styled from 'styled-components'
+
+const Bold = styled.span`
+  font-weight: bold
+`
 
 export const Item = ({ icon, header, content }) =>
   <List.Item>

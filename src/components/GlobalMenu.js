@@ -2,23 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Dropdown, Icon, Menu } from 'semantic-ui-react'
 import { LoginModal } from './LoginModal'
-import { css, sizes, colors } from '../styles'
+import { sizes, colors } from '../styles'
 import Gravatar from 'react-gravatar'
-
-const styles = css({
-  position: 'fixed',
-  backgroundColor: colors.dark,
-  width: '100%',
-  top: 0,
-  display: 'flex',
-  justifyContent: 'center'
-})
-
-const menuStyles = css({
-  height: sizes.menuHeight,
-  width: `${sizes.contentWidth}px !important`,
-  position: 'relative !important'
-})
+import styled from 'styled-components'
 
 const SignedInMenu = ({ me, onSignOut }) =>
   <Menu.Menu position="right">
@@ -61,23 +47,39 @@ const SignedOutMenu = ({ onSignIn, signUpValidations }) =>
     </Menu.Item>
   </Menu.Menu>
 
+const InnerMenu = styled(Menu)`
+  height: ${sizes.menuHeight};
+  width: ${sizes.contentWidth} !important;
+  position: relative !important;
+`
+
 const GlobalMenu = ({
   loading,
   error,
   me,
   onSignIn,
   onSignOut,
-  signUpValidations
+  signUpValidations,
+  className
 }) =>
-  <div {...styles}>
-    <Menu inverted borderless fixed="top" {...menuStyles}>
+  <div className={className}>
+    <InnerMenu inverted borderless fixed="top">
       <Menu.Item header as={Link} to="/">Ontohub</Menu.Item>
       {(me && <SignedInMenu me={me} onSignOut={onSignOut} />) ||
         <SignedOutMenu
           onSignIn={onSignIn}
           signUpValidations={signUpValidations}
         />}
-    </Menu>
+    </InnerMenu>
   </div>
 
-export default GlobalMenu
+const FixedGlobalMenu = styled(GlobalMenu)`
+  position: fixed;
+  background-color: ${colors.dark};
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+`
+
+export default FixedGlobalMenu

@@ -2,20 +2,19 @@
 
 import React, { Component } from 'react'
 import { Message } from 'semantic-ui-react'
-import { css } from '../styles'
 import { satisfies } from 'semver'
+import styled from 'styled-components'
 
-const messageStyles = css({
-  position: 'fixed !important',
-  margin: '-1px !important',
-  borderRadius: '0 !important',
-  bottom: 0,
-  width: 'calc(100% + 2px) !important'
-})
+const BottomMessage = styled(Message)`
+  position: fixed !important;
+  margin: -1px !important;
+  border-radius: 0 !important;
+  bottom: 0;
+  width: calc(100% + 2px) !important;
+`
 
-const WarningMessage = (props: {}) => (
-  <Message {...messageStyles} negative icon="warning sign" {...props} />
-)
+const WarningMessage = (props: {}) =>
+  <BottomMessage negative icon="warning sign" {...props} />
 
 export { WarningMessage }
 
