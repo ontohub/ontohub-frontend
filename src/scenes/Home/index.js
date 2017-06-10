@@ -1,5 +1,4 @@
 import React from 'react'
-import { withHeader } from '../../helpers'
 import { Icon, Message, Container } from 'semantic-ui-react'
 import { Header } from './components'
 
@@ -20,8 +19,6 @@ const Home = () =>
     </Message>
   </Container>
 
-const HomeWithHeader = withHeader(Header, Home)
-
 export { Header, Home }
 
-export default HomeWithHeader
+export default Home

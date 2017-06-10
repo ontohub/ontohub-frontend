@@ -1,1 +1,1 @@
-export { withHeader } from './withHeader'
+export { validate, userValidations } from './validations'

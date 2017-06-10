@@ -1,11 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches the snapshot 1`] = `
-<div
-  data-css-e32ed5=""
->
-  <div>
+<styled.div>
+  <styled.div>
     Header content
-  </div>
-</div>
+  </styled.div>
+</styled.div>
 `;

@@ -30,9 +30,8 @@ exports[`VersionWarning version does not satisfy requirement matches the snapsho
 `;
 
 exports[`WarningMessage matches the snapshot 1`] = `
-<Message
+<Styled(Message)
   content="Message content"
-  data-css-5ccd9j=""
   header="Message header"
   icon="warning sign"
   negative={true}
