@@ -1,41 +1,42 @@
 import _ from 'lodash'
 import { gql } from 'react-apollo'
-import { Client } from '../apollo'
 
-export const userValidations = {
+export const userValidations = (client) => ({
   username: [
-    ({ username }) =>
+    ({ username = '' }) =>
       username.length >= 3 || 'must be at least 3 characters long',
-    ({ username }) =>
+    ({ username = '' }) =>
       /^[a-z0-9][a-z0-9-]*$/.test(username) ||
       'must consist of a-z, A-Z, 0-9, -',
-    ({ username }) =>
-      Client.query({
-        query: gql`
+    ({ username = '' }) =>
+      client
+        .query({
+          query: gql`
           query FetchUser($id: ID!) {
             organizationalUnit(id: $id) {
               id
             }
           }
         `,
-        variables: {
-          id: username
-        }
-      }).then(
-        (resp) => !resp.data.organizationalUnit || 'is already taken',
-        () => 'could not be checked for availability'
-      )
+          variables: {
+            id: username
+          }
+        })
+        .then(
+          (resp) => !resp.data.organizationalUnit || 'is already taken',
+          () => 'could not be checked for availability'
+        )
   ],
-  email: [({ email }) => /^[^@]+@[^@]+$/.test(email) || 'is invalid'],
+  email: [({ email = '' }) => /^[^@]+@[^@]+$/.test(email) || 'is invalid'],
   password: [
-    ({ password }) =>
+    ({ password = '' }) =>
       password.length >= 10 || 'must be at least 10 characters long'
   ],
   passwordConfirm: [
-    ({ password, passwordConfirm }) =>
+    ({ password = '', passwordConfirm = '' }) =>
       password === passwordConfirm || 'must match the password'
   ]
-}
+})
 
 const convertToIntermediate = (obj) =>
   _.reduce(obj, (acc, val, key) => [...acc, key, val.length, ...val], [])
@@ -63,8 +64,9 @@ const convertFromIntermediate = (list) => {
   return acc
 }
 
-export const validate = (validations, data) => Promise.all(
-    intermediateMap(convertToIntermediate(validations), data)
-  ).then(convertFromIntermediate)
+export const validate = (validations, data) =>
+  Promise.all(intermediateMap(convertToIntermediate(validations), data)).then(
+    convertFromIntermediate
+  )
 
 export default validate

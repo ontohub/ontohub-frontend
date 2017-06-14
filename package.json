@@ -39,7 +39,12 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js",
-      "!src/*.js"
+      "!src/*.js",
+      "!src/**/components/index.js",
+      "!src/**/scenes/index.js",
+      "!src/**/containers/*.js",
+      "!src/apollo/**/*.js",
+      "!src/helpers/index.js"
     ]
   }
 }

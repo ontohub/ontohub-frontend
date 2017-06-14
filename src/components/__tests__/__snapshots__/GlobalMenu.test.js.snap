@@ -2,10 +2,10 @@
 
 exports[`GlobalMenu signed in user matches the snapshot 1`] = `
 <div
-  class="sc-bwzfXH gddeqL"
+  class="sc-bwzfXH ezDetF"
 >
   <div
-    class="ui borderless inverted top fixed sc-bdVaJa bBQLuI menu"
+    class="ui borderless inverted top fixed sc-bdVaJa cKMyHT menu"
   >
     <a
       class="header item"
@@ -126,10 +126,10 @@ exports[`GlobalMenu signed in user matches the snapshot 1`] = `
 
 exports[`GlobalMenu signed out user matches the snapshot 1`] = `
 <div
-  class="sc-bwzfXH gddeqL"
+  class="sc-bwzfXH ezDetF"
 >
   <div
-    class="ui borderless inverted top fixed sc-bdVaJa bBQLuI menu"
+    class="ui borderless inverted top fixed sc-bdVaJa cKMyHT menu"
   >
     <a
       class="header item"

@@ -11,9 +11,7 @@ describe('GlobalMenu', () => {
     it('matches the snapshot', () => {
       const wrapper = render(
         <Router>
-          <ThemeProvider
-            theme={{ colors: { dark: '#000' }, sizes: { menuHeight: '50px' } }}
-          >
+          <ThemeProvider theme={theme}>
             <GlobalMenu />
           </ThemeProvider>
         </Router>
@@ -25,9 +23,7 @@ describe('GlobalMenu', () => {
     it('matches the snapshot', () => {
       const wrapper = render(
         <Router>
-          <ThemeProvider
-            theme={{ colors: { dark: '#000' }, sizes: { menuHeight: '50px' } }}
-          >
+          <ThemeProvider theme={theme}>
             <GlobalMenu
               me={{ id: 'ada', emailHash: '3e3417d7ef77d5932a6734b916515ed5' }}
             />

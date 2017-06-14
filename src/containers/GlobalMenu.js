@@ -1,24 +1,28 @@
-import { Client } from '../apollo/client'
 import { currentUserQuery, signInMutation } from '../apollo/queries'
-import { compose, graphql } from 'react-apollo'
+import { compose, graphql, withApollo } from 'react-apollo'
 import { GlobalMenu } from '../components'
 import { userValidations } from '../helpers/validations'
 import _ from 'lodash'
 
-const signOut = () => {
+const signOut = (client) => () => {
   localStorage.removeItem('auth-token')
-  Client.resetStore()
+  return client.resetStore()
+}
+const signIn = (client, token) => {
+  localStorage.setItem('auth-token', token)
+  client.resetStore()
 }
 
 const GlobalMenuWithData = compose(
+  withApollo,
   graphql(currentUserQuery, {
     props: (props) => {
-      if (props.data.error) {
+      if (props.data.error || (!props.data.loading && !props.data.me)) {
         // Invalid user token
-        signOut()
+        signOut(props.ownProps.client)()
       }
       return {
-        ...props,
+        ...props.ownProps,
         loading: _.get(props, 'data.loading'),
         error: _.get(props, 'data.error'),
         me: _.get(props, 'data.me')
@@ -27,8 +31,9 @@ const GlobalMenuWithData = compose(
   }),
   graphql(signInMutation, {
     props: (props) => ({
-      ...props,
-      signUpValidations: userValidations,
+      ...props.ownProps,
+      client: undefined,
+      signUpValidations: userValidations(props.ownProps.client),
       onSignIn: (username, password) =>
         props
           .mutate({
@@ -36,14 +41,12 @@ const GlobalMenuWithData = compose(
           })
           .then((response) => {
             if (response.data.signIn) {
-              localStorage.setItem('auth-token', response.data.signIn.token)
-              Client.resetStore()
-              return Promise.resolve()
+              return signIn(props.ownProps.client, response.data.signIn.token)
             } else {
-              return Promise.reject()
+              throw new Error('Sign in failed')
             }
           }),
-      onSignOut: signOut
+      onSignOut: signOut(props.ownProps.client)
     })
   })
 )(GlobalMenu)

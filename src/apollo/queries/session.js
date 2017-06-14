@@ -4,6 +4,7 @@ export const signInMutation = gql`
 mutation SignIn($username: String!, $password: String!) {
   signIn(username: $username, password: $password) {
     token
+    __typename
   }
 }
 `
@@ -14,6 +15,7 @@ query CurrentUser {
     id
     email
     emailHash
+    __typename
   }
 }
 `
