@@ -43,20 +43,20 @@ export class VersionWarning extends Component {
     return validVersion
       ? null
       : <WarningMessage
-          header="The connected backend does not meet the version requirement"
-          content={
-            <p>
+        header="The connected backend does not meet the version requirement"
+        content={
+          <p>
               Expected version
-              {' '}
-              <code>{this.props.version}</code>
-              {' '}
+            {' '}
+            <code>{this.props.version}</code>
+            {' '}
               to satisfy requirement
-              {' '}
-              <code>{this.props.requirement}</code>
+            {' '}
+            <code>{this.props.requirement}</code>
               . Be aware that this may cause problems.
-            </p>
-          }
-        />
+          </p>
+        }
+      />
   }
 }
 
