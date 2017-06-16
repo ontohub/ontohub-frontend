@@ -7,12 +7,12 @@ describe('validate', () => {
 
   it('validates with errors', () =>
     validate(validations, { num: 5 }).then((errors) => {
-      expect(Object.keys(errors).length).toBe(1)
+      expect(errors.num.length).toBe(1)
     }))
 
   it('validates without errors', () =>
     validate(validations, { num: 2 }).then((errors) => {
-      expect(Object.keys(errors).length).toBe(0)
+      expect(errors.num).toBeFalsy()
     }))
 })
 
@@ -63,8 +63,8 @@ describe('User validations', () => {
 
         return validate(validations, {
           username: 'abc'
-        }).then(({ username = [] }) => {
-          expect(username).not.toContain('Username is already taken')
+        }).then(({ username }) => {
+          expect(username || []).not.toContain('Username is already taken')
         })
       })
 
