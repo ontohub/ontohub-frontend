@@ -38,8 +38,22 @@ export const userValidations = (client) => ({
   ]
 })
 
-const convertToIntermediate = (obj) =>
-  _.reduce(obj, (acc, val, key) => [...acc, key, val.length, ...val], [])
+const convertToIntermediate = (obj, fieldName) => {
+  let fieldNames = Array.isArray(fieldName) ? fieldName : [fieldName]
+  let fields = obj
+  if (fieldNames[0]) {
+    fields = _.reduce(
+      fieldNames,
+      (acc, val) => ({ ...acc, [val]: fields[val] }),
+      {}
+    )
+  }
+  return _.reduce(
+    fields,
+    (acc, val, key) => [...acc, key, val.length, ...val],
+    []
+  )
+}
 
 const intermediateMap = (list, data) =>
   _.map(list, (f) => (_.isFunction(f) ? f(data) : f))
@@ -56,17 +70,15 @@ const convertFromIntermediate = (list) => {
       .filter((v) => v !== true)
       .map(toErrorMessage(list[idx]))
       .value()
-    if (values.length > 0) {
-      acc[list[idx]] = values
-    }
+    acc[list[idx]] = values.length > 0 ? values : null
     idx = idx + 2 + list[idx + 1]
   }
   return acc
 }
 
-export const validate = (validations, data) =>
-  Promise.all(intermediateMap(convertToIntermediate(validations), data)).then(
-    convertFromIntermediate
-  )
+export const validate = (validations, data, fieldName = null) =>
+  Promise.all(
+    intermediateMap(convertToIntermediate(validations, fieldName), data)
+  ).then(convertFromIntermediate)
 
 export default validate

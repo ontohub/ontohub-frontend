@@ -1,5 +1,3 @@
-// @flow
-
 import React, { Component } from 'react'
 import { Message } from 'semantic-ui-react'
 import { satisfies } from 'semver'
@@ -19,14 +17,6 @@ const WarningMessage = (props: {}) =>
 export { WarningMessage }
 
 export class VersionWarning extends Component {
-  props: {
-    version: string,
-    loading?: boolean,
-    requirement: string
-  }
-  static defaultProps = {
-    version: ''
-  }
   render() {
     if (this.props.error) {
       return (

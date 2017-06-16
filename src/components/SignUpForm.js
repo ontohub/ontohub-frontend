@@ -20,17 +20,26 @@ const PasswordStrengthBar = ({ score }) =>
   />
 
 export class SignUpForm extends Component {
-  fields = {}
   constructor(props) {
     super(props)
+    this.fields = {}
     this.state = {
       passwordScore: 0,
       errors: {}
     }
   }
+  componentDidMount() {
+    this._isMounted = true
+  }
+  componentWillUnmount() {
+    this._isMounted = false
+  }
+  fieldValues() {
+    return _.mapValues(this.fields, (f) => f && f.value)
+  }
   onSubmit(e) {
     e.preventDefault()
-    let fieldValues = _.mapValues(this.fields, (f) => f.value),
+    let fieldValues = this.fieldValues(),
         validationErrors = validate(this.props.validations, fieldValues)
     return validationErrors.then((errors) => {
       this.setState({
@@ -46,6 +55,24 @@ export class SignUpForm extends Component {
       }
     })
   }
+  validateField(fieldName) {
+    return _.debounce(
+      (e) =>
+        validate(
+          this.props.validations,
+          this.fieldValues(),
+          fieldName
+        ).then((errors) => {
+          if (this._isMounted) {
+            this.setState((state) => ({
+              ...state,
+              errors: { ...state.errors, ...errors }
+            }))
+          }
+        }),
+      300
+    )
+  }
   render() {
     return (
       <Form onSubmit={this.onSubmit.bind(this)}>
@@ -54,6 +81,8 @@ export class SignUpForm extends Component {
             <label htmlFor="sign-up-username">Username</label>
             <input
               ref={(input) => (this.fields.username = input)}
+              onKeyPress={this.validateField('username')}
+              onBlur={this.validateField('username')}
               placeholder="Username"
               id="sign-up-username"
             />
@@ -68,6 +97,8 @@ export class SignUpForm extends Component {
             <label htmlFor="sign-up-email">Email</label>
             <input
               ref={(input) => (this.fields.email = input)}
+              onKeyPress={this.validateField('email')}
+              onBlur={this.validateField('email')}
               placeholder="Email"
               id="sign-up-email"
             />
@@ -83,6 +114,8 @@ export class SignUpForm extends Component {
             <input
               type="password"
               ref={(input) => (this.fields.password = input)}
+              onKeyPress={this.validateField(['password', 'passwordConfirm'])}
+              onBlur={this.validateField(['password', 'passwordConfirm'])}
               onChange={(e) => {
                 let score = zxcvbn(e.target.value).score
                 this.setState({
@@ -105,6 +138,8 @@ export class SignUpForm extends Component {
             <input
               type="password"
               ref={(input) => (this.fields.passwordConfirm = input)}
+              onKeyPress={this.validateField('passwordConfirm')}
+              onBlur={this.validateField('passwordConfirm')}
               placeholder="Confirm Password"
               id="sign-up-password-confirm"
             />
