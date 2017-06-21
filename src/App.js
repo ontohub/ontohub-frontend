@@ -6,21 +6,31 @@ import { VersionWarning, GlobalMenu } from './containers'
 import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import routes from './routes'
+import ReactCSSTransitionReplace from 'react-css-transition-replace'
 
 const App = (props) =>
   <div className={props.className}>
     <GlobalMenu />
-    <Header>
-      <Switch>
-        {routes.map((route, index) =>
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={route.header}
-          />
-        )}
-      </Switch>
+    <Header heightTransitionDuration=".4s" contentTransitionDuration=".1s">
+      <Route
+        render={({ location }) =>
+          <ReactCSSTransitionReplace
+            transitionName="cross-fade"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+          >
+            <Switch key={location.pathname} location={location}>
+              {routes.map((route, index) =>
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  component={route.header}
+                />
+              )}
+            </Switch>
+          </ReactCSSTransitionReplace>}
+      />
     </Header>
     <Switch>
       {routes.map((route, index) =>

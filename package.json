@@ -7,6 +7,7 @@
     "lodash": "^4.17.4",
     "react": "^15.6.0",
     "react-apollo": "^1.2.0",
+    "react-css-transition-replace": "^2.2.1",
     "react-dom": "^15.6.0",
     "react-gravatar": "^2.6.3",
     "react-router-dom": "^4.1.1",
