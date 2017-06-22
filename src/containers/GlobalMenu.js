@@ -17,7 +17,10 @@ const GlobalMenuWithData = compose(
   withApollo,
   graphql(currentUserQuery, {
     props: (props) => {
-      if (props.data.error || (!props.data.loading && !props.data.me)) {
+      if (
+        !_.get(props, 'data.error.networkError') &&
+        (props.data.error || (!props.data.me && !props.data.loading))
+      ) {
         // Invalid user token
         signOut(props.ownProps.client)()
       }
