@@ -1,16 +1,12 @@
-import {
-  ApolloClient,
-  createBatchingNetworkInterface
-} from 'react-apollo'
+import { ApolloClient, createNetworkInterface } from 'react-apollo'
 import config from '../config'
 
-const networkInterface = createBatchingNetworkInterface({
-  uri: `${config.api.endpoint}/graphql`,
-  batchInterval: 10
+const networkInterface = createNetworkInterface({
+  uri: `${config.api.endpoint}/graphql`
 })
 networkInterface.use([
   {
-    applyBatchMiddleware(req, next) {
+    applyMiddleware(req, next) {
       if (!req.options.headers) {
         req.options.headers = {} // Create the header object if needed.
       }
