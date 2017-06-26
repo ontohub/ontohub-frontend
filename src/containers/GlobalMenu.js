@@ -26,9 +26,9 @@ const GlobalMenuWithData = compose(
       }
       return {
         ...props.ownProps,
-        loading: _.get(props, 'data.loading'),
-        error: _.get(props, 'data.error'),
-        me: _.get(props, 'data.me')
+        loading: props.data.loading,
+        error: props.data.error,
+        me: props.data.me
       }
     }
   }),

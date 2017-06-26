@@ -19,7 +19,7 @@ exports[`SignUpForm matches the snapshot 1`] = `
       <input
         id="sign-up-username"
         onBlur={[Function]}
-        onKeyPress={[Function]}
+        onChange={[Function]}
         placeholder="Username"
       />
     </FormField>
@@ -34,7 +34,7 @@ exports[`SignUpForm matches the snapshot 1`] = `
       <input
         id="sign-up-email"
         onBlur={[Function]}
-        onKeyPress={[Function]}
+        onChange={[Function]}
         placeholder="Email"
       />
     </FormField>
@@ -54,7 +54,6 @@ exports[`SignUpForm matches the snapshot 1`] = `
         id="sign-up-password"
         onBlur={[Function]}
         onChange={[Function]}
-        onKeyPress={[Function]}
         placeholder="Password"
         type="password"
       />
@@ -73,7 +72,7 @@ exports[`SignUpForm matches the snapshot 1`] = `
       <input
         id="sign-up-password-confirm"
         onBlur={[Function]}
-        onKeyPress={[Function]}
+        onChange={[Function]}
         placeholder="Confirm Password"
         type="password"
       />
@@ -141,7 +140,7 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
               <input
                 id="sign-up-username"
                 onBlur={[Function]}
-                onKeyPress={[Function]}
+                onChange={[Function]}
                 placeholder="Username"
               />
               <Label
@@ -176,7 +175,7 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
               <input
                 id="sign-up-email"
                 onBlur={[Function]}
-                onKeyPress={[Function]}
+                onChange={[Function]}
                 placeholder="Email"
               />
               <Label
@@ -217,7 +216,6 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
                 id="sign-up-password"
                 onBlur={[Function]}
                 onChange={[Function]}
-                onKeyPress={[Function]}
                 placeholder="Password"
                 type="password"
               />
@@ -285,7 +283,7 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
               <input
                 id="sign-up-password-confirm"
                 onBlur={[Function]}
-                onKeyPress={[Function]}
+                onChange={[Function]}
                 placeholder="Confirm Password"
                 type="password"
               />

@@ -10,6 +10,11 @@ export class LoginModal extends Component {
       open: this.props.open,
       loading: false
     }
+    this.onSignInSubmit = this.onSignInSubmit.bind(this)
+    this.onSignUpSubmit = this.onSignUpSubmit.bind(this)
+    this.onError = this.onError.bind(this)
+    this.onClose = this.onClose.bind(this)
+    this.onOpen = this.onOpen.bind(this)
   }
   onSignInSubmit(username, password) {
     this.setState({ loading: true })
@@ -45,9 +50,9 @@ export class LoginModal extends Component {
             <Grid.Row>
               <Grid.Column>
                 <SignInForm
-                  onSubmit={this.onSignInSubmit.bind(this)}
-                  onSuccess={this.onClose.bind(this)}
-                  onError={this.onError.bind(this)}
+                  onSubmit={this.onSignInSubmit}
+                  onSuccess={this.onClose}
+                  onError={this.onError}
                 />
               </Grid.Column>
             </Grid.Row>
@@ -58,9 +63,9 @@ export class LoginModal extends Component {
                 </Header>
                 <SignUpForm
                   validations={this.props.signUpValidations}
-                  onSubmit={this.onSignUpSubmit.bind(this)}
-                  onSuccess={this.onClose.bind(this)}
-                  onError={this.onError.bind(this)}
+                  onSubmit={this.onSignUpSubmit}
+                  onSuccess={this.onClose}
+                  onError={this.onError}
                 />
               </Grid.Column>
             </Grid.Row>

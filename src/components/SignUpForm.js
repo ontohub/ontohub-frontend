@@ -27,6 +27,7 @@ export class SignUpForm extends Component {
       passwordScore: 0,
       errors: {}
     }
+    this.onSubmit = this.onSubmit.bind(this)
   }
   componentDidMount() {
     this._isMounted = true
@@ -37,8 +38,8 @@ export class SignUpForm extends Component {
   fieldValues() {
     return _.mapValues(this.fields, (f) => f && f.value)
   }
-  onSubmit(e) {
-    e.preventDefault()
+  onSubmit(event) {
+    event.preventDefault()
     let fieldValues = this.fieldValues(),
         validationErrors = validate(this.props.validations, fieldValues)
     return validationErrors.then((errors) => {
@@ -56,32 +57,29 @@ export class SignUpForm extends Component {
     })
   }
   validateField(fieldName) {
-    return _.debounce(
-      (e) =>
-        validate(
-          this.props.validations,
-          this.fieldValues(),
-          fieldName
-        ).then((errors) => {
-          if (this._isMounted) {
-            this.setState((state) => ({
-              ...state,
-              errors: { ...state.errors, ...errors }
-            }))
-          }
-        }),
-      300
-    )
+    return () =>
+      validate(
+        this.props.validations,
+        this.fieldValues(),
+        fieldName
+      ).then((errors) => {
+        if (this._isMounted) {
+          this.setState((state) => ({
+            ...state,
+            errors: { ...state.errors, ...errors }
+          }))
+        }
+      })
   }
   render() {
     return (
-      <Form onSubmit={this.onSubmit.bind(this)}>
+      <Form onSubmit={this.onSubmit}>
         <Form.Group widths="equal">
           <Form.Field error={!!this.state.errors.username}>
             <label htmlFor="sign-up-username">Username</label>
             <input
               ref={(input) => (this.fields.username = input)}
-              onKeyPress={this.validateField('username')}
+              onChange={_.debounce(this.validateField('username'), 500)}
               onBlur={this.validateField('username')}
               placeholder="Username"
               id="sign-up-username"
@@ -97,7 +95,7 @@ export class SignUpForm extends Component {
             <label htmlFor="sign-up-email">Email</label>
             <input
               ref={(input) => (this.fields.email = input)}
-              onKeyPress={this.validateField('email')}
+              onChange={this.validateField('email')}
               onBlur={this.validateField('email')}
               placeholder="Email"
               id="sign-up-email"
@@ -114,10 +112,12 @@ export class SignUpForm extends Component {
             <input
               type="password"
               ref={(input) => (this.fields.password = input)}
-              onKeyPress={this.validateField(['password', 'passwordConfirm'])}
               onBlur={this.validateField(['password', 'passwordConfirm'])}
-              onChange={(e) => {
-                let score = zxcvbn(e.target.value).score
+              onChange={(event) => {
+                if (!event.no_validation) {
+                  this.validateField(['password', 'passwordConfirm'])()
+                }
+                let score = zxcvbn(event.target.value).score
                 this.setState({
                   passwordScore: score
                 })
@@ -138,7 +138,7 @@ export class SignUpForm extends Component {
             <input
               type="password"
               ref={(input) => (this.fields.passwordConfirm = input)}
-              onKeyPress={this.validateField('passwordConfirm')}
+              onChange={this.validateField('passwordConfirm')}
               onBlur={this.validateField('passwordConfirm')}
               placeholder="Confirm Password"
               id="sign-up-password-confirm"

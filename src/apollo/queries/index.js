@@ -1,3 +1,3 @@
-export { getVersionQuery } from './version'
+export { versionQuery } from './version'
 export { signInMutation, currentUserQuery } from './session'
-export { getUserQuery } from './user'
+export { userQuery } from './user'

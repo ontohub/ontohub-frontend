@@ -1,7 +1,7 @@
 import { gql } from 'react-apollo'
 
-export const getVersionQuery = gql`
-query GetVersionQuery {
+export const versionQuery = gql`
+query GetVersion {
   version {
     tag
     commitsSinceTag
@@ -9,4 +9,4 @@ query GetVersionQuery {
 }
 `
 
-export default getVersionQuery
+export default versionQuery

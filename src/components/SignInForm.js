@@ -7,9 +7,10 @@ export class SignInForm extends Component {
     this.state = {
       error: false
     }
+    this.onSubmit = this.onSubmit.bind(this)
   }
-  onSubmit(e) {
-    e.preventDefault()
+  onSubmit(event) {
+    event.preventDefault()
     return this.props.onSubmit(this.username.value, this.password.value).then(
       () => {
         this.setState({ error: false })
@@ -23,7 +24,7 @@ export class SignInForm extends Component {
   }
   render() {
     return (
-      <Form error={this.state.error} onSubmit={this.onSubmit.bind(this)}>
+      <Form error={this.state.error} onSubmit={this.onSubmit}>
         {this.state.error &&
           <Message
             error

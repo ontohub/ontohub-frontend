@@ -74,7 +74,8 @@ describe('SignUpForm', () => {
     it('is calculated when the password is changed', () => {
       let oldScore = wrapper.state('passwordScore')
       wrapper.find('#sign-up-password').simulate('change', {
-        target: { value: 'areallylongpasswordthatshouldgetareallyhighscore' }
+        target: { value: 'areallylongpasswordthatshouldgetareallyhighscore' },
+        no_validation: true
       })
       expect(wrapper.state('passwordScore')).not.toEqual(oldScore)
     })

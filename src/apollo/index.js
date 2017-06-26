@@ -1,7 +1,7 @@
 export { Client } from './client'
 export {
-  getVersionQuery,
+  versionQuery,
   signInMutation,
   currentUserQuery,
-  getUserQuery
+  userQuery
 } from './queries'
