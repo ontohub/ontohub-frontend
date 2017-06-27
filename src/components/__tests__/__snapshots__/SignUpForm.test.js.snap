@@ -314,7 +314,7 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
         type="submit"
       >
         <button
-          className="ui basic secondary button right floated"
+          className="ui basic secondary right floated button"
           onClick={[Function]}
           type="submit"
         >
@@ -327,7 +327,6 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
               className="add user icon"
             />
           </Icon>
-           
           Create account
         </button>
       </Button>

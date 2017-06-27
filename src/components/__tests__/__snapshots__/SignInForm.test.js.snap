@@ -152,7 +152,7 @@ exports[`SignInForm onSubmit error matches the snapshot 1`] = `
         type="submit"
       >
         <button
-          className="ui primary button right floated"
+          className="ui primary right floated button"
           onClick={[Function]}
           type="submit"
         >
@@ -165,7 +165,6 @@ exports[`SignInForm onSubmit error matches the snapshot 1`] = `
               className="sign in icon"
             />
           </Icon>
-           
           Sign in
         </button>
       </Button>

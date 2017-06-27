@@ -111,15 +111,13 @@ exports[`LoginModal matches the snapshot 1`] = `
                         </div>
                         <button
                           type="submit"
-                          class="ui primary button right floated"
+                          class="ui primary right floated button"
                         >
                           <i
                             aria-hidden="true"
                             class="sign in icon"
                           />
                           <!-- react-text: 22 -->
-                          <!-- /react-text -->
-                          <!-- react-text: 23 -->
                           Sign in
                           <!-- /react-text -->
                         </button>
@@ -215,15 +213,13 @@ exports[`LoginModal matches the snapshot 1`] = `
                         </div>
                         <button
                           type="submit"
-                          class="ui basic secondary button right floated"
+                          class="ui basic secondary right floated button"
                         >
                           <i
                             aria-hidden="true"
                             class="add user icon"
                           />
-                          <!-- react-text: 46 -->
-                          <!-- /react-text -->
-                          <!-- react-text: 47 -->
+                          <!-- react-text: 45 -->
                           Create account
                           <!-- /react-text -->
                         </button>
@@ -279,7 +275,6 @@ exports[`LoginModal matches the snapshot 1`] = `
               className="sign in icon"
             />
           </Icon>
-           
           Sign in
         </button>
       </Button>

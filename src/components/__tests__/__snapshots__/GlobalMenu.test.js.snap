@@ -150,7 +150,7 @@ exports[`GlobalMenu signed out user matches the snapshot 1`] = `
             aria-hidden="true"
             class="sign in icon"
           />
-           Sign in
+          Sign in
         </button>
       </div>
     </div>
