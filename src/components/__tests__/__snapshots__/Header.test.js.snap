@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches the snapshot 1`] = `
+<div
+  class="sc-bdVaJa gtWvUm"
+>
+  <div
+    class="sc-bwzfXH fnCIFD"
+  >
+    Header content
+  </div>
+</div>
+`;
+
+exports[`PaddedContainer matches the snapshot 1`] = `
+<div
+  class="ui container sc-htpNat dJhCev"
+>
+  Header content
+</div>
+`;

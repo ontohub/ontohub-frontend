@@ -1,28 +1,5 @@
 {
-  "root": true,
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
-  },
-  "extends": "eslint:recommended",
-  "env": {
-    "browser": true,
-    "mocha": true
-  },
-  "globals": {
-    "andThen": true,
-    "Application": true,
-    "click": true,
-    "currentPath": true,
-    "currentRoutePath": true,
-    "currentURL": true,
-    "fillIn": true,
-    "find": true,
-    "keyEvent": true,
-    "server": true,
-    "triggerEvent": true,
-    "visit": true
-  },
+  "extends": ["eslint:recommended", "react-app"],
   "rules": {
     "arrow-body-style": ["error"],
     "arrow-parens": ["warn", "always"],
@@ -32,14 +9,13 @@
     "indent": ["error", 2, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }],
     "linebreak-style": ["error", "unix"],
     "max-len": ["warn", 80],
-    "no-confusing-arrow": ["warn"],
+    "no-confusing-arrow": ["warn", {"allowParens": true}],
     "no-const-assign": ["error"],
     "no-eval": ["error"],
     "no-mixed-spaces-and-tabs": ["error"],
     "no-trailing-spaces": ["error"],
     "no-var": ["error"],
     "object-curly-spacing": ["error", "always"],
-    "one-var": ["error", "always"],
     "prefer-arrow-callback": ["warn", { "allowNamedFunctions": true }],
     "prefer-rest-params": ["error"],
     "semi": ["warn", "never"],
