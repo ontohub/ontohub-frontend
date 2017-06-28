@@ -7,17 +7,17 @@ export const userValidations = (client) => ({
       username.length >= 3 || 'must be at least 3 characters long',
     ({ username = '' }) =>
       /^[a-z0-9][a-z0-9-]*[a-z0-9]$/.test(username) ||
-      'must consist of a-z, A-Z, 0-9, -',
+      'must consist of a-z, 0-9, - and not start/end with a dash',
     ({ username = '' }) =>
       client
         .query({
           query: gql`
-          query GetOrgUnit($id: ID!) {
-            organizationalUnit(id: $id) {
-              id
+            query GetOrgUnit($id: ID!) {
+              organizationalUnit(id: $id) {
+                id
+              }
             }
-          }
-        `,
+          `,
           variables: {
             id: username
           }

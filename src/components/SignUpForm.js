@@ -65,7 +65,6 @@ export class SignUpForm extends Component {
       ).then((errors) => {
         if (this._isMounted) {
           this.setState((state) => ({
-            ...state,
             errors: { ...state.errors, ...errors }
           }))
         }
