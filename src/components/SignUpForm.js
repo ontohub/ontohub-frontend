@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import zxcvbn from 'zxcvbn'
 import { validate } from '../helpers/validations'
 import { Button, Form, Label, Progress } from 'semantic-ui-react'
 import _ from 'lodash'
@@ -28,6 +27,7 @@ export class SignUpForm extends Component {
       errors: {}
     }
     this.onSubmit = this.onSubmit.bind(this)
+    import('zxcvbn').then((fn) => (this.calculatePasswordScore = fn))
   }
   componentDidMount() {
     this._isMounted = true
@@ -37,6 +37,9 @@ export class SignUpForm extends Component {
   }
   fieldValues() {
     return _.mapValues(this.fields, (f) => f && f.value)
+  }
+  calculatePasswordScore(password) {
+    return { score: 0 }
   }
   onSubmit(event) {
     event.preventDefault()
@@ -86,7 +89,9 @@ export class SignUpForm extends Component {
             {this.state.errors.username &&
               <Label pointing color="red">
                 {this.state.errors.username.map((e, i) =>
-                  <div key={i}>{e}</div>
+                  <div key={i}>
+                    {e}
+                  </div>
                 )}
               </Label>}
           </Form.Field>
@@ -101,7 +106,11 @@ export class SignUpForm extends Component {
             />
             {this.state.errors.email &&
               <Label pointing color="red">
-                {this.state.errors.email.map((e, i) => <div key={i}>{e}</div>)}
+                {this.state.errors.email.map((e, i) =>
+                  <div key={i}>
+                    {e}
+                  </div>
+                )}
               </Label>}
           </Form.Field>
         </Form.Group>
@@ -116,7 +125,8 @@ export class SignUpForm extends Component {
                 if (!event.no_validation) {
                   this.validateField(['password', 'passwordConfirm'])()
                 }
-                let score = zxcvbn(event.target.value).score
+                let score = this.calculatePasswordScore(event.target.value)
+                  .score
                 this.setState({
                   passwordScore: score
                 })
@@ -128,7 +138,9 @@ export class SignUpForm extends Component {
             {this.state.errors.password &&
               <Label pointing color="red">
                 {this.state.errors.password.map((e, i) =>
-                  <div key={i}>{e}</div>
+                  <div key={i}>
+                    {e}
+                  </div>
                 )}
               </Label>}
           </Form.Field>
@@ -145,7 +157,9 @@ export class SignUpForm extends Component {
             {this.state.errors.passwordConfirm &&
               <Label pointing color="red">
                 {this.state.errors.passwordConfirm.map((e, i) =>
-                  <div key={i}>{e}</div>
+                  <div key={i}>
+                    {e}
+                  </div>
                 )}
               </Label>}
           </Form.Field>
