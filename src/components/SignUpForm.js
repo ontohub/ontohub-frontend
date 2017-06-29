@@ -38,6 +38,7 @@ export class SignUpForm extends Component {
   fieldValues() {
     return _.mapValues(this.fields, (f) => f && f.value)
   }
+  // istanbul ignore next
   calculatePasswordScore(password) {
     return { score: 0 }
   }
