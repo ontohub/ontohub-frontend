@@ -1,8 +1,9 @@
 import { ApolloClient, createNetworkInterface } from 'react-apollo'
-import config from '../config'
+
+const backendHost = process.env.REACT_APP_BACKEND_HOST
 
 const networkInterface = createNetworkInterface({
-  uri: `${config.api.endpoint}/graphql`
+  uri: `${backendHost}/graphql`
 })
 networkInterface.use([
   {

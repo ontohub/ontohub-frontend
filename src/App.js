@@ -8,6 +8,8 @@ import styled from 'styled-components'
 import routes from './routes'
 import ReactCSSTransitionReplace from 'react-css-transition-replace'
 
+const backendVersion = process.env.REACT_APP_BACKEND_VERSION
+
 const App = (props) =>
   <div className={props.className}>
     <GlobalMenu />
@@ -42,7 +44,7 @@ const App = (props) =>
         />
       )}
     </Switch>
-    <VersionWarning requirement={props.config.version} />
+    <VersionWarning requirement={backendVersion} />
   </div>
 
 const StyledApp = styled(App)`
