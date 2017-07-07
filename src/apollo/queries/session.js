@@ -3,7 +3,7 @@ import { gql } from 'react-apollo'
 export const signInMutation = gql`
 mutation SignIn($username: String!, $password: String!) {
   signIn(username: $username, password: $password) {
-    token
+    jwt
     __typename
   }
 }
