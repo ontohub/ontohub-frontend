@@ -9,8 +9,10 @@ const signOut = (client) => () => {
   return client.resetStore()
 }
 const signIn = (client, token) => {
-  localStorage.setItem('auth-token', token)
-  client.resetStore()
+  if (token) {
+    localStorage.setItem('auth-token', token)
+    client.resetStore()
+  }
 }
 
 const GlobalMenuWithData = compose(
@@ -44,7 +46,7 @@ const GlobalMenuWithData = compose(
           })
           .then((response) => {
             if (response.data.signIn) {
-              return signIn(props.ownProps.client, response.data.signIn.token)
+              return signIn(props.ownProps.client, response.data.signIn.jwt)
             } else {
               throw new Error('Sign in failed')
             }
