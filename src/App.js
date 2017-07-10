@@ -7,8 +7,9 @@ import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import routes from './routes'
 import ReactCSSTransitionReplace from 'react-css-transition-replace'
+import config from './config.json'
 
-const backendVersion = process.env.REACT_APP_BACKEND_VERSION
+const backendVersion = config.ontohub.backendVersion
 
 const App = (props) =>
   <div className={props.className}>
