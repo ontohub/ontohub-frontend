@@ -3,6 +3,7 @@
 exports[`LoginModal matches the snapshot 1`] = `
 <LoginModal
   onSignIn={[Function]}
+  onSignUp={[Function]}
   open={true}
 >
   <Modal

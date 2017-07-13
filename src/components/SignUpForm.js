@@ -118,6 +118,8 @@ export class SignUpForm extends Component {
           this.state.captchaLoaded &&
           <ReCAPTCHA
             ref={(el) => {
+              // We disable captchas in the tests:
+              // istanbul ignore next
               captcha = el
             }}
             size="invisible"

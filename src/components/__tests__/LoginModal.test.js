@@ -4,7 +4,7 @@ import toJSON from 'enzyme-to-json'
 import LoginModal from '../LoginModal'
 
 describe('LoginModal', () => {
-  let wrapper, onSignIn
+  let wrapper, onSignIn, onSignUp
 
   beforeAll(() => {
     // Polyfill requestAnimationFrame
@@ -16,7 +16,8 @@ describe('LoginModal', () => {
 
   beforeEach(() => {
     onSignIn = jest.fn()
-    wrapper = mount(<LoginModal open onSignIn={onSignIn} />)
+    onSignUp = jest.fn()
+    wrapper = mount(<LoginModal open onSignIn={onSignIn} onSignUp={onSignUp} />)
   })
 
   it('matches the snapshot', () => {
@@ -39,6 +40,11 @@ describe('LoginModal', () => {
       it('sets the state to loading', () => {
         wrapper.node.onSignUpSubmit()
         expect(wrapper.state('loading')).toBeTruthy()
+      })
+
+      it('calls the passed function', () => {
+        wrapper.node.onSignUpSubmit()
+        expect(onSignUp.mock.calls.length).toBe(1)
       })
     })
     describe('onError', () => {
