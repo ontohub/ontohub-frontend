@@ -39,6 +39,7 @@ export class LoginModal extends Component {
         size="small"
         open={this.state.open}
         closeIcon
+        style={{ overflow: 'hidden' }}
         trigger={<Button primary icon="sign in" content="Sign in" />}
       >
         <Modal.Header>Sign in</Modal.Header>

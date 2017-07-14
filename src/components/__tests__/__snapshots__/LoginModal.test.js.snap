@@ -13,6 +13,11 @@ exports[`LoginModal matches the snapshot 1`] = `
     dimmer={true}
     open={true}
     size="small"
+    style={
+      Object {
+        "overflow": "hidden",
+      }
+    }
     trigger={
       <Button
         as="button"
@@ -37,6 +42,7 @@ exports[`LoginModal matches the snapshot 1`] = `
             <div
               data-reactroot=""
               class="ui small modal transition visible active"
+              style="overflow: hidden;"
             >
               <i
                 aria-hidden="true"
