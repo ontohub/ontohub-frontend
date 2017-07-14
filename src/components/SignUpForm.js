@@ -2,21 +2,24 @@ import React, { Component } from 'react'
 import { validate } from '../helpers/validations'
 import { Button, Form, Label, Progress } from 'semantic-ui-react'
 import _ from 'lodash'
+import ReCAPTCHA from 'react-google-recaptcha'
 
-const PasswordStrengthBar = ({ score }) =>
-  <Progress
-    attached="bottom"
-    title={`Password strength: ${[
-      'Very weak',
-      'Weak',
-      'Okay',
-      'Strong',
-      'Very strong'
-    ][score]}`}
-    style={{ marginTop: -3 }}
-    percent={score * 25}
-    color={['red', 'orange', 'yellow', 'olive', 'green'][score]}
-  />
+let captcha
+const grecaptchaSiteKey = process.env.REACT_APP_GRECAPTCHA_SITE_KEY,
+      PasswordStrengthBar = ({ score }) =>
+        <Progress
+          attached="bottom"
+          title={`Password strength: ${[
+            'Very weak',
+            'Weak',
+            'Okay',
+            'Strong',
+            'Very strong'
+          ][score]}`}
+          style={{ marginTop: -3 }}
+          percent={score * 25}
+          color={['red', 'orange', 'yellow', 'olive', 'green'][score]}
+        />
 
 export class SignUpForm extends Component {
   constructor(props) {
@@ -26,7 +29,9 @@ export class SignUpForm extends Component {
       passwordScore: 0,
       errors: {}
     }
+    this.loadCaptcha = this.loadCaptcha.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+    this.onSubmitSetCaptcha = this.onSubmitSetCaptcha.bind(this)
     import('zxcvbn').then((fn) => (this.calculatePasswordScore = fn))
   }
   componentDidMount() {
@@ -42,6 +47,9 @@ export class SignUpForm extends Component {
   calculatePasswordScore(password) {
     return { score: 0 }
   }
+  loadCaptcha() {
+    this.setState({ captchaLoaded: true })
+  }
   onSubmit(event) {
     event.preventDefault()
     let fieldValues = this.fieldValues(),
@@ -51,14 +59,43 @@ export class SignUpForm extends Component {
         errors: errors
       })
 
-      if (Object.keys(errors).length === 0) {
-        return this.props
-          .onSubmit(fieldValues)
-          .then(this.props.onSuccess, this.props.onError)
+      const erroredFields = _.filter(
+        errors,
+        (field) => Array.isArray(field) && field.length > 0
+      )
+      if (erroredFields.length === 0) {
+        this.onSubmitExecuteCaptcha()
       } else {
         return this.props.onError()
       }
     })
+  }
+  onSubmitExecuteCaptcha() {
+    // `captcha` will be set when the ReCAPTCHA component is inserted
+    // istanbul ignore if
+    if (captcha) {
+      captcha.reset()
+      // This calls onSubmitSetCaptcha with the token received by recaptcha
+      captcha.execute()
+    } else if (!this.props.enableCaptcha) {
+      // Skip captcha verification and go right into the sign up call
+      this.onSubmitSetCaptcha('skip')
+    }
+  }
+  onSubmitSetCaptcha(token) {
+    this.fields.captcha = { value: token }
+    this.onSubmitWithCaptcha()
+  }
+  onSubmitWithCaptcha() {
+    let username, email, password, captcha, fieldValues
+    fieldValues = this.fieldValues()
+    username = fieldValues['username']
+    email = fieldValues['email']
+    password = fieldValues['password']
+    captcha = fieldValues['captcha']
+    return this.props
+      .onSubmit(username, email, password, captcha)
+      .then(this.props.onSuccess, this.props.onError)
   }
   validateField(fieldName) {
     return () =>
@@ -76,7 +113,20 @@ export class SignUpForm extends Component {
   }
   render() {
     return (
-      <Form onSubmit={this.onSubmit}>
+      <Form onSubmit={this.onSubmit} onChange={this.loadCaptcha}>
+        {this.props.enableCaptcha &&
+          this.state.captchaLoaded &&
+          <ReCAPTCHA
+            ref={(el) => {
+              // We disable captchas in the tests:
+              // istanbul ignore next
+              captcha = el
+            }}
+            size="invisible"
+            badge="bottomleft"
+            sitekey={grecaptchaSiteKey}
+            onChange={this.onSubmitSetCaptcha}
+          />}
         <Form.Group widths="equal">
           <Form.Field error={!!this.state.errors.username}>
             <label htmlFor="sign-up-username">Username</label>

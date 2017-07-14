@@ -3,6 +3,7 @@
 exports[`SignUpForm matches the snapshot 1`] = `
 <Form
   as="form"
+  onChange={[Function]}
   onSubmit={[Function]}
 >
   <FormGroup
@@ -92,6 +93,7 @@ exports[`SignUpForm matches the snapshot 1`] = `
 
 exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
 <SignUpForm
+  enableCaptcha={false}
   onError={[Function]}
   onSubmit={[Function]}
   validations={
@@ -114,10 +116,12 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
 >
   <Form
     as="form"
+    onChange={[Function]}
     onSubmit={[Function]}
   >
     <form
       className="ui form"
+      onChange={[Function]}
       onSubmit={[Function]}
     >
       <FormGroup

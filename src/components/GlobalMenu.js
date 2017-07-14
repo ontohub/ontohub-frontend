@@ -7,11 +7,16 @@ import styled from 'styled-components'
 
 const SignedInMenu = ({ me, onSignOut }) =>
   <Menu.Menu position="right">
-    <Dropdown item trigger={<span><Icon name="plus" /></span>}>
+    <Dropdown
+      item
+      trigger={
+        <span>
+          <Icon name="plus" />
+        </span>
+      }
+    >
       <Dropdown.Menu>
-        <Dropdown.Header>
-          Create new...
-        </Dropdown.Header>
+        <Dropdown.Header>Create new...</Dropdown.Header>
         <Dropdown.Item as={Link} to="/new" content="Repository" />
         <Dropdown.Item
           as={Link}
@@ -39,10 +44,20 @@ const SignedInMenu = ({ me, onSignOut }) =>
     </Dropdown>
   </Menu.Menu>
 
-const SignedOutMenu = ({ onSignIn, signUpValidations }) =>
+const SignedOutMenu = ({
+  onSignIn,
+  onSignUp,
+  signUpValidations,
+  enableCaptcha
+}) =>
   <Menu.Menu position="right">
     <Menu.Item>
-      <LoginModal onSignIn={onSignIn} signUpValidations={signUpValidations} />
+      <LoginModal
+        enableCaptcha={enableCaptcha}
+        onSignIn={onSignIn}
+        onSignUp={onSignUp}
+        signUpValidations={signUpValidations}
+      />
     </Menu.Item>
   </Menu.Menu>
 
@@ -56,17 +71,23 @@ const GlobalMenu = ({
   loading,
   error,
   me,
+  enableCaptcha,
   onSignIn,
   onSignOut,
+  onSignUp,
   signUpValidations,
   className
 }) =>
   <div className={className}>
     <InnerMenu inverted borderless fixed="top">
-      <Menu.Item header as={Link} to="/">Ontohub</Menu.Item>
+      <Menu.Item header as={Link} to="/">
+        Ontohub
+      </Menu.Item>
       {(me && <SignedInMenu me={me} onSignOut={onSignOut} />) ||
         <SignedOutMenu
+          enableCaptcha={enableCaptcha}
           onSignIn={onSignIn}
+          onSignUp={onSignUp}
           signUpValidations={signUpValidations}
         />}
     </InnerMenu>

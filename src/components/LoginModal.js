@@ -20,9 +20,9 @@ export class LoginModal extends Component {
     this.setState({ loading: true })
     return this.props.onSignIn(username, password)
   }
-  onSignUpSubmit(username, password) {
+  onSignUpSubmit(username, email, password, captcha) {
     this.setState({ loading: true })
-    return new Promise((res, rej) => setTimeout(res, 2000))
+    return this.props.onSignUp(username, email, password, captcha)
   }
   onError() {
     this.setState({ loading: false })
@@ -39,6 +39,7 @@ export class LoginModal extends Component {
         size="small"
         open={this.state.open}
         closeIcon
+        style={{ overflow: 'hidden' }}
         trigger={<Button primary icon="sign in" content="Sign in" />}
       >
         <Modal.Header>Sign in</Modal.Header>
@@ -62,6 +63,7 @@ export class LoginModal extends Component {
                   Don't have an account yet? Sign up now!
                 </Header>
                 <SignUpForm
+                  enableCaptcha={this.props.enableCaptcha}
                   validations={this.props.signUpValidations}
                   onSubmit={this.onSignUpSubmit}
                   onSuccess={this.onClose}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
+import _ from 'lodash'
 import SignUpForm from '../SignUpForm'
 
 jest.genMockFromModule('zxcvbn')
@@ -33,6 +34,7 @@ describe('SignUpForm', () => {
             validations={validations}
             onSubmit={onSubmit}
             onError={onError}
+            enableCaptcha={false}
           />
         )
         wrapper.node.onSubmit({ preventDefault: jest.fn() })
@@ -52,16 +54,43 @@ describe('SignUpForm', () => {
 
       beforeAll(() => {
         onSuccess = jest.fn()
-        onSubmit = () => Promise.resolve()
+        onSubmit = jest.fn(() => Promise.resolve())
         validations = {}
         wrapper = mount(
           <SignUpForm
             validations={validations}
             onSubmit={onSubmit}
             onSuccess={onSuccess}
+            enableCaptcha={false}
           />
         )
+        _.each(['username', 'email', 'password'], (v) => {
+          wrapper.node.fields[v].value = v
+        })
         wrapper.node.onSubmit({ preventDefault: jest.fn() })
+      })
+
+      it('has not yet loaded recaptcha', () => {
+        expect(wrapper.node.state.captchaLoaded).toBeFalsy()
+      })
+
+      it('loads recaptcha onChange', () => {
+        wrapper.find('form').simulate('change')
+        expect(wrapper.node.state.captchaLoaded).toBe(true)
+      })
+
+      it('calls the submit callback once', () => {
+        expect(onSubmit.mock.calls.length).toBe(1)
+      })
+
+      it('calls the submit callback with the right arguments', () => {
+        // 'skip' is used for the captcha when captcha verification is disabled
+        expect(onSubmit.mock.calls[0]).toEqual([
+          'username',
+          'email',
+          'password',
+          'skip'
+        ])
       })
     })
   })
