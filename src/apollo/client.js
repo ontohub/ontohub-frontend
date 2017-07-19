@@ -1,4 +1,6 @@
 import { ApolloClient, createBatchingNetworkInterface } from 'react-apollo'
+import _ from 'lodash'
+import { signOut } from '../helpers/session'
 
 const backendHost = process.env.REACT_APP_BACKEND_HOST
 
@@ -42,5 +44,15 @@ networkInterface.use([
   }
 ])
 
+networkInterface.useAfter([
+  {
+    applyBatchAfterware({ responses, options }, next) {
+      if (_.some(responses, (response) => response.status === 401)) {
+        signOut(Client)
+      }
+      next()
+    }
+  }
+])
 
 export default Client
