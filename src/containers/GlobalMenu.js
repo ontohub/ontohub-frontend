@@ -1,8 +1,4 @@
-import {
-  currentUserQuery,
-  signInMutation,
-  signUpMutation
-} from '../apollo/queries'
+import { signInMutation, signUpMutation } from '../apollo/queries'
 import { compose, graphql, withApollo } from 'react-apollo'
 import { GlobalMenu } from '../components'
 import { userValidations } from '../helpers/validations'
@@ -12,14 +8,6 @@ const enableCaptcha = process.env.REACT_APP_DISABLE_CAPTCHA !== 'true'
 
 const GlobalMenuWithData = compose(
   withApollo,
-  graphql(currentUserQuery, {
-    props: (props) => ({
-      ...props.ownProps,
-      loading: props.data.loading,
-      error: props.data.error,
-      me: props.data.me
-    })
-  }),
   graphql(signInMutation, {
     props: (props) => ({
       ...props.ownProps,
