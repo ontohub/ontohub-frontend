@@ -1,13 +1,20 @@
-import { ApolloClient, createNetworkInterface } from 'react-apollo'
+import { ApolloClient, createBatchingNetworkInterface } from 'react-apollo'
 
 const backendHost = process.env.REACT_APP_BACKEND_HOST
 
-const networkInterface = createNetworkInterface({
-  uri: `${backendHost}/graphql`
+const networkInterface = createBatchingNetworkInterface({
+  uri: `${backendHost}/graphql`,
+  batchInterval: 10
 })
+
+export const Client = new ApolloClient({
+  networkInterface,
+  queryDeduplication: true
+})
+
 networkInterface.use([
   {
-    applyMiddleware(req, next) {
+    applyBatchMiddleware(req, next) {
       if (!req.options.headers) {
         req.options.headers = {}
       }
@@ -15,7 +22,7 @@ networkInterface.use([
     }
   },
   {
-    applyMiddleware(req, next) {
+    applyBatchMiddleware(req, next) {
       Object.assign(req.options.headers, {
         Accept: 'application/json'
       })
@@ -23,7 +30,7 @@ networkInterface.use([
     }
   },
   {
-    applyMiddleware(req, next) {
+    applyBatchMiddleware(req, next) {
       let authToken = localStorage.getItem('auth-token')
       if (authToken) {
         Object.assign(req.options.headers, {
@@ -35,8 +42,5 @@ networkInterface.use([
   }
 ])
 
-export const Client = new ApolloClient({
-  networkInterface
-})
 
 export default Client
