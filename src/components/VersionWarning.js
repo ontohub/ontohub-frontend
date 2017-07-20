@@ -11,8 +11,13 @@ const BottomMessage = styled(Message)`
   width: calc(100% + 2px) !important;
 `
 
-const WarningMessage = (props: {}) =>
-  <BottomMessage negative icon="warning sign" {...props} />
+const WarningMessage = ({ icon, warning, ...props }: {}) =>
+  <BottomMessage
+    negative={!warning}
+    warning={warning}
+    icon={icon || 'warning sign'}
+    {...props}
+  />
 
 export { WarningMessage }
 
@@ -21,6 +26,8 @@ export class VersionWarning extends Component {
     if (this.props.error) {
       return (
         <WarningMessage
+          icon="plug"
+          warning
           header="Could not determine backend version"
           content="This could mean that the backend is currently offline"
         />
@@ -36,13 +43,8 @@ export class VersionWarning extends Component {
         header="The connected backend does not meet the version requirement"
         content={
           <p>
-              Expected version
-            {' '}
-            <code>{this.props.version}</code>
-            {' '}
-              to satisfy requirement
-            {' '}
-            <code>{this.props.requirement}</code>
+              Expected version <code>{this.props.version}</code> to satisfy
+              requirement <code>{this.props.requirement}</code>
               . Be aware that this may cause problems.
           </p>
         }
