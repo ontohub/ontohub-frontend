@@ -23,6 +23,8 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@storybook/addon-info": "^3.1.9",
+    "@storybook/react": "^3.1.9",
     "codecov": "^2.2.0",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.1",
@@ -31,8 +33,7 @@
     "flow-typed": "^2.1.2",
     "prettier-eslint-cli": "^4.0.3",
     "react-scripts": "1.0.8",
-    "react-test-renderer": "^15.5.4",
-    "@storybook/react": "^3.1.9"
+    "react-test-renderer": "^15.5.4"
   },
   "scripts": {
     "start": "react-scripts start",
