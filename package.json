@@ -31,7 +31,8 @@
     "flow-typed": "^2.1.2",
     "prettier-eslint-cli": "^4.0.3",
     "react-scripts": "1.0.8",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.5.4",
+    "@storybook/react": "^3.1.9"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,7 +41,9 @@
     "flow": "flow",
     "lint": "eslint .",
     "format": "prettier-eslint --write \"src/**/*.js\"",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "jest": {
     "collectCoverageFrom": [

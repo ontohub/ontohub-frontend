@@ -5,7 +5,7 @@ export const colors = {
 
 export const sizes = {
   contentWidth: '700px',
-  headerPadding: '30px 0',
+  headerPadding: '30px',
   menuHeight: '50px',
   footerMargin: '100px'
 }
