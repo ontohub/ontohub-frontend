@@ -23,6 +23,8 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@storybook/addon-info": "^3.1.9",
+    "@storybook/react": "^3.1.9",
     "codecov": "^2.2.0",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.1",
@@ -40,12 +42,15 @@
     "flow": "flow",
     "lint": "eslint .",
     "format": "prettier-eslint --write \"src/**/*.js\"",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/*.js",
+      "!src/**/__stories__/*.js",
       "!src/**/components/index.js",
       "!src/**/scenes/index.js",
       "!src/**/containers/*.js",
