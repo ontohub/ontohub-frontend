@@ -39,7 +39,11 @@ const SignedInMenu = ({ me, onSignOut }) =>
         </Dropdown.Header>
         <Dropdown.Item as={Link} to={`/${me.id}`} content="Profile" />
         <Dropdown.Divider />
-        <Dropdown.Item onClick={onSignOut} content="Sign out" />
+        <Dropdown.Item
+          onClick={onSignOut}
+          content="Sign out"
+          id="global-menu-sign-out-button"
+        />
       </Dropdown.Menu>
     </Dropdown>
   </Menu.Menu>

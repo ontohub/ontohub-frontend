@@ -54,6 +54,7 @@ export class SignInForm extends Component {
         </Form.Group>
         <Button
           type="submit"
+          id="sign-in-form-sign-in-button"
           icon="sign in"
           content="Sign in"
           floated="right"
