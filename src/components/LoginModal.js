@@ -40,7 +40,14 @@ export class LoginModal extends Component {
         open={this.state.open}
         closeIcon
         style={{ overflow: 'hidden' }}
-        trigger={<Button primary icon="sign in" id="main-menu-sign-in" content="Sign in" />}
+        trigger={
+          <Button
+            primary
+            icon="sign in"
+            id="main-menu-sign-in"
+            content="Sign in"
+          />
+        }
       >
         <Modal.Header>Sign in</Modal.Header>
         <Modal.Content>
