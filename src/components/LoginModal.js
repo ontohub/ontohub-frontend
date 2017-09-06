@@ -44,7 +44,7 @@ export class LoginModal extends Component {
           <Button
             primary
             icon="sign in"
-            id="main-menu-sign-in"
+            id="login-modal-sign-in-button"
             content="Sign in"
           />
         }
