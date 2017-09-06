@@ -109,6 +109,7 @@ exports[`GlobalMenu signed in user matches the snapshot 1`] = `
           />
           <div
             class="item"
+            id="global-menu-sign-out-button"
             role="option"
           >
             <span
@@ -145,6 +146,7 @@ exports[`GlobalMenu signed out user matches the snapshot 1`] = `
       >
         <button
           class="ui primary button"
+          id="login-modal-sign-in-button"
         >
           <i
             aria-hidden="true"
