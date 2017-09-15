@@ -6250,9 +6250,9 @@ react-error-overlay@^1.0.8:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
-react-google-recaptcha@^0.9.6:
-  version "0.9.6"
-  resolved "https://registry.yarnpkg.com/react-google-recaptcha/-/react-google-recaptcha-0.9.6.tgz#45ca0c16e2f527bf132136bca77a2e345f63f4b6"
+react-google-recaptcha@^0.9.7:
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha/-/react-google-recaptcha-0.9.7.tgz#13ad944011d02566e8bd06ee8567ace21a1d0ed6"
   dependencies:
     prop-types ">=15.5.0"
 
