@@ -9,7 +9,7 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "react": "^15.6.0",
-    "react-apollo": "^1.2.0",
+    "react-apollo": "^1.4.15",
     "react-async-script": "^0.9.1",
     "react-css-transition-replace": "^2.2.1",
     "react-dom": "^15.6.0",
