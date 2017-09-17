@@ -121,6 +121,7 @@ exports[`LoginModal matches the snapshot 1`] = `
                           type="submit"
                           id="sign-in-form-sign-in-button"
                           class="ui primary right floated button"
+                          role="button"
                         >
                           <i
                             aria-hidden="true"
@@ -223,6 +224,7 @@ exports[`LoginModal matches the snapshot 1`] = `
                         <button
                           type="submit"
                           class="ui basic secondary right floated button"
+                          role="button"
                         >
                           <i
                             aria-hidden="true"
@@ -277,6 +279,7 @@ exports[`LoginModal matches the snapshot 1`] = `
           onFocus={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          role="button"
         >
           <Icon
             as="i"

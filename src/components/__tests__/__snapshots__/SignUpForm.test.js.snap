@@ -320,6 +320,7 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
         <button
           className="ui basic secondary right floated button"
           onClick={[Function]}
+          role="button"
           type="submit"
         >
           <Icon

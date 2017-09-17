@@ -157,6 +157,7 @@ exports[`SignInForm onSubmit error matches the snapshot 1`] = `
           className="ui primary right floated button"
           id="sign-in-form-sign-in-button"
           onClick={[Function]}
+          role="button"
           type="submit"
         >
           <Icon
