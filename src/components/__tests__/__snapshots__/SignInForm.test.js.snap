@@ -75,6 +75,7 @@ exports[`SignInForm onSubmit error matches the snapshot 1`] = `
         >
           <Icon
             as="i"
+            key="warning sign"
             name="warning sign"
           >
             <i
@@ -88,6 +89,7 @@ exports[`SignInForm onSubmit error matches the snapshot 1`] = `
             >
               <MessageHeader
                 content="Incorrect username or password"
+                key="Incorrect username or password"
               >
                 <div
                   className="header"
@@ -162,6 +164,7 @@ exports[`SignInForm onSubmit error matches the snapshot 1`] = `
         >
           <Icon
             as="i"
+            key="sign in"
             name="sign in"
           >
             <i

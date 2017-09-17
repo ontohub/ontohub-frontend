@@ -283,6 +283,7 @@ exports[`LoginModal matches the snapshot 1`] = `
         >
           <Icon
             as="i"
+            key="sign in"
             name="sign in"
           >
             <i
