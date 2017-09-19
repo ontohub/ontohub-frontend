@@ -155,10 +155,14 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
                   className="ui red pointing label"
                   onClick={[Function]}
                 >
-                  <div>
+                  <div
+                    key="0"
+                  >
                     Username is invalid
                   </div>
-                  <div>
+                  <div
+                    key="1"
+                  >
                     Username is too short
                   </div>
                 </div>
@@ -190,7 +194,9 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
                   className="ui red pointing label"
                   onClick={[Function]}
                 >
-                  <div>
+                  <div
+                    key="0"
+                  >
                     Email is invalid
                   </div>
                 </div>
@@ -266,7 +272,9 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
                   className="ui red pointing label"
                   onClick={[Function]}
                 >
-                  <div>
+                  <div
+                    key="0"
+                  >
                     Password is invalid
                   </div>
                 </div>
@@ -299,7 +307,9 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
                   className="ui red pointing label"
                   onClick={[Function]}
                 >
-                  <div>
+                  <div
+                    key="0"
+                  >
                     PasswordConfirm is invalid
                   </div>
                 </div>
@@ -320,10 +330,12 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
         <button
           className="ui basic secondary right floated button"
           onClick={[Function]}
+          role="button"
           type="submit"
         >
           <Icon
             as="i"
+            key="add user"
             name="add user"
           >
             <i
