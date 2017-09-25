@@ -11,6 +11,7 @@ exports[`LoginModal matches the snapshot 1`] = `
     closeOnDimmerClick={true}
     closeOnDocumentClick={false}
     dimmer={true}
+    eventPool="Modal"
     open={true}
     size="small"
     style={
@@ -33,6 +34,7 @@ exports[`LoginModal matches the snapshot 1`] = `
       closeOnDocumentClick={false}
       closeOnEscape={true}
       closeOnRootNodeClick={true}
+      eventPool="Modal"
       mountNode={
         <body
           class="dimmable dimmed"
