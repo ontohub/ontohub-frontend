@@ -17,12 +17,12 @@
     react-inspector "^2.1.1"
     uuid "^3.1.0"
 
-"@storybook/addon-info@^3.2.9":
-  version "3.2.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.9.tgz#50daca12d216f8338843023f13030cd92ab9789e"
+"@storybook/addon-info@^3.2.10":
+  version "3.2.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.10.tgz#d443b4e81e8e7c2c3858bf59f74f7df649ff2ed9"
   dependencies:
-    "@storybook/addons" "^3.2.6"
-    "@storybook/components" "^3.2.7"
+    "@storybook/addons" "^3.2.10"
+    "@storybook/components" "^3.2.10"
     babel-runtime "^6.23.0"
     global "^4.3.2"
     marksy "^2.0.0"
@@ -40,10 +40,6 @@
   version "3.2.10"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.2.10.tgz#dd71654674a417f62dcc91009c61e47dffdcac03"
 
-"@storybook/addons@^3.2.6":
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.2.6.tgz#c7974db36bd1b969d8ca3776f57fd955447dc7ed"
-
 "@storybook/channel-postmessage@^3.2.10":
   version "3.2.10"
   resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-3.2.10.tgz#e4dd9983432f7f08dfabe6c8134d246c029c370e"
@@ -59,14 +55,6 @@
 "@storybook/components@^3.2.10":
   version "3.2.10"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.2.10.tgz#d9a25f20bb27430ed588e7e49a71d303ae299dd0"
-  dependencies:
-    glamor "^2.20.40"
-    glamorous "^4.1.2"
-    prop-types "^15.5.10"
-
-"@storybook/components@^3.2.7":
-  version "3.2.7"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.2.7.tgz#7d4c7221851260e4236bbb3ef82a6494b23e5ec9"
   dependencies:
     glamor "^2.20.40"
     glamorous "^4.1.2"
