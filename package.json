@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@storybook/addon-info": "^3.2.9",
-    "@storybook/react": "^3.2.8",
+    "@storybook/react": "^3.2.10",
     "codecov": "^2.2.0",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^2.0.0",
