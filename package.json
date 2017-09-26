@@ -33,7 +33,7 @@
     "flow-typed": "^2.1.2",
     "prettier-eslint-cli": "^4.0.3",
     "react-scripts": "1.0.13",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
