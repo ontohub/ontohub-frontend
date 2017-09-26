@@ -2808,9 +2808,9 @@ entities@^1.1.1, entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
-enzyme-to-json@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-2.0.0.tgz#721235ae4892f0e149ca00198e236ce7cb6ea7fb"
+enzyme-to-json@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-2.0.1.tgz#e8b223040a7cc603bc678a4698c1a83c8c649932"
   dependencies:
     lodash.filter "^4.6.0"
     lodash.isnil "^4.0.0"
