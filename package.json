@@ -33,7 +33,8 @@
     "flow-typed": "^2.1.2",
     "prettier-eslint-cli": "^4.0.3",
     "react-scripts": "1.0.13",
-    "react-test-renderer": "^16.0.0"
+    "react-test-renderer": "^16.0.0",
+    "serve": "^6.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,7 +45,8 @@
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "serve-built": "serve build -p $PORT"
   },
   "jest": {
     "collectCoverageFrom": [
