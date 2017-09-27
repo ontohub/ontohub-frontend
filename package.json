@@ -46,7 +46,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "serve-built": "serve -p $PORT build"
+    "serve-built": "serve build -p $PORT"
   },
   "jest": {
     "collectCoverageFrom": [
