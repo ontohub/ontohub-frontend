@@ -27,7 +27,7 @@
     "@storybook/react": "^3.2.10",
     "codecov": "^2.2.0",
     "enzyme": "^2.8.2",
-    "enzyme-to-json": "^2.0.1",
+    "enzyme-to-json": "^3.0.0",
     "eslint": "^4.7.2",
     "flow-bin": "^0.49.1",
     "flow-typed": "^2.1.2",
