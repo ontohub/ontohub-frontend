@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import toJSON from 'enzyme-to-json'
 import _ from 'lodash'
 import SignUpForm from '../SignUpForm'
 
@@ -13,7 +12,7 @@ describe('SignUpForm', () => {
     wrapper = shallow(<SignUpForm />)
   })
   it('matches the snapshot', () => {
-    expect(toJSON(wrapper)).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 
   describe('onSubmit', () => {
@@ -37,11 +36,12 @@ describe('SignUpForm', () => {
             enableCaptcha={false}
           />
         )
-        wrapper.node.onSubmit({ preventDefault: jest.fn() })
+        wrapper.instance().onSubmit({ preventDefault: jest.fn() })
       })
 
       it('matches the snapshot', () => {
-        expect(toJSON(wrapper)).toMatchSnapshot()
+        wrapper.setState({ error: true })
+        expect(wrapper).toMatchSnapshot()
       })
 
       it('calls the error callback', () => {
@@ -64,19 +64,19 @@ describe('SignUpForm', () => {
             enableCaptcha={false}
           />
         )
-        _.each(['username', 'email', 'password'], (v) => {
-          wrapper.node.fields[v].value = v
+        _.each(['username', 'email', 'password'], v => {
+          wrapper.instance().fields[v].value = v
         })
-        wrapper.node.onSubmit({ preventDefault: jest.fn() })
+        wrapper.instance().onSubmit({ preventDefault: jest.fn() })
       })
 
       it('has not yet loaded recaptcha', () => {
-        expect(wrapper.node.state.captchaLoaded).toBeFalsy()
+        expect(wrapper.instance().state.captchaLoaded).toBeFalsy()
       })
 
       it('loads recaptcha onChange', () => {
         wrapper.find('form').simulate('change')
-        expect(wrapper.node.state.captchaLoaded).toBe(true)
+        expect(wrapper.instance().state.captchaLoaded).toBe(true)
       })
 
       it('calls the submit callback once', () => {

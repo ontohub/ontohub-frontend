@@ -7,7 +7,7 @@ describe('WarningMessage', () => {
     const component = shallow(
       <WarningMessage header="Message header" content="Message content" />
     )
-    expect(component.getNode()).toMatchSnapshot()
+    expect(component.getElement()).toMatchSnapshot()
   })
 })
 
@@ -19,7 +19,7 @@ describe('VersionWarning', () => {
       const component = shallow(
         <VersionWarning requirement={requirement} error />
       )
-      expect(component.getNode()).toMatchSnapshot()
+      expect(component.getElement()).toMatchSnapshot()
     })
   })
 
@@ -30,7 +30,7 @@ describe('VersionWarning', () => {
       const component = shallow(
         <VersionWarning requirement={requirement} version={version} />
       )
-      expect(component.getNode()).toBe(null)
+      expect(component.getElement()).toBe(null)
     })
   })
 
@@ -41,7 +41,7 @@ describe('VersionWarning', () => {
       const component = shallow(
         <VersionWarning requirement={requirement} version={version} />
       )
-      expect(component.getNode()).toMatchSnapshot()
+      expect(component.getElement()).toMatchSnapshot()
     })
   })
 })

@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import toJSON from 'enzyme-to-json'
 import SignInForm from '../SignInForm'
 
 describe('SignInForm', () => {
@@ -11,7 +10,7 @@ describe('SignInForm', () => {
   })
 
   it('matches the snapshot', () => {
-    expect(toJSON(wrapper)).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 
   describe('onSubmit', () => {
@@ -23,11 +22,12 @@ describe('SignInForm', () => {
         wrapper = mount(
           <SignInForm onSubmit={() => Promise.reject()} onError={onError} />
         )
-        wrapper.node.onSubmit({ preventDefault: jest.fn() })
+        wrapper.instance().onSubmit({ preventDefault: jest.fn() })
       })
 
       it('matches the snapshot', () => {
-        expect(toJSON(wrapper)).toMatchSnapshot()
+        wrapper.setState({ error: true })
+        expect(wrapper).toMatchSnapshot()
       })
 
       it('sets the error state to true', () => {
@@ -49,7 +49,7 @@ describe('SignInForm', () => {
             onSuccess={onSuccess}
           />
         )
-        wrapper.node.onSubmit({ preventDefault: jest.fn() })
+        wrapper.instance().onSubmit({ preventDefault: jest.fn() })
       })
 
       it('sets the error state to false', () => {

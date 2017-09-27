@@ -36,7 +36,7 @@ export class SignInForm extends Component {
             <label htmlFor="sign-in-username">Username</label>
             <input
               defaultValue="ada"
-              ref={(input) => (this.username = input)}
+              ref={input => (this.username = input)}
               placeholder="Username"
               id="sign-in-username"
             />
@@ -46,7 +46,7 @@ export class SignInForm extends Component {
             <input
               type="password"
               defaultValue="changemenow"
-              ref={(input) => (this.password = input)}
+              ref={input => (this.password = input)}
               placeholder="Password"
               id="sign-in-password"
             />

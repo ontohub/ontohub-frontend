@@ -1,6 +1,5 @@
 import React from 'react'
 import { Header, PaddedContainer } from '../Header'
-import toJSON from 'enzyme-to-json'
 import { ThemeProvider } from 'styled-components'
 import { render } from 'enzyme'
 
@@ -15,7 +14,7 @@ describe('Header', () => {
         </Header>
       </ThemeProvider>
     )
-    expect(toJSON(wrapper)).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 })
 
@@ -28,6 +27,6 @@ describe('PaddedContainer', () => {
         </PaddedContainer>
       </ThemeProvider>
     )
-    expect(toJSON(wrapper)).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 })

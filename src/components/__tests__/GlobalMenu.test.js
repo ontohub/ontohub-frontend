@@ -2,7 +2,6 @@ import React from 'react'
 import GlobalMenu from '../GlobalMenu'
 import { MemoryRouter as Router } from 'react-router-dom'
 import { render } from 'enzyme'
-import toJSON from 'enzyme-to-json'
 import { ThemeProvider } from 'styled-components'
 import theme from '../../styles'
 
@@ -16,7 +15,7 @@ describe('GlobalMenu', () => {
           </ThemeProvider>
         </Router>
       )
-      expect(toJSON(wrapper)).toMatchSnapshot()
+      expect(wrapper).toMatchSnapshot()
     })
   })
   describe('signed in user', () => {
@@ -30,7 +29,7 @@ describe('GlobalMenu', () => {
           </ThemeProvider>
         </Router>
       )
-      expect(toJSON(wrapper)).toMatchSnapshot()
+      expect(wrapper).toMatchSnapshot()
     })
   })
   it('contains the title link', () => {

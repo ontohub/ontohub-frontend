@@ -26,12 +26,16 @@ exports[`GlobalMenu signed in user matches the snapshot 1`] = `
           <i
             aria-hidden="true"
             class="plus icon"
-          />
+          >
+            
+          </i>
         </span>
         <i
           aria-hidden="true"
           class="dropdown icon"
-        />
+        >
+          
+        </i>
         <div
           class="menu transition"
         >
@@ -77,14 +81,18 @@ exports[`GlobalMenu signed in user matches the snapshot 1`] = `
             height="24"
             src="//www.gravatar.com/avatar/3e3417d7ef77d5932a6734b916515ed5?d=retro&r=g&s=24"
             srcset="//www.gravatar.com/avatar/3e3417d7ef77d5932a6734b916515ed5?d=retro&r=g&s=48 2x"
-            style="border-radius:2px;"
+            style="border-radius:2px"
             width="24"
-          />
+          >
+            
+          </img>
         </span>
         <i
           aria-hidden="true"
           class="dropdown icon"
-        />
+        >
+          
+        </i>
         <div
           class="menu transition"
         >
@@ -106,7 +114,9 @@ exports[`GlobalMenu signed in user matches the snapshot 1`] = `
           </a>
           <div
             class="divider"
-          />
+          >
+            
+          </div>
           <div
             class="item"
             id="global-menu-sign-out-button"
@@ -152,7 +162,9 @@ exports[`GlobalMenu signed out user matches the snapshot 1`] = `
           <i
             aria-hidden="true"
             class="sign in icon"
-          />
+          >
+            
+          </i>
           Sign in
         </button>
       </div>

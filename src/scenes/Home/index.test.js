@@ -1,6 +1,5 @@
 import React from 'react'
 import { Home, Header } from '.'
-import toJSON from 'enzyme-to-json'
 import { ThemeProvider } from 'styled-components'
 import { render } from 'enzyme'
 
@@ -13,7 +12,7 @@ describe('Home', () => {
         </ThemeProvider>
       )
 
-      expect(toJSON(wrapper)).toMatchSnapshot()
+      expect(wrapper).toMatchSnapshot()
     })
   })
 
@@ -21,7 +20,7 @@ describe('Home', () => {
     it('matches the snapshot', () => {
       let wrapper = render(<Home />)
 
-      expect(toJSON(wrapper)).toMatchSnapshot()
+      expect(wrapper).toMatchSnapshot()
     })
   })
 })
