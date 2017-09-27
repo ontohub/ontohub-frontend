@@ -14,7 +14,7 @@ exports[`Header matches the snapshot 1`] = `
 
 exports[`PaddedContainer matches the snapshot 1`] = `
 <div
-  class="ui container sc-htpNat gTtniJ"
+  class="ui container sc-htpNat kTUAPG"
 >
   Header content
 </div>

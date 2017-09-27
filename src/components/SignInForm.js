@@ -25,12 +25,13 @@ export class SignInForm extends Component {
   render() {
     return (
       <Form error={this.state.error} onSubmit={this.onSubmit}>
-        {this.state.error &&
+        {this.state.error && (
           <Message
             error
             icon="warning sign"
             header="Incorrect username or password"
-          />}
+          />
+        )}
         <Form.Group widths="equal">
           <Form.Field error={this.state.error}>
             <label htmlFor="sign-in-username">Username</label>

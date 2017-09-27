@@ -43,7 +43,6 @@ exports[`LoginModal matches the snapshot 1`] = `
             class="ui page modals dimmer transition visible active"
           >
             <div
-              data-reactroot=""
               class="ui small modal transition visible active"
               style="overflow: hidden;"
             >
@@ -129,9 +128,7 @@ exports[`LoginModal matches the snapshot 1`] = `
                             aria-hidden="true"
                             class="sign in icon"
                           />
-                          <!-- react-text: 22 -->
                           Sign in
-                          <!-- /react-text -->
                         </button>
                       </form>
                     </div>
@@ -198,9 +195,9 @@ exports[`LoginModal matches the snapshot 1`] = `
                             />
                             <div
                               title="Password strength: Very weak"
+                              style="margin-top: -3px;"
                               class="ui red bottom attached progress"
                               data-percent="0"
-                              style="margin-top: -3px;"
                             >
                               <div
                                 class="bar"
@@ -232,9 +229,7 @@ exports[`LoginModal matches the snapshot 1`] = `
                             aria-hidden="true"
                             class="add user icon"
                           />
-                          <!-- react-text: 45 -->
                           Create account
-                          <!-- /react-text -->
                         </button>
                       </form>
                     </div>
@@ -275,6 +270,7 @@ exports[`LoginModal matches the snapshot 1`] = `
       >
         <button
           className="ui primary button"
+          disabled={undefined}
           id="login-modal-sign-in-button"
           onBlur={[Function]}
           onClick={[Function]}
@@ -282,6 +278,7 @@ exports[`LoginModal matches the snapshot 1`] = `
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           role="button"
+          tabIndex={undefined}
         >
           <Icon
             as="i"

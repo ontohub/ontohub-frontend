@@ -7,14 +7,13 @@ import theme from '../../styles'
 import { Icon, Input, Header as SemHeader, Menu } from 'semantic-ui-react'
 import Header, { PaddedContainer } from '../Header'
 
-const Decorator = (storyFn) =>
-  <ThemeProvider theme={theme}>
-    {storyFn()}
-  </ThemeProvider>
+const Decorator = (storyFn) => (
+  <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
+)
 
 storiesOf('Header', module)
   .addDecorator(Decorator)
-  .add('without bottom padding', () =>
+  .add('without bottom padding', () => (
     <Header>
       <SemHeader as="h2" inverted>
         ada / repo0
@@ -34,8 +33,8 @@ storiesOf('Header', module)
         </Menu.Menu>
       </Menu>
     </Header>
-  )
-  .add('with bottom padding', () =>
+  ))
+  .add('with bottom padding', () => (
     <Header>
       <PaddedContainer>
         <SemHeader as="h2" inverted>
@@ -53,4 +52,4 @@ storiesOf('Header', module)
         />
       </PaddedContainer>
     </Header>
-  )
+  ))

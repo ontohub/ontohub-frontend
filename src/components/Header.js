@@ -39,10 +39,10 @@ const InnerHeader = styled.div`
 `
 
 export const PaddedContainer = styled(Container)`
-  padding-bottom: ${({ theme }) => theme.sizes.headerPadding}
+  padding-bottom: ${({ theme }) => theme.sizes.headerPadding};
 `
 
-export const Header = (props) =>
+export const Header = (props) => (
   <StyledHeader>
     <InnerHeader
       heightTransitionDuration={props.heightTransitionDuration}
@@ -51,5 +51,6 @@ export const Header = (props) =>
       {props.children}
     </InnerHeader>
   </StyledHeader>
+)
 
 export default Header

@@ -10,7 +10,9 @@ exports[`Home Body matches the snapshot 1`] = `
     <i
       aria-hidden="true"
       class="announcement icon"
-    />
+    >
+      
+    </i>
     <div
       class="content"
     >
@@ -33,7 +35,7 @@ exports[`Home Body matches the snapshot 1`] = `
 
 exports[`Home Header matches the snapshot 1`] = `
 <div
-  class="ui container sc-EHOje hobark"
+  class="ui container sc-EHOje bwZcKZ"
 >
   <h2
     class="ui inverted header"
@@ -51,12 +53,14 @@ exports[`Home Header matches the snapshot 1`] = `
       <i
         aria-hidden="true"
         class="fork icon"
-      />
+      >
+        
+      </i>
       <div
         class="content"
       >
         <span
-          class="sc-bdVaJa iKQokJ"
+          class="sc-bdVaJa hCboOS"
         >
           Open
         </span>
@@ -70,12 +74,14 @@ exports[`Home Header matches the snapshot 1`] = `
       <i
         aria-hidden="true"
         class="code icon"
-      />
+      >
+        
+      </i>
       <div
         class="content"
       >
         <span
-          class="sc-bdVaJa iKQokJ"
+          class="sc-bdVaJa hCboOS"
         >
           Flexible
         </span>
@@ -89,12 +95,14 @@ exports[`Home Header matches the snapshot 1`] = `
       <i
         aria-hidden="true"
         class="sitemap icon"
-      />
+      >
+        
+      </i>
       <div
         class="content"
       >
         <span
-          class="sc-bdVaJa iKQokJ"
+          class="sc-bdVaJa hCboOS"
         >
           Distributed
         </span>
