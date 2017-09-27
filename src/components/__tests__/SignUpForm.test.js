@@ -36,11 +36,14 @@ describe('SignUpForm', () => {
             enableCaptcha={false}
           />
         )
-        wrapper.instance().onSubmit({ preventDefault: jest.fn() })
+        wrapper
+          .instance()
+          .onSubmit({ preventDefault: jest.fn() })
+          // Somehow enzyme does not update the wrapper's state
+          .then(() => wrapper.setState({ error: true }))
       })
 
       it('matches the snapshot', () => {
-        wrapper.setState({ error: true })
         expect(wrapper).toMatchSnapshot()
       })
 
