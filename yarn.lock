@@ -17,9 +17,9 @@
     react-inspector "^2.1.1"
     uuid "^3.1.0"
 
-"@storybook/addon-info@^3.2.10":
-  version "3.2.10"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.10.tgz#d443b4e81e8e7c2c3858bf59f74f7df649ff2ed9"
+"@storybook/addon-info@^3.2.11":
+  version "3.2.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.11.tgz#303a103827b398ec3330d0d6c3726b3ef06e6b00"
   dependencies:
     "@storybook/addons" "^3.2.10"
     "@storybook/components" "^3.2.10"
