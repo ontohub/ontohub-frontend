@@ -9,9 +9,7 @@ describe('Header', () => {
       <ThemeProvider
         theme={{ colors: { dark: '#000' }, sizes: { contentWidth: '700px' } }}
       >
-        <Header>
-          Header content
-        </Header>
+        <Header>Header content</Header>
       </ThemeProvider>
     )
     expect(wrapper).toMatchSnapshot()
@@ -22,9 +20,7 @@ describe('PaddedContainer', () => {
   it('matches the snapshot', () => {
     const wrapper = render(
       <ThemeProvider theme={{ sizes: { headerPadding: '1em' } }}>
-        <PaddedContainer>
-          Header content
-        </PaddedContainer>
+        <PaddedContainer>Header content</PaddedContainer>
       </ThemeProvider>
     )
     expect(wrapper).toMatchSnapshot()

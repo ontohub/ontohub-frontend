@@ -5,7 +5,7 @@ import { LoginModal } from './LoginModal'
 import Gravatar from 'react-gravatar'
 import styled from 'styled-components'
 
-const SignedInMenu = ({ me, onSignOut }) =>
+const SignedInMenu = ({ me, onSignOut }) => (
   <Menu.Menu position="right">
     <Dropdown
       item
@@ -34,9 +34,7 @@ const SignedInMenu = ({ me, onSignOut }) =>
       }
     >
       <Dropdown.Menu>
-        <Dropdown.Header>
-          Signed in as {me.id}
-        </Dropdown.Header>
+        <Dropdown.Header>Signed in as {me.id}</Dropdown.Header>
         <Dropdown.Item as={Link} to={`/${me.id}`} content="Profile" />
         <Dropdown.Divider />
         <Dropdown.Item
@@ -47,13 +45,14 @@ const SignedInMenu = ({ me, onSignOut }) =>
       </Dropdown.Menu>
     </Dropdown>
   </Menu.Menu>
+)
 
 const SignedOutMenu = ({
   onSignIn,
   onSignUp,
   signUpValidations,
   enableCaptcha
-}) =>
+}) => (
   <Menu.Menu position="right">
     <Menu.Item>
       <LoginModal
@@ -64,6 +63,7 @@ const SignedOutMenu = ({
       />
     </Menu.Item>
   </Menu.Menu>
+)
 
 const InnerMenu = styled(Menu)`
   height: ${({ theme }) => theme.sizes.menuHeight};
@@ -81,21 +81,23 @@ const GlobalMenu = ({
   onSignUp,
   signUpValidations,
   className
-}) =>
+}) => (
   <div className={className}>
     <InnerMenu inverted borderless fixed="top">
       <Menu.Item header as={Link} to="/">
         Ontohub
       </Menu.Item>
-      {(me && <SignedInMenu me={me} onSignOut={onSignOut} />) ||
-        <SignedOutMenu
-          enableCaptcha={enableCaptcha}
-          onSignIn={onSignIn}
-          onSignUp={onSignUp}
-          signUpValidations={signUpValidations}
-        />}
+      {(me && <SignedInMenu me={me} onSignOut={onSignOut} />) || (
+          <SignedOutMenu
+            enableCaptcha={enableCaptcha}
+            onSignIn={onSignIn}
+            onSignUp={onSignUp}
+            signUpValidations={signUpValidations}
+          />
+        )}
     </InnerMenu>
   </div>
+)
 
 const FixedGlobalMenu = styled(GlobalMenu)`
   position: fixed;

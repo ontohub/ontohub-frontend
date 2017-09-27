@@ -6,20 +6,21 @@ import ReCAPTCHA from 'react-google-recaptcha'
 
 let captcha
 const grecaptchaSiteKey = process.env.REACT_APP_GRECAPTCHA_SITE_KEY,
-      PasswordStrengthBar = ({ score }) =>
-        <Progress
-          attached="bottom"
-          title={`Password strength: ${[
-            'Very weak',
-            'Weak',
-            'Okay',
-            'Strong',
-            'Very strong'
-          ][score]}`}
-          style={{ marginTop: -3 }}
-          percent={score * 25}
-          color={['red', 'orange', 'yellow', 'olive', 'green'][score]}
-        />
+      PasswordStrengthBar = ({ score }) => (
+    <Progress
+      attached="bottom"
+      title={`Password strength: ${[
+        'Very weak',
+        'Weak',
+        'Okay',
+        'Strong',
+        'Very strong'
+      ][score]}`}
+      style={{ marginTop: -3 }}
+      percent={score * 25}
+      color={['red', 'orange', 'yellow', 'olive', 'green'][score]}
+    />
+  )
 
 export class SignUpForm extends Component {
   constructor(props) {
@@ -115,18 +116,19 @@ export class SignUpForm extends Component {
     return (
       <Form onSubmit={this.onSubmit} onChange={this.loadCaptcha}>
         {this.props.enableCaptcha &&
-          this.state.captchaLoaded &&
-          <ReCAPTCHA
-            ref={(el) => {
-              // We disable captchas in the tests:
-              // istanbul ignore next
-              captcha = el
-            }}
-            size="invisible"
-            badge="bottomleft"
-            sitekey={grecaptchaSiteKey}
-            onChange={this.onSubmitSetCaptcha}
-          />}
+          this.state.captchaLoaded && (
+            <ReCAPTCHA
+              ref={(el) => {
+                // We disable captchas in the tests:
+                // istanbul ignore next
+                captcha = el
+              }}
+              size="invisible"
+              badge="bottomleft"
+              sitekey={grecaptchaSiteKey}
+              onChange={this.onSubmitSetCaptcha}
+            />
+          )}
         <Form.Group widths="equal">
           <Form.Field error={!!this.state.errors.username}>
             <label htmlFor="sign-up-username">Username</label>
@@ -137,14 +139,13 @@ export class SignUpForm extends Component {
               placeholder="Username"
               id="sign-up-username"
             />
-            {this.state.errors.username &&
+            {this.state.errors.username && (
               <Label pointing color="red">
-                {this.state.errors.username.map((e, i) =>
-                  <div key={i}>
-                    {e}
-                  </div>
-                )}
-              </Label>}
+                {this.state.errors.username.map((e, i) => (
+                  <div key={i}>{e}</div>
+                ))}
+              </Label>
+            )}
           </Form.Field>
           <Form.Field error={!!this.state.errors.email}>
             <label htmlFor="sign-up-email">Email</label>
@@ -155,14 +156,11 @@ export class SignUpForm extends Component {
               placeholder="Email"
               id="sign-up-email"
             />
-            {this.state.errors.email &&
+            {this.state.errors.email && (
               <Label pointing color="red">
-                {this.state.errors.email.map((e, i) =>
-                  <div key={i}>
-                    {e}
-                  </div>
-                )}
-              </Label>}
+                {this.state.errors.email.map((e, i) => <div key={i}>{e}</div>)}
+              </Label>
+            )}
           </Form.Field>
         </Form.Group>
         <Form.Group widths="equal">
@@ -186,14 +184,13 @@ export class SignUpForm extends Component {
               id="sign-up-password"
             />
             <PasswordStrengthBar score={this.state.passwordScore} />
-            {this.state.errors.password &&
+            {this.state.errors.password && (
               <Label pointing color="red">
-                {this.state.errors.password.map((e, i) =>
-                  <div key={i}>
-                    {e}
-                  </div>
-                )}
-              </Label>}
+                {this.state.errors.password.map((e, i) => (
+                  <div key={i}>{e}</div>
+                ))}
+              </Label>
+            )}
           </Form.Field>
           <Form.Field error={!!this.state.errors.passwordConfirm}>
             <label htmlFor="sign-up-password-confirm">Confirm Password</label>
@@ -205,14 +202,13 @@ export class SignUpForm extends Component {
               placeholder="Confirm Password"
               id="sign-up-password-confirm"
             />
-            {this.state.errors.passwordConfirm &&
+            {this.state.errors.passwordConfirm && (
               <Label pointing color="red">
-                {this.state.errors.passwordConfirm.map((e, i) =>
-                  <div key={i}>
-                    {e}
-                  </div>
-                )}
-              </Label>}
+                {this.state.errors.passwordConfirm.map((e, i) => (
+                  <div key={i}>{e}</div>
+                ))}
+              </Label>
+            )}
           </Form.Field>
         </Form.Group>
         <Button

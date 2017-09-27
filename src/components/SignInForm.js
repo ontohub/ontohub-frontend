@@ -25,18 +25,19 @@ export class SignInForm extends Component {
   render() {
     return (
       <Form error={this.state.error} onSubmit={this.onSubmit}>
-        {this.state.error &&
+        {this.state.error && (
           <Message
             error
             icon="warning sign"
             header="Incorrect username or password"
-          />}
+          />
+        )}
         <Form.Group widths="equal">
           <Form.Field error={this.state.error}>
             <label htmlFor="sign-in-username">Username</label>
             <input
               defaultValue="ada"
-              ref={input => (this.username = input)}
+              ref={(input) => (this.username = input)}
               placeholder="Username"
               id="sign-in-username"
             />
@@ -46,7 +47,7 @@ export class SignInForm extends Component {
             <input
               type="password"
               defaultValue="changemenow"
-              ref={input => (this.password = input)}
+              ref={(input) => (this.password = input)}
               placeholder="Password"
               id="sign-in-password"
             />

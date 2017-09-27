@@ -64,7 +64,7 @@ describe('SignUpForm', () => {
             enableCaptcha={false}
           />
         )
-        _.each(['username', 'email', 'password'], v => {
+        _.each(['username', 'email', 'password'], (v) => {
           wrapper.instance().fields[v].value = v
         })
         wrapper.instance().onSubmit({ preventDefault: jest.fn() })

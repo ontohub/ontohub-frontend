@@ -16,7 +16,9 @@ describe('LoginModal', () => {
   beforeEach(() => {
     onSignIn = jest.fn()
     onSignUp = jest.fn()
-    wrapper = mount(<LoginModal open onSignIn={onSignIn} onSignUp={onSignUp} />)
+    wrapper = mount(
+      <LoginModal open onSignIn={onSignIn} onSignUp={onSignUp} />
+    )
   })
 
   it('matches the snapshot', () => {

@@ -11,13 +11,14 @@ const BottomMessage = styled(Message)`
   width: calc(100% + 2px) !important;
 `
 
-const WarningMessage = ({ icon, warning, ...props }: {}) =>
+const WarningMessage = ({ icon, warning, ...props }: {}) => (
   <BottomMessage
     negative={!warning}
     warning={warning}
     icon={icon || 'warning sign'}
     {...props}
   />
+)
 
 export { WarningMessage }
 
@@ -37,18 +38,18 @@ export class VersionWarning extends Component {
       this.props.loading ||
       satisfies(this.props.version, this.props.requirement)
 
-    return validVersion
-      ? null
-      : <WarningMessage
+    return validVersion ? null : (
+      <WarningMessage
         header="The connected backend does not meet the version requirement"
         content={
           <p>
-              Expected version <code>{this.props.version}</code> to satisfy
-              requirement <code>{this.props.requirement}</code>
-              . Be aware that this may cause problems.
+            Expected version <code>{this.props.version}</code> to satisfy
+            requirement <code>{this.props.requirement}</code>
+            . Be aware that this may cause problems.
           </p>
         }
       />
+    )
   }
 }
 

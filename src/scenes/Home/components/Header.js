@@ -3,9 +3,11 @@ import { Header as SemHeader, List } from 'semantic-ui-react'
 import { PaddedContainer } from '../../../components'
 import { Item } from '.'
 
-export const Header = () =>
+export const Header = () => (
   <PaddedContainer>
-    <SemHeader as="h2" inverted>Welcome to Ontohub</SemHeader>
+    <SemHeader as="h2" inverted>
+      Welcome to Ontohub
+    </SemHeader>
     <List size="large">
       <Item icon="fork" header="Open" content="based on open source software" />
       <Item
@@ -20,5 +22,6 @@ export const Header = () =>
       />
     </List>
   </PaddedContainer>
+)
 
 export default Header

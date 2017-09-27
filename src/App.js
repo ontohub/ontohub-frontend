@@ -13,42 +13,44 @@ import config from './config.json'
 
 const backendVersion = config.ontohub.backendVersion
 
-const App = (props) =>
+const App = (props) => (
   <div className={props.className}>
     <GlobalMenu me={props.me} />
     <Header heightTransitionDuration=".4s" contentTransitionDuration=".1s">
       <Route
-        render={({ location }) =>
+        render={({ location }) => (
           <ReactCSSTransitionReplace
             transitionName="cross-fade"
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}
           >
             <Switch key={location.pathname} location={location}>
-              {routes.map((route, index) =>
+              {routes.map((route, index) => (
                 <Route
                   key={index}
                   path={route.path}
                   exact={route.exact}
                   component={route.header}
                 />
-              )}
+              ))}
             </Switch>
-          </ReactCSSTransitionReplace>}
+          </ReactCSSTransitionReplace>
+        )}
       />
     </Header>
     <Switch>
-      {routes.map((route, index) =>
+      {routes.map((route, index) => (
         <Route
           key={index}
           path={route.path}
           exact={route.exact}
           component={route.main}
         />
-      )}
+      ))}
     </Switch>
     <VersionWarning requirement={backendVersion} />
   </div>
+)
 
 const StyledApp = styled(App)`
   position: relative;

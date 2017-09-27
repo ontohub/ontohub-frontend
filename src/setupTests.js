@@ -10,5 +10,4 @@ global.requestAnimationFrame = function(callback) {
   setTimeout(callback, 0)
 }
 
-global.cancelAnimationFrame = function(callback) {
-}
+global.cancelAnimationFrame = function(callback) {}
