@@ -17,16 +17,16 @@
     react-inspector "^2.2.0"
     uuid "^3.1.0"
 
-"@storybook/addon-info@^3.2.11":
-  version "3.2.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.11.tgz#303a103827b398ec3330d0d6c3726b3ef06e6b00"
+"@storybook/addon-info@^3.2.12":
+  version "3.2.12"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.12.tgz#0600393398590dcc64fc1d24e509487f424e8354"
   dependencies:
-    "@storybook/addons" "^3.2.10"
-    "@storybook/components" "^3.2.10"
-    babel-runtime "^6.23.0"
+    "@storybook/addons" "^3.2.12"
+    "@storybook/components" "^3.2.12"
+    babel-runtime "^6.26.0"
     global "^4.3.2"
     marksy "^2.0.0"
-    prop-types "^15.5.10"
+    prop-types "^15.6.0"
     react-addons-create-fragment "^15.5.3"
     util-deprecate "^1.0.2"
 
@@ -35,10 +35,6 @@
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.2.12.tgz#8b2f1d1496e1066d165d1e0615224a5e0a3e2db6"
   dependencies:
     "@storybook/addons" "^3.2.12"
-
-"@storybook/addons@^3.2.10":
-  version "3.2.10"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.2.10.tgz#dd71654674a417f62dcc91009c61e47dffdcac03"
 
 "@storybook/addons@^3.2.12":
   version "3.2.12"
@@ -55,14 +51,6 @@
 "@storybook/channels@^3.2.12":
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.2.12.tgz#7920d0e5f84d718ccbb3925c5782cb5312500b6d"
-
-"@storybook/components@^3.2.10":
-  version "3.2.10"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.2.10.tgz#d9a25f20bb27430ed588e7e49a71d303ae299dd0"
-  dependencies:
-    glamor "^2.20.40"
-    glamorous "^4.1.2"
-    prop-types "^15.5.10"
 
 "@storybook/components@^3.2.12":
   version "3.2.12"
@@ -3896,7 +3884,7 @@ glamor@^2.20.40:
     prop-types "^15.5.10"
     through "^2.3.8"
 
-glamorous@^4.1.2, glamorous@^4.9.7:
+glamorous@^4.9.7:
   version "4.9.7"
   resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.9.7.tgz#78bb008d1404b5bd91ad4d043ec0dc6430ad2653"
   dependencies:
