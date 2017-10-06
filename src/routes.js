@@ -1,4 +1,9 @@
-import { Home, HomeHeader } from "./scenes";
+import {
+  Home,
+  HomeHeader,
+  OrganizationalUnit,
+  OrganizationalUnitHeader
+} from "./scenes";
 
 export default [
   {
@@ -6,5 +11,11 @@ export default [
     exact: true,
     header: HomeHeader,
     main: Home
+  },
+  {
+    path: "/:organizationalUnitId",
+    exact: true,
+    header: OrganizationalUnitHeader,
+    main: OrganizationalUnit
   }
 ];
