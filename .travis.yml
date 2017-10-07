@@ -8,10 +8,9 @@ node_js:
 
 cache: yarn
 
-matrix:
-  include:
-    - env: RUN_TESTS=1
-    - env: RUN_FLOW=1
+env:
+  - RUN_TESTS=true
+  - RUN_FLOW=true
 
 before_install:
   - "yarn --version"
