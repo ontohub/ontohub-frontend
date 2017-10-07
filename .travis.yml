@@ -6,9 +6,12 @@ node_js:
   - "6"
   - "8"
 
-cache:
-  directories:
-    - "/home/travis/.yarn-cache"
+cache: yarn
+
+matrix:
+  include:
+    - env: RUN_TESTS=1
+    - env: RUN_FLOW=1
 
 before_install:
   - "yarn --version"
@@ -17,8 +20,8 @@ install:
   - "yarn install --pure-lockfile --no-emoji"
 
 script:
-  - "yarn flow"
-  - "yarn test -- --coverage --verbose"
+  - if [ -n "$RUN_FLOW" ]; then yarn flow; fi
+  - if [ -n "$RUN_TESTS" ]; then yarn test -- --coverage --verbose; fi
 
 after_script:
-  - "yarn run codecov"
+  - if [ -n "$RUN_TESTS" ]; then yarn codecov; fi
