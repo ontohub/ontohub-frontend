@@ -6,7 +6,10 @@ node_js:
   - "6"
   - "8"
 
-cache: yarn
+cache:
+  yarn: true
+  directories:
+    - node_modules
 
 env:
   - RUN_TESTS=true
