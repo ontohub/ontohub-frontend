@@ -6897,9 +6897,9 @@ react-async-script@^0.9.1:
   dependencies:
     prop-types ">=15.5.0"
 
-react-css-transition-replace@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/react-css-transition-replace/-/react-css-transition-replace-3.0.1.tgz#6ce40810d6af7f93d07fa4a054c73193a90b0d3a"
+react-css-transition-replace@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-css-transition-replace/-/react-css-transition-replace-3.0.2.tgz#8c2f8ea556c935f590ec285ed2d3ec247b19271e"
   dependencies:
     chain-function "^1.0.0"
     dom-helpers "^3.2.0"
