@@ -11,56 +11,26 @@ import config from "./config.json";
 
 const backendVersion = config.ontohub.backendVersion;
 
-injectGlobal`
-.fade-wait-leave {
-  opacity: 1;
-}
-.fade-wait-leave.fade-wait-leave-active {
-  opacity: 0;
-  transition: opacity .2s ease-in .1s;
-}
-
-.fade-wait-enter {
-  opacity: 0;
-}
-.fade-wait-enter.fade-wait-enter-active {
-  opacity: 1;
-  /* Delay the enter animation until the leave completes */
-  transition: opacity .1s ease-in .1s;
-}
-
-.fade-wait-height {
-  transition: height .2s ease-in-out .1s;
-}
-`;
-
-class RouteManager extends Component {
+class GraphQL extends Component {
   constructor(props) {
-    super(props);
-    this.state = { data: { loading: true } };
-    this.update = this.update.bind(this);
+    super();
+    const { query, render, update } = props;
+    this.Comp = query(render);
   }
-  update(props) {
-    this.setState(props);
+  componentWillReceiveProps(props) {
+    this.Comp = props.query(props.render);
+  }
+  shouldComponentUpdate(props) {
+    console.log("should update", props, this.props, props == this.props);
+    return props.update !== this.props.update;
   }
   render() {
-    return this.props.render(this.state, this.update);
+    const Comp = this.Comp;
+    return <Comp {...this.props} />;
   }
 }
 
-class GraphqlConnected extends Component {
-  shouldComponentUpdate(nextProps) {
-    return (
-      !!this.props.data &&
-      !!this.props.data.loading &&
-      (!nextProps.data || !nextProps.data.loading)
-    );
-  }
-  render() {
-    this.props.update(this.props);
-    return null;
-  }
-}
+const meQuery = graphql(currentUserQuery);
 
 const App = ({ me, ...props }) => (
   <div className={props.className}>
@@ -71,48 +41,24 @@ const App = ({ me, ...props }) => (
           key={1}
           path={route.path}
           exact={route.exact}
-          render={routeProps => {
-            let Comp = route.graphql
-              ? route.graphql(GraphqlConnected)
-              : graphql(currentUserQuery, { skip: true })(GraphqlConnected);
-            return (
-              <RouteManager
-                render={(gqlProps, update) => (
-                  <div>
-                    <Comp {...routeProps} update={update} />
-                    <Header>
-                      <ReactCSSTransitionReplace
-                        transitionName="fade-wait"
-                        transitionEnterTimeout={400}
-                        transitionLeaveTimeout={400}
-                      >
-                        {route.header ? (
-                          <route.header
-                            key={routeProps.location.key}
-                            me={me}
-                            {...routeProps}
-                            {...gqlProps}
-                          />
-                        ) : null}
-                      </ReactCSSTransitionReplace>
-                    </Header>
-                    <ReactCSSTransitionReplace
-                      transitionName="fade-wait"
-                      transitionEnterTimeout={400}
-                      transitionLeaveTimeout={400}
-                    >
-                      <route.main
-                        key={routeProps.location.key}
-                        me={me}
-                        {...routeProps}
-                        {...gqlProps}
-                      />
-                    </ReactCSSTransitionReplace>
-                  </div>
-                )}
-              />
-            );
-          }}
+          render={routeProps => (
+            <GraphQL
+              {...routeProps}
+              update={routeProps.location.key}
+              query={route.graphql || meQuery}
+              render={gqlProps => [
+                <Header key="header">
+                  <route.header
+                    key="header"
+                    me={me}
+                    {...routeProps}
+                    {...gqlProps}
+                  />
+                </Header>,
+                <route.main key="main" me={me} {...routeProps} {...gqlProps} />
+              ]}
+            />
+          )}
         />
       ))}
     </Switch>

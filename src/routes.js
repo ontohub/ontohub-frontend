@@ -1,3 +1,6 @@
+import { graphql } from 'react-apollo'
+import { organizationalUnitQuery } from './apollo/queries'
+
 import {
   Home,
   HomeHeader,
@@ -16,6 +19,11 @@ export default [
     path: "/:organizationalUnitId",
     exact: true,
     header: OrganizationalUnitHeader,
-    main: OrganizationalUnit
+    main: OrganizationalUnit,
+    graphql: graphql(organizationalUnitQuery, {
+      options: ({ match: { params: { organizationalUnitId } } }) => ({
+        variables: { id: organizationalUnitId }
+      })
+    })
   }
 ];
