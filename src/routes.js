@@ -1,5 +1,5 @@
-import { graphql } from 'react-apollo'
-import { organizationalUnitQuery } from './apollo/queries'
+import { graphql } from "react-apollo";
+import { organizationalUnitQuery } from "./apollo/queries";
 
 import {
   Home,
@@ -16,7 +16,7 @@ export default [
     main: Home
   },
   {
-    path: "/:organizationalUnitId",
+    path: "/:organizationalUnitId/(repositories|organizations|members)?",
     exact: true,
     header: OrganizationalUnitHeader,
     main: OrganizationalUnit,

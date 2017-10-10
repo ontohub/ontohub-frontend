@@ -5,6 +5,28 @@ export const organizationalUnitQuery = gql`
     organizationalUnit(id: $id) {
       id
       displayName
+      repositories {
+        id
+        name
+        description
+        visibility
+      }
+      ... on User {
+        emailHash
+        organizations {
+          id
+          displayName
+          description
+        }
+      }
+      ... on Organization {
+        description
+        members {
+          id
+          displayName
+          emailHash
+        }
+      }
     }
   }
 `

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { graphql } from "react-apollo";
 import { currentUserQuery } from "./apollo/queries";
 import { Header } from "./components";
@@ -6,7 +6,6 @@ import { VersionWarning, GlobalMenu } from "./containers";
 import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import routes from "./routes";
-import ReactCSSTransitionReplace from "react-css-transition-replace";
 import config from "./config.json";
 
 const backendVersion = config.ontohub.backendVersion;
@@ -14,14 +13,13 @@ const backendVersion = config.ontohub.backendVersion;
 class GraphQL extends Component {
   constructor(props) {
     super();
-    const { query, render, update } = props;
+    const { query, render } = props;
     this.Comp = query(render);
   }
   componentWillReceiveProps(props) {
     this.Comp = props.query(props.render);
   }
   shouldComponentUpdate(props) {
-    console.log("should update", props, this.props, props == this.props);
     return props.update !== this.props.update;
   }
   render() {
