@@ -13,18 +13,23 @@ export const organizationalUnitQuery = gql`
       }
       ... on User {
         emailHash
-        organizations {
-          id
-          displayName
-          description
+        organizationMemberships {
+          organization {
+            id
+            displayName
+            description
+          }
         }
       }
       ... on Organization {
         description
-        members {
-          id
-          displayName
-          emailHash
+        memberships {
+          member {
+            id
+            displayName
+            emailHash
+          }
+          role
         }
       }
     }

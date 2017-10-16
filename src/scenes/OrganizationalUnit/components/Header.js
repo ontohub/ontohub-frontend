@@ -55,6 +55,17 @@ export const Header = ({ data }) => (
           <Icon name="users" /> Members
         </Menu.Item>
       )}
+      {get(data, 'organizationalUnit.__typename') === 'Organization' &&
+      get(data, 'organizationalUnit.memberships[0].role') ? (
+        <Menu.Menu position="right">
+          <Menu.Item
+            as={Link}
+            to={`/${get(data, 'organizationalUnit.id')}/settings`}
+          >
+            <Icon name="settings" /> Settings
+          </Menu.Item>
+        </Menu.Menu>
+      ) : null}
     </Menu>
   </Container>
 )
