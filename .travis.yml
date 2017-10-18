@@ -6,9 +6,7 @@ node_js:
   - "6"
   - "8"
 
-cache:
-  directories:
-    - "/home/travis/.yarn-cache"
+cache: yarn
 
 before_install:
   - "yarn --version"
@@ -17,7 +15,6 @@ install:
   - "yarn install --pure-lockfile --no-emoji"
 
 script:
-  - "yarn flow"
   - "yarn test -- --coverage --verbose"
 
 after_script:
