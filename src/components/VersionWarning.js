@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { Message } from 'semantic-ui-react'
-import { satisfies } from 'semver'
-import styled from 'styled-components'
+import React, { Component } from "react";
+import { Message } from "semantic-ui-react";
+import { satisfies } from "semver";
+import styled from "styled-components";
 
 const BottomMessage = styled(Message)`
   position: fixed !important;
@@ -9,18 +9,18 @@ const BottomMessage = styled(Message)`
   border-radius: 0 !important;
   bottom: 0;
   width: calc(100% + 2px) !important;
-`
+`;
 
 const WarningMessage = ({ icon, warning, ...props }: {}) => (
   <BottomMessage
     negative={!warning}
     warning={warning}
-    icon={icon || 'warning sign'}
+    icon={icon || "warning sign"}
     {...props}
   />
-)
+);
 
-export { WarningMessage }
+export { WarningMessage };
 
 export class VersionWarning extends Component {
   render() {
@@ -32,11 +32,11 @@ export class VersionWarning extends Component {
           header="Could not determine backend version"
           content="This could mean that the backend is currently offline"
         />
-      )
+      );
     }
     const validVersion =
       this.props.loading ||
-      satisfies(this.props.version, this.props.requirement)
+      satisfies(this.props.version, this.props.requirement);
 
     return validVersion ? null : (
       <WarningMessage
@@ -49,8 +49,8 @@ export class VersionWarning extends Component {
           </p>
         }
       />
-    )
+    );
   }
 }
 
-export default VersionWarning
+export default VersionWarning;

@@ -1,10 +1,10 @@
-import { Home, HomeHeader } from './scenes'
+import { Home, HomeHeader } from "./scenes";
 
 export default [
   {
-    path: '/',
+    path: "/",
     exact: true,
     header: HomeHeader,
     main: Home
   }
-]
+];

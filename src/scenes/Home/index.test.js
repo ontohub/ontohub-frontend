@@ -1,26 +1,26 @@
-import React from 'react'
-import { Home, Header } from '.'
-import { ThemeProvider } from 'styled-components'
-import { render } from 'enzyme'
+import React from "react";
+import { Home, Header } from ".";
+import { ThemeProvider } from "styled-components";
+import { render } from "enzyme";
 
-describe('Home', () => {
-  describe('Header', () => {
-    it('matches the snapshot', () => {
+describe("Home", () => {
+  describe("Header", () => {
+    it("matches the snapshot", () => {
       let wrapper = render(
-        <ThemeProvider theme={{ sizes: { headerPadding: '1em' } }}>
+        <ThemeProvider theme={{ sizes: { headerPadding: "1em" } }}>
           <Header />
         </ThemeProvider>
-      )
+      );
 
-      expect(wrapper).toMatchSnapshot()
-    })
-  })
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
 
-  describe('Body', () => {
-    it('matches the snapshot', () => {
-      let wrapper = render(<Home />)
+  describe("Body", () => {
+    it("matches the snapshot", () => {
+      let wrapper = render(<Home />);
 
-      expect(wrapper).toMatchSnapshot()
-    })
-  })
-})
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
+});

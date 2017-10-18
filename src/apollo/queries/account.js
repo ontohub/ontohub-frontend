@@ -1,4 +1,4 @@
-import { gql } from 'react-apollo'
+import { gql } from "react-apollo";
 
 export const signUpMutation = gql`
   mutation SignUp($user: NewUser!, $captcha: String!) {
@@ -14,4 +14,4 @@ export const signUpMutation = gql`
       __typename
     }
   }
-`
+`;

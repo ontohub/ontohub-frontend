@@ -1,7 +1,7 @@
-import React from 'react'
-import { Header as SemHeader, List } from 'semantic-ui-react'
-import { PaddedContainer } from '../../../components'
-import { Item } from '.'
+import React from "react";
+import { Header as SemHeader, List } from "semantic-ui-react";
+import { PaddedContainer } from "../../../components";
+import { Item } from ".";
 
 export const Header = () => (
   <PaddedContainer>
@@ -22,6 +22,6 @@ export const Header = () => (
       />
     </List>
   </PaddedContainer>
-)
+);
 
-export default Header
+export default Header;

@@ -1,12 +1,12 @@
-import React from 'react'
-import { Container } from 'semantic-ui-react'
-import styled from 'styled-components'
+import React from "react";
+import { Container } from "semantic-ui-react";
+import styled from "styled-components";
 
 const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};
   color: ${({ theme }) => theme.colors.light} !important;
   margin-bottom: 1em;
-`
+`;
 
 const InnerHeader = styled.div`
   max-width: ${({ theme }) => theme.sizes.contentWidth};
@@ -36,13 +36,13 @@ const InnerHeader = styled.div`
     transition: height
       ${({ heightTransitionDuration }) => heightTransitionDuration} ease-in-out;
   }
-`
+`;
 
 export const PaddedContainer = styled(Container)`
   padding-bottom: ${({ theme }) => theme.sizes.headerPadding};
-`
+`;
 
-export const Header = (props) => (
+export const Header = props => (
   <StyledHeader>
     <InnerHeader
       heightTransitionDuration={props.heightTransitionDuration}
@@ -51,6 +51,6 @@ export const Header = (props) => (
       {props.children}
     </InnerHeader>
   </StyledHeader>
-)
+);
 
-export default Header
+export default Header;

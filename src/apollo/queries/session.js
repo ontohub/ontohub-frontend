@@ -1,4 +1,4 @@
-import { gql } from 'react-apollo'
+import { gql } from "react-apollo";
 
 export const signInMutation = gql`
   mutation SignIn($username: String!, $password: String!) {
@@ -14,7 +14,7 @@ export const signInMutation = gql`
       __typename
     }
   }
-`
+`;
 
 export const currentUserQuery = gql`
   query CurrentUser {
@@ -26,4 +26,4 @@ export const currentUserQuery = gql`
       __typename
     }
   }
-`
+`;
