@@ -30,7 +30,7 @@
     "enzyme-adapter-react-16": "^1.0.2",
     "enzyme-to-json": "^3.1.4",
     "eslint": "^4.9.0",
-    "prettier-eslint-cli": "^4.4.0",
+    "prettier": "1.7.4",
     "react-scripts": "1.0.14",
     "react-test-renderer": "^16.0.0",
     "serve": "^6.3.1"
@@ -40,7 +40,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "lint": "eslint .",
-    "format": "prettier-eslint --write \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.js\"",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
