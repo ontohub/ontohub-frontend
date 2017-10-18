@@ -1,5 +1,6 @@
 {
   "extends": ["eslint:recommended", "react-app", "prettier", "prettier/react"],
+  "parser": "babel-eslint",
   "rules": {
     "linebreak-style": ["error", "unix"],
     "no-var": ["warn"],
