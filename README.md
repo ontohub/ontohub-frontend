@@ -15,7 +15,6 @@
 - [Common Tasks](#common-tasks)
   - [Running the app in development mode](#running-the-app-in-development-mode)
   - [Run the tests](#run-the-tests)
-  - [Run the type checker](#run-the-type-checker)
   - [Run the linter on the entire project](#run-the-linter-on-the-entire-project)
   - [Build the app in production mode](#build-the-app-in-production-mode)
 
@@ -42,7 +41,6 @@ If you are using Visual Studio Code, there are some Plugins we recommend using w
 - [Prettier - ESLint](https://marketplace.visualstudio.com/items?itemName=RobinMalfait.prettier-eslint-vscode): Automatically format the code according to our code style
 - [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome): Launch a Chrome instance and debug from within the editor
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag): Automatically close HTML (and JSX) tags
-- [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode): Annotate expressions with flow types
 
 You can install them via the Plugin Manager from inside the editor.
 
@@ -51,7 +49,6 @@ You can install them via the Plugin Manager from inside the editor.
 **Language features and extensions**
 - ECMAScript 7 via [Babel](https://babeljs.io/)
 - [JSX](https://facebook.github.io/jsx/)
-- [flow](https://flow.org/)
 
 **Rendering**
 - [React](https://facebook.github.io/react/)
@@ -125,12 +122,6 @@ yarn start
 
 ```bash
 yarn test
-```
-
-### Run the type checker
-
-```bash
-yarn flow
 ```
 
 ### Run the linter on the entire project
