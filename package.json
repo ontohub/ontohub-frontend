@@ -39,7 +39,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "lint": "eslint .",
     "format": "prettier --write \"src/**/*.js\"",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
