@@ -8,12 +8,6 @@ node_js:
 
 cache: yarn
 
-before_install:
-  - "yarn --version"
-
-install:
-  - "yarn install --pure-lockfile --no-emoji"
-
 script:
   - "yarn test -- --coverage --verbose"
 
