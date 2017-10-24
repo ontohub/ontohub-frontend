@@ -1,33 +1,33 @@
-import { signInMutation, signUpMutation } from '../apollo/queries'
-import { compose, graphql, withApollo } from 'react-apollo'
-import { GlobalMenu } from '../components'
-import { userValidations } from '../helpers/validations'
-import { signIn, signOut } from '../helpers'
+import { signInMutation, signUpMutation } from "../apollo/queries";
+import { compose, graphql, withApollo } from "react-apollo";
+import { GlobalMenu } from "../components";
+import { userValidations } from "../helpers/validations";
+import { signIn, signOut } from "../helpers";
 
-const enableCaptcha = process.env.REACT_APP_DISABLE_CAPTCHA !== 'true'
+const enableCaptcha = process.env.REACT_APP_DISABLE_CAPTCHA !== "true";
 
 const GlobalMenuWithData = compose(
   withApollo,
   graphql(signInMutation, {
-    props: (props) => ({
+    props: props => ({
       ...props.ownProps,
       onSignIn: (username, password) =>
         props
           .mutate({
             variables: { username, password }
           })
-          .then((response) => {
-            const signInData = response.data.signIn
+          .then(response => {
+            const signInData = response.data.signIn;
             if (signInData) {
-              return signIn(props.ownProps.client, signInData.jwt)
+              return signIn(props.ownProps.client, signInData.jwt);
             } else {
-              throw new Error('Sign in failed')
+              throw new Error("Sign in failed");
             }
           })
     })
   }),
   graphql(signUpMutation, {
-    props: (props) => ({
+    props: props => ({
       ...props.ownProps,
       client: undefined,
       signUpValidations: userValidations(props.ownProps.client),
@@ -37,17 +37,17 @@ const GlobalMenuWithData = compose(
           .mutate({
             variables: { user: { username, email, password }, captcha }
           })
-          .then((response) => {
-            const signUpData = response.data.signUp
+          .then(response => {
+            const signUpData = response.data.signUp;
             if (signUpData) {
-              return signIn(props.ownProps.client, signUpData.jwt)
+              return signIn(props.ownProps.client, signUpData.jwt);
             } else {
-              throw new Error('Sign up failed')
+              throw new Error("Sign up failed");
             }
           }),
       onSignOut: () => signOut(props.ownProps.client)
     })
   })
-)(GlobalMenu)
+)(GlobalMenu);
 
-export default GlobalMenuWithData
+export default GlobalMenuWithData;

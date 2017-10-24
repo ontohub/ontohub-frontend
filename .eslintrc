@@ -1,26 +1,10 @@
 {
-  "extends": ["eslint:recommended", "react-app"],
+  "extends": ["eslint:recommended", "react-app", "prettier", "prettier/react"],
+  "parser": "babel-eslint",
   "rules": {
-    "arrow-body-style": ["error"],
-    "arrow-parens": ["warn", "always"],
-    "arrow-spacing": ["error"],
-    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
-    "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
-    "indent": ["error", 2, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }],
     "linebreak-style": ["error", "unix"],
-    "max-len": ["warn", 80],
-    "no-confusing-arrow": ["warn", {"allowParens": true}],
-    "no-const-assign": ["error"],
-    "no-eval": ["error"],
-    "no-mixed-spaces-and-tabs": ["error"],
-    "no-trailing-spaces": ["error"],
-    "no-var": ["error"],
-    "object-curly-spacing": ["error", "always"],
-    "prefer-arrow-callback": ["warn", { "allowNamedFunctions": true }],
-    "prefer-rest-params": ["error"],
-    "semi": ["warn", "never"],
-    "semi-spacing": ["error"],
-    "template-curly-spacing": ["error"],
-    "quotes": ["warn", "single", { "avoidEscape": true }]
+    "no-var": ["warn"],
+    "no-mixed-spaces-and-tabs": ["warn"],
+    "prefer-rest-params": ["warn"]
   }
 }

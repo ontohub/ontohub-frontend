@@ -1,19 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import { storiesOf } from '@storybook/react'
+import { storiesOf } from "@storybook/react";
 
-import { ThemeProvider } from 'styled-components'
-import theme from '../../styles'
-import { Icon, Input, Header as SemHeader, Menu } from 'semantic-ui-react'
-import Header, { PaddedContainer } from '../Header'
+import { ThemeProvider } from "styled-components";
+import theme from "../../styles";
+import { Icon, Input, Header as SemHeader, Menu } from "semantic-ui-react";
+import Header, { PaddedContainer } from "../Header";
 
-const Decorator = (storyFn) => (
+const Decorator = storyFn => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
-)
+);
 
-storiesOf('Header', module)
+storiesOf("Header", module)
   .addDecorator(Decorator)
-  .add('without bottom padding', () => (
+  .add("without bottom padding", () => (
     <Header>
       <SemHeader as="h2" inverted>
         ada / repo0
@@ -34,7 +34,7 @@ storiesOf('Header', module)
       </Menu>
     </Header>
   ))
-  .add('with bottom padding', () => (
+  .add("with bottom padding", () => (
     <Header>
       <PaddedContainer>
         <SemHeader as="h2" inverted>
@@ -44,12 +44,12 @@ storiesOf('Header', module)
           fluid
           placeholder="Search"
           action={{
-            labelPosition: 'right',
-            content: 'Search',
-            color: 'blue',
-            icon: 'search'
+            labelPosition: "right",
+            content: "Search",
+            color: "blue",
+            icon: "search"
           }}
         />
       </PaddedContainer>
     </Header>
-  ))
+  ));

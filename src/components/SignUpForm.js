@@ -1,102 +1,102 @@
-import React, { Component } from 'react'
-import { validate } from '../helpers/validations'
-import { Button, Form, Label, Progress } from 'semantic-ui-react'
-import _ from 'lodash'
-import ReCAPTCHA from 'react-google-recaptcha'
+import React, { Component } from "react";
+import { validate } from "../helpers/validations";
+import { Button, Form, Label, Progress } from "semantic-ui-react";
+import _ from "lodash";
+import ReCAPTCHA from "react-google-recaptcha";
 
-let captcha
+let captcha;
 const grecaptchaSiteKey = process.env.REACT_APP_GRECAPTCHA_SITE_KEY,
-      PasswordStrengthBar = ({ score }) => (
+  PasswordStrengthBar = ({ score }) => (
     <Progress
       attached="bottom"
       title={`Password strength: ${[
-        'Very weak',
-        'Weak',
-        'Okay',
-        'Strong',
-        'Very strong'
+        "Very weak",
+        "Weak",
+        "Okay",
+        "Strong",
+        "Very strong"
       ][score]}`}
       style={{ marginTop: -3 }}
       percent={score * 25}
-      color={['red', 'orange', 'yellow', 'olive', 'green'][score]}
+      color={["red", "orange", "yellow", "olive", "green"][score]}
     />
-  )
+  );
 
 export class SignUpForm extends Component {
   constructor(props) {
-    super(props)
-    this.fields = {}
+    super(props);
+    this.fields = {};
     this.state = {
       passwordScore: 0,
       errors: {}
-    }
-    this.loadCaptcha = this.loadCaptcha.bind(this)
-    this.onSubmit = this.onSubmit.bind(this)
-    this.onSubmitSetCaptcha = this.onSubmitSetCaptcha.bind(this)
-    import('zxcvbn').then((fn) => (this.calculatePasswordScore = fn))
+    };
+    this.loadCaptcha = this.loadCaptcha.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.onSubmitSetCaptcha = this.onSubmitSetCaptcha.bind(this);
+    import("zxcvbn").then(fn => (this.calculatePasswordScore = fn));
   }
   componentDidMount() {
-    this._isMounted = true
+    this._isMounted = true;
   }
   componentWillUnmount() {
-    this._isMounted = false
+    this._isMounted = false;
   }
   fieldValues() {
-    return _.mapValues(this.fields, (f) => f && f.value)
+    return _.mapValues(this.fields, f => f && f.value);
   }
   // istanbul ignore next
   calculatePasswordScore(password) {
-    return { score: 0 }
+    return { score: 0 };
   }
   loadCaptcha() {
-    this.setState({ captchaLoaded: true })
+    this.setState({ captchaLoaded: true });
   }
   onSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
     let fieldValues = this.fieldValues(),
-        validationErrors = validate(this.props.validations, fieldValues)
-    return validationErrors.then((errors) => {
+      validationErrors = validate(this.props.validations, fieldValues);
+    return validationErrors.then(errors => {
       this.setState({
         errors: errors
-      })
+      });
 
       const erroredFields = _.filter(
         errors,
-        (field) => Array.isArray(field) && field.length > 0
-      )
+        field => Array.isArray(field) && field.length > 0
+      );
       if (erroredFields.length === 0) {
-        this.onSubmitExecuteCaptcha()
+        this.onSubmitExecuteCaptcha();
       } else {
-        return this.props.onError()
+        return this.props.onError();
       }
-    })
+    });
   }
   onSubmitExecuteCaptcha() {
     // `captcha` will be set when the ReCAPTCHA component is inserted
     // istanbul ignore if
     if (captcha) {
-      captcha.reset()
+      captcha.reset();
       // This calls onSubmitSetCaptcha with the token received by recaptcha
-      captcha.execute()
+      captcha.execute();
     } else if (!this.props.enableCaptcha) {
       // Skip captcha verification and go right into the sign up call
-      this.onSubmitSetCaptcha('skip')
+      this.onSubmitSetCaptcha("skip");
     }
   }
   onSubmitSetCaptcha(token) {
-    this.fields.captcha = { value: token }
-    this.onSubmitWithCaptcha()
+    this.fields.captcha = { value: token };
+    this.onSubmitWithCaptcha();
   }
   onSubmitWithCaptcha() {
-    let username, email, password, captcha, fieldValues
-    fieldValues = this.fieldValues()
-    username = fieldValues['username']
-    email = fieldValues['email']
-    password = fieldValues['password']
-    captcha = fieldValues['captcha']
+    let username, email, password, captcha, fieldValues;
+    fieldValues = this.fieldValues();
+    username = fieldValues["username"];
+    email = fieldValues["email"];
+    password = fieldValues["password"];
+    captcha = fieldValues["captcha"];
     return this.props
       .onSubmit(username, email, password, captcha)
-      .then(this.props.onSuccess, this.props.onError)
+      .then(this.props.onSuccess, this.props.onError);
   }
   validateField(fieldName) {
     return () =>
@@ -104,13 +104,13 @@ export class SignUpForm extends Component {
         this.props.validations,
         this.fieldValues(),
         fieldName
-      ).then((errors) => {
+      ).then(errors => {
         if (this._isMounted) {
-          this.setState((state) => ({
+          this.setState(state => ({
             errors: { ...state.errors, ...errors }
-          }))
+          }));
         }
-      })
+      });
   }
   render() {
     return (
@@ -118,10 +118,10 @@ export class SignUpForm extends Component {
         {this.props.enableCaptcha &&
           this.state.captchaLoaded && (
             <ReCAPTCHA
-              ref={(el) => {
+              ref={el => {
                 // We disable captchas in the tests:
                 // istanbul ignore next
-                captcha = el
+                captcha = el;
               }}
               size="invisible"
               badge="bottomleft"
@@ -133,9 +133,9 @@ export class SignUpForm extends Component {
           <Form.Field error={!!this.state.errors.username}>
             <label htmlFor="sign-up-username">Username</label>
             <input
-              ref={(input) => (this.fields.username = input)}
-              onChange={_.debounce(this.validateField('username'), 500)}
-              onBlur={this.validateField('username')}
+              ref={input => (this.fields.username = input)}
+              onChange={_.debounce(this.validateField("username"), 500)}
+              onBlur={this.validateField("username")}
               placeholder="Username"
               id="sign-up-username"
             />
@@ -150,9 +150,9 @@ export class SignUpForm extends Component {
           <Form.Field error={!!this.state.errors.email}>
             <label htmlFor="sign-up-email">Email</label>
             <input
-              ref={(input) => (this.fields.email = input)}
-              onChange={this.validateField('email')}
-              onBlur={this.validateField('email')}
+              ref={input => (this.fields.email = input)}
+              onChange={this.validateField("email")}
+              onBlur={this.validateField("email")}
               placeholder="Email"
               id="sign-up-email"
             />
@@ -168,17 +168,17 @@ export class SignUpForm extends Component {
             <label htmlFor="sign-up-password">Password</label>
             <input
               type="password"
-              ref={(input) => (this.fields.password = input)}
-              onBlur={this.validateField(['password', 'passwordConfirm'])}
-              onChange={(event) => {
+              ref={input => (this.fields.password = input)}
+              onBlur={this.validateField(["password", "passwordConfirm"])}
+              onChange={event => {
                 if (!event.no_validation) {
-                  this.validateField(['password', 'passwordConfirm'])()
+                  this.validateField(["password", "passwordConfirm"])();
                 }
                 let score = this.calculatePasswordScore(event.target.value)
-                  .score
+                  .score;
                 this.setState({
                   passwordScore: score
-                })
+                });
               }}
               placeholder="Password"
               id="sign-up-password"
@@ -196,9 +196,9 @@ export class SignUpForm extends Component {
             <label htmlFor="sign-up-password-confirm">Confirm Password</label>
             <input
               type="password"
-              ref={(input) => (this.fields.passwordConfirm = input)}
-              onChange={this.validateField('passwordConfirm')}
-              onBlur={this.validateField('passwordConfirm')}
+              ref={input => (this.fields.passwordConfirm = input)}
+              onChange={this.validateField("passwordConfirm")}
+              onBlur={this.validateField("passwordConfirm")}
               placeholder="Confirm Password"
               id="sign-up-password-confirm"
             />
@@ -220,8 +220,8 @@ export class SignUpForm extends Component {
           secondary
         />
       </Form>
-    )
+    );
   }
 }
 
-export default SignUpForm
+export default SignUpForm;

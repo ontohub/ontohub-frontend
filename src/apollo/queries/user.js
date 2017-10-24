@@ -1,4 +1,4 @@
-import { gql } from 'react-apollo'
+import { gql } from "react-apollo";
 
 export const userQuery = gql`
   query GetUser($id: ID!) {
@@ -7,4 +7,4 @@ export const userQuery = gql`
       email
     }
   }
-`
+`;

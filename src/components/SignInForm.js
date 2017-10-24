@@ -1,26 +1,26 @@
-import React, { Component } from 'react'
-import { Button, Form, Message } from 'semantic-ui-react'
+import React, { Component } from "react";
+import { Button, Form, Message } from "semantic-ui-react";
 
 export class SignInForm extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       error: false
-    }
-    this.onSubmit = this.onSubmit.bind(this)
+    };
+    this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
     return this.props.onSubmit(this.username.value, this.password.value).then(
       () => {
-        this.setState({ error: false })
-        this.props.onSuccess()
+        this.setState({ error: false });
+        this.props.onSuccess();
       },
       () => {
-        this.setState({ error: true })
-        this.props.onError()
+        this.setState({ error: true });
+        this.props.onError();
       }
-    )
+    );
   }
   render() {
     return (
@@ -37,7 +37,7 @@ export class SignInForm extends Component {
             <label htmlFor="sign-in-username">Username</label>
             <input
               defaultValue="ada"
-              ref={(input) => (this.username = input)}
+              ref={input => (this.username = input)}
               placeholder="Username"
               id="sign-in-username"
             />
@@ -47,7 +47,7 @@ export class SignInForm extends Component {
             <input
               type="password"
               defaultValue="changemenow"
-              ref={(input) => (this.password = input)}
+              ref={input => (this.password = input)}
               placeholder="Password"
               id="sign-in-password"
             />
@@ -62,8 +62,8 @@ export class SignInForm extends Component {
           primary
         />
       </Form>
-    )
+    );
   }
 }
 
-export default SignInForm
+export default SignInForm;
