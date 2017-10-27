@@ -86,6 +86,14 @@ exports[`LoginModal matches the snapshot 1`] = `
                         class="ui form"
                       >
                         <div
+                          class="ui error icon message"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="warning sign icon"
+                          />
+                        </div>
+                        <div
                           class="equal width fields"
                         >
                           <div
@@ -97,9 +105,11 @@ exports[`LoginModal matches the snapshot 1`] = `
                               Username
                             </label>
                             <input
-                              placeholder="Username"
+                              type="text"
+                              name="username"
                               id="sign-in-username"
                               value="ada"
+                              placeholder="Username"
                             />
                           </div>
                           <div
@@ -112,9 +122,10 @@ exports[`LoginModal matches the snapshot 1`] = `
                             </label>
                             <input
                               type="password"
-                              placeholder="Password"
+                              name="password"
                               id="sign-in-password"
                               value="changemenow"
+                              placeholder="Password"
                             />
                           </div>
                         </div>
@@ -161,6 +172,8 @@ exports[`LoginModal matches the snapshot 1`] = `
                             <input
                               placeholder="Username"
                               id="sign-up-username"
+                              name="name"
+                              value=""
                             />
                           </div>
                           <div
@@ -174,6 +187,8 @@ exports[`LoginModal matches the snapshot 1`] = `
                             <input
                               placeholder="Email"
                               id="sign-up-email"
+                              name="email"
+                              value=""
                             />
                           </div>
                         </div>
@@ -192,6 +207,8 @@ exports[`LoginModal matches the snapshot 1`] = `
                               type="password"
                               placeholder="Password"
                               id="sign-up-password"
+                              name="password"
+                              value=""
                             />
                             <div
                               title="Password strength: Very weak"
@@ -211,19 +228,23 @@ exports[`LoginModal matches the snapshot 1`] = `
                             <label
                               for="sign-up-password-confirm"
                             >
-                              Confirm Password
+                              Password confirmation
                             </label>
                             <input
                               type="password"
-                              placeholder="Confirm Password"
+                              placeholder="Password confirmation"
                               id="sign-up-password-confirm"
+                              name="confirmPassword"
+                              value=""
                             />
                           </div>
                         </div>
                         <button
                           type="submit"
-                          class="ui basic secondary right floated button"
+                          class="ui basic secondary disabled right floated button"
+                          disabled=""
                           role="button"
+                          tabindex="-1"
                         >
                           <i
                             aria-hidden="true"

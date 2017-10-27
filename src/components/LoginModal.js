@@ -20,9 +20,9 @@ export class LoginModal extends Component {
     this.setState({ loading: true });
     return this.props.onSignIn(username, password);
   }
-  onSignUpSubmit(username, email, password, captcha) {
+  onSignUpSubmit({ name, email, password, captcha }) {
     this.setState({ loading: true });
-    return this.props.onSignUp(username, email, password, captcha);
+    return this.props.onSignUp(name, email, password, captcha);
   }
   onError() {
     this.setState({ loading: false });
