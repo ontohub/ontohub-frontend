@@ -7,6 +7,11 @@
   "private": true,
   "license": "AGPL-3.0",
   "dependencies": {
+    "apollo-cache-inmemory": "^1.0.0",
+    "apollo-client": "^2.0.1",
+    "apollo-link-batch-http": "^1.0.0",
+    "apollo-link-error": "^1.0.0",
+    "graphql-tag": "^2.5.0",
     "lodash": "^4.17.4",
     "react": "^16.0.0",
     "react-apollo": "^2.0.0",

@@ -1,4 +1,7 @@
-import { ApolloClient, createBatchingNetworkInterface } from "react-apollo";
+import { ApolloClient } from "apollo-client";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { BatchHttpLink } from "apollo-link-batch-http";
+import { onError } from "apollo-link-error";
 import _ from "lodash";
 import { signOut } from "../helpers/session";
 
@@ -9,50 +12,31 @@ const networkInterface = createBatchingNetworkInterface({
   batchInterval: 10
 });
 
-export const Client = new ApolloClient({
-  networkInterface,
-  queryDeduplication: true
+const batchHttpLink = new BacthHttpLink({
+  uri: `${backendHost}/graphql`
 });
 
-networkInterface.use([
-  {
-    applyBatchMiddleware(req, next) {
-      if (!req.options.headers) {
-        req.options.headers = {};
-      }
-      next();
+const headerLink = new ApolloLink((operation, forward) => {
+  const authToken = localStorage.getItem("auth-token");
+  operation.setContext({
+    headers: {
+      authorization: `Bearer ${authToken}`,
+      accept: "application/json"
     }
-  },
-  {
-    applyBatchMiddleware(req, next) {
-      Object.assign(req.options.headers, {
-        Accept: "application/json"
-      });
-      next();
-    }
-  },
-  {
-    applyBatchMiddleware(req, next) {
-      let authToken = localStorage.getItem("auth-token");
-      if (authToken) {
-        Object.assign(req.options.headers, {
-          Authorization: `Bearer ${authToken}`
-        });
-      }
-      next();
-    }
-  }
-]);
+  });
+  return forward(operation);
+});
 
-networkInterface.useAfter([
-  {
-    applyBatchAfterware({ responses, options }, next) {
-      if (_.some(responses, response => response.status === 401)) {
-        signOut(Client);
-      }
-      next();
-    }
-  }
-]);
+const errorLink = onError(({ graphQLErrors, networkError }) => {
+  console.log(graphQLErrors);
+  console.log(networkError);
+});
+
+const link = errorLink.concat(headerLink.concat(batchHttpLink));
+
+export const Client = new ApolloClient({
+  link,
+  cache: new InMemoryCache()
+});
 
 export default Client;
