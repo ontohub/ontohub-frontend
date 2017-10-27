@@ -1,55 +1,48 @@
-import React, { Component } from "react";
+import React from "react";
+import { Formik } from "formik";
 import { Button, Form, Message } from "semantic-ui-react";
 
-export class SignInForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: false
-    };
-    this.onSubmit = this.onSubmit.bind(this);
-  }
-  onSubmit(event) {
-    event.preventDefault();
-    return this.props.onSubmit(this.username.value, this.password.value).then(
-      () => {
-        this.setState({ error: false });
-        this.props.onSuccess();
-      },
-      () => {
-        this.setState({ error: true });
-        this.props.onError();
-      }
-    );
-  }
-  render() {
-    return (
-      <Form error={this.state.error} onSubmit={this.onSubmit}>
-        {this.state.error && (
-          <Message
-            error
-            icon="warning sign"
-            header="Incorrect username or password"
-          />
-        )}
+export const SignInForm = ({ onSubmit, onSuccess, onError }) => (
+  <Formik
+    initialValues={{
+      username: "ada",
+      password: "changemenow"
+    }}
+    onSubmit={(values, { setErrors }) => {
+      onSubmit(values.username, values.password).then(
+        () => {
+          onSuccess();
+        },
+        () => {
+          setErrors({ password: "Incorrect username or password" });
+          onError();
+        }
+      );
+    }}
+    render={({ values, errors, handleChange, handleSubmit }) => (
+      <Form error={!!errors.password} onSubmit={handleSubmit}>
+        <Message error icon="warning sign" header={errors.password} />
         <Form.Group widths="equal">
-          <Form.Field error={this.state.error}>
+          <Form.Field error={!!errors.password}>
             <label htmlFor="sign-in-username">Username</label>
             <input
-              defaultValue="ada"
-              ref={input => (this.username = input)}
-              placeholder="Username"
+              name="username"
               id="sign-in-username"
+              type="text"
+              onChange={handleChange}
+              value={values.username}
+              placeholder="Username"
             />
           </Form.Field>
-          <Form.Field error={this.state.error}>
+          <Form.Field error={!!errors.password}>
             <label htmlFor="sign-in-password">Password</label>
             <input
-              type="password"
-              defaultValue="changemenow"
-              ref={input => (this.password = input)}
-              placeholder="Password"
+              name="password"
               id="sign-in-password"
+              type="password"
+              onChange={handleChange}
+              value={values.password}
+              placeholder="Password"
             />
           </Form.Field>
         </Form.Group>
@@ -62,8 +55,8 @@ export class SignInForm extends Component {
           primary
         />
       </Form>
-    );
-  }
-}
+    )}
+  />
+);
 
 export default SignInForm;
