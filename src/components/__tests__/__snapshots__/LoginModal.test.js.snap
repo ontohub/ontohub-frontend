@@ -270,7 +270,6 @@ exports[`LoginModal matches the snapshot 1`] = `
       >
         <button
           className="ui primary button"
-          disabled={undefined}
           id="login-modal-sign-in-button"
           onBlur={[Function]}
           onClick={[Function]}
@@ -278,7 +277,6 @@ exports[`LoginModal matches the snapshot 1`] = `
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           role="button"
-          tabIndex={undefined}
         >
           <Icon
             as="i"
