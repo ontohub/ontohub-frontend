@@ -33,7 +33,7 @@
     "prettier": "1.7.4",
     "react-scripts": "1.0.14",
     "react-test-renderer": "^16.0.0",
-    "serve": "^6.4.0"
+    "serve": "^6.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
