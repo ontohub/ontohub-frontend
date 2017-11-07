@@ -120,7 +120,6 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
     onSubmit={[Function]}
   >
     <form
-      action={undefined}
       className="ui form"
       onChange={[Function]}
       onSubmit={[Function]}
@@ -330,10 +329,8 @@ exports[`SignUpForm onSubmit error matches the snapshot 1`] = `
       >
         <button
           className="ui basic secondary right floated button"
-          disabled={undefined}
           onClick={[Function]}
           role="button"
-          tabIndex={undefined}
           type="submit"
         >
           <Icon
