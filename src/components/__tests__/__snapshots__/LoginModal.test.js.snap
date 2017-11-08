@@ -256,41 +256,45 @@ exports[`LoginModal matches the snapshot 1`] = `
         />
       }
     >
-      <Button
-        as="button"
-        content="Sign in"
-        icon="sign in"
-        id="login-modal-sign-in-button"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        primary={true}
+      <Ref
+        innerRef={[Function]}
       >
-        <button
-          className="ui primary button"
+        <Button
+          as="button"
+          content="Sign in"
+          icon="sign in"
           id="login-modal-sign-in-button"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
-          role="button"
+          primary={true}
         >
-          <Icon
-            as="i"
-            key="sign in"
-            name="sign in"
+          <button
+            className="ui primary button"
+            id="login-modal-sign-in-button"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="button"
           >
-            <i
-              aria-hidden="true"
-              className="sign in icon"
-            />
-          </Icon>
-          Sign in
-        </button>
-      </Button>
+            <Icon
+              as="i"
+              key="sign in"
+              name="sign in"
+            >
+              <i
+                aria-hidden="true"
+                className="sign in icon"
+              />
+            </Icon>
+            Sign in
+          </button>
+        </Button>
+      </Ref>
     </Portal>
   </Modal>
 </LoginModal>
