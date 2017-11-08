@@ -26,7 +26,7 @@
     "@storybook/addon-info": "^3.2.14",
     "@storybook/react": "^3.2.14",
     "codecov": "^3.0.0",
-    "enzyme": "^3.1.0",
+    "enzyme": "^3.1.1",
     "enzyme-adapter-react-16": "^1.0.4",
     "enzyme-to-json": "^3.2.0",
     "eslint": "^4.10.0",
