@@ -5,6 +5,7 @@
     "linebreak-style": ["error", "unix"],
     "no-var": ["warn"],
     "no-mixed-spaces-and-tabs": ["warn"],
-    "prefer-rest-params": ["warn"]
+    "prefer-rest-params": ["warn"],
+    "jsx-a11y/href-no-hash": "off"
   }
 }
