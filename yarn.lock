@@ -372,9 +372,9 @@ apollo-link-dedup@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/apollo-link-dedup/-/apollo-link-dedup-1.0.0.tgz#f0134ac495cc42e7e43dfafe7126645baa1e03bc"
 
-apollo-link-error@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/apollo-link-error/-/apollo-link-error-1.0.0.tgz#4d64ad8bb30c2adc73e9a7a87298bd45ef8025f0"
+apollo-link-error@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/apollo-link-error/-/apollo-link-error-1.0.1.tgz#c0185d95477318f029900aff3bdf07853d19e442"
 
 apollo-link@1.0.0, apollo-link@^1.0.0:
   version "1.0.0"
