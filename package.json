@@ -7,7 +7,7 @@
   "private": true,
   "license": "AGPL-3.0",
   "dependencies": {
-    "apollo-cache-inmemory": "^1.0.0",
+    "apollo-cache-inmemory": "^1.1.1",
     "apollo-client": "^2.0.1",
     "apollo-link-batch-http": "^1.0.0",
     "apollo-link-error": "^1.0.0",
