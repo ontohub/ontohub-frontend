@@ -17,7 +17,7 @@
     "react-apollo": "^2.0.1",
     "react-async-script": "^0.9.1",
     "react-css-transition-replace": "^3.0.2",
-    "react-dom": "^16.1.1",
+    "react-dom": "^16.2.0",
     "react-google-recaptcha": "^0.9.9",
     "react-gravatar": "^2.6.3",
     "react-router-dom": "^4.2.2",
