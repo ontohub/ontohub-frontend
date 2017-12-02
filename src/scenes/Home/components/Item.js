@@ -2,7 +2,7 @@ import React from "react";
 import { List } from "semantic-ui-react";
 import styled from "react-emotion";
 
-const Bold = styled.span`
+const Bold = styled("span")`
   font-weight: bold;
 `;
 

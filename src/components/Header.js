@@ -2,13 +2,13 @@ import React from "react";
 import { Container } from "semantic-ui-react";
 import styled from "react-emotion";
 
-const StyledHeader = styled.div`
+const StyledHeader = styled("div")`
   background-color: ${({ theme }) => theme.colors.dark};
   color: ${({ theme }) => theme.colors.light} !important;
   margin-bottom: 1em;
 `;
 
-const InnerHeader = styled.div`
+const InnerHeader = styled("div")`
   max-width: ${({ theme }) => theme.sizes.contentWidth};
   margin: auto;
   padding-top: ${({ theme }) => theme.sizes.headerPadding};
