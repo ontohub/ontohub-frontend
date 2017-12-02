@@ -35,7 +35,7 @@ exports[`Home Body matches the snapshot 1`] = `
 
 exports[`Home Header matches the snapshot 1`] = `
 <div
-  class="ui container sc-EHOje bwZcKZ"
+  class="ui container css-11wtz8p"
 >
   <h2
     class="ui inverted header"
@@ -60,7 +60,7 @@ exports[`Home Header matches the snapshot 1`] = `
         class="content"
       >
         <span
-          class="sc-bdVaJa koclZm"
+          class="css-1xxe9l9"
         >
           Open
         </span>
@@ -81,7 +81,7 @@ exports[`Home Header matches the snapshot 1`] = `
         class="content"
       >
         <span
-          class="sc-bdVaJa koclZm"
+          class="css-1xxe9l9"
         >
           Flexible
         </span>
@@ -102,7 +102,7 @@ exports[`Home Header matches the snapshot 1`] = `
         class="content"
       >
         <span
-          class="sc-bdVaJa koclZm"
+          class="css-1xxe9l9"
         >
           Distributed
         </span>
