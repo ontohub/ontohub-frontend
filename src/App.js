@@ -4,7 +4,7 @@ import { currentUserQuery } from "./apollo/queries";
 import { Header } from "./components";
 import { VersionWarning, GlobalMenu } from "./containers";
 import { Switch, Route } from "react-router-dom";
-import styled from "styled-components";
+import styled from "react-emotion";
 import routes from "./routes";
 import ReactCSSTransitionReplace from "react-css-transition-replace";
 import config from "./config.json";

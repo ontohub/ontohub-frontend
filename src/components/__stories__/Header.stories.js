@@ -2,7 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "emotion-theming";
 import theme from "../../styles";
 import { Icon, Input, Header as SemHeader, Menu } from "semantic-ui-react";
 import Header, { PaddedContainer } from "../Header";

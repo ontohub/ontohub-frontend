@@ -1,6 +1,6 @@
 import React from "react";
 import { Home, Header } from ".";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "emotion-theming";
 import { render } from "enzyme";
 
 describe("Home", () => {
