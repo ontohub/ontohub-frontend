@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, PaddedContainer } from "../Header";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "emotion-theming";
 import { render } from "enzyme";
 
 describe("Header", () => {

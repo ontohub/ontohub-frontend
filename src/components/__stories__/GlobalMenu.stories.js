@@ -3,7 +3,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import { MemoryRouter as Router } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "emotion-theming";
 import theme from "../../styles";
 import GlobalMenu from "../GlobalMenu";
 

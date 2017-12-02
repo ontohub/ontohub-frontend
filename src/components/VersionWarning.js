@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Message } from "semantic-ui-react";
 import { satisfies } from "semver";
-import styled from "styled-components";
+import styled from "react-emotion";
 
 const BottomMessage = styled(Message)`
   position: fixed !important;

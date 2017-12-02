@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "semantic-ui-react";
-import styled from "styled-components";
+import styled from "react-emotion";
 
 const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};

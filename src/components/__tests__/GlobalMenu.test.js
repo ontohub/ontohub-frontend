@@ -2,7 +2,7 @@ import React from "react";
 import GlobalMenu from "../GlobalMenu";
 import { MemoryRouter as Router } from "react-router-dom";
 import { render } from "enzyme";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "emotion-theming";
 import theme from "../../styles";
 
 describe("GlobalMenu", () => {
