@@ -393,17 +393,20 @@ apollo-fetch@^0.6.0:
   dependencies:
     isomorphic-fetch "^2.2.1"
 
-apollo-link-batch-http@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/apollo-link-batch-http/-/apollo-link-batch-http-1.0.1.tgz#81ea211303b410afaefbf8c6d9f37053d75454ea"
+apollo-link-batch-http@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/apollo-link-batch-http/-/apollo-link-batch-http-1.0.2.tgz#49aa173b7e905e7c5bb5c08d15972d20dd430a53"
   dependencies:
     apollo-fetch "^0.6.0"
-    apollo-link-batch "^1.0.1"
+    apollo-link "^1.0.4"
+    apollo-link-batch "^1.0.2"
     graphql "^0.11.0"
 
-apollo-link-batch@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/apollo-link-batch/-/apollo-link-batch-1.0.1.tgz#b3c336f117dfa981a02b3963c166dc140b073dbd"
+apollo-link-batch@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/apollo-link-batch/-/apollo-link-batch-1.0.2.tgz#04362f09477142418527e164f22146e0d92af5ef"
+  dependencies:
+    apollo-link "^1.0.4"
 
 apollo-link-dedup@^1.0.0:
   version "1.0.2"
