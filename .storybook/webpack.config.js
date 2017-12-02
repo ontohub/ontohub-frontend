@@ -5,8 +5,5 @@ function rewireEmotion(config, env, emotionBabelOptions = {}) {
 }
 
 module.exports = function(config, env) {
-  console.log(config);
-  config = rewireEmotion(config, env, { inline: true });
-  console.log(config);
-  return config;
+  return rewireEmotion(config, env, { inline: true });
 };

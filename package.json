@@ -50,7 +50,7 @@
     "test": "react-app-rewired test --env=jsdom",
     "format": "prettier --write \"src/**/*.js\"",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "start-storybook -p 9009 -s public,node_modules/semantic-ui-css",
     "build-storybook": "build-storybook -s public",
     "serve-built": "serve build -p $PORT"
   },
