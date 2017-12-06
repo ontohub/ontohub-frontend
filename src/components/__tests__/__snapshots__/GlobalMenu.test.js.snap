@@ -1,11 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GlobalMenu signed in user matches the snapshot 1`] = `
+.glamor-1 {
+  position: fixed;
+  background-color: #1B1C1D;
+  width: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-0 {
+  height: 50px;
+  width: 700px !important;
+  position: relative !important;
+}
+
 <div
-  class="sc-bwzfXH ezDetF"
+  class="glamor-1"
 >
   <div
-    class="ui borderless inverted top fixed sc-bdVaJa cKMyHT menu"
+    class="ui borderless inverted top fixed glamor-0 menu"
   >
     <a
       class="header item"
@@ -136,11 +157,32 @@ exports[`GlobalMenu signed in user matches the snapshot 1`] = `
 `;
 
 exports[`GlobalMenu signed out user matches the snapshot 1`] = `
+.glamor-1 {
+  position: fixed;
+  background-color: #1B1C1D;
+  width: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.glamor-0 {
+  height: 50px;
+  width: 700px !important;
+  position: relative !important;
+}
+
 <div
-  class="sc-bwzfXH ezDetF"
+  class="glamor-1"
 >
   <div
-    class="ui borderless inverted top fixed sc-bdVaJa cKMyHT menu"
+    class="ui borderless inverted top fixed glamor-0 menu"
   >
     <a
       class="header item"

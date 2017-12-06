@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Dropdown, Icon, Menu } from "semantic-ui-react";
 import { LoginModal } from "./LoginModal";
 import Gravatar from "react-gravatar";
-import styled from "styled-components";
+import styled from "react-emotion";
 
 const SignedInMenu = ({ me, onSignOut }) => (
   <Menu.Menu position="right">
