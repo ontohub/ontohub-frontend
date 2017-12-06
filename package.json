@@ -65,5 +65,8 @@
       "!src/apollo/**/*.js",
       "!src/helpers/index.js"
     ]
+  },
+  "babel": {
+    "plugins": ["emotion"]
   }
 }
