@@ -1,11 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches the snapshot 1`] = `
+.glamor-1 {
+  background-color: #000;
+  color: !important;
+  margin-bottom: 1em;
+}
+
+.glamor-0 {
+  max-width: 700px;
+  margin: auto;
+}
+
+.glamor-0 .cross-fade-leave {
+  opacity: 1;
+}
+
+.glamor-0 .cross-fade-leave.cross-fade-leave-active {
+  opacity: 0;
+  -webkit-transition: opacity ease-in;
+  transition: opacity ease-in;
+}
+
+.glamor-0 .cross-fade-enter {
+  opacity: 0;
+}
+
+.glamor-0 .cross-fade-enter.cross-fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity ease-in;
+  transition: opacity ease-in;
+}
+
+.glamor-0 .cross-fade-height {
+  -webkit-transition: height ease-in-out;
+  transition: height ease-in-out;
+}
+
 <div
-  class="css-17ii8se"
+  class="glamor-1"
 >
   <div
-    class="css-1fction"
+    class="glamor-0"
   >
     Header content
   </div>
@@ -13,8 +49,12 @@ exports[`Header matches the snapshot 1`] = `
 `;
 
 exports[`PaddedContainer matches the snapshot 1`] = `
+.glamor-0 {
+  padding-bottom: 1em;
+}
+
 <div
-  class="ui container css-t6mvr8"
+  class="ui container glamor-0"
 >
   Header content
 </div>

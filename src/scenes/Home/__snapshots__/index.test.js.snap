@@ -34,8 +34,16 @@ exports[`Home Body matches the snapshot 1`] = `
 `;
 
 exports[`Home Header matches the snapshot 1`] = `
+.glamor-3 {
+  padding-bottom: 1em;
+}
+
+.glamor-0 {
+  font-weight: bold;
+}
+
 <div
-  class="ui container css-t6mvr8"
+  class="ui container glamor-3"
 >
   <h2
     class="ui inverted header"
@@ -60,7 +68,7 @@ exports[`Home Header matches the snapshot 1`] = `
         class="content"
       >
         <span
-          class="css-in3yi3"
+          class="glamor-0"
         >
           Open
         </span>
@@ -81,7 +89,7 @@ exports[`Home Header matches the snapshot 1`] = `
         class="content"
       >
         <span
-          class="css-in3yi3"
+          class="glamor-0"
         >
           Flexible
         </span>
@@ -102,7 +110,7 @@ exports[`Home Header matches the snapshot 1`] = `
         class="content"
       >
         <span
-          class="css-in3yi3"
+          class="glamor-0"
         >
           Distributed
         </span>
