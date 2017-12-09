@@ -9,13 +9,9 @@ const grecaptchaSiteKey = process.env.REACT_APP_GRECAPTCHA_SITE_KEY,
   PasswordStrengthBar = ({ score }) => (
     <Progress
       attached="bottom"
-      title={`Password strength: ${[
-        "Very weak",
-        "Weak",
-        "Okay",
-        "Strong",
-        "Very strong"
-      ][score]}`}
+      title={`Password strength: ${
+        ["Very weak", "Weak", "Okay", "Strong", "Very strong"][score]
+      }`}
       style={{ marginTop: -3 }}
       percent={score * 25}
       color={["red", "orange", "yellow", "olive", "green"][score]}
@@ -100,17 +96,15 @@ export class SignUpForm extends Component {
   }
   validateField(fieldName) {
     return () =>
-      validate(
-        this.props.validations,
-        this.fieldValues(),
-        fieldName
-      ).then(errors => {
-        if (this._isMounted) {
-          this.setState(state => ({
-            errors: { ...state.errors, ...errors }
-          }));
+      validate(this.props.validations, this.fieldValues(), fieldName).then(
+        errors => {
+          if (this._isMounted) {
+            this.setState(state => ({
+              errors: { ...state.errors, ...errors }
+            }));
+          }
         }
-      });
+      );
   }
   render() {
     return (
