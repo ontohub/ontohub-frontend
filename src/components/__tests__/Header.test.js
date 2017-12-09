@@ -2,13 +2,12 @@ import React from "react";
 import { Header, PaddedContainer } from "../Header";
 import { ThemeProvider } from "emotion-theming";
 import { render } from "enzyme";
+import theme from "../../styles";
 
 describe("Header", () => {
   it("matches the snapshot", () => {
     const wrapper = render(
-      <ThemeProvider
-        theme={{ colors: { dark: "#000" }, sizes: { contentWidth: "700px" } }}
-      >
+      <ThemeProvider theme={theme}>
         <Header>Header content</Header>
       </ThemeProvider>
     );
@@ -19,7 +18,7 @@ describe("Header", () => {
 describe("PaddedContainer", () => {
   it("matches the snapshot", () => {
     const wrapper = render(
-      <ThemeProvider theme={{ sizes: { headerPadding: "1em" } }}>
+      <ThemeProvider theme={theme}>
         <PaddedContainer>Header content</PaddedContainer>
       </ThemeProvider>
     );

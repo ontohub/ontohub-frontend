@@ -2,14 +2,15 @@
 
 exports[`Header matches the snapshot 1`] = `
 .glamor-1 {
-  background-color: #000;
-  color: !important;
+  background-color: #1B1C1D;
+  color: rgba(255,255,255,0.9) !important;
   margin-bottom: 1em;
 }
 
 .glamor-0 {
   max-width: 700px;
   margin: auto;
+  padding-top: 30px;
 }
 
 .glamor-0 .cross-fade-leave {
@@ -50,7 +51,7 @@ exports[`Header matches the snapshot 1`] = `
 
 exports[`PaddedContainer matches the snapshot 1`] = `
 .glamor-0 {
-  padding-bottom: 1em;
+  padding-bottom: 30px;
 }
 
 <div

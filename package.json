@@ -11,7 +11,6 @@
     "apollo-client": "^2.1.0",
     "apollo-link-batch-http": "^1.0.2",
     "apollo-link-error": "^1.0.2",
-    "babel-plugin-emotion": "^8.0.11",
     "emotion": "^8.0.11",
     "emotion-theming": "^8.0.11",
     "graphql-tag": "^2.5.0",
@@ -33,6 +32,7 @@
   "devDependencies": {
     "@storybook/addon-info": "^3.2.17",
     "@storybook/react": "^3.2.17",
+    "babel-plugin-emotion": "^8.0.11",
     "codecov": "^3.0.0",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
