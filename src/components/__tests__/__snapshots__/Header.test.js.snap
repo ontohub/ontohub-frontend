@@ -2,7 +2,7 @@
 
 exports[`Header matches the snapshot 1`] = `
 .glamor-2 {
-  background-color: #1b1c1d;
+  background-color: #1B1C1D;
   color: rgba(255,255,255,0.9) !important;
   margin-bottom: 1em;
 }

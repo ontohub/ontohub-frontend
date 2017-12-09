@@ -3,7 +3,7 @@ import { Container } from "semantic-ui-react";
 import styled from "react-emotion";
 
 const StyledHeader = styled.div`
-  background-color: #1b1c1d;
+  background-color: ${({ theme }) => theme.colors.dark};
   color: rgba(255, 255, 255, 0.9) !important;
   margin-bottom: 1em;
 `;
