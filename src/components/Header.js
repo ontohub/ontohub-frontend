@@ -9,7 +9,7 @@ const StyledHeader = styled.div`
 `;
 
 const InnerHeader = styled.div`
-  max-width: 700px;
+  max-width: ${({ theme }) => theme.sizes.contentWidth};
   margin: auto;
   padding-top: 30px;
 
