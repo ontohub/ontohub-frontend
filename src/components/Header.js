@@ -11,7 +11,7 @@ const StyledHeader = styled.div`
 const InnerHeader = styled.div`
   max-width: ${({ theme }) => theme.sizes.contentWidth};
   margin: auto;
-  padding-top: 30px;
+  padding-top: ${({ theme }) => theme.sizes.headerPadding};
 
   & .cross-fade-leave {
     opacity: 1;
