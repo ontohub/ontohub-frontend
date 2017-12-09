@@ -4,7 +4,7 @@ import styled from "react-emotion";
 
 const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: ${({ theme }) => theme.colors.light} !important;
   margin-bottom: 1em;
 `;
 
