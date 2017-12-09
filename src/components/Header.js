@@ -39,7 +39,7 @@ const InnerHeader = styled.div`
 `;
 
 export const PaddedContainer = styled(Container)`
-  padding-bottom: 1em;
+  padding-bottom: ${({ theme }) => theme.sizes.headerPadding};
 `;
 
 export const Header = props => (
