@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches the snapshot 1`] = `
-.glamor-1 {
-  background-color: #1B1C1D;
+.glamor-2 {
+  background-color: #1b1c1d;
   color: rgba(255,255,255,0.9) !important;
   margin-bottom: 1em;
 }
@@ -39,10 +39,10 @@ exports[`Header matches the snapshot 1`] = `
 }
 
 <div
-  class="glamor-1"
+  class="glamor-2 glamor-3"
 >
   <div
-    class="glamor-0"
+    class="glamor-0 glamor-1"
   >
     Header content
   </div>
@@ -51,11 +51,11 @@ exports[`Header matches the snapshot 1`] = `
 
 exports[`PaddedContainer matches the snapshot 1`] = `
 .glamor-0 {
-  padding-bottom: 30px;
+  padding-bottom: 1em;
 }
 
 <div
-  class="ui container glamor-0"
+  class="ui container glamor-0 glamor-1"
 >
   Header content
 </div>

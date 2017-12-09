@@ -43,7 +43,7 @@ exports[`Home Header matches the snapshot 1`] = `
 }
 
 <div
-  class="ui container glamor-3"
+  class="ui container glamor-3 glamor-4"
 >
   <h2
     class="ui inverted header"

@@ -3,15 +3,15 @@ import { Container } from "semantic-ui-react";
 import styled from "react-emotion";
 
 const StyledHeader = styled.div`
-  background-color: ${({ theme }) => theme.colors.dark};
-  color: ${({ theme }) => theme.colors.light} !important;
+  background-color: #1b1c1d;
+  color: rgba(255, 255, 255, 0.9) !important;
   margin-bottom: 1em;
 `;
 
 const InnerHeader = styled.div`
-  max-width: ${({ theme }) => theme.sizes.contentWidth};
+  max-width: 700px;
   margin: auto;
-  padding-top: ${({ theme }) => theme.sizes.headerPadding};
+  padding-top: 30px;
 
   & .cross-fade-leave {
     opacity: 1;
@@ -39,7 +39,7 @@ const InnerHeader = styled.div`
 `;
 
 export const PaddedContainer = styled(Container)`
-  padding-bottom: ${({ theme }) => theme.sizes.headerPadding};
+  padding-bottom: 1em;
 `;
 
 export const Header = props => (
