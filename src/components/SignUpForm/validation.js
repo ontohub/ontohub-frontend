@@ -6,11 +6,12 @@ import {
   pick,
   forEach,
   compact,
-  capitalize
+  capitalize,
+  trim
 } from "lodash";
 import debounce from "debounce-promise";
 
-const isUsernameAvailable = id =>
+export const isUsernameAvailable = id =>
   Client.query({ query: userQuery, variables: { id: id } }).then(
     data => !get(data, "data.organizationalUnit", null)
   );
@@ -24,7 +25,7 @@ export const formHasError = errors =>
     filter(pick(errors, ["email", "name", "password", "confirmPassword"]))
   );
 
-const addError = (condition, errors, field, error) => {
+export const addError = (condition, errors, field, error) => {
   if (condition) {
     if (!errors[field]) {
       errors[field] = [];
@@ -42,7 +43,7 @@ export const validate = values => {
       errors.passwordScore = scorePassword(values.password);
 
       addError(
-        values.password.length < 10,
+        !values.password || values.password.length < 10,
         errors,
         "password",
         "Password must be at least 10 characters long"
@@ -60,7 +61,7 @@ export const validate = values => {
         "Email is invalid"
       );
       addError(
-        values.name.length < 3,
+        !values.name || values.name.length < 3,
         errors,
         "name",
         "Username must be at least 3 characters long"
@@ -106,12 +107,15 @@ export const validate = values => {
 
 export const setServerErrors = (setErrors, setSubmitting, onError) => err => {
   let errors = {};
+  let matches;
+  let regex = /GraphQL error:\s*((\S+) .+)\s*$/gm;
 
-  forEach(compact(err.message.split("GraphQL error: ")), message => {
-    let [field] = message.split(" ");
+  while ((matches = regex.exec(err.message))) {
+    let field = matches[2].toLowerCase();
+    let message = capitalize(matches[1]);
     if (!errors[field]) errors[field] = [];
-    errors[field].push(capitalize(message));
-  });
+    errors[field].push(message);
+  }
 
   setErrors(errors);
   setSubmitting(false);
