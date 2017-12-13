@@ -87,6 +87,7 @@ const initialValues = {
   confirmPassword: ""
 };
 
+/* istanbul ignore next */
 const FormikSignUpForm = ({
   enableCaptcha,
   onError,

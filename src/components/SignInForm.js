@@ -9,6 +9,7 @@ export const SignInForm = ({ onSubmit, onSuccess, onError }) => (
       password: "changemenow"
     }}
     onSubmit={(values, { setErrors }) => {
+      /* istanbul ignore next */
       onSubmit(values.username, values.password).then(
         () => {
           onSuccess();
