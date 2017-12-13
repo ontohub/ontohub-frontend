@@ -1,14 +1,5 @@
 import { Client, userQuery } from "../../apollo";
-import {
-  get,
-  isEmpty,
-  filter,
-  pick,
-  forEach,
-  compact,
-  capitalize,
-  trim
-} from "lodash";
+import { get, isEmpty, filter, pick, capitalize } from "lodash";
 import debounce from "debounce-promise";
 
 export const isUsernameAvailable = id =>

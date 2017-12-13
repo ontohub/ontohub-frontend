@@ -1,6 +1,14 @@
+import {
+  addError,
+  formHasError,
+  setServerErrors,
+  validate,
+  isUsernameAvailable
+} from "../validation";
+
 jest.mock("../../../apollo", () => ({
   Client: {
-    query: ({ variables: { id: id } }) => {
+    query: ({ variables: { id } }) => {
       if (id === "bob") {
         return Promise.reject();
       } else {
@@ -9,14 +17,6 @@ jest.mock("../../../apollo", () => ({
     }
   }
 }));
-
-import {
-  addError,
-  formHasError,
-  setServerErrors,
-  validate,
-  isUsernameAvailable
-} from "../validation";
 
 describe("addError", () => {
   it("adds an error if the field has no error", () => {

@@ -2,10 +2,6 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-
-import { ThemeProvider } from "styled-components";
-import theme from "../../styles";
-import { Icon, Input, Header as SemHeader, Menu } from "semantic-ui-react";
 import { SignUpForm } from "../SignUpForm";
 
 const Decorator = storyFn => (

@@ -1,6 +1,5 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
-import _ from "lodash";
+import { mount } from "enzyme";
 import { SignUpForm } from "..";
 
 const shallowRender = props => mount(<SignUpForm {...props} />);
@@ -44,7 +43,7 @@ describe("SignUpForm", () => {
       "#sign-up-email",
       "#sign-up-password",
       "#sign-up-password-confirm"
-    ].map(selector => {
+    ].forEach(selector => {
       it(`calls onChange when changing the value of ${selector}`, () => {
         wrapper.find(selector).simulate("change", {});
         expect(onChange.mock.calls.length).toEqual(1);
