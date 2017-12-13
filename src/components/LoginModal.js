@@ -71,7 +71,6 @@ export class LoginModal extends Component {
                 </Header>
                 <SignUpForm
                   enableCaptcha={this.props.enableCaptcha}
-                  validations={this.props.signUpValidations}
                   onSubmit={this.onSignUpSubmit}
                   onSuccess={this.onClose}
                   onError={this.onError}

@@ -47,19 +47,13 @@ const SignedInMenu = ({ me, onSignOut }) => (
   </Menu.Menu>
 );
 
-const SignedOutMenu = ({
-  onSignIn,
-  onSignUp,
-  signUpValidations,
-  enableCaptcha
-}) => (
+const SignedOutMenu = ({ onSignIn, onSignUp, enableCaptcha }) => (
   <Menu.Menu position="right">
     <Menu.Item>
       <LoginModal
         enableCaptcha={enableCaptcha}
         onSignIn={onSignIn}
         onSignUp={onSignUp}
-        signUpValidations={signUpValidations}
       />
     </Menu.Item>
   </Menu.Menu>
@@ -79,7 +73,6 @@ const GlobalMenu = ({
   onSignIn,
   onSignOut,
   onSignUp,
-  signUpValidations,
   className
 }) => (
   <div className={className}>
@@ -92,7 +85,6 @@ const GlobalMenu = ({
           enableCaptcha={enableCaptcha}
           onSignIn={onSignIn}
           onSignUp={onSignUp}
-          signUpValidations={signUpValidations}
         />
       )}
     </InnerMenu>
