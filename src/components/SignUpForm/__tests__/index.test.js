@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
 import _ from "lodash";
-import { SignUpForm } from "../SignUpForm";
+import { SignUpForm } from "..";
 
 const shallowRender = props => mount(<SignUpForm {...props} />);
 
