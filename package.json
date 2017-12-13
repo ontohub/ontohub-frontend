@@ -34,7 +34,7 @@
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "enzyme-to-json": "^3.2.2",
-    "eslint": "^4.12.1",
+    "eslint": "^4.13.1",
     "prettier": "1.8.2",
     "react-scripts": "1.0.17",
     "react-test-renderer": "^16.2.0",
