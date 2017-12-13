@@ -170,9 +170,9 @@ exports[`LoginModal matches the snapshot 1`] = `
                               Username
                             </label>
                             <input
-                              placeholder="Username"
                               id="sign-up-username"
                               name="name"
+                              placeholder="Username"
                               value=""
                             />
                           </div>
@@ -185,9 +185,9 @@ exports[`LoginModal matches the snapshot 1`] = `
                               Email
                             </label>
                             <input
-                              placeholder="Email"
                               id="sign-up-email"
                               name="email"
+                              placeholder="Email"
                               value=""
                             />
                           </div>
@@ -205,9 +205,9 @@ exports[`LoginModal matches the snapshot 1`] = `
                             </label>
                             <input
                               type="password"
-                              placeholder="Password"
                               id="sign-up-password"
                               name="password"
+                              placeholder="Password"
                               value=""
                             />
                             <div
@@ -232,9 +232,9 @@ exports[`LoginModal matches the snapshot 1`] = `
                             </label>
                             <input
                               type="password"
-                              placeholder="Password confirmation"
                               id="sign-up-password-confirm"
                               name="confirmPassword"
+                              placeholder="Password confirmation"
                               value=""
                             />
                           </div>

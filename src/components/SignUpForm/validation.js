@@ -73,11 +73,7 @@ export const validate = values => {
           "or number, and only contain lower case " +
           'letters, numbers, "-" and "_"'
       );
-      if (formHasError(errors)) {
-        throw errors;
-      } else {
-        return errors;
-      }
+      return errors;
     })
     .then(errors => {
       if (!errors.name) {
@@ -100,6 +96,10 @@ export const validate = values => {
             throw errors;
           }
         );
+      } else if (formHasError(errors)) {
+        throw errors;
+      } else {
+        return errors;
       }
     });
 };
