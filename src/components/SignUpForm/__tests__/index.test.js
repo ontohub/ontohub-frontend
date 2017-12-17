@@ -67,7 +67,7 @@ describe("SignUpForm", () => {
         touched,
         onChange,
         onSubmit,
-        submitDisabled: true
+        submitEnabled: false
       });
       wrapper.find("form").simulate("submit", {});
       expect(onSubmit.mock.calls.length).toEqual(0);

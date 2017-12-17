@@ -15,11 +15,11 @@ export const SignUpForm = ({
   onBlur,
   onChange,
   onSubmit,
-  submitDisabled,
+  submitEnabled = true,
   touched,
   values
 }) => (
-  <Form onSubmit={!submitDisabled ? onSubmit : undefined}>
+  <Form onSubmit={submitEnabled ? onSubmit : undefined}>
     {Captcha || null}
     <Form.Group widths="equal">
       <Field
@@ -75,7 +75,7 @@ export const SignUpForm = ({
       content="Create account"
       floated="right"
       secondary
-      disabled={submitDisabled}
+      disabled={!submitEnabled}
     />
   </Form>
 );
@@ -146,7 +146,7 @@ const FormikSignUpForm = ({
           return handleChange(e, ...args);
         }}
         onSubmit={handleSubmit}
-        submitDisabled={values === initialValues}
+        submitEnabled={values !== initialValues}
         touched={touched}
         values={values}
       />

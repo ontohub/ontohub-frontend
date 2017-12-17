@@ -41,7 +41,7 @@ storiesOf("SignUpForm", module)
       onSubmit={() => {}}
       onChange={action("change-field")}
       onError={() => {}}
-      submitDisabled={true}
+      submitEnabled={false}
       touched={{ email: true, confirmPassword: true }}
       values={{
         name: "ada",
