@@ -39,12 +39,12 @@ describe("LoginModal", () => {
     });
     describe("onSignUpSubmit", () => {
       it("sets the state to loading", () => {
-        wrapper.instance().onSignUpSubmit();
+        wrapper.instance().onSignUpSubmit({});
         expect(wrapper.state("loading")).toBeTruthy();
       });
 
       it("calls the passed function", () => {
-        wrapper.instance().onSignUpSubmit();
+        wrapper.instance().onSignUpSubmit({});
         expect(onSignUp.mock.calls.length).toBe(1);
       });
     });

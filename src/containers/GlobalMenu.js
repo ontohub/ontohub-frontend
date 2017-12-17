@@ -1,7 +1,6 @@
 import { signInMutation, signUpMutation } from "../apollo/queries";
 import { compose, graphql, withApollo } from "react-apollo";
 import { GlobalMenu } from "../components";
-import { userValidations } from "../helpers/validations";
 import { signIn, signOut } from "../helpers";
 
 const enableCaptcha = process.env.REACT_APP_DISABLE_CAPTCHA !== "true";
@@ -30,7 +29,6 @@ const GlobalMenuWithData = compose(
     props: props => ({
       ...props.ownProps,
       client: undefined,
-      signUpValidations: userValidations(props.ownProps.client),
       enableCaptcha: enableCaptcha,
       onSignUp: (username, email, password, captcha) =>
         props

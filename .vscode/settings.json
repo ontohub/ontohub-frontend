@@ -19,5 +19,6 @@
     "**/coverage": true
   },
   "eslint.enable": true,
-  "prettier.tabWidth": 2
+  "prettier.tabWidth": 2,
+  "prettier.proseWrap": true
 }

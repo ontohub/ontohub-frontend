@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addError adds an error if the field already has an error 1`] = `
+Object {
+  "someField": Array [
+    "This is another error message",
+    "This is the error message",
+  ],
+}
+`;
+
+exports[`addError adds an error if the field has no error 1`] = `
+Object {
+  "anotherField": Array [
+    "Some Error message",
+  ],
+  "someField": Array [
+    "This is the error message",
+  ],
+}
+`;
+
+exports[`setServerErrors calls setErrors with the found errors 1`] = `
+Array [
+  Array [
+    Object {
+      "password": Array [
+        "Password is missing",
+      ],
+      "username": Array [
+        "Username not found",
+      ],
+    },
+  ],
+]
+`;
+
+exports[`setServerErrors with an invalid error message calls setErrors with the found errors 1`] = `
+Array [
+  Array [
+    Object {},
+  ],
+]
+`;
+
+exports[`validate checks for username availability 1`] = `
+Object {
+  "name": Array [
+    "Username is already taken",
+  ],
+  "passwordScore": 10,
+}
+`;
+
+exports[`validate on empty fields 1`] = `
+Object {
+  "email": Array [
+    "Email is invalid",
+  ],
+  "name": Array [
+    "Username must be at least 3 characters long",
+  ],
+  "password": Array [
+    "Password must be at least 10 characters long",
+  ],
+  "passwordScore": 10,
+}
+`;
+
+exports[`validate on some non-empty fields 1`] = `
+Object {
+  "confirmPassword": Array [
+    "Passwords must match",
+  ],
+  "email": Array [
+    "Email is invalid",
+  ],
+  "name": Array [
+    "Username must start and end with a lower case letter or number, and only contain lower case letters, numbers, \\"-\\" and \\"_\\"",
+  ],
+  "password": Array [
+    "Password must be at least 10 characters long",
+  ],
+  "passwordScore": 10,
+}
+`;
+
+exports[`validate returns an error if availability cannot be checked 1`] = `
+Object {
+  "name": Array [
+    "Unable to check username availability. Please check your network connection.",
+  ],
+  "passwordScore": 10,
+}
+`;
