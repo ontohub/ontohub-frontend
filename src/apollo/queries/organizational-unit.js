@@ -1,4 +1,4 @@
-import { gql } from 'react-apollo'
+import gql from "graphql-tag";
 
 export const organizationalUnitQuery = gql`
   query GetOrganizationalUnit($id: ID!) {
@@ -34,4 +34,4 @@ export const organizationalUnitQuery = gql`
       }
     }
   }
-`
+`;

@@ -20,6 +20,7 @@ exports[`GlobalMenu signed in user matches the snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  z-index: 99999999;
 }
 
 <div
@@ -176,6 +177,7 @@ exports[`GlobalMenu signed out user matches the snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  z-index: 99999999;
 }
 
 <div
