@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import ReactCSSTransitionReplace from "react-css-transition-replace";
 import { compose, defaultProps, withStateHandlers } from "recompose";
-import { includes, last, map, without } from "lodash";
+import { compact, includes, last, map, without } from "lodash";
 import styled from "styled-components";
 import { Icon, List } from "semantic-ui-react";
+import { fileType } from "../../helpers";
 
 const transitionDuration = 400; // milliseconds
 
@@ -20,9 +21,7 @@ const InnerNodeOpener = ({ isOpen, path, onClick }) => {
   const dropdownIconStyle = {
     transition: `all ${transitionDuration}ms`,
     transformOrigin: "4px 6px 0",
-    transform: `translateX(${dropdownIconX}px) translateY(${
-      dropdownIconY
-    }px) rotate(${dropdownIconRotation}deg)`
+    transform: `translateX(${dropdownIconX}px) translateY(${dropdownIconY}px) rotate(${dropdownIconRotation}deg)`
   };
 
   return (
@@ -139,113 +138,8 @@ export const directoryIcon = (label, path, toggle, isOpen) => (
 export const fileLabel = (label, path) => <List.Header>{label}</List.Header>;
 
 export const fileIcon = (label, path) => {
-  let name;
-  switch (last(label.split(".")).toLowerCase()) {
-    case "txt":
-      name = "file text outline";
-      break;
-    case "pdf":
-      name = "file pdf outline";
-      break;
-    case "bat":
-    case "bmp":
-    case "bpg":
-    case "exif":
-    case "gif":
-    case "heif":
-    case "jfif":
-    case "jpeg":
-    case "jpeg2000":
-    case "jpg":
-    case "pbm":
-    case "pgm":
-    case "png":
-    case "pnm":
-    case "ppm":
-    case "svg":
-    case "tiff":
-    case "webp":
-      name = "file image outline";
-      break;
-    case "3gp":
-    case "asf":
-    case "avi":
-    case "flv":
-    case "gifv":
-    case "mkv":
-    case "mov":
-    case "mp4":
-    case "mpeg":
-    case "mpg":
-    case "mwv":
-    case "qt":
-    case "ts":
-    case "vob":
-    case "webm":
-      name = "file video outline";
-      break;
-    case "aac":
-    case "flac":
-    case "mp3":
-    case "ogg":
-    case "wav":
-      name = "file audio outline";
-      break;
-    case "doc":
-    case "docx":
-      name = "file word outline";
-      break;
-    case "xls":
-    case "xlsx":
-      name = "file excel outline";
-      break;
-    case "ppt":
-    case "pptx":
-      name = "file powerpoint outline";
-      break;
-    case "7z":
-    case "bz2":
-    case "gz":
-    case "rar":
-    case "tar":
-    case "xz":
-    case "zip":
-      name = "file archive outline";
-      break;
-    case "casl":
-    case "dol":
-    case "hascasl":
-    case "het":
-    case "owl":
-    case "omn":
-    case "obo":
-    case "hs":
-    case "exp":
-    case "maude":
-    case "elf":
-    case "hol":
-    case "isa":
-    case "thy":
-    case "prf":
-    case "omdoc":
-    case "hpf":
-    case "clf":
-    case "clif":
-    case "xml":
-    case "fcstd":
-    case "rdf":
-    case "xmi":
-    case "qvt":
-    case "p":
-    case "tptp":
-    case "gen_trm":
-    case "baf":
-      name = "file code outline";
-      break;
-    default:
-      name = "file outline";
-      break;
-  }
+  const type = fileType(label);
+  const name = compact(["file", type, "outline"]).join(" ");
   return <List.Icon name={name} />;
 };
 
