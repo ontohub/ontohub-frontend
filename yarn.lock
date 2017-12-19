@@ -28,12 +28,12 @@
     react-inspector "^2.2.2"
     uuid "^3.1.0"
 
-"@storybook/addon-info@^3.2.17":
-  version "3.2.17"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.17.tgz#a1a612ca323c360089dd4d49aca8abf902d4929d"
+"@storybook/addon-info@^3.2.18":
+  version "3.2.18"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.2.18.tgz#537c81b03952bca032d3ab39edf18723da7ef099"
   dependencies:
-    "@storybook/addons" "^3.2.17"
-    "@storybook/components" "^3.2.17"
+    "@storybook/addons" "^3.2.18"
+    "@storybook/components" "^3.2.18"
     babel-runtime "^6.26.0"
     global "^4.3.2"
     marksy "^2.0.0"
@@ -66,14 +66,6 @@
 "@storybook/channels@^3.2.18":
   version "3.2.18"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.2.18.tgz#c5d8c4ac780c6ebb4b1c360d8faf9207fd4fbafd"
-
-"@storybook/components@^3.2.17":
-  version "3.2.17"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.2.17.tgz#318c6e6a1d3ffb469523b5dcfee775639ccc500b"
-  dependencies:
-    glamor "^2.20.40"
-    glamorous "^4.11.0"
-    prop-types "^15.6.0"
 
 "@storybook/components@^3.2.18":
   version "3.2.18"
