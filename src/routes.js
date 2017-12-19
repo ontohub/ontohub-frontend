@@ -16,8 +16,8 @@ export default [
     main: Home
   },
   {
-    path: "/:organizationalUnitId/(repositories|organizations|members)?",
-    exact: true,
+    path:
+      "/:organizationalUnitId/(repositories|organizations|members|settings)?",
     header: OrganizationalUnitHeader,
     main: OrganizationalUnit,
     graphql: graphql(organizationalUnitQuery, {
