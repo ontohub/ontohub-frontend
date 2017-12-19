@@ -36,7 +36,7 @@
     "@storybook/react": "^3.2.18",
     "codecov": "^3.0.0",
     "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.2.2",
     "eslint": "^4.13.1",
     "jest-styled-components": "^4.9.0",
