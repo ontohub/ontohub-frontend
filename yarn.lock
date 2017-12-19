@@ -392,20 +392,20 @@ apollo-fetch@^0.7.0:
   dependencies:
     cross-fetch "^1.0.0"
 
-apollo-link-batch-http@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/apollo-link-batch-http/-/apollo-link-batch-http-1.0.3.tgz#94aa2bcf9b30d543c18ed61d128c1929d9096e6c"
+apollo-link-batch-http@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/apollo-link-batch-http/-/apollo-link-batch-http-1.0.4.tgz#e958a418a40625943a6018df695cca0cf4527977"
   dependencies:
     apollo-fetch "^0.7.0"
-    apollo-link "^1.0.6"
-    apollo-link-batch "^1.0.3"
-    graphql "^0.11.0"
+    apollo-link "^1.0.7"
+    apollo-link-batch "^1.0.4"
+    graphql "^0.12.0"
 
-apollo-link-batch@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/apollo-link-batch/-/apollo-link-batch-1.0.3.tgz#ff56308d28482eecbf4dbf095676958608ada10e"
+apollo-link-batch@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/apollo-link-batch/-/apollo-link-batch-1.0.4.tgz#ce0c3820ebd72a153a951017f71c252df51178b4"
   dependencies:
-    apollo-link "^1.0.6"
+    apollo-link "^1.0.7"
 
 apollo-link-dedup@^1.0.0:
   version "1.0.4"
@@ -422,6 +422,14 @@ apollo-link-error@^1.0.2:
 apollo-link@^1.0.0, apollo-link@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.0.6.tgz#ed5e975b4582b2471fd8eebf9efbd6691188dc0a"
+  dependencies:
+    "@types/zen-observable" "0.5.3"
+    apollo-utilities "^1.0.0"
+    zen-observable "^0.6.0"
+
+apollo-link@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.0.7.tgz#42cd38a7378332fc3e41a214ff6a6e5e703a556f"
   dependencies:
     "@types/zen-observable" "0.5.3"
     apollo-utilities "^1.0.0"
@@ -3884,9 +3892,9 @@ graphql-tag@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.6.0.tgz#0fb1b9f6d6651263c47a3420e827910e6fed3952"
 
-graphql@^0.11.0:
-  version "0.11.7"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.11.7.tgz#e5abaa9cb7b7cccb84e9f0836bf4370d268750c6"
+graphql@^0.12.0:
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.12.3.tgz#11668458bbe28261c0dcb6e265f515ba79f6ce07"
   dependencies:
     iterall "1.1.3"
 
