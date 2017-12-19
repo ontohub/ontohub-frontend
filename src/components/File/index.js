@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 
 import brace from "brace";
 import AceEditor from "react-ace";
+import "brace/keybinding/vim";
 import "brace/theme/github";
 
 import ImageViewer from "./ImageViewer";
@@ -33,7 +34,21 @@ export const File = ({ filename, value, encoding }) => {
     // fall through to text
     default:
       // display text
-      return;
+      return (
+        <AceEditor
+          theme="github"
+          name={`editor-${filename}`}
+          value={value}
+          defaultValue={value}
+          editorProps={{ $blockScrolling: true }}
+          setOptions={{ cursorStyle: "smooth" }}
+          // keyboardHandler="vim"
+          width="100%"
+          height="100vh"
+          tabSize={2}
+          debounceChangePeriod={500}
+        />
+      );
   }
   return null;
 };
