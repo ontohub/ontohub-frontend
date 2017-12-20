@@ -1,8 +1,8 @@
-import React from 'react'
-import { Container, Item, Icon } from 'semantic-ui-react'
-import { Header, OrganizationSettings } from './components'
-import { Link, Switch, Route, Redirect } from 'react-router-dom'
-import Gravatar from 'react-gravatar'
+import React from "react";
+import { Container, Item, Icon } from "semantic-ui-react";
+import { Header, OrganizationSettings } from "./components";
+import { Link, Switch, Route, Redirect } from "react-router-dom";
+import Gravatar from "react-gravatar";
 
 const OrganizationalUnit = props => [
   <Route
@@ -20,8 +20,7 @@ const OrganizationalUnit = props => [
           path="/:id/repositories"
           exact
           render={() => {
-            console.log(props)
-            const { data: { organizationalUnit: { repositories } } } = props
+            const { data: { organizationalUnit: { repositories } } } = props;
             return (
               <Item.Group divided>
                 {repositories.map(({ id, name, description, visibility }) => (
@@ -30,7 +29,7 @@ const OrganizationalUnit = props => [
                       <Item.Header>
                         <Link to={`/${id}`}>
                           {name}
-                          {visibility === 'private' && (
+                          {visibility === "private" && (
                             <Icon color="yellow" name="unlock alternate" />
                           )}
                         </Link>
@@ -40,7 +39,7 @@ const OrganizationalUnit = props => [
                   </Item>
                 ))}
               </Item.Group>
-            )
+            );
           }}
         />
         <Route
@@ -49,7 +48,7 @@ const OrganizationalUnit = props => [
           render={() => {
             const {
               data: { organizationalUnit: { organizationMemberships } }
-            } = props
+            } = props;
             return (
               <Item.Group divided>
                 {organizationMemberships.map(
@@ -65,14 +64,14 @@ const OrganizationalUnit = props => [
                   )
                 )}
               </Item.Group>
-            )
+            );
           }}
         />
         <Route
           path="/:id/members"
           exact
           render={() => {
-            const { data: { organizationalUnit: { memberships } } } = props
+            const { data: { organizationalUnit: { memberships } } } = props;
             return (
               <Item.Group divided>
                 {memberships.map(
@@ -97,23 +96,23 @@ const OrganizationalUnit = props => [
                   )
                 )}
               </Item.Group>
-            )
+            );
           }}
         />
         <Route
           path="/:id/settings"
           render={({ match: { url } }) => {
-            const { data: { organizationalUnit } } = props
+            const { data: { organizationalUnit } } = props;
             return (
               <OrganizationSettings match={{ url }} data={organizationalUnit} />
-            )
+            );
           }}
         />
       </Switch>
     </Container>
   )
-]
+];
 
-export { Header, OrganizationalUnit }
+export { Header, OrganizationalUnit };
 
-export default OrganizationalUnit
+export default OrganizationalUnit;

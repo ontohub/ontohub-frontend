@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { graphql } from "react-apollo";
+import { HeadAndBody } from "./components";
 import { currentUserQuery } from "./apollo/queries";
-import { Header } from "./components";
 import { VersionWarning, GlobalMenu } from "./containers";
 import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
@@ -9,26 +9,6 @@ import routes from "./routes";
 import config from "./config.json";
 
 const backendVersion = config.ontohub.backendVersion;
-
-class GraphQL extends Component {
-  constructor(props) {
-    super();
-    const { query, render } = props;
-    this.Comp = query(render);
-  }
-  componentWillReceiveProps(props) {
-    this.Comp = props.query(props.render);
-  }
-  shouldComponentUpdate(props) {
-    return props.update !== this.props.update;
-  }
-  render() {
-    const Comp = this.Comp;
-    return <Comp {...this.props} />;
-  }
-}
-
-const meQuery = graphql(currentUserQuery);
 
 const App = ({ me, ...props }) => (
   <div className={props.className}>
@@ -39,22 +19,13 @@ const App = ({ me, ...props }) => (
           key={1}
           path={route.path}
           exact={route.exact}
-          render={routeProps => (
-            <GraphQL
-              {...routeProps}
-              update={routeProps.location.key}
-              query={route.graphql || meQuery}
-              render={gqlProps => [
-                <Header key="header">
-                  <route.header
-                    key="header"
-                    me={me}
-                    {...routeProps}
-                    {...gqlProps}
-                  />
-                </Header>,
-                <route.main key="main" me={me} {...routeProps} {...gqlProps} />
-              ]}
+          render={props => (
+            <HeadAndBody
+              hoc={route.graphql}
+              me={me}
+              head={route.header}
+              body={route.main}
+              {...props}
             />
           )}
         />
