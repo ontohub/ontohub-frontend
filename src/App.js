@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql } from "react-apollo";
-import { HeadAndBody } from "./components";
+import { VersionWarning, HeadAndBody } from "./components";
 import { currentUserQuery } from "./apollo/queries";
-import { VersionWarning, GlobalMenu } from "./containers";
+import { GlobalMenu } from "./containers";
 import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import routes from "./routes";

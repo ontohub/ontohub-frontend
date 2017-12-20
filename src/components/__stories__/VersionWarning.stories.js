@@ -2,7 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 
-import VersionWarning from "../VersionWarning";
+import { VersionWarning } from "../VersionWarning";
 
 storiesOf("VersionWarning", module)
   .addWithInfo(
