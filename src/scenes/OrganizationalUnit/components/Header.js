@@ -1,8 +1,8 @@
-import React from 'react'
-import { Header as SemHeader, Container, Menu, Icon } from 'semantic-ui-react'
-import { NavLink as Link } from 'react-router-dom'
-import Gravatar from 'react-gravatar'
-import { get } from 'lodash'
+import React from "react";
+import { Header as SemHeader, Container, Menu, Icon } from "semantic-ui-react";
+import { NavLink as Link } from "react-router-dom";
+import Gravatar from "react-gravatar";
+import { get } from "lodash";
 
 export const Header = ({ data }) => (
   <Container>
@@ -10,39 +10,39 @@ export const Header = ({ data }) => (
       {data.loading
         ? null
         : [
-            get(data, 'organizationalUnit.emailHash') ? (
+            get(data, "organizationalUnit.emailHash") ? (
               <Gravatar
                 key="avatar"
                 style={{ borderRadius: 2 }}
                 size={100}
-                md5={get(data, 'organizationalUnit.emailHash')}
+                md5={get(data, "organizationalUnit.emailHash")}
               />
             ) : null,
             <SemHeader.Content key="content">
-              {get(data, 'organizationalUnit.displayName')
+              {get(data, "organizationalUnit.displayName")
                 ? [
-                    get(data, 'organizationalUnit.displayName'),
+                    get(data, "organizationalUnit.displayName"),
                     <SemHeader.Subheader key="id">
-                      {get(data, 'organizationalUnit.description') ||
-                        get(data, 'organizationalUnit.id')}
+                      {get(data, "organizationalUnit.description") ||
+                        get(data, "organizationalUnit.id")}
                     </SemHeader.Subheader>
                   ]
-                : get(data, 'organizationalUnit.id')}
+                : get(data, "organizationalUnit.id")}
             </SemHeader.Content>
           ]}
     </SemHeader>
     <Menu inverted pointing secondary>
       <Menu.Item
         as={Link}
-        to={`/${get(data, 'organizationalUnit.id')}/repositories`}
+        to={`/${get(data, "organizationalUnit.id")}/repositories`}
       >
         <Icon name="fork" />
         Repositories
       </Menu.Item>
-      {get(data, 'organizationalUnit.__typename') === 'User' ? (
+      {get(data, "organizationalUnit.__typename") === "User" ? (
         <Menu.Item
           as={Link}
-          to={`/${get(data, 'organizationalUnit.id')}/organizations`}
+          to={`/${get(data, "organizationalUnit.id")}/organizations`}
         >
           <Icon name="users" />
           Organizations
@@ -50,17 +50,16 @@ export const Header = ({ data }) => (
       ) : (
         <Menu.Item
           as={Link}
-          to={`/${get(data, 'organizationalUnit.id')}/members`}
+          to={`/${get(data, "organizationalUnit.id")}/members`}
         >
           <Icon name="users" /> Members
         </Menu.Item>
       )}
-      {get(data, 'organizationalUnit.__typename') === 'Organization' &&
-      get(data, 'organizationalUnit.memberships[0].role') ? (
+      {get(data, "organizationalUnit.permissions.role") === "admin" ? (
         <Menu.Menu position="right">
           <Menu.Item
             as={Link}
-            to={`/${get(data, 'organizationalUnit.id')}/settings`}
+            to={`/${get(data, "organizationalUnit.id")}/settings`}
           >
             <Icon name="settings" /> Settings
           </Menu.Item>
@@ -68,6 +67,6 @@ export const Header = ({ data }) => (
       ) : null}
     </Menu>
   </Container>
-)
+);
 
-export default Header
+export default Header;

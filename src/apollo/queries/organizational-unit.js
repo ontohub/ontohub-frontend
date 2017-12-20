@@ -23,6 +23,9 @@ export const organizationalUnitQuery = gql`
       }
       ... on Organization {
         description
+        permissions {
+          role
+        }
         memberships {
           member {
             id
@@ -32,6 +35,16 @@ export const organizationalUnitQuery = gql`
           role
         }
       }
+    }
+  }
+`;
+
+export const saveOrganizationMutation = gql`
+  mutation SaveOrganization($id: ID!, $data: OrganizationChangeset!) {
+    saveOrganization(id: $id, data: $data) {
+      id
+      description
+      displayName
     }
   }
 `;
