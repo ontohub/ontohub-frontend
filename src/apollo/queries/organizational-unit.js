@@ -48,3 +48,31 @@ export const saveOrganizationMutation = gql`
     }
   }
 `;
+
+export const addOrganizationMemberMutation = gql`
+  mutation AddOrganizationMember(
+    $organization: ID!
+    $member: ID!
+    $role: OrganizationRole!
+  ) {
+    addOrganizationMember(
+      organization: $organization
+      member: $member
+      role: $role
+    ) {
+      member {
+        id
+      }
+      organization {
+        id
+      }
+      role
+    }
+  }
+`;
+
+export const removeOrganizationMemberMutation = gql`
+  mutation RemoveOrganizationMember($organization: ID!, $member: ID!) {
+    removeOrganizationMember(organization: $organization, member: $member)
+  }
+`;

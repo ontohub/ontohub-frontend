@@ -4,5 +4,7 @@ export { userQuery } from "./user";
 export { versionQuery } from "./version";
 export {
   saveOrganizationMutation,
+  addOrganizationMemberMutation,
+  removeOrganizationMemberMutation,
   organizationalUnitQuery
 } from "./organizational-unit";

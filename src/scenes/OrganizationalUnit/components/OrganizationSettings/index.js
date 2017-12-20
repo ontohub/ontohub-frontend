@@ -2,11 +2,12 @@ import React, { Fragment } from "react";
 import { NavLink as Link, Route, Switch, Redirect } from "react-router-dom";
 import { Container, Grid, Menu } from "semantic-ui-react";
 import ProfileSettings from "./ProfileSettings";
-import { MemberSettings } from "./MemberSettings";
+import MemberSettings from "./MemberSettings";
 import { dropRight } from "lodash";
 
 export const OrganizationSettings = ({
   match: { url },
+  me,
   data: { id, displayName, description, memberships, permissions },
   ...props
 }) => (
@@ -49,7 +50,9 @@ export const OrganizationSettings = ({
             />
             <Route
               path={`${url}/members`}
-              render={() => <MemberSettings memberships={memberships} />}
+              render={() => (
+                <MemberSettings me={me} id={id} memberships={memberships} />
+              )}
             />
           </Switch>
         </Container>
