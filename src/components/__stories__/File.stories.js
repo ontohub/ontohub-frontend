@@ -22,7 +22,7 @@ const zipData = `UEsDBBQACAAIAK9tcUsAAAAAAAAAAAAAAAALABAAb250b2h1Yi5zdmdVWAwA\nz
 const textData =
   `function onLoad(editor) {
   console.log("I've loaded!");
-}` + "\n".repeat(100);
+}` + "\n".repeat(2);
 
 storiesOf("File", module)
   .addDecorator(Decorator)
@@ -41,6 +41,19 @@ storiesOf("File", module)
   .add("ZIP Archive", () => (
     <File filename="ontohub.svg.zip" encoding="base64" value={zipData} />
   ))
-  .add("Text Document", () => (
-    <File filename="onLoad.js" encoding="plain" value={textData} />
+  .add("Text Document (read-only)", () => (
+    <File
+      filename="onLoad.js"
+      encoding="plain"
+      value={textData}
+      isEditingPermitted={false}
+    />
+  ))
+  .add("Text Document (with editing allowed)", () => (
+    <File
+      filename="onLoad.js"
+      encoding="plain"
+      value={textData}
+      isEditingPermitted={true}
+    />
   ));

@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 import _ from "lodash";
-import styled, { css } from "styled-components";
-
-import brace from "brace";
-import AceEditor from "react-ace";
-import "brace/keybinding/vim";
-import "brace/theme/github";
+import styled from "styled-components";
+import { fileType } from "../../helpers/filetype";
 
 import ImageViewer from "./ImageViewer";
 import PDFViewer from "./PDFViewer";
 import Downloader from "./Downloader";
-import { fileType } from "../../helpers";
+import Editor from "./Editor";
 
-export const File = ({ filename, value, encoding }) => {
+export const File = ({ filename, value, encoding, ...editorProps }) => {
   switch (fileType(filename)) {
     case "image":
       return (
@@ -35,18 +31,11 @@ export const File = ({ filename, value, encoding }) => {
     default:
       // display text
       return (
-        <AceEditor
-          theme="github"
-          name={`editor-${filename}`}
-          value={value}
+        <Editor
+          filename={filename}
+          initialValue={value}
           defaultValue={value}
-          editorProps={{ $blockScrolling: true }}
-          setOptions={{ cursorStyle: "smooth" }}
-          // keyboardHandler="vim"
-          width="100%"
-          height="100vh"
-          tabSize={2}
-          debounceChangePeriod={500}
+          {...editorProps}
         />
       );
   }
