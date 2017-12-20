@@ -11,3 +11,6 @@ do
   fi
 done
 
+>&2 echo "No chrome or chromium executable found in PATH"
+
+exit 1
