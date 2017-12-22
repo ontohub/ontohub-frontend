@@ -6,7 +6,7 @@ import brace from "brace";
 import "brace/keybinding/vim";
 import "brace/theme/github";
 
-const StaticEditor = ({
+const PureEditor = ({
   reservedHeaderHeight,
   filename,
   value,
@@ -90,7 +90,7 @@ const StaticEditor = ({
   );
 };
 
-export default compose(
+export const Editor = compose(
   defaultProps({
     isEditingPermitted: false,
     reservedHeaderHeight: 0
@@ -122,4 +122,4 @@ export default compose(
       })
     }
   )
-)(StaticEditor);
+)(PureEditor);

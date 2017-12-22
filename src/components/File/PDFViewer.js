@@ -4,7 +4,7 @@ import { compose, defaultProps, withProps, withStateHandlers } from "recompose";
 import { Button, Icon, Label } from "semantic-ui-react";
 import PDF from "react-pdf-js";
 
-const RawPagination = ({
+const UnstyledPagination = ({
   className,
   page,
   pagesCount,
@@ -35,12 +35,12 @@ const RawPagination = ({
     </Button.Group>
   );
 };
-const Pagination = styled(RawPagination)`
+const Pagination = styled(UnstyledPagination)`
   text-align: center;
   width: 100%;
 `;
 
-const Viewer = ({
+const PurePDFViewer = ({
   page,
   pagesCount,
   handlePrevious,
@@ -65,7 +65,7 @@ const Viewer = ({
   </div>
 );
 
-export default compose(
+export const PDFViewer = compose(
   defaultProps({ fillWidth: true, fillHeight: true }),
   withStateHandlers(
     ({ initialPage = 1, initialPagesCount = 1 }) => ({
@@ -88,4 +88,4 @@ export default compose(
       })
     }
   )
-)(Viewer);
+)(PurePDFViewer);

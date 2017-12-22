@@ -3,10 +3,10 @@ import _ from "lodash";
 import styled from "styled-components";
 import { fileType } from "../../helpers/filetype";
 
-import ImageViewer from "./ImageViewer";
-import PDFViewer from "./PDFViewer";
-import Downloader from "./Downloader";
-import Editor from "./Editor";
+import { ImageViewer } from "./ImageViewer";
+import { PDFViewer } from "./PDFViewer";
+import { Downloader } from "./Downloader";
+import { Editor } from "./Editor";
 
 export const File = ({ filename, value, encoding, ...editorProps }) => {
   switch (fileType(filename)) {
