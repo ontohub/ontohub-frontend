@@ -33,7 +33,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.18",
     "@storybook/addon-info": "^3.2.18",
-    "@storybook/react": "^3.2.18",
+    "@storybook/react": "^3.2.19",
     "codecov": "^3.0.0",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.1",
