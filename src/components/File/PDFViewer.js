@@ -1,18 +1,21 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { compose, defaultProps, withProps, withStateHandlers } from "recompose";
-import { Button, Icon, Label } from "semantic-ui-react";
+import { Button, Form, Icon, Input, Label } from "semantic-ui-react";
 import PDF from "react-pdf-js";
 
 const UnstyledPagination = ({
   className,
   page,
+  pageInInput,
   pagesCount,
   handlePrevious,
-  handleNext
+  handleNext,
+  changePageInInputTo,
+  changePageTo
 }) => {
   return (
-    <Button.Group className={className}>
+    <div className={`row ${className}`}>
       <Button
         onClick={handlePrevious}
         disabled={page === 1}
@@ -22,7 +25,23 @@ const UnstyledPagination = ({
         <Icon name="angle double left" />
         Previous Page
       </Button>
-      <Button.Or text={`${page}/${pagesCount}`} />
+      <form
+        onSubmit={event => {
+          event.preventDefault();
+          changePageTo(pageInInput);
+        }}
+      >
+        <Input labelPosition="right" type="text" placeholder="Page">
+          <input
+            style={{ textAlign: "right" }}
+            value={pageInInput}
+            onChange={event => {
+              changePageInInputTo(event.target.value);
+            }}
+          />
+          <Label>of {pagesCount}</Label>
+        </Input>
+      </form>
       <Button
         onClick={handleNext}
         disabled={page === pagesCount}
@@ -32,19 +51,36 @@ const UnstyledPagination = ({
         Next Page
         <Icon name="angle double right" />
       </Button>
-    </Button.Group>
+    </div>
   );
 };
 const Pagination = styled(UnstyledPagination)`
   text-align: center;
   width: 100%;
+  & form {
+    display: inline-block;
+    margin: 0 0.25em 0 0;
+    padding: 0.125em 0 0 0;
+  }
+  & form input {
+    width: 4em;
+    height: 36px;
+  }
+  & form .label {
+    width: 4em;
+    height: 36px;
+    text-align: left;
+  }
 `;
 
 const PurePDFViewer = ({
   page,
   pagesCount,
+  pageInInput,
   handlePrevious,
   handleNext,
+  changePageInInputTo,
+  changePageTo,
   onDocumentComplete,
   onPageComplete,
   ...pdfProps
@@ -52,9 +88,12 @@ const PurePDFViewer = ({
   <div>
     <Pagination
       page={page}
+      pageInInput={pageInInput}
       pagesCount={pagesCount}
       handlePrevious={handlePrevious}
       handleNext={handleNext}
+      changePageTo={changePageTo}
+      changePageInInputTo={changePageInInputTo}
     />
     <PDF
       onDocumentComplete={onDocumentComplete}
@@ -70,7 +109,8 @@ export const PDFViewer = compose(
   withStateHandlers(
     ({ initialPage = 1, initialPagesCount = 1 }) => ({
       page: initialPage,
-      pagesCount: initialPagesCount
+      pagesCount: initialPagesCount,
+      pageInInput: initialPage
     }),
     {
       onDocumentComplete: () => pagesCount => ({
@@ -78,14 +118,24 @@ export const PDFViewer = compose(
         pagesCount: pagesCount
       }),
       onPageComplete: () => page => ({
-        page: page
+        page: page,
+        pageInInput: page
       }),
       handlePrevious: ({ page }) => () => ({
         page: page - 1
       }),
       handleNext: ({ page }) => () => ({
         page: page + 1
-      })
+      }),
+      changePageInInputTo: () => newPage => ({
+        pageInInput: newPage
+      }),
+      changePageTo: ({ pagesCount }) => newPage => {
+        const pageInt = parseInt(newPage);
+        if (pageInt && 1 <= pageInt && pageInt <= pagesCount) {
+          return { page: pageInt };
+        }
+      }
     }
   )
 )(PurePDFViewer);
