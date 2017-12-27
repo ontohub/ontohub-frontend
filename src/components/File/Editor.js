@@ -1,6 +1,6 @@
 import React from "react";
 import { compose, defaultProps, withProps, withStateHandlers } from "recompose";
-import { Button, Grid } from "semantic-ui-react";
+import { Button, Header, Icon, Modal } from "semantic-ui-react";
 import AceEditor from "react-ace";
 import brace from "brace";
 import "brace/keybinding/vim";
@@ -23,6 +23,9 @@ const PureEditor = ({
   cursorPositionWasSet,
   setInitialCursorPosition,
   keepCursorAt,
+  revertChangesModalIsOpen,
+  openRevertChangesModal,
+  closeRevertChangesModal,
 
   ...aceEditorProps
 }) => {
@@ -43,18 +46,48 @@ const PureEditor = ({
             content={isEditing ? "Editing Mode" : "Reading Mode"}
           />
           {isEditing && (
-            <Button
-              onClick={() => {
-                if (confirm("Really revert the changes?")) {
-                  resetValue(defaultValue);
-                  toggleEditingMode();
-                  editor.refEditor.getElementsByTagName("textarea")[0].focus();
-                }
-              }}
-              color="red"
-              icon="trash outline"
-              content="Revert Changes"
-            />
+            <Modal
+              trigger={
+                <Button
+                  color="red"
+                  icon="trash outline"
+                  content="Discard Changes"
+                  onClick={openRevertChangesModal}
+                />
+              }
+              basic
+              size="small"
+              open={revertChangesModalIsOpen}
+            >
+              <Header icon="trash outline" content="Discard Changes" />
+              <Modal.Content>
+                <p>Revert the changes to the original state?</p>
+              </Modal.Content>
+              <Modal.Actions>
+                <Button
+                  color="grey"
+                  icon="close"
+                  content="Cancel"
+                  inverted
+                  onClick={closeRevertChangesModal}
+                />
+                <Button
+                  onClick={() => {
+                    resetValue(defaultValue);
+                    closeRevertChangesModal();
+                    toggleEditingMode();
+                    editor.refEditor
+                      .getElementsByTagName("textarea")[0]
+                      .focus();
+                  }}
+                  basic
+                  color="red"
+                  icon="trash outline"
+                  content="Discard"
+                  inverted
+                />
+              </Modal.Actions>
+            </Modal>
           )}
         </Button.Group>
       )}
@@ -104,7 +137,8 @@ export const Editor = compose(
     }) => ({
       isEditing: isEditingInitially,
       value: initialValue,
-      cursorPosition: initialCursorPosition
+      cursorPosition: initialCursorPosition,
+      revertChangesModalIsOpen: false
     }),
     {
       toggleEditingMode: ({ isEditing }) => () => ({
@@ -119,7 +153,9 @@ export const Editor = compose(
       setInitialCursorPosition: () => () => ({ cursorPositionWasSet: true }),
       keepCursorAt: () => currentCursorPosition => ({
         cursorPosition: currentCursorPosition
-      })
+      }),
+      openRevertChangesModal: () => () => ({ revertChangesModalIsOpen: true }),
+      closeRevertChangesModal: () => () => ({ revertChangesModalIsOpen: false })
     }
   )
 )(PureEditor);

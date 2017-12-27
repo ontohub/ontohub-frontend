@@ -1,5 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import { ThemeProvider } from "styled-components";
 import theme from "../../styles";
 
@@ -27,22 +28,54 @@ const textData =
 storiesOf("File", module)
   .addDecorator(Decorator)
   .add("JPG Image", () => (
-    <File filename="ontohub.jpg" encoding="base64" value={jpgData} />
+    <File
+      onRaw={action("onRaw ontohub.jpg")}
+      onDelete={action("onDelete ontohub.jpg")}
+      filename="ontohub.jpg"
+      encoding="base64"
+      value={jpgData}
+    />
   ))
   .add("PNG Image", () => (
-    <File filename="ontohub.png" encoding="base64" value={pngData} />
+    <File
+      onRaw={action("onRaw ontohub.png")}
+      onDelete={action("onDelete ontohub.png")}
+      filename="ontohub.png"
+      encoding="base64"
+      value={pngData}
+    />
   ))
   .add("SVG Image", () => (
-    <File filename="ontohub.svg" encoding="plain" value={svgData} />
+    <File
+      onRaw={action("onRaw ontohub.svg")}
+      onDelete={action("onDelete ontohub.svg")}
+      filename="ontohub.svg"
+      encoding="plain"
+      value={svgData}
+    />
   ))
   .add("PDF Document", () => (
-    <File filename="ontohub.pdf" encoding="plain" value={pdfData} />
+    <File
+      onRaw={action("onRaw ontohub.pdf")}
+      onDelete={action("onDelete ontohub.pdf")}
+      filename="ontohub.pdf"
+      encoding="plain"
+      value={pdfData}
+    />
   ))
   .add("ZIP Archive", () => (
-    <File filename="ontohub.svg.zip" encoding="base64" value={zipData} />
+    <File
+      onRaw={action("onRaw ontohub.svg.zip")}
+      onDelete={action("onDelete ontohub.svg.zip")}
+      filename="ontohub.svg.zip"
+      encoding="base64"
+      value={zipData}
+    />
   ))
   .add("Text Document (read-only)", () => (
     <File
+      onRaw={action("onRaw onLoad.js")}
+      onDelete={action("onDelete onLoad.js")}
       filename="onLoad.js"
       encoding="plain"
       value={textData}
@@ -51,6 +84,8 @@ storiesOf("File", module)
   ))
   .add("Text Document (with editing allowed)", () => (
     <File
+      onRaw={action("onRaw onLoad.js")}
+      onDelete={action("onDelete onLoad.js")}
       filename="onLoad.js"
       encoding="plain"
       value={textData}
