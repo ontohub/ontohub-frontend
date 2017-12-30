@@ -1,10 +1,10 @@
 import React from "react";
-import GitLsFilesToTree from "../GitLsFilesToTree";
+import { gitLsFilesToTree } from "../gitLsFilesToTree";
 
-describe("GitLsFilesToTree", () => {
+describe("gitLsFilesToTree", () => {
   describe("given an empty array", () => {
     it("results in an empty object", () => {
-      expect(GitLsFilesToTree([])).toEqual({});
+      expect(gitLsFilesToTree([])).toEqual({});
     });
   });
 
@@ -27,7 +27,7 @@ describe("GitLsFilesToTree", () => {
         "some file 2",
         "some file 3"
       ];
-      expect(GitLsFilesToTree(input)).toMatchSnapshot();
+      expect(gitLsFilesToTree(input)).toMatchSnapshot();
     });
   });
 });

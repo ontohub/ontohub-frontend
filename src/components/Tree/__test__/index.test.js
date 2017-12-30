@@ -1,12 +1,12 @@
 import React from "react";
 import { mount, render } from "enzyme";
-import GitLsFilesToTree from "../GitLsFilesToTree";
+import { gitLsFilesToTree } from "../gitLsFilesToTree";
 import { DirectoryTree } from "..";
 
 describe("DirectoryTree", () => {
   const component = (
     <DirectoryTree
-      tree={GitLsFilesToTree([
+      tree={gitLsFilesToTree([
         "bin/bash",
         "bin/sh",
         "usr/local/bin/true",

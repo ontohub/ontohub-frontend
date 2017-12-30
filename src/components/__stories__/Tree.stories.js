@@ -13,7 +13,7 @@ import {
   fileLabel
 } from "../Tree";
 import { Icon, List } from "semantic-ui-react";
-import GitLsFilesToTree from "../Tree/GitLsFilesToTree";
+import { gitLsFilesToTree } from "../Tree/gitLsFilesToTree";
 
 const Decorator = storyFn => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
@@ -23,7 +23,7 @@ storiesOf("Tree", module)
   .addDecorator(Decorator)
   .add("Exhaustive pattern", () => (
     <Tree
-      tree={GitLsFilesToTree([
+      tree={gitLsFilesToTree([
         "A/AA/AAA/a",
         "A/AB/ABA/a",
         "A/AB/ABA/b",
@@ -53,7 +53,7 @@ storiesOf("Tree", module)
   ))
   .add("with seed entries", () => (
     <DirectoryTree
-      tree={GitLsFilesToTree([
+      tree={gitLsFilesToTree([
         "Basic/Numbers.casl",
         "Basic/RelationsAndOrders.casl",
         "NativeDocuments/cat.clif",

@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DirectoryTree after clicking on a directory opener after clicking on a directory closer matches the snapshot 1`] = `
+.c0 .subtree-container-height {
+  -webkit-transition: height 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
+}
+
+.c1 {
+  width: 100%;
+}
+
 <defaultProps(withStateHandlers(Component))
   initiallyOpenNodes={
     Array [
@@ -1382,7 +1391,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                   key="/"
                 >
                   <div
-                    className="sc-bdVaJa eucJam"
+                    className="c0"
                   >
                     <List>
                       <div
@@ -1485,7 +1494,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                 }
                               >
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                   style={
                                     Object {
                                       "paddingLeft": 0,
@@ -1493,7 +1502,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                   }
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                     style={
                                       Object {
                                         "paddingLeft": 0,
@@ -1639,7 +1648,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                 }
                               >
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                   style={
                                     Object {
                                       "paddingLeft": 0,
@@ -1647,7 +1656,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                   }
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                     style={
                                       Object {
                                         "paddingLeft": 0,
@@ -1716,7 +1725,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                 key="usr"
                                               >
                                                 <div
-                                                  className="sc-bdVaJa eucJam"
+                                                  className="c0"
                                                 >
                                                   <ListList
                                                     style={
@@ -1829,7 +1838,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                               }
                                                             >
                                                               <ListContent
-                                                                className="sc-bwzfXH jwfMIB"
+                                                                className="c1"
                                                                 style={
                                                                   Object {
                                                                     "paddingLeft": 0,
@@ -1837,7 +1846,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                                 }
                                                               >
                                                                 <div
-                                                                  className="content sc-bwzfXH jwfMIB"
+                                                                  className="content c1"
                                                                   style={
                                                                     Object {
                                                                       "paddingLeft": 0,
@@ -1901,7 +1910,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                                               key="usr/local"
                                                                             >
                                                                               <div
-                                                                                className="sc-bdVaJa eucJam"
+                                                                                className="c0"
                                                                               >
                                                                                 <ListList
                                                                                   style={
@@ -2014,7 +2023,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                                                             }
                                                                                           >
                                                                                             <ListContent
-                                                                                              className="sc-bwzfXH jwfMIB"
+                                                                                              className="c1"
                                                                                               style={
                                                                                                 Object {
                                                                                                   "paddingLeft": 0,
@@ -2022,7 +2031,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                                                               }
                                                                                             >
                                                                                               <div
-                                                                                                className="content sc-bwzfXH jwfMIB"
+                                                                                                className="content c1"
                                                                                                 style={
                                                                                                   Object {
                                                                                                     "paddingLeft": 0,
@@ -2078,7 +2087,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                                                                             key="usr/local/bin"
                                                                                                           >
                                                                                                             <div
-                                                                                                              className="sc-bdVaJa eucJam"
+                                                                                                              className="c0"
                                                                                                             >
                                                                                                               <ListList
                                                                                                                 style={
@@ -2126,10 +2135,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                                                                                         </ListIcon>
                                                                                                                         <Styled(ListContent)>
                                                                                                                           <ListContent
-                                                                                                                            className="sc-bwzfXH jwfMIB"
+                                                                                                                            className="c1"
                                                                                                                           >
                                                                                                                             <div
-                                                                                                                              className="content sc-bwzfXH jwfMIB"
+                                                                                                                              className="content c1"
                                                                                                                             >
                                                                                                                               <ListHeader>
                                                                                                                                 <div
@@ -2175,10 +2184,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                                                                                         </ListIcon>
                                                                                                                         <Styled(ListContent)>
                                                                                                                           <ListContent
-                                                                                                                            className="sc-bwzfXH jwfMIB"
+                                                                                                                            className="c1"
                                                                                                                           >
                                                                                                                             <div
-                                                                                                                              className="content sc-bwzfXH jwfMIB"
+                                                                                                                              className="content c1"
                                                                                                                             >
                                                                                                                               <ListHeader>
                                                                                                                                 <div
@@ -2304,7 +2313,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                                                             }
                                                                                           >
                                                                                             <ListContent
-                                                                                              className="sc-bwzfXH jwfMIB"
+                                                                                              className="c1"
                                                                                               style={
                                                                                                 Object {
                                                                                                   "paddingLeft": 0,
@@ -2312,7 +2321,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                                                                               }
                                                                                             >
                                                                                               <div
-                                                                                                className="content sc-bwzfXH jwfMIB"
+                                                                                                className="content c1"
                                                                                                 style={
                                                                                                   Object {
                                                                                                     "paddingLeft": 0,
@@ -2486,7 +2495,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                 }
                               >
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                   style={
                                     Object {
                                       "paddingLeft": 0,
@@ -2494,7 +2503,7 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                                   }
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                     style={
                                       Object {
                                         "paddingLeft": 0,
@@ -2575,10 +2584,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -2624,10 +2633,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -2673,10 +2682,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -2722,10 +2731,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -2771,10 +2780,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -2820,10 +2829,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -2869,10 +2878,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -2918,10 +2927,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -2967,10 +2976,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3016,10 +3025,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3065,10 +3074,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3114,10 +3123,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3163,10 +3172,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3212,10 +3221,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3261,10 +3270,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3310,10 +3319,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3359,10 +3368,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3408,10 +3417,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3457,10 +3466,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3506,10 +3515,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3555,10 +3564,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3604,10 +3613,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3653,10 +3662,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3702,10 +3711,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3751,10 +3760,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3800,10 +3809,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3849,10 +3858,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3898,10 +3907,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3947,10 +3956,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -3996,10 +4005,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4045,10 +4054,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4094,10 +4103,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4143,10 +4152,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4192,10 +4201,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4241,10 +4250,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4290,10 +4299,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4339,10 +4348,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4388,10 +4397,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4437,10 +4446,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4486,10 +4495,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4535,10 +4544,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4584,10 +4593,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4633,10 +4642,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4682,10 +4691,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4731,10 +4740,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4780,10 +4789,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4829,10 +4838,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4878,10 +4887,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4927,10 +4936,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -4976,10 +4985,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5025,10 +5034,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5074,10 +5083,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5123,10 +5132,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5172,10 +5181,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5221,10 +5230,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5270,10 +5279,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5319,10 +5328,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5368,10 +5377,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5417,10 +5426,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5466,10 +5475,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5515,10 +5524,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5564,10 +5573,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5613,10 +5622,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5662,10 +5671,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5711,10 +5720,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5760,10 +5769,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5809,10 +5818,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5858,10 +5867,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5907,10 +5916,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -5956,10 +5965,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6005,10 +6014,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6054,10 +6063,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6103,10 +6112,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6152,10 +6161,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6201,10 +6210,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6250,10 +6259,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6299,10 +6308,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6348,10 +6357,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6397,10 +6406,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6446,10 +6455,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6495,10 +6504,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6544,10 +6553,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6593,10 +6602,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6642,10 +6651,10 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -6675,6 +6684,15 @@ exports[`DirectoryTree after clicking on a directory opener after clicking on a 
 `;
 
 exports[`DirectoryTree after clicking on a directory opener matches the snapshot 1`] = `
+.c0 .subtree-container-height {
+  -webkit-transition: height 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
+}
+
+.c1 {
+  width: 100%;
+}
+
 <defaultProps(withStateHandlers(Component))
   initiallyOpenNodes={
     Array [
@@ -8056,7 +8074,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                   key="/"
                 >
                   <div
-                    className="sc-bdVaJa eucJam"
+                    className="c0"
                   >
                     <List>
                       <div
@@ -8159,7 +8177,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                 }
                               >
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                   style={
                                     Object {
                                       "paddingLeft": 0,
@@ -8167,7 +8185,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                   }
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                     style={
                                       Object {
                                         "paddingLeft": 0,
@@ -8313,7 +8331,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                 }
                               >
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                   style={
                                     Object {
                                       "paddingLeft": 0,
@@ -8321,7 +8339,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                   }
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                     style={
                                       Object {
                                         "paddingLeft": 0,
@@ -8390,7 +8408,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                 key="usr"
                                               >
                                                 <div
-                                                  className="sc-bdVaJa eucJam"
+                                                  className="c0"
                                                 >
                                                   <ListList
                                                     style={
@@ -8503,7 +8521,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                               }
                                                             >
                                                               <ListContent
-                                                                className="sc-bwzfXH jwfMIB"
+                                                                className="c1"
                                                                 style={
                                                                   Object {
                                                                     "paddingLeft": 0,
@@ -8511,7 +8529,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                                 }
                                                               >
                                                                 <div
-                                                                  className="content sc-bwzfXH jwfMIB"
+                                                                  className="content c1"
                                                                   style={
                                                                     Object {
                                                                       "paddingLeft": 0,
@@ -8575,7 +8593,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                                               key="usr/local"
                                                                             >
                                                                               <div
-                                                                                className="sc-bdVaJa eucJam"
+                                                                                className="c0"
                                                                               >
                                                                                 <ListList
                                                                                   style={
@@ -8688,7 +8706,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                                                             }
                                                                                           >
                                                                                             <ListContent
-                                                                                              className="sc-bwzfXH jwfMIB"
+                                                                                              className="c1"
                                                                                               style={
                                                                                                 Object {
                                                                                                   "paddingLeft": 0,
@@ -8696,7 +8714,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                                                               }
                                                                                             >
                                                                                               <div
-                                                                                                className="content sc-bwzfXH jwfMIB"
+                                                                                                className="content c1"
                                                                                                 style={
                                                                                                   Object {
                                                                                                     "paddingLeft": 0,
@@ -8752,7 +8770,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                                                                             key="usr/local/bin"
                                                                                                           >
                                                                                                             <div
-                                                                                                              className="sc-bdVaJa eucJam"
+                                                                                                              className="c0"
                                                                                                             >
                                                                                                               <ListList
                                                                                                                 style={
@@ -8800,10 +8818,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                                                                                         </ListIcon>
                                                                                                                         <Styled(ListContent)>
                                                                                                                           <ListContent
-                                                                                                                            className="sc-bwzfXH jwfMIB"
+                                                                                                                            className="c1"
                                                                                                                           >
                                                                                                                             <div
-                                                                                                                              className="content sc-bwzfXH jwfMIB"
+                                                                                                                              className="content c1"
                                                                                                                             >
                                                                                                                               <ListHeader>
                                                                                                                                 <div
@@ -8849,10 +8867,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                                                                                         </ListIcon>
                                                                                                                         <Styled(ListContent)>
                                                                                                                           <ListContent
-                                                                                                                            className="sc-bwzfXH jwfMIB"
+                                                                                                                            className="c1"
                                                                                                                           >
                                                                                                                             <div
-                                                                                                                              className="content sc-bwzfXH jwfMIB"
+                                                                                                                              className="content c1"
                                                                                                                             >
                                                                                                                               <ListHeader>
                                                                                                                                 <div
@@ -8978,7 +8996,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                                                             }
                                                                                           >
                                                                                             <ListContent
-                                                                                              className="sc-bwzfXH jwfMIB"
+                                                                                              className="c1"
                                                                                               style={
                                                                                                 Object {
                                                                                                   "paddingLeft": 0,
@@ -8986,7 +9004,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                                                                               }
                                                                                             >
                                                                                               <div
-                                                                                                className="content sc-bwzfXH jwfMIB"
+                                                                                                className="content c1"
                                                                                                 style={
                                                                                                   Object {
                                                                                                     "paddingLeft": 0,
@@ -9160,7 +9178,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                 }
                               >
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                   style={
                                     Object {
                                       "paddingLeft": 0,
@@ -9168,7 +9186,7 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                                   }
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                     style={
                                       Object {
                                         "paddingLeft": 0,
@@ -9249,10 +9267,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9298,10 +9316,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9347,10 +9365,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9396,10 +9414,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9445,10 +9463,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9494,10 +9512,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9543,10 +9561,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9592,10 +9610,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9641,10 +9659,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9690,10 +9708,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9739,10 +9757,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9788,10 +9806,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9837,10 +9855,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9886,10 +9904,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9935,10 +9953,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -9984,10 +10002,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10033,10 +10051,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10082,10 +10100,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10131,10 +10149,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10180,10 +10198,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10229,10 +10247,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10278,10 +10296,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10327,10 +10345,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10376,10 +10394,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10425,10 +10443,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10474,10 +10492,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10523,10 +10541,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10572,10 +10590,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10621,10 +10639,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10670,10 +10688,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10719,10 +10737,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10768,10 +10786,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10817,10 +10835,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10866,10 +10884,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10915,10 +10933,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -10964,10 +10982,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11013,10 +11031,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11062,10 +11080,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11111,10 +11129,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11160,10 +11178,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11209,10 +11227,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11258,10 +11276,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11307,10 +11325,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11356,10 +11374,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11405,10 +11423,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11454,10 +11472,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11503,10 +11521,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11552,10 +11570,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11601,10 +11619,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11650,10 +11668,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11699,10 +11717,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11748,10 +11766,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11797,10 +11815,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11846,10 +11864,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11895,10 +11913,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11944,10 +11962,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -11993,10 +12011,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12042,10 +12060,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12091,10 +12109,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12140,10 +12158,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12189,10 +12207,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12238,10 +12256,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12287,10 +12305,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12336,10 +12354,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12385,10 +12403,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12434,10 +12452,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12483,10 +12501,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12532,10 +12550,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12581,10 +12599,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12630,10 +12648,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12679,10 +12697,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12728,10 +12746,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12777,10 +12795,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12826,10 +12844,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12875,10 +12893,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12924,10 +12942,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -12973,10 +12991,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -13022,10 +13040,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -13071,10 +13089,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -13120,10 +13138,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -13169,10 +13187,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -13218,10 +13236,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -13267,10 +13285,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -13316,10 +13334,10 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
                               </ListIcon>
                               <Styled(ListContent)>
                                 <ListContent
-                                  className="sc-bwzfXH jwfMIB"
+                                  className="c1"
                                 >
                                   <div
-                                    className="content sc-bwzfXH jwfMIB"
+                                    className="content c1"
                                   >
                                     <ListHeader>
                                       <div
@@ -13349,12 +13367,21 @@ exports[`DirectoryTree after clicking on a directory opener matches the snapshot
 `;
 
 exports[`DirectoryTree matches the snapshot 1`] = `
+.c0 .subtree-container-height {
+  -webkit-transition: height 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
+}
+
+.c1 {
+  width: 100%;
+}
+
 <div
   style="width:100%"
 >
   <span>
     <div
-      class="sc-bdVaJa eucJam"
+      class="c0"
     >
       <div
         class="ui list"
@@ -13386,7 +13413,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             </i>
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
             style="padding-left:0"
           >
             <div
@@ -13427,7 +13454,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             </i>
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
             style="padding-left:0"
           >
             <div
@@ -13440,7 +13467,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             >
               <span>
                 <div
-                  class="sc-bdVaJa eucJam"
+                  class="c0"
                 >
                   <div
                     class="list"
@@ -13472,7 +13499,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
                         </i>
                       </i>
                       <div
-                        class="content sc-bwzfXH jwfMIB"
+                        class="content c1"
                         style="padding-left:0"
                       >
                         <div
@@ -13519,7 +13546,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             </i>
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
             style="padding-left:0"
           >
             <div
@@ -13545,7 +13572,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13565,7 +13592,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13585,7 +13612,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13605,7 +13632,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13625,7 +13652,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13645,7 +13672,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13665,7 +13692,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13685,7 +13712,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13705,7 +13732,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13725,7 +13752,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13745,7 +13772,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13765,7 +13792,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13785,7 +13812,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13805,7 +13832,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13825,7 +13852,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13845,7 +13872,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13865,7 +13892,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13885,7 +13912,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13905,7 +13932,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13925,7 +13952,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13945,7 +13972,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13965,7 +13992,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -13985,7 +14012,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14005,7 +14032,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14025,7 +14052,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14045,7 +14072,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14065,7 +14092,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14085,7 +14112,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14105,7 +14132,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14125,7 +14152,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14145,7 +14172,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14165,7 +14192,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14185,7 +14212,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14205,7 +14232,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14225,7 +14252,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14245,7 +14272,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14265,7 +14292,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14285,7 +14312,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14305,7 +14332,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14325,7 +14352,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14345,7 +14372,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14365,7 +14392,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14385,7 +14412,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14405,7 +14432,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14425,7 +14452,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14445,7 +14472,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14465,7 +14492,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14485,7 +14512,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14505,7 +14532,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14525,7 +14552,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14545,7 +14572,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14565,7 +14592,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14585,7 +14612,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14605,7 +14632,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14625,7 +14652,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14645,7 +14672,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14665,7 +14692,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14685,7 +14712,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14705,7 +14732,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14725,7 +14752,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14745,7 +14772,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14765,7 +14792,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14785,7 +14812,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14805,7 +14832,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14825,7 +14852,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14845,7 +14872,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14865,7 +14892,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14885,7 +14912,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14905,7 +14932,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14925,7 +14952,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14945,7 +14972,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14965,7 +14992,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -14985,7 +15012,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15005,7 +15032,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15025,7 +15052,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15045,7 +15072,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15065,7 +15092,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15085,7 +15112,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15105,7 +15132,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15125,7 +15152,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15145,7 +15172,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15165,7 +15192,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15185,7 +15212,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"
@@ -15205,7 +15232,7 @@ exports[`DirectoryTree matches the snapshot 1`] = `
             
           </i>
           <div
-            class="content sc-bwzfXH jwfMIB"
+            class="content c1"
           >
             <div
               class="header"

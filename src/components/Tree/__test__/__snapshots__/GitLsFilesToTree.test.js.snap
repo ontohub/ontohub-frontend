@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GitLsFilesToTree given some real-world data results in the correct tree data 1`] = `
+exports[`gitLsFilesToTree given some real-world data results in the correct tree data 1`] = `
 Object {
   "directories": Object {
     "bin": Object {

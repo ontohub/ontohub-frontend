@@ -1,15 +1,15 @@
 import _ from "lodash";
 
-function insertInnerNodePaths(tree, parentPath) {
+const insertInnerNodePaths = (tree, parentPath) => {
   _.each(tree.directories, (subtree, directoryName) => {
     const path =
       parentPath == "" ? directoryName : `${parentPath}/${directoryName}`;
     subtree.path = path;
     insertInnerNodePaths(subtree, path);
   });
-}
+};
 
-export default function(gitLsFiles) {
+export const gitLsFilesToTree = gitLsFiles => {
   const resultTree = {};
   _.each(gitLsFiles, filepath => {
     const pathComponents = _.split(filepath, "/");
@@ -33,4 +33,4 @@ export default function(gitLsFiles) {
   });
   insertInnerNodePaths(resultTree, "");
   return resultTree;
-}
+};
