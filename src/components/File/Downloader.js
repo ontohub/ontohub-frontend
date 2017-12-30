@@ -32,7 +32,7 @@ export const DownloadButton = ({
 
 export const Downloader = ({ filename, encoding, value }) => {
   return (
-    <Grid columns={1}>
+    <Grid style={{ padding: "1em" }} columns={1}>
       <Grid.Row>
         <Grid.Column textAlign="center">
           <Container>This file type cannot be displayed.</Container>

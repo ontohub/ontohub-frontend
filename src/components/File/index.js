@@ -79,7 +79,7 @@ const ControlsRaw = ({ onClick, display }) => {
       <ControlButton
         name="raw"
         icon="file outline"
-        label="Raw"
+        label="Raw File"
         onClick={onClick}
       />
     );
@@ -94,7 +94,7 @@ const ControlsRemove = ({ onClick, display }) => {
       <ControlButton
         name="delete"
         icon="trash"
-        label="Delete"
+        label="Delete File"
         onClick={onClick}
         negative
       />

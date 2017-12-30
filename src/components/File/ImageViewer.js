@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import mime from "mime-types";
 
 export const ImageViewer = ({ filename, encoding, value }) => {
@@ -6,7 +7,7 @@ export const ImageViewer = ({ filename, encoding, value }) => {
   const imageEncoding = encoding === "base64" ? encoding : "utf8";
   return (
     <img
-      style={{ maxWidth: "100%" }}
+      style={{ padding: "1em", maxWidth: "100%" }}
       src={`data:${contentType};${imageEncoding},${value}`}
       alt={filename}
     />
