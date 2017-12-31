@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import theme from "../../../../styles";
 import { ThemeProvider } from "styled-components";
-import theme from "../../styles";
 
 import { File } from "../File";
 
@@ -59,7 +59,7 @@ storiesOf("File", module)
       onRaw={action("onRaw ontohub.pdf")}
       onDelete={action("onDelete ontohub.pdf")}
       filename="ontohub.pdf"
-      encoding="plain"
+      encoding="base64"
       value={pdfData}
     />
   ))

@@ -1,9 +1,8 @@
 import React from "react";
-
 import { storiesOf } from "@storybook/react";
+import theme from "../../../../styles";
 
 import { ThemeProvider } from "styled-components";
-import theme from "../../styles";
 import {
   DynamicTree as Tree,
   DirectoryTree,

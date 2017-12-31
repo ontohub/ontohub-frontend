@@ -3,7 +3,7 @@ import _ from "lodash";
 import styled, { css } from "styled-components";
 import { compose, defaultProps, withProps, withStateHandlers } from "recompose";
 import { Accordion, Button, Icon, Transition } from "semantic-ui-react";
-import { media } from "../helpers";
+import { media } from "../../../helpers";
 
 const Container = styled.div`
   box-sizing: border-box;

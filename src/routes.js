@@ -5,7 +5,9 @@ import {
   Home,
   HomeHeader,
   OrganizationalUnit,
-  OrganizationalUnitHeader
+  OrganizationalUnitHeader,
+  Repository,
+  RepositoryHeader
 } from "./scenes";
 
 export default [
@@ -25,5 +27,11 @@ export default [
         variables: { id: organizationalUnitId }
       })
     })
+  },
+  {
+    path: "/:organizationalUnitId/:repositoryId",
+    exact: true,
+    header: RepositoryHeader,
+    main: Repository
   }
 ];

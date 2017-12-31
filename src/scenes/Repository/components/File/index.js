@@ -5,8 +5,8 @@ import { ReactHeight } from "react-height";
 import { compose, defaultProps, withStateHandlers } from "recompose";
 import { Button, Header, Icon, Menu, Popup, Segment } from "semantic-ui-react";
 
-import { media } from "../../helpers";
-import { fileType } from "../../helpers/filetype";
+import { media } from "../../../../helpers";
+import { fileType } from "../helpers/filetype";
 
 import { ImageViewer } from "./ImageViewer";
 import { PDFViewer } from "./PDFViewer";
@@ -116,14 +116,14 @@ const ControlsDownload = ({ filename, encoding, value }) => (
             value={value}
           />
         }
-        content="Download"
+        content="Download File"
         position="bottom right"
       />
     </OnMobile>
     <OnTabletAndUp>
       <DownloadButton
         icon="download"
-        label="Download"
+        label="Download File"
         filename={filename}
         encoding={encoding}
         value={value}

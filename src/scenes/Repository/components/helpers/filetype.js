@@ -95,6 +95,7 @@ export const fileType = name => {
     case "gen_trm":
     case "baf":
       return "code";
+    default:
+      return null;
   }
-  return null;
 };
