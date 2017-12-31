@@ -5,7 +5,7 @@ import theme from "../../../../styles";
 import { ThemeProvider } from "styled-components";
 import { ReactHeight } from "react-height";
 import { withState } from "recompose";
-import { RepositoryPanes } from "../RepositoryPanes";
+import { Panes } from "../Panes";
 
 const Decorator = storyFn => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
@@ -77,14 +77,14 @@ const updateHeight = newHeight => {
   height = newHeight;
 };
 
-storiesOf("RepositoryPanes", module)
+storiesOf("Panes", module)
   .addDecorator(Decorator)
   .add("Every pane opened", () => (
     <div>
       <ReactHeight onHeightReady={updateHeight}>
         <Header />
       </ReactHeight>
-      <RepositoryPanes
+      <Panes
         reservedHeaderHeight={height}
         childLeft={contentL}
         childCenter={contentC}
@@ -99,7 +99,7 @@ storiesOf("RepositoryPanes", module)
       <ReactHeight onHeightReady={updateHeight}>
         <Header />
       </ReactHeight>
-      <RepositoryPanes
+      <Panes
         reservedHeaderHeight={height}
         childLeft={contentL}
         childCenter={contentC}
@@ -114,7 +114,7 @@ storiesOf("RepositoryPanes", module)
       <ReactHeight onHeightReady={updateHeight}>
         <Header />
       </ReactHeight>
-      <RepositoryPanes
+      <Panes
         reservedHeaderHeight={height}
         childLeft={contentL}
         childCenter={contentC}
@@ -129,7 +129,7 @@ storiesOf("RepositoryPanes", module)
       <ReactHeight onHeightReady={updateHeight}>
         <Header />
       </ReactHeight>
-      <RepositoryPanes
+      <Panes
         reservedHeaderHeight={height}
         childLeft={contentL}
         childCenter={contentC}
@@ -144,7 +144,7 @@ storiesOf("RepositoryPanes", module)
       <ReactHeight onHeightReady={updateHeight}>
         <Header />
       </ReactHeight>
-      <RepositoryPanes
+      <Panes
         reservedHeaderHeight={height}
         childLeft={contentLWide}
         childCenter={contentCWide}

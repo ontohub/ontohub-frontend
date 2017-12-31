@@ -1,8 +1,8 @@
 import React from "react";
 import { mount, render } from "enzyme";
-import { RepositoryPanes } from "../RepositoryPanes";
+import { Panes } from "../Panes";
 
-describe("RepositoryPanes", () => {
+describe("Panes", () => {
   const ChildLeft = () => null;
   const ChildCenter = () => null;
   const ChildRight = () => null;
@@ -10,7 +10,7 @@ describe("RepositoryPanes", () => {
 
   describe("with default options", () => {
     const component = (
-      <RepositoryPanes
+      <Panes
         reservedHeaderHeight={reservedHeaderHeight}
         childLeft={ChildLeft}
         childCenter={ChildCenter}
@@ -28,7 +28,7 @@ describe("RepositoryPanes", () => {
     describe("starting at the left segment", () => {
       const mobileActiveSegment = "left";
       const component = (
-        <RepositoryPanes
+        <Panes
           reservedHeaderHeight={reservedHeaderHeight}
           childLeft={ChildLeft}
           childCenter={ChildCenter}
@@ -46,7 +46,7 @@ describe("RepositoryPanes", () => {
     describe("starting at the center segment", () => {
       const mobileActiveSegment = "center";
       const component = (
-        <RepositoryPanes
+        <Panes
           reservedHeaderHeight={reservedHeaderHeight}
           childLeft={ChildLeft}
           childCenter={ChildCenter}
@@ -64,7 +64,7 @@ describe("RepositoryPanes", () => {
     describe("starting at the right segment", () => {
       const mobileActiveSegment = "right";
       const component = (
-        <RepositoryPanes
+        <Panes
           reservedHeaderHeight={reservedHeaderHeight}
           childLeft={ChildLeft}
           childCenter={ChildCenter}
@@ -86,7 +86,7 @@ describe("RepositoryPanes", () => {
       const rightSegmentIsOpen = false;
 
       const component = (
-        <RepositoryPanes
+        <Panes
           reservedHeaderHeight={reservedHeaderHeight}
           childLeft={ChildLeft}
           childCenter={ChildCenter}
@@ -106,7 +106,7 @@ describe("RepositoryPanes", () => {
       const rightSegmentIsOpen = true;
 
       const component = (
-        <RepositoryPanes
+        <Panes
           reservedHeaderHeight={reservedHeaderHeight}
           childLeft={ChildLeft}
           childCenter={ChildCenter}
@@ -129,7 +129,7 @@ describe("RepositoryPanes", () => {
       const rightSegmentIsOpen = false;
 
       const component = (
-        <RepositoryPanes
+        <Panes
           reservedHeaderHeight={reservedHeaderHeight}
           childLeft={ChildLeft}
           childCenter={ChildCenter}
@@ -149,7 +149,7 @@ describe("RepositoryPanes", () => {
       const rightSegmentIsOpen = true;
 
       const component = (
-        <RepositoryPanes
+        <Panes
           reservedHeaderHeight={reservedHeaderHeight}
           childLeft={ChildLeft}
           childCenter={ChildCenter}
@@ -168,7 +168,7 @@ describe("RepositoryPanes", () => {
 
   describe("interactions", () => {
     const component = (
-      <RepositoryPanes
+      <Panes
         reservedHeaderHeight={reservedHeaderHeight}
         childLeft={ChildLeft}
         childCenter={ChildCenter}

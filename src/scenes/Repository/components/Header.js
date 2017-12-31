@@ -10,7 +10,7 @@ const PureHeader = ({
   console.log(repositoryId);
   return (
     <SemHeader inverted as="h1">
-      Header
+      {organizationalUnitId} / {repositoryId}
     </SemHeader>
   );
 };

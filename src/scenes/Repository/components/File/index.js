@@ -105,7 +105,7 @@ const ControlsRemove = ({ onClick, display }) => {
 };
 
 const ControlsDownload = ({ filename, encoding, value }) => (
-  <Menu.Item name={name}>
+  <Menu.Item name={filename}>
     <OnMobile>
       <Popup
         trigger={

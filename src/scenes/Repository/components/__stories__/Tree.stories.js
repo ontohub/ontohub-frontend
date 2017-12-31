@@ -12,7 +12,7 @@ import {
   fileLabel
 } from "../Tree";
 import { Icon, List } from "semantic-ui-react";
-import { gitLsFilesToTree } from "../Tree/gitLsFilesToTree";
+import { gitLsFilesToTree } from "../Tree/helpers";
 
 const Decorator = storyFn => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>

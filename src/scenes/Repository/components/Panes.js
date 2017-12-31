@@ -129,7 +129,7 @@ const TabletSegmentRight = styled.div`
   flex: 1;
 `;
 
-const StaticRepositoryPanes = ({
+const PurePanes = ({
   // Child components to display in the segments
   childLeft,
   childCenter,
@@ -349,7 +349,7 @@ const StaticRepositoryPanes = ({
   );
 };
 
-export const RepositoryPanes = compose(
+export const Panes = compose(
   defaultProps({
     labelLeft: "Left",
     labelCenter: "Center",
@@ -396,4 +396,4 @@ export const RepositoryPanes = compose(
       })
     }
   )
-)(StaticRepositoryPanes);
+)(PurePanes);
