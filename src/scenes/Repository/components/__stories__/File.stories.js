@@ -20,7 +20,11 @@ const pdfData = `JVBERi0xLjUKJdDUxdgKNSAwIG9iago8PAovTGVuZ3RoIDMwNiAgICAgICAK\nL
 
 const zipData = `UEsDBBQACAAIAK9tcUsAAAAAAAAAAAAAAAALABAAb250b2h1Yi5zdmdVWAwA\nzg85WurZDlr1ARQAxVlbb9s2FH5Ogf4HTn1ZAYkidaNk2CsWJ8sCdFuAdRn2\nFDiyYgvRJEOSL9mv3zmkJKuOU9eRkjQQL4f0d75zISmxw0+bfxOyivIiztKR\nxinTSJSG2TROZyNtWd4Zvvbpp/fvhj8YBrmI0iiflFk+ID9Ps9uIXCbJsiil\niHCfMsp08uf1BTnfLLK8JFfJcmZcpoRK4bVSMiAeZYycLuNkSthHQgxD4p/9\nMf7yz9U5KVYzcvXX6efLMdEM0/zbHpvm2ZczCcEpN83z3zWizctyMTDN9XpN\n1zbN8pl5kU8W8zgsTJho4kT4kQlgnNNpOdVQB0K3TOUaiacj7fPkIcpvoAOe\nSIvRHmiLMYZQ1ZTBJonT+30TeRAEphyFqSONLTYaeVD1+3cnZBVH69MMBwgj\n3HWopUp0+eQ2iYzbSXg/y7NlCrTSaE0ezQP9g2IxCaORtsijIspXkbRsBsWJ\nKk+G0+iukK2TYR6FpTQSnHJ5duPeaGQdT8s5mK8A51E8m5d111QAZoMwDJN4\ncTUp5y0QfqNV6MsiItLawTyP7kbah60WkoGj75JsPdJWcRGDcQ14Dam6M4J9\nYzFBUss8+fFDreVjrWZrzyODxHcZ1LZor0lWbdKTNolv2bRr1MkQzXnCMAsM\nI3dxkgA24/inESDym+1TT2dzISgPLU4dnelSxAW1VAuLlRxnOs4wmiGjGVdW\n/IrNsRyWfgAsbgssuUvFtRxlClkWlSr2X2PQdxrwi/ynDPA96uuID/RcahsO\ntfUAuMGDdWiAUGfQFTgk66AmHDI5quQ4XY6NfQv84OkKmcGERkd3poEATm2m\nola9n6k4zNT3FcHAqqmikk5UZVxcb4dqJ6famBCOUCF3OcxolHSiym23Z6bc\nZtADqhIamdY6uoe/X6Yy/EBUQfM6/P1Q5Rifo7gWO/wUd8WSWz4NqoVk282a\nQh3dM7XfRSUzFRaVgrbqTO28qDCL+mWqMtX3ZYJKprWOLVE4VKIjzoQNH2m4\n2cMbBMfjjAqQWY0MWphdR6KnWRppBF7Zsvuo5RQlMKqT1KYed1+KwRP2oat2\n0WVO1vDV8fziZh4k8hw7cckpeOkxCV/JrErlC8exdwZf2cctWBS78LVwB/9l\nA3kMk24Z+8aGHkGkY0TfeGkew6TjHiuhvrE0XiuiB4l024P2ufE1zpLeGRw8\nK1sLog3/anE8RKS3vXbrxjfeavcT6evdYLsaXvfdpycGB98JWtsaps4bvBN0\nYnA4T/FbQ8H7AXW6GVgr+9pARgPPOZ7BMy5sAB4/8ILQYNSqHg6Pq6tahJUc\n+m5VC53V3xGyjw+vxrEWYyTt6K68moEmb5pSV+uzJ0seZll6BOdFFqdlAXYL\noBGATuI7+AnDqUV8F78JfWoTwO47qz1B3VcL+hEEnhFzK4BPuybougqwW9UC\ng9nOBjlYZYXYxv1xTowB10FcR4eWDLXQG119BN3z5f0UBNgL6qB7HqiSidAx\n6HvfXFo7CQsgJj2cSQeDfwyR54QfoeRVCQ/xNpLpVfCr2g1RYrfiK6VV5A35\nkyol6tRwx8LDS17AtHVoBgpe32rqI/oC9nKdc0YULIOSCHm5DLJ28J/jE0zY\n6jaFg/EcNFjUMfCuCZ7Q4NJsFMGQUQ01tynyVk/J65+NgRpAuuBFBe6hb2o1\ntT+GpvpPD1nVZbHC+n9QSwcIxsO2QO4EAADVGgAAUEsBAhUDFAAIAAgAr21x\nS8bDtkDuBAAA1RoAAAsADAAAAAAAAAAAQKSBAAAAAG9udG9odWIuc3ZnVVgI\nAM4POVrq2Q5aUEsFBgAAAAABAAEARQAAADcFAAAAAA==\n`;
 
-const markdownData = `# Headers
+const markdownData = `# Demo
+This demo is taken from [github-markdown-css](https://github.com/sindresorhus/github-markdown-css).
+
+# Headers
+
 # H1
 ## H2
 ### H3
@@ -143,14 +147,33 @@ Reference-style:
 
 Inline \`code\` has \`back-ticks around\` it.
 
-\`\`\`javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+\`\`\`json
+{
+  "string": "Hello World",
+  "number": 0,
+  "array": [1, 2, 3]
+}
 \`\`\`
 
-\`\`\`python
-s = "Python syntax highlighting"
-print s
+\`\`\`xml
+<object>
+  <string>Hello World</string>
+  <number>0</number>
+  <array>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </array>
+</object>
+\`\`\`
+
+\`\`\`yaml
+string: Hello World
+number: 0
+array:
+  - 1
+  - 2
+  - 3
 \`\`\`
 
 \`\`\`
@@ -188,14 +211,14 @@ Quote break.
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
 
-# Inline HTML (HTML is escaped)
+# Inline HTML (HTML is escaped, so there is no HTML interpretation)
 
 <dl>
-    <dt>Definition list</dt>
-    <dd>Is something people use sometimes.</dd>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
 
-    <dt>Markdown in HTML</dt>
-    <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
 
 
@@ -279,7 +302,7 @@ storiesOf("File", module)
       value={zipData}
     />
   ))
-  .add("Markdown Preview", () => (
+  .add("Markdown", () => (
     <File
       onRaw={action("onRaw markdown")}
       onDelete={action("onDelete markdown")}
