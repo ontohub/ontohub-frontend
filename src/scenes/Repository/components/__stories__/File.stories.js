@@ -20,6 +20,213 @@ const pdfData = `JVBERi0xLjUKJdDUxdgKNSAwIG9iago8PAovTGVuZ3RoIDMwNiAgICAgICAK\nL
 
 const zipData = `UEsDBBQACAAIAK9tcUsAAAAAAAAAAAAAAAALABAAb250b2h1Yi5zdmdVWAwA\nzg85WurZDlr1ARQAxVlbb9s2FH5Ogf4HTn1ZAYkidaNk2CsWJ8sCdFuAdRn2\nFDiyYgvRJEOSL9mv3zmkJKuOU9eRkjQQL4f0d75zISmxw0+bfxOyivIiztKR\nxinTSJSG2TROZyNtWd4Zvvbpp/fvhj8YBrmI0iiflFk+ID9Ps9uIXCbJsiil\niHCfMsp08uf1BTnfLLK8JFfJcmZcpoRK4bVSMiAeZYycLuNkSthHQgxD4p/9\nMf7yz9U5KVYzcvXX6efLMdEM0/zbHpvm2ZczCcEpN83z3zWizctyMTDN9XpN\n1zbN8pl5kU8W8zgsTJho4kT4kQlgnNNpOdVQB0K3TOUaiacj7fPkIcpvoAOe\nSIvRHmiLMYZQ1ZTBJonT+30TeRAEphyFqSONLTYaeVD1+3cnZBVH69MMBwgj\n3HWopUp0+eQ2iYzbSXg/y7NlCrTSaE0ezQP9g2IxCaORtsijIspXkbRsBsWJ\nKk+G0+iukK2TYR6FpTQSnHJ5duPeaGQdT8s5mK8A51E8m5d111QAZoMwDJN4\ncTUp5y0QfqNV6MsiItLawTyP7kbah60WkoGj75JsPdJWcRGDcQ14Dam6M4J9\nYzFBUss8+fFDreVjrWZrzyODxHcZ1LZor0lWbdKTNolv2bRr1MkQzXnCMAsM\nI3dxkgA24/inESDym+1TT2dzISgPLU4dnelSxAW1VAuLlRxnOs4wmiGjGVdW\n/IrNsRyWfgAsbgssuUvFtRxlClkWlSr2X2PQdxrwi/ynDPA96uuID/RcahsO\ntfUAuMGDdWiAUGfQFTgk66AmHDI5quQ4XY6NfQv84OkKmcGERkd3poEATm2m\nola9n6k4zNT3FcHAqqmikk5UZVxcb4dqJ6famBCOUCF3OcxolHSiym23Z6bc\nZtADqhIamdY6uoe/X6Yy/EBUQfM6/P1Q5Rifo7gWO/wUd8WSWz4NqoVk282a\nQh3dM7XfRSUzFRaVgrbqTO28qDCL+mWqMtX3ZYJKprWOLVE4VKIjzoQNH2m4\n2cMbBMfjjAqQWY0MWphdR6KnWRppBF7Zsvuo5RQlMKqT1KYed1+KwRP2oat2\n0WVO1vDV8fziZh4k8hw7cckpeOkxCV/JrErlC8exdwZf2cctWBS78LVwB/9l\nA3kMk24Z+8aGHkGkY0TfeGkew6TjHiuhvrE0XiuiB4l024P2ufE1zpLeGRw8\nK1sLog3/anE8RKS3vXbrxjfeavcT6evdYLsaXvfdpycGB98JWtsaps4bvBN0\nYnA4T/FbQ8H7AXW6GVgr+9pARgPPOZ7BMy5sAB4/8ILQYNSqHg6Pq6tahJUc\n+m5VC53V3xGyjw+vxrEWYyTt6K68moEmb5pSV+uzJ0seZll6BOdFFqdlAXYL\noBGATuI7+AnDqUV8F78JfWoTwO47qz1B3VcL+hEEnhFzK4BPuybougqwW9UC\ng9nOBjlYZYXYxv1xTowB10FcR4eWDLXQG119BN3z5f0UBNgL6qB7HqiSidAx\n6HvfXFo7CQsgJj2cSQeDfwyR54QfoeRVCQ/xNpLpVfCr2g1RYrfiK6VV5A35\nkyol6tRwx8LDS17AtHVoBgpe32rqI/oC9nKdc0YULIOSCHm5DLJ28J/jE0zY\n6jaFg/EcNFjUMfCuCZ7Q4NJsFMGQUQ01tynyVk/J65+NgRpAuuBFBe6hb2o1\ntT+GpvpPD1nVZbHC+n9QSwcIxsO2QO4EAADVGgAAUEsBAhUDFAAIAAgAr21x\nS8bDtkDuBAAA1RoAAAsADAAAAAAAAAAAQKSBAAAAAG9udG9odWIuc3ZnVVgI\nAM4POVrq2Q5aUEsFBgAAAAABAAEARQAAADcFAAAAAA==\n`;
 
+const markdownData = `# Headers
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+
+
+# Emphasis
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+
+# Lists
+
+1. First ordered list item
+2. Another item
+  * Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
+  1. Ordered sub-list
+4. And another item.
+
+   You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+   To have a line break without a paragraph, you will need to use two trailing spaces.
+   Note that this line is separate, but within the same paragraph.
+   (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+
+
+1. foo
+    1. bar
+        1. baz
+            1. faz
+1. foo2
+
+* foo
+    * bar
+        * baz
+            * faz
+* foo2
+
+1. foo
+* bar
+    * baz
+        * faz
+* foo
+    1. bar
+        * baz
+            1. faz
+
+1. Lists in a list item:
+    * Indented four spaces.
+        * indented eight spaces.
+    * Four spaces again.
+1.  Multiple paragraphs in a list items: It's best to indent the paragraphs four spaces You can get away with three, but it can get confusing when you nest other things. Stick to four.
+
+    We indented the first line an extra space to align it with these paragraphs. In real use, we might do that to the entire list so that all items line up.
+
+    This paragraph is still part of the list item, but it looks messy to humans. So it's a good idea to wrap your nested paragraphs manually, as we did with the first two.
+1. Blockquotes in a list item
+    > Skip a line and indent the >'s four spaces.
+1.  Preformatted text in a list item:
+        Skip a line and indent eight spaces.
+        That's four spaces for the list
+        and four to trigger the code block.
+
+# Inline HTML
+<b>HTML code is escaped</b>
+
+
+# Links
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself]
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+
+
+# Images
+Here's our logo (hover to see the title text):
+
+Inline-style:
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Reference-style:
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+
+# Code and Syntax Highlighting
+
+Inline \`code\` has \`back-ticks around\` it.
+
+\`\`\`javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+\`\`\`
+
+\`\`\`python
+s = "Python syntax highlighting"
+print s
+\`\`\`
+
+\`\`\`
+No language indicated, so no syntax highlighting.
+But let's throw in a <b>tag</b>.
+\`\`\`
+
+
+# Tables
+
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned |  |
+| col 2 is      | centered      |    |
+| zebra stripes | are neat      |     |
+
+The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | \`renders\` | **nicely**
+1 | 2 | 3
+
+
+# Blockquotes
+
+
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+
+
+# Inline HTML (HTML is escaped)
+
+<dl>
+    <dt>Definition list</dt>
+    <dd>Is something people use sometimes.</dd>
+
+    <dt>Markdown in HTML</dt>
+    <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+
+# Horizontal Rule
+
+Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+
+
+# Line Breaks
+
+
+Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+`;
+
 const textData =
   `function onLoad(editor) {
   console.log("I've loaded!");
@@ -70,6 +277,15 @@ storiesOf("File", module)
       filename="ontohub.svg.zip"
       encoding="base64"
       value={zipData}
+    />
+  ))
+  .add("Markdown Preview", () => (
+    <File
+      onRaw={action("onRaw markdown")}
+      onDelete={action("onDelete markdown")}
+      filename="Readme.md"
+      encoding="plain"
+      value={markdownData}
     />
   ))
   .add("Text Document (read-only)", () => (

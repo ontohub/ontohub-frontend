@@ -4,6 +4,8 @@ export const fileExtension = name => last(name.split(".")).toLowerCase();
 
 export const fileType = name => {
   switch (fileExtension(name)) {
+    case "md":
+      return "markdown";
     case "txt":
       return "text";
     case "pdf":

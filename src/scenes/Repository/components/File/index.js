@@ -8,6 +8,7 @@ import { Button, Header, Icon, Menu, Popup, Segment } from "semantic-ui-react";
 import { media } from "../../../../helpers";
 import { fileType } from "../helpers/filetype";
 
+import { MarkdownViewer } from "./MarkdownViewer";
 import { ImageViewer } from "./ImageViewer";
 import { PDFViewer } from "./PDFViewer";
 import { Downloader, DownloadButton } from "./Downloader";
@@ -33,6 +34,8 @@ export const FileSwitch = ({ filename, value, encoding, ...editorProps }) => {
       );
     case "code":
     // fall through to text
+    case "markdown":
+      return <MarkdownViewer value={value} />;
     case "text":
     // fall through to text
     default:
