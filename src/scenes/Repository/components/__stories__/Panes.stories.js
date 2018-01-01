@@ -29,7 +29,7 @@ const contentL = () => (
 );
 const contentC = () => (
   <div style={{ backgroundColor: "LightSteelBlue", padding: "20px" }}>
-    {_.range(10).map(i => <p key={i}>Center {lipsum}</p>)}
+    {_.range(20).map(i => <p key={i}>Center {lipsum}</p>)}
   </div>
 );
 
@@ -52,7 +52,7 @@ const contentCWide = () => (
     <div
       style={{ backgroundColor: "DimGrey", width: "115%", height: "50px" }}
     />
-    {_.range(10).map(i => <p key={i}>Center {lipsum}</p>)}
+    {_.range(20).map(i => <p key={i}>Center {lipsum}</p>)}
   </div>
 );
 
@@ -136,6 +136,21 @@ storiesOf("Panes", module)
         childRight={contentR}
         leftSegmentIsOpenInitially={false}
         rightSegmentIsOpenInitially={false}
+      />
+    </div>
+  ))
+  .add("Right pane disabled", () => (
+    <div>
+      <ReactHeight onHeightReady={updateHeight}>
+        <Header />
+      </ReactHeight>
+      <Panes
+        reservedHeaderHeight={height}
+        childLeft={contentL}
+        childCenter={contentC}
+        childRight={contentR}
+        leftSegmentIsOpenInitially={true}
+        rightSegmentIsEnabled={false}
       />
     </div>
   ))

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import _ from "lodash";
 import styled, { css } from "styled-components";
 import { compose, defaultProps, withProps, withStateHandlers } from "recompose";
@@ -17,6 +17,7 @@ const Container = styled.div`
   will-change: overflow;
   & ::-webkit-scrollbar {
     width: 0.3em;
+    height: 0.3em;
   }
 `;
 
@@ -150,6 +151,8 @@ const PurePanes = ({
   leftSegmentIsOpen,
   rightSegmentIsOpen,
 
+  rightSegmentIsEnabled,
+
   toggleLeftSegment,
   toggleRightSegment,
 
@@ -177,13 +180,16 @@ const PurePanes = ({
   const CenterTablet = segmentCenterTablet;
   const RightTablet = segmentRightTablet;
 
+  const rightSegmentIsOpenAndEnabled =
+    rightSegmentIsOpen && rightSegmentIsEnabled;
+
   const leftSegmentWidthEM = leftSegmentIsOpen
     ? tabletAndUpLeftSegmentWidth / 16.0
     : 0; //em
-  const rightSegmentWidthEM = rightSegmentIsOpen
+  const rightSegmentWidthEM = rightSegmentIsOpenAndEnabled
     ? computerAndUpRightSegmentWidth / 16.0
     : 0; //em
-  const rightSegmentTabletHeightEM = rightSegmentIsOpen
+  const rightSegmentTabletHeightEM = rightSegmentIsOpenAndEnabled
     ? tabletRightSegmentTabletHeight / 16.0
     : 0; // em
 
@@ -227,24 +233,28 @@ const PurePanes = ({
               <ChildCenter />
             </Transition>
           </Accordion.Content>
-          <Accordion.Title
-            active={mobileActiveSegment === "right"}
-            segment="right"
-            handlerid="mobileRightSegmentSwitcher"
-            onClick={(event, { segment }) => mobileSwitchSegment(segment)}
-          >
-            <Icon name="dropdown" />
-            {labelRight}
-          </Accordion.Title>
-          <Accordion.Content active={mobileActiveSegment === "right"}>
-            <Transition
-              visible={mobileActiveSegment === "right"}
-              animation="slide up"
-              duration={transitionDuration}
-            >
-              <ChildRight />
-            </Transition>
-          </Accordion.Content>
+          {rightSegmentIsEnabled && (
+            <Fragment>
+              <Accordion.Title
+                active={mobileActiveSegment === "right"}
+                segment="right"
+                handlerid="mobileRightSegmentSwitcher"
+                onClick={(event, { segment }) => mobileSwitchSegment(segment)}
+              >
+                <Icon name="dropdown" />
+                {labelRight}
+              </Accordion.Title>
+              <Accordion.Content active={mobileActiveSegment === "right"}>
+                <Transition
+                  visible={mobileActiveSegment === "right"}
+                  animation="slide up"
+                  duration={transitionDuration}
+                >
+                  <ChildRight />
+                </Transition>
+              </Accordion.Content>
+            </Fragment>
+          )}
         </ScrollingAccordion>
       </OnMobile>
       <OnTablet reservedHeaderHeight={reservedHeaderHeight}>
@@ -269,26 +279,30 @@ const PurePanes = ({
             left: `${leftSegmentWidthEM}em`
           }}
         >
-          <RightTablet
-            leftSegmentWidthEM={leftSegmentWidthEM}
-            rightSegmentIsOpen={rightSegmentIsOpen}
-            transitionDuration={transitionDuration}
-            style={{
-              left: `${leftSegmentWidthEM}em`,
-              height: `${rightSegmentTabletHeightEM}em`
-            }}
-          >
-            <ChildRight />
-          </RightTablet>
-          <SegmentToggler
-            handlerid="tabletRightSegmentToggler"
-            isOpen={rightSegmentIsOpen}
-            toggle={toggleRightSegment}
-            attachedAt="bottom"
-            iconOpen={"chevron up"}
-            iconClosed={"chevron down"}
-            label={labelRight}
-          />
+          {rightSegmentIsEnabled && (
+            <Fragment>
+              <RightTablet
+                leftSegmentWidthEM={leftSegmentWidthEM}
+                rightSegmentIsOpen={rightSegmentIsOpenAndEnabled}
+                transitionDuration={transitionDuration}
+                style={{
+                  left: `${leftSegmentWidthEM}em`,
+                  height: `${rightSegmentTabletHeightEM}em`
+                }}
+              >
+                <ChildRight />
+              </RightTablet>
+              <SegmentToggler
+                handlerid="tabletRightSegmentToggler"
+                isOpen={rightSegmentIsOpenAndEnabled}
+                toggle={toggleRightSegment}
+                attachedAt="bottom"
+                iconOpen={"chevron up"}
+                iconClosed={"chevron down"}
+                label={labelRight}
+              />
+            </Fragment>
+          )}
           <CenterTablet
             leftSegmentWidthEM={leftSegmentWidthEM}
             transitionDuration={transitionDuration}
@@ -328,22 +342,26 @@ const PurePanes = ({
         >
           <ChildCenter />
         </Center>
-        <SegmentToggler
-          handlerid="computerAndUpRightSegmentToggler"
-          isOpen={rightSegmentIsOpen}
-          toggle={toggleRightSegment}
-          attachedAt="left"
-          iconOpen={"chevron right"}
-          iconClosed={"chevron left"}
-          label={labelRight}
-          vertical
-        />
-        <Right
-          style={{ width: `${rightSegmentWidthEM}em` }}
-          transitionDuration={transitionDuration}
-        >
-          <ChildRight />
-        </Right>
+        {rightSegmentIsEnabled && (
+          <Fragment>
+            <SegmentToggler
+              handlerid="computerAndUpRightSegmentToggler"
+              isOpen={rightSegmentIsOpenAndEnabled}
+              toggle={toggleRightSegment}
+              attachedAt="left"
+              iconOpen={"chevron right"}
+              iconClosed={"chevron left"}
+              label={labelRight}
+              vertical
+            />
+            <Right
+              style={{ width: `${rightSegmentWidthEM}em` }}
+              transitionDuration={transitionDuration}
+            >
+              <ChildRight />
+            </Right>
+          </Fragment>
+        )}
       </OnComputerAndUp>
     </Container>
   );
@@ -363,6 +381,10 @@ export const Panes = compose(
     leftSegmentIsOpen: true,
     rightSegmentIsOpen: true,
 
+    // This overrides `rightSegmentIsOpen`, setting it to `false`:
+    rightSegmentIsEnabled: true,
+
+    // Possible options: "left", "center", "right"
     mobileActiveSegment: "left"
   }),
   withProps({
