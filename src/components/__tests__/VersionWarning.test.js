@@ -1,6 +1,5 @@
 import React from "react";
 import { WarningMessage, VersionWarning } from "../VersionWarning";
-import { shallow } from "enzyme";
 
 describe("WarningMessage", () => {
   it("matches the snapshot", () => {

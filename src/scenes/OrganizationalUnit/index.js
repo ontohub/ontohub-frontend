@@ -4,7 +4,17 @@ import { Header, OrganizationSettings } from "./components";
 import { Link, Switch, Route, Redirect } from "react-router-dom";
 import Gravatar from "react-gravatar";
 
-const OrganizationalUnit = props => (
+const OrganizationalUnit = ({
+  data: {
+    loading,
+    organizationalUnit: {
+      repositories,
+      organizationMemberships,
+      memberships
+    } = {}
+  } = {},
+  me
+}) => (
   <Fragment>
     <Route
       key="main-route-redirect"
@@ -14,14 +24,13 @@ const OrganizationalUnit = props => (
         <Redirect to={`/${id}/repositories`} />
       )}
     />
-    {props.data.loading ? null : (
+    {loading ? null : (
       <Container key="main-content" text>
         <Switch>
           <Route
             path="/:id/repositories"
             exact
             render={() => {
-              const { data: { organizationalUnit: { repositories } } } = props;
               return (
                 <Item.Group divided>
                   {repositories.map(({ id, name, description, visibility }) => (
@@ -47,9 +56,6 @@ const OrganizationalUnit = props => (
             path="/:id/organizations"
             exact
             render={() => {
-              const {
-                data: { organizationalUnit: { organizationMemberships } }
-              } = props;
               return (
                 <Item.Group divided>
                   {organizationMemberships.map(
@@ -72,7 +78,6 @@ const OrganizationalUnit = props => (
             path="/:id/members"
             exact
             render={() => {
-              const { data: { organizationalUnit: { memberships } } } = props;
               return (
                 <Item.Group divided>
                   {memberships.map(
@@ -103,10 +108,9 @@ const OrganizationalUnit = props => (
           <Route
             path="/:id/settings"
             render={({ match: { url } }) => {
-              const { data: { organizationalUnit } } = props;
               return (
                 <OrganizationSettings
-                  me={props.me}
+                  me={me}
                   match={{ url }}
                   data={organizationalUnit}
                 />

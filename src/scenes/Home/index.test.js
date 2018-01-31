@@ -1,7 +1,6 @@
 import React from "react";
 import { Home, Header } from ".";
 import { ThemeProvider } from "styled-components";
-import { render } from "enzyme";
 
 describe("Home", () => {
   describe("Header", () => {

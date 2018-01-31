@@ -1,0 +1,273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrganizationalUnit Organization Index route matches the snapshot 1`] = `
+<div
+  class="ui text container"
+>
+  
+</div>
+`;
+
+exports[`OrganizationalUnit Organization Loading state matches the snapshot 1`] = `null`;
+
+exports[`OrganizationalUnit Organization Members route matches the snapshot 1`] = `
+<div
+  class="ui text container"
+>
+  <div
+    class="ui divided items"
+  >
+    <div
+      class="item"
+    >
+      <div
+        class="ui image"
+      >
+        <img
+          alt="Gravatar for undefined"
+          class="react-gravatar image"
+          height="60"
+          src="//www.gravatar.com/avatar/3e3417d7ef77d5932a6734b916515ed5?d=retro&r=g&s=60"
+          srcset="//www.gravatar.com/avatar/3e3417d7ef77d5932a6734b916515ed5?d=retro&r=g&s=120 2x"
+          style="border-radius:2px"
+          width="60"
+        >
+          
+        </img>
+      </div>
+      <div
+        class="middle aligned content"
+      >
+        <div
+          class="header"
+        >
+          <a
+            href="/ada"
+          >
+            Ada Lovelace
+          </a>
+        </div>
+        <div
+          class="meta"
+        >
+          ada
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OrganizationalUnit Organization Repositories route matches the snapshot 1`] = `
+<div
+  class="ui text container"
+>
+  <div
+    class="ui divided items"
+  >
+    <div
+      class="item"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="header"
+        >
+          <a
+            href="/seed-user-organization/some-repo"
+          >
+            Some Repo
+          </a>
+        </div>
+        <div
+          class="description"
+        >
+          This is some repo
+        </div>
+      </div>
+    </div>
+    <div
+      class="item"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="header"
+        >
+          <a
+            href="/seed-user-organization/another-repo"
+          >
+            Another Repo
+          </a>
+        </div>
+        <div
+          class="description"
+        >
+          This is another repo
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OrganizationalUnit Organization Settings route matches the snapshot 1`] = `
+<div
+  class="ui text container"
+>
+  <div
+    class="ui inverted grid"
+  >
+    <div
+      class="five wide column"
+    >
+      <div
+        class="ui fluid pointing secondary vertical menu"
+      >
+        <div
+          class="header item"
+        >
+          Organization Settings
+        </div>
+        <a
+          aria-current="false"
+          class="item"
+          href="/seed-user-organization/settings/profile"
+        >
+          Profile
+          <div
+            class="menu"
+          >
+            <div
+              class="item"
+            >
+              Name
+            </div>
+            <div
+              class="item"
+            >
+              Description
+            </div>
+          </div>
+        </a>
+        <a
+          aria-current="false"
+          class="item"
+          href="/seed-user-organization/settings/members"
+        >
+          Members
+        </a>
+      </div>
+    </div>
+    <div
+      class="eleven wide column"
+    >
+      <div
+        class="ui container"
+      >
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OrganizationalUnit User Index route matches the snapshot 1`] = `
+<div
+  class="ui text container"
+>
+  
+</div>
+`;
+
+exports[`OrganizationalUnit User Loading state matches the snapshot 1`] = `null`;
+
+exports[`OrganizationalUnit User Organizations route matches the snapshot 1`] = `
+<div
+  class="ui text container"
+>
+  <div
+    class="ui divided items"
+  >
+    <div
+      class="item"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="header"
+        >
+          <a
+            href="/seed-user-organization"
+          >
+            Seed User Organization
+          </a>
+        </div>
+        <div
+          class="description"
+        >
+          An organization containing seed users
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OrganizationalUnit User Repositories route matches the snapshot 1`] = `
+<div
+  class="ui text container"
+>
+  <div
+    class="ui divided items"
+  >
+    <div
+      class="item"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="header"
+        >
+          <a
+            href="/ada/some-repo"
+          >
+            Some Repo
+          </a>
+        </div>
+        <div
+          class="description"
+        >
+          This is some repo
+        </div>
+      </div>
+    </div>
+    <div
+      class="item"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="header"
+        >
+          <a
+            href="/ada/another-repo"
+          >
+            Another Repo
+          </a>
+        </div>
+        <div
+          class="description"
+        >
+          This is another repo
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,13 +1,12 @@
 import React, { Fragment } from "react";
-import { graphql } from "react-apollo";
 import { Button, Form, Header, Message } from "semantic-ui-react";
-import { saveOrganizationMutation } from "../../../../apollo/queries";
+import { withSaveOrganizationMutation } from "../../../../apollo/queries";
 import { withFormik } from "formik";
 import { Field } from "../../../../components/SignUpForm/Field";
 import { capitalize } from "lodash";
 import { compose } from "recompose";
 
-export const ProfileSettings = ({
+export const PureProfileSettings = ({
   errors,
   handleBlur,
   handleChange,
@@ -46,33 +45,34 @@ export const ProfileSettings = ({
   </Fragment>
 );
 
-export const ProfileSettingsWithData = compose(
-  graphql(saveOrganizationMutation, {
-    props: ({ mutate, ownProps: { id, ...props } }) => ({
-      onSubmit: data => mutate({ variables: { id, data } }),
-      ...props
-    })
-  }),
-  withFormik({
-    mapPropsToValues({ displayName, description }) {
-      return { displayName, description };
-    },
-    handleSubmit(values, { props: { onSubmit }, setErrors }) {
-      onSubmit(values).catch(err => {
-        let errors = { _: [] };
-        let matches;
-        let regex = /GraphQL error:\s*(.+)\s*$/gm;
+const withFormikForm = withFormik({
+  mapPropsToValues: /* istanbul ignore next */ ({
+    displayName,
+    description
+  }) => {
+    return { displayName, description };
+  },
+  handleSubmit: /* istanbul ignore next */ (
+    values,
+    { props: { saveOrganization }, setErrors }
+  ) => {
+    saveOrganization(values).catch(err => {
+      let errors = { _: [] };
+      let matches;
+      let regex = /GraphQL error:\s*(.+)\s*$/gm;
 
-        // eslint-disable-next-line no-cond-assign
-        while ((matches = regex.exec(err.message))) {
-          let message = capitalize(matches[1]);
-          errors._.push(message);
-        }
+      // eslint-disable-next-line no-cond-assign
+      while ((matches = regex.exec(err.message))) {
+        let message = capitalize(matches[1]);
+        errors._.push(message);
+      }
 
-        setErrors(errors);
-      });
-    }
-  })
-)(ProfileSettings);
+      setErrors(errors);
+    });
+  }
+});
 
-export default ProfileSettingsWithData;
+export const ProfileSettings = compose(
+  withSaveOrganizationMutation,
+  withFormikForm
+)(PureProfileSettings);

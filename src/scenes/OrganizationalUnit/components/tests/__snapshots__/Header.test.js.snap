@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Finished state with role "admin" matches the snapshot 1`] = `
+<div
+  class="ui container"
+>
+  <h2
+    class="ui inverted header"
+  >
+    <div
+      class="content"
+    >
+      Seed User Organization
+      <div
+        class="sub header"
+      >
+        An Organization for all seed users
+      </div>
+    </div>
+  </h2>
+  <div
+    class="ui inverted pointing secondary menu"
+  >
+    <a
+      aria-current="false"
+      class="item"
+      href="/seed-user-organization/repositories"
+    >
+      <i
+        aria-hidden="true"
+        class="fork icon"
+      >
+        
+      </i>
+      Repositories
+    </a>
+    <a
+      aria-current="false"
+      class="item"
+      href="/seed-user-organization/members"
+    >
+      <i
+        aria-hidden="true"
+        class="users icon"
+      >
+        
+      </i>
+       Members
+    </a>
+    <div
+      class="right menu"
+    >
+      <a
+        aria-current="false"
+        class="item"
+        href="/seed-user-organization/settings"
+      >
+        <i
+          aria-hidden="true"
+          class="settings icon"
+        >
+          
+        </i>
+         Settings
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header Finished state with role "read" matches the snapshot 1`] = `
+<div
+  class="ui container"
+>
+  <h2
+    class="ui inverted header"
+  >
+    <div
+      class="content"
+    >
+      Seed User Organization
+      <div
+        class="sub header"
+      >
+        An Organization for all seed users
+      </div>
+    </div>
+  </h2>
+  <div
+    class="ui inverted pointing secondary menu"
+  >
+    <a
+      aria-current="false"
+      class="item"
+      href="/seed-user-organization/repositories"
+    >
+      <i
+        aria-hidden="true"
+        class="fork icon"
+      >
+        
+      </i>
+      Repositories
+    </a>
+    <a
+      aria-current="false"
+      class="item"
+      href="/seed-user-organization/members"
+    >
+      <i
+        aria-hidden="true"
+        class="users icon"
+      >
+        
+      </i>
+       Members
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Header Loading state matches the snapshot 1`] = `
+<div
+  class="ui container"
+>
+  <h2
+    class="ui inverted header"
+  >
+    
+  </h2>
+  <div
+    class="ui inverted pointing secondary menu"
+  >
+    <a
+      aria-current="false"
+      class="item"
+      href="/undefined/repositories"
+    >
+      <i
+        aria-hidden="true"
+        class="fork icon"
+      >
+        
+      </i>
+      Repositories
+    </a>
+    <a
+      aria-current="false"
+      class="item"
+      href="/undefined/members"
+    >
+      <i
+        aria-hidden="true"
+        class="users icon"
+      >
+        
+      </i>
+       Members
+    </a>
+  </div>
+</div>
+`;

@@ -1,4 +1,5 @@
 import gql from "graphql-tag";
+import { graphql } from "react-apollo";
 
 export const organizationalUnitQuery = gql`
   query GetOrganizationalUnit($id: ID!) {
@@ -48,6 +49,11 @@ export const saveOrganizationMutation = gql`
     }
   }
 `;
+export const withSaveOrganizationMutation = graphql(saveOrganizationMutation, {
+  props: ({ mutate, ownProps: { id } }) => ({
+    saveOrganization: data => mutate({ variables: { id, data } })
+  })
+});
 
 export const addOrganizationMemberMutation = gql`
   mutation AddOrganizationMember(
@@ -71,8 +77,38 @@ export const addOrganizationMemberMutation = gql`
   }
 `;
 
+export const withAddOrganizationMemberMutation = graphql(
+  addOrganizationMemberMutation,
+  {
+    props: ({ mutate, ownProps: { id: organization } }) => ({
+      addOrganizationMember: (member, role) =>
+        mutate({
+          variables: { member, role, organization },
+          refetchQueries: [
+            { query: organizationalUnitQuery, variables: { id: organization } }
+          ]
+        })
+    })
+  }
+);
+
 export const removeOrganizationMemberMutation = gql`
   mutation RemoveOrganizationMember($organization: ID!, $member: ID!) {
     removeOrganizationMember(organization: $organization, member: $member)
   }
 `;
+
+export const withRemoveOrganizationMemberMutation = graphql(
+  removeOrganizationMemberMutation,
+  {
+    props: ({ mutate, ownProps: { id: organization } }) => ({
+      removeOrganizationMember: member =>
+        mutate({
+          variables: { member, organization },
+          refetchQueries: [
+            { query: organizationalUnitQuery, variables: { id: organization } }
+          ]
+        })
+    })
+  }
+);

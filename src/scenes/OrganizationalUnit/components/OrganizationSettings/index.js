@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { NavLink as Link, Route, Switch, Redirect } from "react-router-dom";
 import { Container, Grid, Menu } from "semantic-ui-react";
-import ProfileSettings from "./ProfileSettings";
-import MemberSettings from "./MemberSettings";
+import { ProfileSettings } from "./ProfileSettings";
+import { MemberSettings } from "./MemberSettings";
 import { dropRight } from "lodash";
 
 export const OrganizationSettings = ({
@@ -13,11 +13,9 @@ export const OrganizationSettings = ({
 }) => (
   <Fragment>
     {!permissions || permissions.role !== "admin" ? (
-      <Route
-        path={url}
-        render={() => <Redirect to={dropRight(url.split("/")).join("/")} />}
-      />
+      <Redirect to={dropRight(url.split("/")).join("/")} />
     ) : null}
+    <Switch />
     <Route path={url} exact render={() => <Redirect to={`${url}/profile`} />} />
     <Grid inverted>
       <Grid.Column width={5}>

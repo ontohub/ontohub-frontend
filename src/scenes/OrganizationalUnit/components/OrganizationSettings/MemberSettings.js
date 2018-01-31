@@ -14,11 +14,9 @@ import Gravatar from "react-gravatar";
 
 import { withFormik } from "formik";
 import { compose, withState } from "recompose";
-import { graphql } from "react-apollo";
 import {
-  organizationalUnitQuery,
-  addOrganizationMemberMutation,
-  removeOrganizationMemberMutation
+  withAddOrganizationMemberMutation,
+  withRemoveOrganizationMemberMutation
 } from "../../../../apollo/queries";
 
 const membershipRoles = [
@@ -34,16 +32,17 @@ const NarrowIcon = styled(Icon)`
   margin-top: -1em !important;
 `;
 
-export const MemberSettings = ({
+export const PureMemberSettings = ({
   values,
   handleChange,
   handleSubmit,
   memberships,
-  onChangeRole,
-  onRemoveMember,
+  addOrganizationMember,
+  removeOrganizationMember,
   popup,
   setPopup,
-  me
+  me,
+  id: organization
 }) => (
   <form onSubmit={handleSubmit}>
     <Header as="h3">Organization Members</Header>
@@ -56,7 +55,7 @@ export const MemberSettings = ({
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        <Table.Row>
+        <Table.Row id="new_member">
           <Table.Cell>
             <Input
               fluid
@@ -82,7 +81,7 @@ export const MemberSettings = ({
             />
           </Table.Cell>
           <Table.Cell>
-            <Button primary>
+            <Button primary onClick={handleSubmit}>
               <NarrowIcon name="plus" />
             </Button>
           </Table.Cell>
@@ -112,7 +111,9 @@ export const MemberSettings = ({
                 basic
                 fluid
                 selection
-                onChange={onChangeRole(id)}
+                onChange={(e, { value: role }) =>
+                  addOrganizationMember({ organization, id, role })
+                }
                 options={membershipRoles}
                 value={role}
               />
@@ -140,13 +141,11 @@ export const MemberSettings = ({
                     from this organization!
                   </Header>
                 }
-                onConfirm={e => {
+                onConfirm={() => {
                   setPopup(null);
-                  onRemoveMember(popup)(e);
+                  removeOrganizationMember(popup);
                 }}
-                onCancel={e => {
-                  setPopup(null);
-                }}
+                onCancel={setPopup}
               />
             </Table.Cell>
           </Table.Row>
@@ -156,72 +155,21 @@ export const MemberSettings = ({
   </form>
 );
 
-export default compose(
-  graphql(addOrganizationMemberMutation, {
-    props({ mutate, ownProps: { id: organization, ...props } }) {
-      return {
-        onChangeRole: member => (_, { value: role }) => {
-          return mutate({
-            variables: { member, organization, role },
-            refetchQueries: [
-              {
-                query: organizationalUnitQuery,
-                variables: { id: organization }
-              }
-            ]
-          });
-        },
-        id: organization,
-        ...props
-      };
-    }
+const withFormikForm = withFormik({
+  mapPropsToValues: /* istanbul ignore next */ ({ id: organization }) => ({
+    member: "",
+    role: "read",
+    organization
   }),
-  graphql(addOrganizationMemberMutation, {
-    props({ mutate, ownProps: { id: organization, ...props } }) {
-      return {
-        onAddMember({ member, role }) {
-          return mutate({
-            variables: { member, organization, role },
-            refetchQueries: [
-              {
-                query: organizationalUnitQuery,
-                variables: { id: organization }
-              }
-            ]
-          });
-        },
-        id: organization,
-        ...props
-      };
-    }
-  }),
-  graphql(removeOrganizationMemberMutation, {
-    props({ mutate, ownProps: { id: organization, ...props } }) {
-      return {
-        onRemoveMember: member => e => {
-          e.preventDefault();
-          return mutate({
-            variables: { member, organization },
-            refetchQueries: [
-              {
-                query: organizationalUnitQuery,
-                variables: { id: organization }
-              }
-            ]
-          });
-        },
-        id: organization,
-        ...props
-      };
-    }
-  }),
-  withFormik({
-    mapPropsToValues(props) {
-      return { member: "", role: "read" };
-    },
-    handleSubmit(values, { props: { onAddMember }, resetForm }) {
-      return onAddMember(values).then(() => resetForm());
-    }
-  }),
+  handleSubmit: /* istanbul ignore next */ (
+    values,
+    { props: { addOrganizationMember }, resetForm }
+  ) => addOrganizationMember(values).then(resetForm)
+});
+
+export const MemberSettings = compose(
+  withAddOrganizationMemberMutation,
+  withRemoveOrganizationMemberMutation,
+  withFormikForm,
   withState("popup", "setPopup", null)
-)(MemberSettings);
+)(PureMemberSettings);

@@ -1,5 +1,4 @@
 import React from "react";
-import { mount } from "enzyme";
 import { SignUpForm } from "..";
 
 const shallowRender = props => mount(<SignUpForm {...props} />);

@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PureMemberSettings matches the snapshot 1`] = `
+.c0 {
+  height: 0 !important;
+  width: 0 !important;
+  padding: 0 1px;
+  margin-top: -1em !important;
+}
+
+<form>
+  <h3
+    class="ui header"
+  >
+    Organization Members
+  </h3>
+  <table
+    class="ui compact table"
+  >
+    <thead
+      class=""
+    >
+      <tr
+        class=""
+      >
+        <th
+          class=""
+        >
+          User
+        </th>
+        <th
+          class="four wide"
+        >
+          Role
+        </th>
+        <th
+          class="one wide"
+        >
+          
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class=""
+    >
+      <tr
+        class=""
+        id="new_member"
+      >
+        <td
+          class=""
+        >
+          <div
+            class="ui small fluid input"
+          >
+            <input
+              name="member"
+              placeholder="Username"
+              type="text"
+              value=""
+            >
+              
+            </input>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            aria-expanded="false"
+            class="ui basic fluid selection dropdown"
+            role="listbox"
+            tabindex="0"
+          >
+            <div
+              aria-live="polite"
+              class="text"
+              role="alert"
+            >
+              Read
+            </div>
+            <i
+              aria-hidden="true"
+              class="dropdown icon"
+            >
+              
+            </i>
+            <div
+              class="menu transition"
+            >
+              <div
+                aria-checked="true"
+                aria-selected="true"
+                class="active selected item"
+                role="option"
+                style="pointer-events:all"
+              >
+                <span
+                  class="text"
+                >
+                  Read
+                </span>
+              </div>
+              <div
+                aria-checked="false"
+                aria-selected="false"
+                class="item"
+                role="option"
+                style="pointer-events:all"
+              >
+                <span
+                  class="text"
+                >
+                  Write
+                </span>
+              </div>
+              <div
+                aria-checked="false"
+                aria-selected="false"
+                class="item"
+                role="option"
+                style="pointer-events:all"
+              >
+                <span
+                  class="text"
+                >
+                  Admin
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <button
+            class="ui primary button"
+            role="button"
+          >
+            <i
+              aria-hidden="true"
+              class="plus icon c0"
+            >
+              
+            </i>
+          </button>
+        </td>
+      </tr>
+      <tr
+        class=""
+      >
+        <td
+          class=""
+        >
+          <h4
+            class="ui image header"
+          >
+            <img
+              alt="Gravatar for undefined"
+              class="react-gravatar image"
+              height="50"
+              src="//www.gravatar.com/avatar/3e3417d7ef77d5932a6734b916515ed5?d=retro&r=g&s=50"
+              srcset="//www.gravatar.com/avatar/3e3417d7ef77d5932a6734b916515ed5?d=retro&r=g&s=100 2x"
+              style="border-radius:2px"
+              width="50"
+            >
+              
+            </img>
+            <div
+              class="content"
+            >
+              <a
+                aria-current="false"
+                href="/ada"
+              >
+                Ada Lovelace
+              </a>
+              <div
+                class="sub header"
+              >
+                ada
+              </div>
+            </div>
+          </h4>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            aria-expanded="false"
+            class="ui basic fluid selection dropdown"
+            role="listbox"
+            tabindex="0"
+          >
+            <div
+              aria-live="polite"
+              class="text"
+              role="alert"
+            >
+              Admin
+            </div>
+            <i
+              aria-hidden="true"
+              class="dropdown icon"
+            >
+              
+            </i>
+            <div
+              class="menu transition"
+            >
+              <div
+                aria-checked="false"
+                aria-selected="false"
+                class="item"
+                role="option"
+                style="pointer-events:all"
+              >
+                <span
+                  class="text"
+                >
+                  Read
+                </span>
+              </div>
+              <div
+                aria-checked="false"
+                aria-selected="false"
+                class="item"
+                role="option"
+                style="pointer-events:all"
+              >
+                <span
+                  class="text"
+                >
+                  Write
+                </span>
+              </div>
+              <div
+                aria-checked="true"
+                aria-selected="true"
+                class="active selected item"
+                role="option"
+                style="pointer-events:all"
+              >
+                <span
+                  class="text"
+                >
+                  Admin
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <button
+            class="ui negative button"
+            role="button"
+          >
+            <i
+              aria-hidden="true"
+              class="trash icon c0"
+            >
+              
+            </i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+`;
