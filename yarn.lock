@@ -24,12 +24,12 @@
     react-inspector "^2.2.2"
     uuid "^3.1.0"
 
-"@storybook/addon-info@^3.3.11":
-  version "3.3.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.3.11.tgz#865307ed6ccb8cb3c0e189779d12f31b9adde683"
+"@storybook/addon-info@^3.3.12":
+  version "3.3.12"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.3.12.tgz#3ef8ccbf5aeb7cdd32a0c1fce07d673da4cfa7ca"
   dependencies:
-    "@storybook/client-logger" "^3.3.11"
-    "@storybook/components" "^3.3.11"
+    "@storybook/client-logger" "^3.3.12"
+    "@storybook/components" "^3.3.12"
     babel-runtime "^6.26.0"
     global "^4.3.2"
     marksy "^6.0.2"
@@ -62,21 +62,9 @@
   version "3.3.12"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.3.12.tgz#aa4106888971f9e689511093b0e6f2b569973a09"
 
-"@storybook/client-logger@^3.3.11":
-  version "3.3.11"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.3.11.tgz#35c851dbed2067201189847c7aa92f8d567a4d61"
-
 "@storybook/client-logger@^3.3.12":
   version "3.3.12"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.3.12.tgz#5307eba4d63d6dc54676e14a40bc0d4be3439d92"
-
-"@storybook/components@^3.3.11":
-  version "3.3.11"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.3.11.tgz#cb2a48b52e7cb45408172f4462f4730ca6970e78"
-  dependencies:
-    glamor "^2.20.40"
-    glamorous "^4.11.2"
-    prop-types "^15.6.0"
 
 "@storybook/components@^3.3.12":
   version "3.3.12"
