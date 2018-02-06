@@ -22,7 +22,13 @@ describe("PureProfileSettings", () => {
   set("handleChange", () => jest.fn());
   set("handleSubmit", () => jest.fn());
   set("touched", () => ({}));
-  set("values", () => Seeds.organizationalUnit["seed-user-organization"]);
+  set("values", () =>
+    Factories.Organization({
+      id: "seed-user-organization",
+      displayName: "Seed User Organization",
+      description: "An organization for all seed users"
+    })
+  );
 
   it("matches the snapshot", () => {
     expect(renderedComponent).toMatchSnapshot();

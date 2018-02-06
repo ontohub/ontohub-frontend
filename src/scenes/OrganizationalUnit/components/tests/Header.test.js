@@ -26,7 +26,11 @@ describe("Header", () => {
   ["admin", "read"].map(role => {
     describe(`Finished state with role "${role}"`, () => {
       set("organizationalUnit", () => ({
-        ...Seeds.organizationalUnit["seed-user-organization"],
+        ...Factories.Organization({
+          id: "seed-user-organization",
+          displayName: "Seed User Organization",
+          description: "An organization for all seed users"
+        }),
         permissions: { role: role }
       }));
 

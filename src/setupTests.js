@@ -18,22 +18,4 @@ global.mount = mount;
 global.shallow = shallow;
 global.React = React;
 global.Router = MemoryRouter;
-
-global.Seeds = {
-  organizationalUnit: {
-    "seed-user-organization": {
-      __typename: "Organization",
-      id: "seed-user-organization",
-      displayName: "Seed User Organization",
-      description: "An Organization for all seed users"
-    },
-    ada: {
-      __typename: "User",
-      id: "ada",
-      displayName: "Ada Lovelace",
-      emailHash: "3e3417d7ef77d5932a6734b916515ed5"
-    }
-  }
-};
-
 global.Factories = Factories;

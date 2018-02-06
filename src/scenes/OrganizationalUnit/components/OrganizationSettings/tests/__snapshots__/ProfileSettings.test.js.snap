@@ -40,7 +40,7 @@ Array [
         <input
             name="description"
             placeholder="Description"
-            value="An Organization for all seed users"
+            value="An organization for all seed users"
         >
             
         </input>
@@ -96,7 +96,7 @@ Array [
         <input
             name="description"
             placeholder="Description"
-            value="An Organization for all seed users"
+            value="An organization for all seed users"
         >
             
         </input>
