@@ -112,7 +112,7 @@ export const PureMemberSettings = ({
                 fluid
                 selection
                 onChange={(e, { value: role }) =>
-                  addOrganizationMember({ organization, id, role })
+                  addOrganizationMember(id, role)
                 }
                 options={membershipRoles}
                 value={role}
@@ -156,15 +156,14 @@ export const PureMemberSettings = ({
 );
 
 const withFormikForm = withFormik({
-  mapPropsToValues: /* istanbul ignore next */ ({ id: organization }) => ({
+  mapPropsToValues: /* istanbul ignore next */ () => ({
     member: "",
-    role: "read",
-    organization
+    role: "read"
   }),
   handleSubmit: /* istanbul ignore next */ (
-    values,
+    { member, role },
     { props: { addOrganizationMember }, resetForm }
-  ) => addOrganizationMember(values).then(resetForm)
+  ) => addOrganizationMember(member, role).then(resetForm)
 });
 
 export const MemberSettings = compose(
