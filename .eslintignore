@@ -5,6 +5,9 @@ flow-typed/**/*
 # testing
 .chrome/**/*
 coverage/**/*
+**/tests/**/*
+**/__tests__/**/*
+**/*.test.js
 
 # production
 build/**/*

@@ -68,10 +68,12 @@ export const validate = values => {
       return errors;
     })
     .then(errors => {
+      /* istanbul ignore else */
       if (!errors.name) {
         return isUsernameAvailableDebounced(values.name).then(
           available => {
             addError(!available, errors, "name", "Username is already taken");
+            /* istanbul ignore else */
             if (formHasError(errors)) {
               throw errors;
             } else {

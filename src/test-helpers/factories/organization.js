@@ -11,7 +11,7 @@ export const Organization = stampit(OrganizationalUnit, {
     displayName = faker.company.companyName(),
     description = faker.company.catchPhrase()
   }) {
-    this.id = id || faker.internet.userName(companyName);
+    this.id = id || faker.internet.userName(displayName);
     this.displayName = displayName;
     this.description = description;
   }

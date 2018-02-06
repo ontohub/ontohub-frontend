@@ -11,7 +11,8 @@ const OrganizationalUnit = ({
       repositories,
       organizationMemberships,
       memberships
-    } = {}
+    } = {},
+    organizationalUnit
   } = {},
   me
 }) => (
