@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeadAndBody applies the HOC to head and body 1`] = `
+Array [
+  .c0 {
+  background-color: #000;
+  color: !important;
+  margin-bottom: 1em;
+}
+
+.c1 {
+  max-width: 700px;
+  margin: auto;
+}
+
+.c1 .cross-fade-leave {
+  opacity: 1;
+}
+
+.c1 .cross-fade-leave.cross-fade-leave-active {
+  opacity: 0;
+  -webkit-transition: opacity ease-in;
+  transition: opacity ease-in;
+}
+
+.c1 .cross-fade-enter {
+  opacity: 0;
+}
+
+.c1 .cross-fade-enter.cross-fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity ease-in;
+  transition: opacity ease-in;
+}
+
+.c1 .cross-fade-height {
+  -webkit-transition: height ease-in-out;
+  transition: height ease-in-out;
+}
+
+<div
+    class="c0"
+>
+    <div
+        class="c1"
+    >
+        <h1>
+            Head
+        </h1>
+    </div>
+</div>,
+  <div>
+    Body
+</div>,
+]
+`;

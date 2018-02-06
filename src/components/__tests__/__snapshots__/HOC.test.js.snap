@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HOC custom HOC applies the passed HOC 1`] = `
+Array [
+  <h1
+    class="twice"
+>
+    Hello
+</h1>,
+  <h1
+    class="twice"
+>
+    Hello
+</h1>,
+]
+`;
+
+exports[`HOC default HOC applies the default HOC (identity) 1`] = `
+<h1
+  class="once"
+>
+  Hello
+</h1>
+`;
