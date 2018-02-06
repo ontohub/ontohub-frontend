@@ -9,7 +9,7 @@ node_js:
 cache: yarn
 
 script:
-  - "yarn test -- --coverage --verbose"
+  - "yarn test --coverage --verbose"
 
 after_script:
   - "yarn run codecov"
