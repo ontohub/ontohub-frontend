@@ -3774,9 +3774,9 @@ form-data@~2.3.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-formik@^0.11.5:
-  version "0.11.5"
-  resolved "https://registry.yarnpkg.com/formik/-/formik-0.11.5.tgz#6b555f659b92f94a15d8ae6f4dde75c34c201e98"
+formik@^0.11.9:
+  version "0.11.9"
+  resolved "https://registry.yarnpkg.com/formik/-/formik-0.11.9.tgz#41da6e5b5ddaf1474eab29a992c9ef8623d40d00"
   dependencies:
     lodash.clonedeep "^4.5.0"
     lodash.isequal "4.5.0"
