@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import { Message } from "semantic-ui-react";
 import { satisfies } from "semver";
 import styled from "styled-components";
-import { versionQuery } from "../apollo/queries";
-import { graphql } from "react-apollo";
-import { at } from "lodash";
+import { withVersionQuery } from "../apollo/queries";
 
 const BottomMessage = styled(Message)`
   position: fixed !important;
@@ -56,16 +54,6 @@ export class VersionWarning extends Component {
   }
 }
 
-export const VersionWarningWithData = graphql(versionQuery, {
-  props: props => ({
-    loading: props.data.loading,
-    error: props.data.error,
-    version: at(props, [
-      "data.version.tag",
-      "data.version.commitsSinceTag"
-    ]).join("-"),
-    requirement: props.ownProps.requirement
-  })
-})(VersionWarning);
+export const VersionWarningWithData = withVersionQuery(VersionWarning);
 
 export default VersionWarningWithData;
