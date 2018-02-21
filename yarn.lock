@@ -209,6 +209,10 @@
   version "8.5.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.1.tgz#4ec3020bcdfe2abffeef9ba3fbf26fca097514b5"
 
+"@types/node@^9.4.6":
+  version "9.4.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.6.tgz#d8176d864ee48753d053783e4e463aec86b8d82e"
+
 "@types/react@^16.0.18":
   version "16.0.31"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.31.tgz#5285da62f3ac62b797f6d0729a1d6181f3180c3e"
@@ -404,26 +408,19 @@ apollo-client@^2.2.2:
   optionalDependencies:
     "@types/async" "2.0.47"
 
-apollo-fetch@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/apollo-fetch/-/apollo-fetch-0.7.0.tgz#63c255a0ccb1b4c473524d8f9b536d72438bd3e7"
+apollo-link-batch-http@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/apollo-link-batch-http/-/apollo-link-batch-http-1.1.0.tgz#cc8854f6d7c99ae984c33a3b811b260917654f91"
   dependencies:
-    cross-fetch "^1.0.0"
+    apollo-link "^1.2.0"
+    apollo-link-batch "^1.1.0"
+    apollo-link-http-common "^0.2.1"
 
-apollo-link-batch-http@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/apollo-link-batch-http/-/apollo-link-batch-http-1.0.4.tgz#e958a418a40625943a6018df695cca0cf4527977"
+apollo-link-batch@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/apollo-link-batch/-/apollo-link-batch-1.1.0.tgz#86274c8f1a0a9baf735a11d399c84779f4c53a72"
   dependencies:
-    apollo-fetch "^0.7.0"
-    apollo-link "^1.0.7"
-    apollo-link-batch "^1.0.4"
-    graphql "^0.12.0"
-
-apollo-link-batch@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/apollo-link-batch/-/apollo-link-batch-1.0.4.tgz#ce0c3820ebd72a153a951017f71c252df51178b4"
-  dependencies:
-    apollo-link "^1.0.7"
+    apollo-link "^1.2.0"
 
 apollo-link-dedup@^1.0.0:
   version "1.0.4"
@@ -437,6 +434,12 @@ apollo-link-error@^1.0.2:
   dependencies:
     apollo-link "^1.0.6"
 
+apollo-link-http-common@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/apollo-link-http-common/-/apollo-link-http-common-0.2.1.tgz#bd8dbb751633be8796f58fe1ba4ecdc0a2f46110"
+  dependencies:
+    apollo-link "^1.2.0"
+
 apollo-link@^1.0.0, apollo-link@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.0.6.tgz#ed5e975b4582b2471fd8eebf9efbd6691188dc0a"
@@ -445,13 +448,14 @@ apollo-link@^1.0.0, apollo-link@^1.0.6:
     apollo-utilities "^1.0.0"
     zen-observable "^0.6.0"
 
-apollo-link@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.0.7.tgz#42cd38a7378332fc3e41a214ff6a6e5e703a556f"
+apollo-link@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.2.0.tgz#1abba5456eb35fc8b8a79f3be421e683a9ecfc41"
   dependencies:
+    "@types/node" "^9.4.6"
     "@types/zen-observable" "0.5.3"
     apollo-utilities "^1.0.0"
-    zen-observable "^0.6.0"
+    zen-observable "^0.8.0"
 
 apollo-utilities@^1.0.0:
   version "1.0.3"
@@ -2441,13 +2445,6 @@ create-react-class@^15.6.2:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-cross-fetch@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-1.1.1.tgz#dede6865ae30f37eae62ac90ebb7bdac002b05a0"
-  dependencies:
-    node-fetch "1.7.3"
-    whatwg-fetch "2.0.3"
-
 cross-spawn@5.1.0, cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -4078,12 +4075,6 @@ graphql-tag@^2.7.0:
   dependencies:
     "@types/graphql" ">=0.8.6 <=0.11.7"
 
-graphql@^0.12.0:
-  version "0.12.3"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.12.3.tgz#11668458bbe28261c0dcb6e265f515ba79f6ce07"
-  dependencies:
-    iterall "1.1.3"
-
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
@@ -4888,10 +4879,6 @@ istanbul-reports@^1.1.3:
   resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-1.1.3.tgz#3b9e1e8defb6d18b1d425da8e8b32c5a163f2d10"
   dependencies:
     handlebars "^4.0.3"
-
-iterall@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.3.tgz#1cbbff96204056dde6656e2ed2e2226d0e6d72c9"
 
 jest-changed-files@^20.0.3:
   version "20.0.3"
@@ -5828,7 +5815,7 @@ node-dir@^0.1.10:
   dependencies:
     minimatch "^3.0.2"
 
-node-fetch@1.7.3, node-fetch@^1.0.1:
+node-fetch@^1.0.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   dependencies:
@@ -9028,6 +9015,10 @@ zen-observable@^0.6.0:
 zen-observable@^0.7.0:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.7.1.tgz#f84075c0ee085594d3566e1d6454207f126411b3"
+
+zen-observable@^0.8.0:
+  version "0.8.6"
+  resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.6.tgz#e2419311497019419d7bb56d8f6a56356a607272"
 
 zxcvbn@^4.4.2:
   version "4.4.2"
