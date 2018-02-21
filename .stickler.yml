@@ -1,4 +1,6 @@
 linters:
+  eslint:
+    config: './.eslintrc'
   shellcheck:
     shell: bash
 files:
