@@ -6,6 +6,8 @@ const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};
   color: ${({ theme }) => theme.colors.light} !important;
   margin-bottom: 1em;
+  margin-top: -5em;
+  padding-top: 5em;
 `;
 
 const InnerHeader = styled.div`
