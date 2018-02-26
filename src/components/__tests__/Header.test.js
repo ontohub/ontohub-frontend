@@ -1,7 +1,6 @@
 import React from "react";
 import { Header, PaddedContainer } from "../Header";
 import { ThemeProvider } from "styled-components";
-import { render } from "enzyme";
 
 describe("Header", () => {
   it("matches the snapshot", () => {

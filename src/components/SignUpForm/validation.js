@@ -1,5 +1,5 @@
 import { Client, userQuery } from "../../apollo";
-import { get, isEmpty, filter, pick, capitalize } from "lodash";
+import { get, isEmpty, filter, pick } from "lodash";
 import debounce from "debounce-promise";
 
 export const isUsernameAvailable = id =>
@@ -68,10 +68,12 @@ export const validate = values => {
       return errors;
     })
     .then(errors => {
+      /* istanbul ignore else */
       if (!errors.name) {
         return isUsernameAvailableDebounced(values.name).then(
           available => {
             addError(!available, errors, "name", "Username is already taken");
+            /* istanbul ignore else */
             if (formHasError(errors)) {
               throw errors;
             } else {
@@ -94,22 +96,4 @@ export const validate = values => {
         return errors;
       }
     });
-};
-
-export const setServerErrors = (setErrors, setSubmitting, onError) => err => {
-  let errors = {};
-  let matches;
-  let regex = /GraphQL error:\s*((\S+) .+)\s*$/gm;
-
-  // eslint-disable-next-line no-cond-assign
-  while ((matches = regex.exec(err.message))) {
-    let field = matches[2].toLowerCase();
-    let message = capitalize(matches[1]);
-    if (!errors[field]) errors[field] = [];
-    errors[field].push(message);
-  }
-
-  setErrors(errors);
-  setSubmitting(false);
-  onError();
 };

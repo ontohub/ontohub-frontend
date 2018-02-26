@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PureProfileSettings Error state matches snapshot 1`] = `
+Array [
+  <h3
+    class="ui header"
+>
+    Organization Profile
+</h3>,
+  <form
+    class="ui form"
+>
+    <div
+        class="field"
+    >
+        <label>
+            Display name
+        </label>
+        <input
+            name="displayName"
+            placeholder="Display name"
+            value="Seed User Organization"
+        >
+            
+        </input>
+        <div
+            class="ui red pointing label"
+        >
+            <div>
+                is too short
+            </div>
+        </div>
+    </div>
+    <div
+        class="field"
+    >
+        <label>
+            Description
+        </label>
+        <input
+            name="description"
+            placeholder="Description"
+            value="An organization for all seed users"
+        >
+            
+        </input>
+        <div
+            class="ui red pointing label"
+        >
+            <div>
+                must be filled
+            </div>
+        </div>
+    </div>
+    <button
+        class="ui positive right floated button"
+        role="button"
+        type="submit"
+    >
+        Update profile
+    </button>
+</form>,
+]
+`;
+
+exports[`PureProfileSettings matches the snapshot 1`] = `
+Array [
+  <h3
+    class="ui header"
+>
+    Organization Profile
+</h3>,
+  <form
+    class="ui form"
+>
+    <div
+        class="field"
+    >
+        <label>
+            Display name
+        </label>
+        <input
+            name="displayName"
+            placeholder="Display name"
+            value="Seed User Organization"
+        >
+            
+        </input>
+    </div>
+    <div
+        class="field"
+    >
+        <label>
+            Description
+        </label>
+        <input
+            name="description"
+            placeholder="Description"
+            value="An organization for all seed users"
+        >
+            
+        </input>
+    </div>
+    <button
+        class="ui positive right floated button"
+        role="button"
+        type="submit"
+    >
+        Update profile
+    </button>
+</form>,
+]
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`setServerErrors calls setErrors with the found errors 1`] = `
+Array [
+  Array [
+    Object {
+      "password": Array [
+        "Password is missing",
+      ],
+      "username": Array [
+        "Username not found",
+      ],
+    },
+  ],
+]
+`;
+
+exports[`setServerErrors with an invalid error message calls setErrors with the found errors 1`] = `
+Array [
+  Array [
+    Object {},
+  ],
+]
+`;

@@ -1,17 +1,8 @@
 import React from "react";
-import { mount } from "enzyme";
 import LoginModal from "../LoginModal";
 
 describe("LoginModal", () => {
   let wrapper, onSignIn, onSignUp;
-
-  beforeAll(() => {
-    // Polyfill requestAnimationFrame
-    if (!window.requestAnimationFrame) {
-      window.requestAnimationFrame = jest.fn();
-      window.cancelAnimationFrame = jest.fn();
-    }
-  });
 
   beforeEach(() => {
     onSignIn = jest.fn();

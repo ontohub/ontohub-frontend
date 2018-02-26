@@ -1,4 +1,12 @@
-import { Home, HomeHeader } from "./scenes";
+import { graphql } from "react-apollo";
+import { organizationalUnitQuery } from "./apollo/queries";
+
+import {
+  Home,
+  HomeHeader,
+  OrganizationalUnit,
+  OrganizationalUnitHeader
+} from "./scenes";
 
 export default [
   {
@@ -6,5 +14,16 @@ export default [
     exact: true,
     header: HomeHeader,
     main: Home
+  },
+  {
+    path:
+      "/:organizationalUnitId/(repositories|organizations|members|settings)?",
+    header: OrganizationalUnitHeader,
+    main: OrganizationalUnit,
+    graphql: graphql(organizationalUnitQuery, {
+      options: ({ match: { params: { organizationalUnitId } } }) => ({
+        variables: { id: organizationalUnitId }
+      })
+    })
   }
 ];

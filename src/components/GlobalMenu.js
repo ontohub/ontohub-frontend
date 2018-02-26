@@ -98,6 +98,7 @@ const FixedGlobalMenu = styled(GlobalMenu)`
   top: 0;
   display: flex;
   justify-content: center;
+  z-index: 99999999;
 `;
 
 export default FixedGlobalMenu;

@@ -1,6 +1,15 @@
 {
   "extends": ["eslint:recommended", "react-app", "prettier", "prettier/react"],
   "parser": "babel-eslint",
+  "globals": {
+    "Factories": true,
+    "mount": true,
+    "React": true,
+    "Router": true,
+    "render": true,
+    "set": true,
+    "shallow": true
+  },
   "rules": {
     "linebreak-style": ["error", "unix"],
     "no-var": ["warn"],

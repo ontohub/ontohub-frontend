@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Message } from "semantic-ui-react";
 import { satisfies } from "semver";
 import styled from "styled-components";
+import { withVersionQuery } from "../apollo/queries";
 
 const BottomMessage = styled(Message)`
   position: fixed !important;
@@ -53,4 +54,6 @@ export class VersionWarning extends Component {
   }
 }
 
-export default VersionWarning;
+export const VersionWarningWithData = withVersionQuery(VersionWarning);
+
+export default VersionWarningWithData;

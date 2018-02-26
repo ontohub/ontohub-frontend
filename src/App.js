@@ -1,48 +1,33 @@
 import React from "react";
 import { graphql } from "react-apollo";
+import { VersionWarning, HeadAndBody } from "./components";
 import { currentUserQuery } from "./apollo/queries";
-import { Header } from "./components";
-import { VersionWarning, GlobalMenu } from "./containers";
+import { GlobalMenu } from "./containers";
 import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import routes from "./routes";
-import ReactCSSTransitionReplace from "react-css-transition-replace";
 import config from "./config.json";
 
 const backendVersion = config.ontohub.backendVersion;
 
-const App = props => (
+const App = ({ me, ...props }) => (
   <div className={props.className}>
-    <GlobalMenu me={props.me} />
-    <Header heightTransitionDuration=".4s" contentTransitionDuration=".1s">
-      <Route
-        render={({ location }) => (
-          <ReactCSSTransitionReplace
-            transitionName="cross-fade"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={500}
-          >
-            <Switch key={location.pathname} location={location}>
-              {routes.map((route, index) => (
-                <Route
-                  key={index}
-                  path={route.path}
-                  exact={route.exact}
-                  component={route.header}
-                />
-              ))}
-            </Switch>
-          </ReactCSSTransitionReplace>
-        )}
-      />
-    </Header>
+    <GlobalMenu me={me} />
     <Switch>
       {routes.map((route, index) => (
         <Route
-          key={index}
+          key={1}
           path={route.path}
           exact={route.exact}
-          component={route.main}
+          render={props => (
+            <HeadAndBody
+              hoc={route.graphql}
+              me={me}
+              head={route.header}
+              body={route.main}
+              {...props}
+            />
+          )}
         />
       ))}
     </Switch>
