@@ -41,7 +41,7 @@
     "eslint": "^4.17.0",
     "faker": "^4.1.0",
     "jest-plugin-set": "^2.6.0",
-    "jest-styled-components": "^4.10.0",
+    "jest-styled-components": "^5.0.0",
     "prettier": "1.10.2",
     "react-scripts": "1.1.1",
     "react-test-renderer": "^16.2.0",
