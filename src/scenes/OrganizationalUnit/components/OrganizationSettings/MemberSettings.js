@@ -145,7 +145,7 @@ export const PureMemberSettings = ({
                   setPopup(null);
                   removeOrganizationMember(popup);
                 }}
-                onCancel={setPopup}
+                onCancel={() => setPopup(null)}
               />
             </Table.Cell>
           </Table.Row>

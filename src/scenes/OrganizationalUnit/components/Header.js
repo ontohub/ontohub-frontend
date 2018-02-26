@@ -12,7 +12,7 @@ export const Header = ({
       displayName,
       emailHash,
       id,
-      permissions: { role } = {}
+      permissions
     } = {}
   }
 }) => (
@@ -58,13 +58,13 @@ export const Header = ({
           <Icon name="users" /> Members
         </Menu.Item>
       )}
-      {role === "admin" && (
+      {permissions && permissions.role === "admin" ? (
         <Menu.Menu position="right">
           <Menu.Item as={Link} to={`/${id}/settings`}>
             <Icon name="settings" /> Settings
           </Menu.Item>
         </Menu.Menu>
-      )}
+      ) : null}
     </Menu>
   </Container>
 );

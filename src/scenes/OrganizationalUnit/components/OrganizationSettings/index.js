@@ -8,8 +8,7 @@ import { dropRight } from "lodash";
 export const OrganizationSettings = ({
   match: { url },
   me,
-  data: { id, displayName, description, memberships, permissions },
-  ...props
+  data: { id, displayName, description, memberships, permissions }
 }) => (
   <Fragment>
     {!permissions || permissions.role !== "admin" ? (

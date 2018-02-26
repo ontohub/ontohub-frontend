@@ -80,7 +80,7 @@ describe("PureMemberSettings", () => {
       });
 
       describe("Open popup", () => {
-        set("poup", () => "ada");
+        set("popup", () => "ada");
 
         it("calls remove member callbacks", () => {
           wrapper
@@ -89,6 +89,15 @@ describe("PureMemberSettings", () => {
             .props.onConfirm();
 
           expect(removeOrganizationMember.mock.calls.length).toEqual(1);
+          expect(setPopup.mock.calls.length).toEqual(1);
+        });
+
+        it("closes the popup when clicking cancel", () => {
+          wrapper
+            .find("Confirm")
+            .instance()
+            .props.onCancel();
+
           expect(setPopup.mock.calls.length).toEqual(1);
         });
       });
