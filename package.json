@@ -12,7 +12,7 @@
     "apollo-link-batch-http": "^1.0.4",
     "apollo-link-error": "^1.0.5",
     "debounce-promise": "^3.1.0",
-    "formik": "^0.11.10",
+    "formik": "^0.11.11",
     "graphql-tag": "^2.7.3",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
