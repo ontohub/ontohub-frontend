@@ -27,7 +27,7 @@
     "semantic-ui-css": "^2.3.0",
     "semantic-ui-react": "^0.78.2",
     "semver": "^5.5.0",
-    "styled-components": "^2.4.0",
+    "styled-components": "^3.1.6",
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
