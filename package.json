@@ -13,7 +13,7 @@
     "apollo-link-error": "^1.0.5",
     "debounce-promise": "^3.1.0",
     "formik": "^0.11.11",
-    "graphql-tag": "^2.7.3",
+    "graphql-tag": "^2.8.0",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-apollo": "^2.0.4",
