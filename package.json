@@ -46,7 +46,7 @@
     "prettier": "1.10.2",
     "react-scripts": "1.1.1",
     "react-test-renderer": "^16.2.0",
-    "serve": "^6.5.0",
+    "serve": "^6.5.2",
     "stampit": "^4.0.2"
   },
   "scripts": {
