@@ -13,12 +13,12 @@
     react-inspector "^2.2.2"
     uuid "^3.1.0"
 
-"@storybook/addon-info@^3.3.14":
-  version "3.3.14"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.3.14.tgz#5d43fc4acb7fcca030691f3f53ddf73647a1c386"
+"@storybook/addon-info@^3.3.15":
+  version "3.3.15"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.3.15.tgz#32b914e009bb778f79e7d0e6f0433c477b2edac2"
   dependencies:
-    "@storybook/client-logger" "^3.3.14"
-    "@storybook/components" "^3.3.14"
+    "@storybook/client-logger" "^3.3.15"
+    "@storybook/components" "^3.3.15"
     babel-runtime "^6.26.0"
     global "^4.3.2"
     marksy "^6.0.2"
@@ -51,13 +51,13 @@
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.3.14.tgz#b43f767f7775bb17cec5ab0696f918a475043df9"
 
-"@storybook/client-logger@^3.3.14":
-  version "3.3.14"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.3.14.tgz#03d5bc6036a8e82351a349bec11a8c89f06c901e"
+"@storybook/client-logger@^3.3.14", "@storybook/client-logger@^3.3.15":
+  version "3.3.15"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.3.15.tgz#d1ae40bcbd537bae1896531f8f099a963d0fdeff"
 
-"@storybook/components@^3.3.14":
-  version "3.3.14"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.3.14.tgz#84ffcb5ac6a7d40e145402ed0d1521e6ad1b2d4d"
+"@storybook/components@^3.3.14", "@storybook/components@^3.3.15":
+  version "3.3.15"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.3.15.tgz#50dc213958b18a0e64c1624c50bdfdaf023609aa"
   dependencies:
     glamor "^2.20.40"
     glamorous "^4.11.2"
@@ -6414,13 +6414,7 @@ postcss-minify-selectors@^2.0.4:
     postcss "^5.0.14"
     postcss-selector-parser "^2.0.0"
 
-postcss-modules-extract-imports@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.1.0.tgz#b614c9720be6816eaee35fb3a5faa1dba6a05ddb"
-  dependencies:
-    postcss "^6.0.1"
-
-postcss-modules-extract-imports@^1.2.0:
+postcss-modules-extract-imports@^1.0.0, postcss-modules-extract-imports@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.2.0.tgz#66140ecece38ef06bf0d3e355d69bf59d141ea85"
   dependencies:
