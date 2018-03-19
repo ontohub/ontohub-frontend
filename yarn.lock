@@ -415,17 +415,17 @@ apollo-client@^2.2.7:
   optionalDependencies:
     "@types/async" "2.0.47"
 
-apollo-link-batch-http@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/apollo-link-batch-http/-/apollo-link-batch-http-1.1.1.tgz#b9d419edd8a0c806725265c9ba624e7da0a0fd97"
+apollo-link-batch-http@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/apollo-link-batch-http/-/apollo-link-batch-http-1.2.1.tgz#74cf212ae737cb856f42b3efdc97ddbd5e6c6f52"
   dependencies:
     apollo-link "^1.2.1"
-    apollo-link-batch "^1.1.1"
-    apollo-link-http-common "^0.2.2"
+    apollo-link-batch "^1.1.2"
+    apollo-link-http-common "^0.2.3"
 
-apollo-link-batch@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/apollo-link-batch/-/apollo-link-batch-1.1.1.tgz#2f40ad629606d1fa55329ab5d2891af1881448b0"
+apollo-link-batch@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/apollo-link-batch/-/apollo-link-batch-1.1.2.tgz#ee9ab566048e82c757cf67b889124f7563584d49"
   dependencies:
     apollo-link "^1.2.1"
 
@@ -441,9 +441,9 @@ apollo-link-error@^1.0.7:
   dependencies:
     apollo-link "^1.2.1"
 
-apollo-link-http-common@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/apollo-link-http-common/-/apollo-link-http-common-0.2.2.tgz#ac8a1810eca6a7ed37a34baeeb0a55752e6a0e30"
+apollo-link-http-common@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/apollo-link-http-common/-/apollo-link-http-common-0.2.3.tgz#82ae0d4ff0cdd7c5c8826411d9dd7f7d8049ca46"
   dependencies:
     apollo-link "^1.2.1"
 
