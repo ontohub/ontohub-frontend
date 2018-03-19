@@ -7896,9 +7896,9 @@ ssri@^5.2.4:
   dependencies:
     safe-buffer "^5.1.1"
 
-stampit@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/stampit/-/stampit-4.0.2.tgz#7865b0987747d117970c6262930b5b030865f051"
+stampit@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/stampit/-/stampit-4.1.1.tgz#e1827c1f094077d00153ef818234b91e580cecb8"
 
 "statuses@>= 1.3.1 < 2", statuses@~1.4.0:
   version "1.4.0"
