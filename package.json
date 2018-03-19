@@ -47,7 +47,7 @@
     "react-scripts": "1.1.1",
     "react-test-renderer": "^16.2.0",
     "serve": "^6.5.3",
-    "stampit": "^4.0.2"
+    "stampit": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
