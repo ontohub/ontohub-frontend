@@ -4,8 +4,8 @@ import { storiesOf } from "@storybook/react";
 
 import { MemoryRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import theme from "../../styles";
-import GlobalMenu from "../GlobalMenu";
+import theme from "../../../styles";
+import GlobalMenu from "../global-menu";
 
 const Decorator = storyFn => (
   <Router>

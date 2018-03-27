@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Dropdown, Icon, Menu } from "semantic-ui-react";
-import { LoginModal } from "./LoginModal";
+import { LoginModal } from "../../components/LoginModal";
 import Gravatar from "react-gravatar";
 import styled from "styled-components";
 
