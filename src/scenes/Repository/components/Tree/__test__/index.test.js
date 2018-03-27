@@ -1,6 +1,6 @@
 import React from "react";
 import { mount, render } from "enzyme";
-import { gitLsFilesToTree } from "../gitLsFilesToTree";
+import { gitLsFilesToTree } from "../helpers/gitLsFilesToTree";
 import { DirectoryTree } from "..";
 
 describe("DirectoryTree", () => {

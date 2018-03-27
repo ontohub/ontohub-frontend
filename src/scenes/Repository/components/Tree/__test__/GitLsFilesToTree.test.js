@@ -1,5 +1,5 @@
 import React from "react";
-import { gitLsFilesToTree } from "../gitLsFilesToTree";
+import { gitLsFilesToTree } from "../helpers/gitLsFilesToTree";
 
 describe("gitLsFilesToTree", () => {
   describe("given an empty array", () => {
