@@ -1,10 +1,13 @@
 import { OrganizationSettings } from "..";
+import { ApolloProvider } from "react-apollo";
 
 describe("OrganizationSettings", () => {
   set("component", () => (
-    <Router initialEntries={[path]}>
-      <OrganizationSettings data={data} match={match} me={me} />
-    </Router>
+    <ApolloProvider client={{}}>
+      <Router initialEntries={[path]}>
+        <OrganizationSettings data={data} match={match} me={me} />
+      </Router>
+    </ApolloProvider>
   ));
 
   set("renderedComponent", () => render(component));
