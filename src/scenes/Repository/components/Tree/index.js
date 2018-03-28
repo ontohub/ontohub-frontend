@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactCSSTransitionReplace from "react-css-transition-replace";
 import { compose, defaultProps, withStateHandlers } from "recompose";
-import { compact, includes, last, map, without } from "lodash";
+import { compact, includes, map, without } from "lodash";
 import styled from "styled-components";
 import { Icon, List } from "semantic-ui-react";
 import { fileType } from "../helpers";

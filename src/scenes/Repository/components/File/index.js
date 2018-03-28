@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
-import _, { includes } from "lodash";
+import { includes } from "lodash";
 import styled from "styled-components";
 import { ReactHeight } from "react-height";
 import { compose, defaultProps, withStateHandlers } from "recompose";
-import { Button, Header, Icon, Menu, Popup, Segment } from "semantic-ui-react";
+import { Button, Menu, Popup } from "semantic-ui-react";
 
 import { media } from "../../../../helpers";
 import { fileType } from "../helpers/filetype";
@@ -22,7 +22,6 @@ export const FileSwitch = ({ filename, value, encoding, ...editorProps }) => {
       );
     case "pdf":
       return <PDFViewer content={value} />;
-      break;
     case "audio":
     case "video":
     case "word":
@@ -49,7 +48,6 @@ export const FileSwitch = ({ filename, value, encoding, ...editorProps }) => {
         />
       );
   }
-  return null;
 };
 
 const OnMobile = styled.div`

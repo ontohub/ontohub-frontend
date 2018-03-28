@@ -1,18 +1,25 @@
 import React from "react";
 import { get } from "lodash";
-import { Header as SemHeader, Container, Menu, Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import { PaddedContainer } from "../../../components";
+import { Header as SemHeader } from "semantic-ui-react";
 
 const PureHeader = ({
-  match: { params: { organizationalUnitId, repositoryId } }
+  match: { params: { organizationalUnitId, repositoryId } },
+  ...props
 }) => {
-  console.log("Header");
-  console.log(organizationalUnitId);
-  console.log(repositoryId);
+  console.log(props);
   return (
-    <SemHeader inverted as="h1">
-      {organizationalUnitId} / {repositoryId}
-    </SemHeader>
+    <PaddedContainer>
+      <SemHeader inverted as="h2">
+        <Link to={`/${organizationalUnitId}`}>{organizationalUnitId}</Link> /{" "}
+        {repositoryId}
+        <SemHeader.Subheader key="description">
+          {get(props, "data.repository.description")}
+        </SemHeader.Subheader>
+      </SemHeader>
+    </PaddedContainer>
   );
 };
 
-export const Header = PureHeader;
+export { PureHeader as Header };

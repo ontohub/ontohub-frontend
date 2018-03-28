@@ -1,5 +1,5 @@
 import { graphql } from "react-apollo";
-import { organizationalUnitQuery } from "./apollo/queries";
+import { organizationalUnitQuery, repositoryQuery } from "./apollo/queries";
 
 import {
   Home,
@@ -20,6 +20,7 @@ export default [
   {
     path:
       "/:organizationalUnitId/(repositories|organizations|members|settings)?",
+    exact: true,
     header: OrganizationalUnitHeader,
     main: OrganizationalUnit,
     graphql: graphql(organizationalUnitQuery, {
@@ -30,8 +31,14 @@ export default [
   },
   {
     path: "/:organizationalUnitId/:repositoryId",
-    exact: true,
     header: RepositoryHeader,
-    main: Repository
+    main: Repository,
+    graphql: graphql(repositoryQuery, {
+      options: ({
+        match: { params: { organizationalUnitId, repositoryId } }
+      }) => ({
+        variables: { id: `${organizationalUnitId}/${repositoryId}` }
+      })
+    })
   }
 ];

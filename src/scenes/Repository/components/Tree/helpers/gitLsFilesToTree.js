@@ -3,7 +3,7 @@ import _ from "lodash";
 const insertInnerNodePaths = (tree, parentPath) => {
   _.each(tree.directories, (subtree, directoryName) => {
     const path =
-      parentPath == "" ? directoryName : `${parentPath}/${directoryName}`;
+      parentPath === "" ? directoryName : `${parentPath}/${directoryName}`;
     subtree.path = path;
     insertInnerNodePaths(subtree, path);
   });

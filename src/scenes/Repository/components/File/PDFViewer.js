@@ -1,7 +1,7 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import { compose, defaultProps, withProps, withStateHandlers } from "recompose";
-import { Button, Form, Icon, Input, Label } from "semantic-ui-react";
+import styled from "styled-components";
+import { compose, defaultProps, withStateHandlers } from "recompose";
+import { Button, Icon, Input, Label } from "semantic-ui-react";
 import PDF from "react-pdf-js";
 
 const UnstyledPagination = ({
@@ -131,7 +131,7 @@ export const PDFViewer = compose(
         pageInInput: newPage
       }),
       changePageTo: ({ pagesCount }) => newPage => {
-        const pageInt = parseInt(newPage);
+        const pageInt = parseInt(newPage, 10);
         if (pageInt && 1 <= pageInt && pageInt <= pagesCount) {
           return { page: pageInt };
         }

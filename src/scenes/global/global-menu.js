@@ -101,4 +101,4 @@ const FixedGlobalMenu = styled(GlobalMenu)`
   z-index: 99999999;
 `;
 
-export default FixedGlobalMenu;
+export { FixedGlobalMenu as GlobalMenu };

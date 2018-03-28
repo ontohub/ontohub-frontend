@@ -1,11 +1,8 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
+import React from "react";
 import mime from "mime-types";
 import { Button, Container, Grid } from "semantic-ui-react";
 import FileSaver from "file-saver";
 import B64toBlob from "b64-to-blob";
-
-const Wrapper = styled.div``;
 
 export const DownloadButton = ({
   filename,

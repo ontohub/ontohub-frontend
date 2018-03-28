@@ -9,3 +9,15 @@ export const lsFilesQuery = gql`
     }
   }
 `;
+
+export const repositoryQuery = gql`
+  query repositoryQuery($id: ID!, $revision: ID) {
+    repository(id: $id) {
+      id
+      description
+      commit(revision: $revision) {
+        lsFiles
+      }
+    }
+  }
+`;

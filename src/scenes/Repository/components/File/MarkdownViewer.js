@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Container } from "semantic-ui-react";
 import Markdown from "react-markdown";
-import _githubMarkdownCss from "github-markdown-css/github-markdown.css";
+import "github-markdown-css/github-markdown.css";
 
 import Lowlight from "react-lowlight";
-import _highlightJsCss from "highlight.js/styles/github.css";
+import "highlight.js/styles/github.css";
 import bash from "highlight.js/lib/languages/bash";
 import json from "highlight.js/lib/languages/json";
 import markdown from "highlight.js/lib/languages/markdown";

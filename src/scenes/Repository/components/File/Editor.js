@@ -1,8 +1,7 @@
 import React from "react";
-import { compose, defaultProps, withProps, withStateHandlers } from "recompose";
-import { Button, Header, Icon, Modal } from "semantic-ui-react";
+import { compose, defaultProps, withStateHandlers } from "recompose";
+import { Button, Header, Modal } from "semantic-ui-react";
 import AceEditor from "react-ace";
-import brace from "brace";
 import "brace/keybinding/vim";
 import "brace/theme/github";
 

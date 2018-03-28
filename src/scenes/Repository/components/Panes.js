@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
-import _ from "lodash";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { compose, defaultProps, withProps, withStateHandlers } from "recompose";
 import { Accordion, Button, Icon, Transition } from "semantic-ui-react";
 import { media } from "../../../helpers";
@@ -49,9 +48,9 @@ const SegmentToggler = ({
     active={isOpen}
     basic
     attached={attachedAt}
-    size="mini"
+    // size="mini"
     onClick={toggle}
-    style={{ padding: "2px 0", boxSizing: "border-box" }}
+    style={{ padding: "2px 0", boxSizing: "border-box", borderRadius: 0 }}
   >
     <div style={{ position: "relative" }}>
       <Icon name={isOpen ? iconOpen : iconClosed} />

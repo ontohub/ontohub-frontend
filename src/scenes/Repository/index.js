@@ -1,35 +1,22 @@
 import React from "react";
+import { get } from "lodash";
 import { gitLsFilesToTree } from "./components/Tree/helpers";
 
 import { Header, Panes, DirectoryTree } from "./components";
 
 const PureRepository = ({
-  match: { params: { organizationalUnitId, repositoryId } }
+  match: { params: { organizationalUnitId, repositoryId } },
+  data
 }) => {
   const height = 0;
   const ChildLeft = () => (
     <DirectoryTree
-      tree={gitLsFilesToTree([
-        "Basic/Numbers.casl",
-        "Basic/RelationsAndOrders.casl",
-        "NativeDocuments/cat.clif",
-        "NativeDocuments/pizza.owl",
-        "icons/ontohub.jpg",
-        "icons/ontohub.png",
-        "icons/ontohub.svg",
-        "new_folder/.gitkeep",
-        "pdf/ontohub.pdf",
-        "texts/ontohub.txt",
-        "texts/ontohub_changed.txt",
-        "texts/ontohub_changed_renamed.txt",
-        "texts/ontohub_created.txt",
-        "texts/ontohub_renamed.txt"
-      ])}
-      initiallyOpenNodes={["Basic", "texts"]}
+      tree={gitLsFilesToTree(get(data, "repository.commit.lsFiles"))}
+      initiallyOpenNodes={[]}
     />
   );
-  const ChildCenter = () => null;
-  const ChildRight = () => null;
+  const ChildCenter = () => <div>This is the main content</div>;
+  const ChildRight = () => <div>This is the context</div>;
   return (
     <Panes
       reservedHeaderHeight={height}
@@ -45,5 +32,4 @@ const PureRepository = ({
   );
 };
 
-const Repository = PureRepository;
-export { Header, Repository };
+export { Header, PureRepository as Repository };

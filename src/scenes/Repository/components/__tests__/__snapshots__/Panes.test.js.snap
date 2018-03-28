@@ -439,20 +439,21 @@ exports[`Panes interactions after toggling the left segment in the computer view
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -543,20 +544,21 @@ exports[`Panes interactions after toggling the left segment in the computer view
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -664,20 +666,21 @@ exports[`Panes interactions after toggling the left segment in the computer view
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -753,20 +756,21 @@ exports[`Panes interactions after toggling the left segment in the computer view
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -1273,20 +1277,21 @@ exports[`Panes interactions after toggling the left segment in the computer view
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -1377,20 +1382,21 @@ exports[`Panes interactions after toggling the left segment in the computer view
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -1498,20 +1504,21 @@ exports[`Panes interactions after toggling the left segment in the computer view
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -1587,20 +1594,21 @@ exports[`Panes interactions after toggling the left segment in the computer view
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -2107,20 +2115,21 @@ exports[`Panes interactions after toggling the left segment in the tablet view a
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -2211,20 +2220,21 @@ exports[`Panes interactions after toggling the left segment in the tablet view a
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -2332,20 +2342,21 @@ exports[`Panes interactions after toggling the left segment in the tablet view a
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -2421,20 +2432,21 @@ exports[`Panes interactions after toggling the left segment in the tablet view a
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -2941,20 +2953,21 @@ exports[`Panes interactions after toggling the left segment in the tablet view t
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -3045,20 +3058,21 @@ exports[`Panes interactions after toggling the left segment in the tablet view t
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -3166,20 +3180,21 @@ exports[`Panes interactions after toggling the left segment in the tablet view t
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -3255,20 +3270,21 @@ exports[`Panes interactions after toggling the left segment in the tablet view t
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -3775,20 +3791,21 @@ exports[`Panes interactions after toggling the right segment in the computer vie
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -3879,20 +3896,21 @@ exports[`Panes interactions after toggling the right segment in the computer vie
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -4000,20 +4018,21 @@ exports[`Panes interactions after toggling the right segment in the computer vie
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -4089,20 +4108,21 @@ exports[`Panes interactions after toggling the right segment in the computer vie
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -4609,20 +4629,21 @@ exports[`Panes interactions after toggling the right segment in the computer vie
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -4713,20 +4734,21 @@ exports[`Panes interactions after toggling the right segment in the computer vie
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -4834,20 +4856,21 @@ exports[`Panes interactions after toggling the right segment in the computer vie
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -4923,20 +4946,21 @@ exports[`Panes interactions after toggling the right segment in the computer vie
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -5443,20 +5467,21 @@ exports[`Panes interactions after toggling the right segment in the tablet view 
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -5547,20 +5572,21 @@ exports[`Panes interactions after toggling the right segment in the tablet view 
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -5668,20 +5694,21 @@ exports[`Panes interactions after toggling the right segment in the tablet view 
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -5757,20 +5784,21 @@ exports[`Panes interactions after toggling the right segment in the tablet view 
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -6277,20 +6305,21 @@ exports[`Panes interactions after toggling the right segment in the tablet view 
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -6381,20 +6410,21 @@ exports[`Panes interactions after toggling the right segment in the tablet view 
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -6502,20 +6532,21 @@ exports[`Panes interactions after toggling the right segment in the tablet view 
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -6591,20 +6622,21 @@ exports[`Panes interactions after toggling the right segment in the tablet view 
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -7115,20 +7147,21 @@ exports[`Panes mobile view starting at the center segment the correct segment is
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -7219,20 +7252,21 @@ exports[`Panes mobile view starting at the center segment the correct segment is
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -7340,20 +7374,21 @@ exports[`Panes mobile view starting at the center segment the correct segment is
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -7429,20 +7464,21 @@ exports[`Panes mobile view starting at the center segment the correct segment is
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -7953,20 +7989,21 @@ exports[`Panes mobile view starting at the left segment the correct segment is o
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -8057,20 +8094,21 @@ exports[`Panes mobile view starting at the left segment the correct segment is o
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -8178,20 +8216,21 @@ exports[`Panes mobile view starting at the left segment the correct segment is o
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -8267,20 +8306,21 @@ exports[`Panes mobile view starting at the left segment the correct segment is o
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -8791,20 +8831,21 @@ exports[`Panes mobile view starting at the right segment the correct segment is 
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -8895,20 +8936,21 @@ exports[`Panes mobile view starting at the right segment the correct segment is 
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -9016,20 +9058,21 @@ exports[`Panes mobile view starting at the right segment the correct segment is 
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -9105,20 +9148,21 @@ exports[`Panes mobile view starting at the right segment the correct segment is 
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -9625,20 +9669,21 @@ exports[`Panes with default options matches the snapshot 1`] = `
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -9729,20 +9774,21 @@ exports[`Panes with default options matches the snapshot 1`] = `
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -9850,20 +9896,21 @@ exports[`Panes with default options matches the snapshot 1`] = `
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -9939,20 +9986,21 @@ exports[`Panes with default options matches the snapshot 1`] = `
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -10459,20 +10507,21 @@ exports[`Panes with left segment closed with right segment closed matches the sn
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -10563,20 +10612,21 @@ exports[`Panes with left segment closed with right segment closed matches the sn
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -10684,20 +10734,21 @@ exports[`Panes with left segment closed with right segment closed matches the sn
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -10773,20 +10824,21 @@ exports[`Panes with left segment closed with right segment closed matches the sn
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -11293,20 +11345,21 @@ exports[`Panes with left segment closed with right segment open matches the snap
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -11397,20 +11450,21 @@ exports[`Panes with left segment closed with right segment open matches the snap
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -11518,20 +11572,21 @@ exports[`Panes with left segment closed with right segment open matches the snap
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -11607,20 +11662,21 @@ exports[`Panes with left segment closed with right segment open matches the snap
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -12127,20 +12183,21 @@ exports[`Panes with left segment open with right segment closed matches the snap
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -12231,20 +12288,21 @@ exports[`Panes with left segment open with right segment closed matches the snap
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -12352,20 +12410,21 @@ exports[`Panes with left segment open with right segment closed matches the snap
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -12441,20 +12500,21 @@ exports[`Panes with left segment open with right segment closed matches the snap
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -12961,20 +13021,21 @@ exports[`Panes with left segment open with right segment open matches the snapsh
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -13065,20 +13126,21 @@ exports[`Panes with left segment open with right segment open matches the snapsh
                           attached="bottom"
                           basic={true}
                           onClick={[Function]}
-                          size="mini"
                           style={
                             Object {
+                              "borderRadius": 0,
                               "boxSizing": "border-box",
                               "padding": "2px 0",
                             }
                           }
                         >
                           <div
-                            className="ui mini basic bottom attached button"
+                            className="ui basic bottom attached button"
                             onClick={[Function]}
                             role="button"
                             style={
                               Object {
+                                "borderRadius": 0,
                                 "boxSizing": "border-box",
                                 "padding": "2px 0",
                               }
@@ -13186,20 +13248,21 @@ exports[`Panes with left segment open with right segment open matches the snapsh
                       attached="right"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini active basic right attached button"
+                        className="ui active basic right attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }
@@ -13275,20 +13338,21 @@ exports[`Panes with left segment open with right segment open matches the snapsh
                       attached="left"
                       basic={true}
                       onClick={[Function]}
-                      size="mini"
                       style={
                         Object {
+                          "borderRadius": 0,
                           "boxSizing": "border-box",
                           "padding": "2px 0",
                         }
                       }
                     >
                       <div
-                        className="ui mini basic left attached button"
+                        className="ui basic left attached button"
                         onClick={[Function]}
                         role="button"
                         style={
                           Object {
+                            "borderRadius": 0,
                             "boxSizing": "border-box",
                             "padding": "2px 0",
                           }

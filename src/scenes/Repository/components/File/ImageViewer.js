@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import mime from "mime-types";
 
 export const ImageViewer = ({ filename, encoding, value }) => {

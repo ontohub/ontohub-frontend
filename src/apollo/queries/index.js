@@ -3,3 +3,4 @@ export * from "./session";
 export * from "./user";
 export * from "./version";
 export * from "./organizational-unit";
+export * from "./repository";
