@@ -4,7 +4,7 @@ import { gitLsFilesToTree } from "./components/Tree/helpers";
 import { withRouter } from "react-router-dom";
 
 import { Header, Panes, DirectoryTree } from "./components";
-import { Container, Dropdown } from "semantic-ui-react";
+import { Container, Dropdown, Message } from "semantic-ui-react";
 
 const BranchDropdown = withRouter(
   ({ history, revision, branches = [], repo, defaultBranch }) => (
@@ -56,6 +56,15 @@ const PureRepository = ({
     </Container>
   );
   const ChildRight = () => <div>This is the context</div>;
+  if (!data.loading && !get(data, "repository.commit")) {
+    return (
+      <Container text>
+        <Message size="tiny" info>
+          <Message.Header>This repository is empty</Message.Header>
+        </Message>
+      </Container>
+    );
+  }
   return (
     <Panes
       reservedHeaderHeight={height}
