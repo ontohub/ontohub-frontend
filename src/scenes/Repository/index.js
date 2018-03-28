@@ -52,7 +52,7 @@ const PureRepository = ({
   );
   const ChildCenter = () => (
     <Container text>
-      <pre>{get(data, "repository.commit.readme.content")}</pre>
+      <pre>{get(data, "repository.readme.content")}</pre>
     </Container>
   );
   const ChildRight = () => <div>This is the context</div>;
