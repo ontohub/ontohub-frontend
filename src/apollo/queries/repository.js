@@ -15,8 +15,13 @@ export const repositoryQuery = gql`
     repository(id: $id) {
       id
       description
+      branches
+      defaultBranch
       commit(revision: $revision) {
         lsFiles
+        readme: file(path: "texts/ontohub.txt") {
+          content
+        }
       }
     }
   }

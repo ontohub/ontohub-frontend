@@ -18,14 +18,39 @@ export default [
     main: Home
   },
   {
-    path:
-      "/:organizationalUnitId/(repositories|organizations|members|settings)?",
+    path: "/:organizationalUnitId",
     exact: true,
     header: OrganizationalUnitHeader,
     main: OrganizationalUnit,
     graphql: graphql(organizationalUnitQuery, {
       options: ({ match: { params: { organizationalUnitId } } }) => ({
         variables: { id: organizationalUnitId }
+      })
+    })
+  },
+  {
+    path:
+      "/:organizationalUnitId/(repositories|organizations|members|settings)",
+    header: OrganizationalUnitHeader,
+    main: OrganizationalUnit,
+    graphql: graphql(organizationalUnitQuery, {
+      options: ({ match: { params: { organizationalUnitId } } }) => ({
+        variables: { id: organizationalUnitId }
+      })
+    })
+  },
+  {
+    path: "/:organizationalUnitId/:repositoryId/rev/:revision",
+    header: RepositoryHeader,
+    main: Repository,
+    graphql: graphql(repositoryQuery, {
+      options: ({
+        match: { params: { organizationalUnitId, repositoryId, revision } }
+      }) => ({
+        variables: {
+          id: `${organizationalUnitId}/${repositoryId}`,
+          revision: decodeURIComponent(revision)
+        }
       })
     })
   },
@@ -37,7 +62,9 @@ export default [
       options: ({
         match: { params: { organizationalUnitId, repositoryId } }
       }) => ({
-        variables: { id: `${organizationalUnitId}/${repositoryId}` }
+        variables: {
+          id: `${organizationalUnitId}/${repositoryId}`
+        }
       })
     })
   }

@@ -10,3 +10,4 @@ export {
   StaticTree
 } from "./Tree";
 export { File } from "./File";
+export { Editor } from "./File/Editor";
