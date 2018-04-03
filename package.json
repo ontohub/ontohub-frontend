@@ -44,7 +44,7 @@
     "jest-plugin-set": "^2.6.0",
     "jest-styled-components": "^5.0.0",
     "prettier": "1.11.1",
-    "react-scripts": "1.1.1",
+    "react-scripts": "1.1.2",
     "react-test-renderer": "^16.2.0",
     "serve": "^6.5.3",
     "stampit": "^4.1.1"
