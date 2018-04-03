@@ -105,11 +105,11 @@ exports[`LoginModal matches the snapshot 1`] = `
                               Username
                             </label>
                             <input
-                              type="text"
                               name="username"
                               id="sign-in-username"
-                              value="ada"
+                              type="text"
                               placeholder="Username"
+                              value="ada"
                             />
                           </div>
                           <div
@@ -121,11 +121,11 @@ exports[`LoginModal matches the snapshot 1`] = `
                               Password
                             </label>
                             <input
-                              type="password"
                               name="password"
                               id="sign-in-password"
-                              value="changemenow"
+                              type="password"
                               placeholder="Password"
+                              value="changemenow"
                             />
                           </div>
                         </div>
@@ -204,10 +204,10 @@ exports[`LoginModal matches the snapshot 1`] = `
                               Password
                             </label>
                             <input
-                              type="password"
                               id="sign-up-password"
                               name="password"
                               placeholder="Password"
+                              type="password"
                               value=""
                             />
                             <div
@@ -231,10 +231,10 @@ exports[`LoginModal matches the snapshot 1`] = `
                               Password confirmation
                             </label>
                             <input
-                              type="password"
                               id="sign-up-password-confirm"
                               name="confirmPassword"
                               placeholder="Password confirmation"
+                              type="password"
                               value=""
                             />
                           </div>
