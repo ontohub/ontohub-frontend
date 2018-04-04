@@ -18,15 +18,17 @@ const BranchDropdown = withRouter(
         text: branch,
         value: branch
       }))}
-      onChange={(event, { value }) => {
-        let newPath;
-        if (value === defaultBranch) {
-          newPath = `/${repo}`;
-        } else {
-          newPath = `/${repo}/rev/${encodeURIComponent(value)}`;
+      onChange={
+        /* istanbul ignore next */ (event, { value }) => {
+          let newPath;
+          if (value === defaultBranch) {
+            newPath = `/${repo}`;
+          } else {
+            newPath = `/${repo}/rev/${encodeURIComponent(value)}`;
+          }
+          history.push(newPath);
         }
-        history.push(newPath);
-      }}
+      }
     />
   )
 );

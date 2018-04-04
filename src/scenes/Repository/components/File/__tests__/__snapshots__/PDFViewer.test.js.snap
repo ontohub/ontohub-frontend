@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PDFViewer matches the snapshot 1`] = `
+.c0 {
+  text-align: center;
+  width: 100%;
+}
+
+.c0 form {
+  display: inline-block;
+  margin: 0 0.25em 0 0;
+  padding: 0.125em 0 0 0;
+}
+
+.c0 form input {
+  width: 4em;
+  height: 36px;
+}
+
+.c0 form .label {
+  width: 4em;
+  height: 36px;
+  text-align: left;
+}
+
+<div>
+  <div
+    class="row c0"
+  >
+    <button
+      class="ui icon disabled left labeled button"
+      disabled=""
+      role="button"
+      tabindex="-1"
+    >
+      <i
+        aria-hidden="true"
+        class="angle double left icon"
+      >
+        
+      </i>
+      Previous Page
+    </button>
+    <form>
+      <div
+        class="ui right labeled input"
+      >
+        <input
+          placeholder="Page"
+          style="text-align:right"
+          type="text"
+          value="1"
+        >
+          
+        </input>
+        <div
+          class="ui label"
+        >
+          of 1
+        </div>
+      </div>
+    </form>
+    <button
+      class="ui icon disabled right labeled button"
+      disabled=""
+      role="button"
+      tabindex="-1"
+    >
+      Next Page
+      <i
+        aria-hidden="true"
+        class="angle double right icon"
+      >
+        
+      </i>
+    </button>
+  </div>
+  <div>
+    Loading PDF...
+  </div>
+</div>
+`;

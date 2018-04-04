@@ -26,18 +26,22 @@ const UnstyledPagination = ({
         Previous Page
       </Button>
       <form
-        onSubmit={event => {
-          event.preventDefault();
-          changePageTo(pageInInput);
-        }}
+        onSubmit={
+          /* istanbul ignore next */ event => {
+            event.preventDefault();
+            changePageTo(pageInInput);
+          }
+        }
       >
         <Input labelPosition="right" type="text" placeholder="Page">
           <input
             style={{ textAlign: "right" }}
             value={pageInInput}
-            onChange={event => {
-              changePageInInputTo(event.target.value);
-            }}
+            onChange={
+              /* istanbul ignore next */ event => {
+                changePageInInputTo(event.target.value);
+              }
+            }
           />
           <Label>of {pagesCount}</Label>
         </Input>
@@ -113,24 +117,24 @@ export const PDFViewer = compose(
       pageInInput: initialPage
     }),
     {
-      onDocumentComplete: () => pagesCount => ({
+      onDocumentComplete: /* istanbul ignore next */ () => pagesCount => ({
         page: 1,
         pagesCount: pagesCount
       }),
-      onPageComplete: () => page => ({
+      onPageComplete: /* istanbul ignore next */ () => page => ({
         page: page,
         pageInInput: page
       }),
-      handlePrevious: ({ page }) => () => ({
+      handlePrevious: /* istanbul ignore next */ ({ page }) => () => ({
         page: page - 1
       }),
-      handleNext: ({ page }) => () => ({
+      handleNext: /* istanbul ignore next */ ({ page }) => () => ({
         page: page + 1
       }),
-      changePageInInputTo: () => newPage => ({
+      changePageInInputTo: /* istanbul ignore next */ () => newPage => ({
         pageInInput: newPage
       }),
-      changePageTo: ({ pagesCount }) => newPage => {
+      changePageTo: /* istanbul ignore next */ ({ pagesCount }) => newPage => {
         const pageInt = parseInt(newPage, 10);
         if (pageInt && 1 <= pageInt && pageInt <= pagesCount) {
           return { page: pageInt };
