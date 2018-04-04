@@ -51,6 +51,7 @@ const PureEditor = ({
                   color="red"
                   icon="trash outline"
                   content="Discard Changes"
+                  data-testid="reset-button"
                   onClick={openRevertChangesModal}
                 />
               }
@@ -71,14 +72,16 @@ const PureEditor = ({
                   onClick={closeRevertChangesModal}
                 />
                 <Button
-                  onClick={() => {
-                    resetValue(defaultValue);
-                    closeRevertChangesModal();
-                    toggleEditingMode();
-                    editor.refEditor
-                      .getElementsByTagName("textarea")[0]
-                      .focus();
-                  }}
+                  onClick={
+                    /* istanbul ignore next */ () => {
+                      resetValue(defaultValue);
+                      closeRevertChangesModal();
+                      toggleEditingMode();
+                      editor.refEditor
+                        .getElementsByTagName("textarea")[0]
+                        .focus();
+                    }
+                  }
                   basic
                   color="red"
                   icon="trash outline"
@@ -113,10 +116,12 @@ const PureEditor = ({
         debounceChangePeriod={100}
         {...aceEditorProps}
         readOnly={isEditingPermitted ? !isEditing : true}
-        onChange={(value, changeEvent) => {
-          onChangeValueUpdater(value, changeEvent);
-          onChange && onChange(value, changeEvent);
-        }}
+        onChange={
+          /* istanbul ignore next */ (value, changeEvent) => {
+            onChangeValueUpdater(value, changeEvent);
+            onChange && onChange(value, changeEvent);
+          }
+        }
       />
     </div>
   );
@@ -143,18 +148,25 @@ export const Editor = compose(
       toggleEditingMode: ({ isEditing }) => () => ({
         isEditing: !isEditing
       }),
-      onChangeValueUpdater: () => (newValue, changeEvent) => ({
+      onChangeValueUpdater: /* istanbul ignore next */ () => (
+        newValue,
+        changeEvent
+      ) => ({
         value: newValue
       }),
-      resetValue: () => defaultValue => ({
+      resetValue: /* istanbul ignore next */ () => defaultValue => ({
         value: defaultValue
       }),
       setInitialCursorPosition: () => () => ({ cursorPositionWasSet: true }),
       keepCursorAt: () => currentCursorPosition => ({
         cursorPosition: currentCursorPosition
       }),
-      openRevertChangesModal: () => () => ({ revertChangesModalIsOpen: true }),
-      closeRevertChangesModal: () => () => ({ revertChangesModalIsOpen: false })
+      openRevertChangesModal: /* istanbul ignore next */ () => () => ({
+        revertChangesModalIsOpen: true
+      }),
+      closeRevertChangesModal: /* istanbul ignore next */ () => () => ({
+        revertChangesModalIsOpen: false
+      })
     }
   )
 )(PureEditor);

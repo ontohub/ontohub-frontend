@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadButton with a base64-encoded text file matches the snapshot 1`] = `
+<div
+  class="ui one column grid"
+  style="padding:1em"
+>
+  <div
+    class="row"
+  >
+    <div
+      class="center aligned column"
+    >
+      <div
+        class="ui container"
+      >
+        This file type cannot be displayed.
+      </div>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="center aligned column"
+    >
+      <button
+        class="ui button"
+        role="button"
+      >
+        Download test.js
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DownloadButton with a plain text file matches the snapshot 1`] = `
+<div
+  class="ui one column grid"
+  style="padding:1em"
+>
+  <div
+    class="row"
+  >
+    <div
+      class="center aligned column"
+    >
+      <div
+        class="ui container"
+      >
+        This file type cannot be displayed.
+      </div>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="center aligned column"
+    >
+      <button
+        class="ui button"
+        role="button"
+      >
+        Download test.js
+      </button>
+    </div>
+  </div>
+</div>
+`;
