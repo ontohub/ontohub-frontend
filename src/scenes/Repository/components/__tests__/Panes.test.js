@@ -259,5 +259,74 @@ describe("Panes", () => {
         });
       });
     });
+
+    describe("after toggling the left segment in the mobile view", () => {
+      const wrapper = mount(component);
+      wrapper
+        .find({ handlerid: "mobileLeftSegmentSwitcher" })
+        .first()
+        .simulate("click");
+
+      it("toggles the left segment (snapshot)", () => {
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      describe("after toggling the left segment in the mobile view", () => {
+        wrapper
+          .find({ handlerid: "mobileLeftSegmentSwitcher" })
+          .first()
+          .simulate("click");
+
+        it("toggles the left segment (snapshot)", () => {
+          expect(wrapper).toMatchSnapshot();
+        });
+      });
+    });
+
+    describe("after toggling the center segment in the mobile view", () => {
+      const wrapper = mount(component);
+      wrapper
+        .find({ handlerid: "mobileCenterSegmentSwitcher" })
+        .first()
+        .simulate("click");
+
+      it("toggles the center segment (snapshot)", () => {
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      describe("after toggling the center segment in the mobile view", () => {
+        wrapper
+          .find({ handlerid: "mobileCenterSegmentSwitcher" })
+          .first()
+          .simulate("click");
+
+        it("toggles the center segment (snapshot)", () => {
+          expect(wrapper).toMatchSnapshot();
+        });
+      });
+    });
+
+    describe("after toggling the right segment in the mobile view", () => {
+      const wrapper = mount(component);
+      wrapper
+        .find({ handlerid: "mobileRightSegmentSwitcher" })
+        .first()
+        .simulate("click");
+
+      it("toggles the right segment (snapshot)", () => {
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      describe("after toggling the right segment in the mobile view", () => {
+        wrapper
+          .find({ handlerid: "mobileRightSegmentSwitcher" })
+          .first()
+          .simulate("click");
+
+        it("toggles the right segment (snapshot)", () => {
+          expect(wrapper).toMatchSnapshot();
+        });
+      });
+    });
   });
 });
