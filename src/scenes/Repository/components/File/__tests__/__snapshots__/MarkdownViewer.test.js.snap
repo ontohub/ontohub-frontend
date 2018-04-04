@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MarkdownViewer matches the snapshot 1`] = `
+<div
+  class="ui container markdown-body"
+>
+  <div>
+    <h1>
+      Hello 
+      <a
+        href="https://ontohub.org"
+      >
+        World
+      </a>
+    </h1>
+    <pre
+      class="lowlight"
+    >
+      <code
+        class="hljs yaml"
+      >
+        <span
+          class="hljs-string"
+        >
+          ()
+        </span>
+         
+        <span
+          class="hljs-string"
+        >
+          =&gt;
+        </span>
+         
+        <span
+          class="hljs-literal"
+        >
+          null
+        </span>
+        <span
+          class="hljs-string"
+        >
+          ;
+        </span>
+      </code>
+    </pre>
+  </div>
+</div>
+`;
