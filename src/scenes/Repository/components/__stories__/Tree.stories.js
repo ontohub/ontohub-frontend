@@ -3,15 +3,8 @@ import { storiesOf } from "@storybook/react";
 import theme from "../../../../styles";
 
 import { ThemeProvider } from "styled-components";
-import {
-  DynamicTree as Tree,
-  DirectoryTree,
-  directoryIcon,
-  directoryLabel,
-  fileIcon,
-  fileLabel
-} from "../Tree";
-import { Icon, List } from "semantic-ui-react";
+import { DynamicTree as Tree, DirectoryTree } from "../Tree";
+import { List } from "semantic-ui-react";
 import { gitLsFilesToTree } from "../Tree/helpers";
 
 const Decorator = storyFn => (

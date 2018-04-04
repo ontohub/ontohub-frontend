@@ -1,10 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import theme from "../../../../styles";
+import _ from "lodash";
 
 import { ThemeProvider } from "styled-components";
 import { ReactHeight } from "react-height";
-import { withState } from "recompose";
 import { Panes } from "../Panes";
 
 const Decorator = storyFn => (
