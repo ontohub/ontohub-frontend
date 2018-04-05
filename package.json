@@ -42,15 +42,13 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.0",
-    "@storybook/addon-info": "^3.4.0",
-    "@storybook/react": "^3.4.0",
     "codecov": "^3.0.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
     "eslint": "^4.19.1",
     "faker": "^4.1.0",
+    "graphql-tools": "^2.23.1",
     "jest-plugin-set": "^2.8.0",
     "jest-styled-components": "^5.0.1",
     "prettier": "1.12.1",
@@ -65,15 +63,12 @@
     "test": "react-scripts test --env=jsdom",
     "format": "prettier --write \"src/**/*.js\"",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
     "serve-built": "serve build -p $PORT"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/*.js",
-      "!src/**/__stories__/*.js",
       "!src/config/**/*.js",
       "!src/lib/test-helpers/**/*.js"
     ]
