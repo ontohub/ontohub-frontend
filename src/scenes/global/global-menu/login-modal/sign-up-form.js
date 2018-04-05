@@ -1,5 +1,5 @@
 import React from "react";
-import { Field } from "./sign-up-form/field";
+import { Field } from "lib/field";
 import { PasswordStrengthBar } from "./sign-up-form/password-strength-bar";
 import { withRefs } from "./sign-up-form/withRefs";
 import { compose } from "recompose";

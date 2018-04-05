@@ -3,66 +3,12 @@ import { signInMutation, signUpMutation } from "config/apollo/queries";
 import { compose, graphql, withApollo } from "react-apollo";
 import { signIn, signOut } from "lib/session";
 import { Link } from "react-router-dom";
-import { Dropdown, Icon, Menu } from "semantic-ui-react";
-import { LoginModal } from "./login-modal";
-import Gravatar from "react-gravatar";
+import { Menu } from "semantic-ui-react";
+import { SignedInMenu } from "./global-menu/signed-in-menu";
+import { SignedOutMenu } from "./global-menu/signed-out-menu";
 import styled from "styled-components";
 
 const enableCaptcha = process.env.REACT_APP_DISABLE_CAPTCHA !== "true";
-
-const SignedInMenu = ({ me, onSignOut }) => (
-  <Menu.Menu position="right">
-    <Dropdown
-      item
-      trigger={
-        <span>
-          <Icon name="plus" />
-        </span>
-      }
-    >
-      <Dropdown.Menu>
-        <Dropdown.Header>Create new...</Dropdown.Header>
-        <Dropdown.Item as={Link} to="/new" content="Repository" />
-        <Dropdown.Item
-          as={Link}
-          to="/organizations/new"
-          content="Organization"
-        />
-      </Dropdown.Menu>
-    </Dropdown>
-    <Dropdown
-      item
-      trigger={
-        <span>
-          <Gravatar style={{ borderRadius: 2 }} size={24} md5={me.emailHash} />
-        </span>
-      }
-    >
-      <Dropdown.Menu>
-        <Dropdown.Header>Signed in as {me.id}</Dropdown.Header>
-        <Dropdown.Item as={Link} to={`/${me.id}`} content="Profile" />
-        <Dropdown.Divider />
-        <Dropdown.Item
-          onClick={onSignOut}
-          content="Sign out"
-          id="global-menu-sign-out-button"
-        />
-      </Dropdown.Menu>
-    </Dropdown>
-  </Menu.Menu>
-);
-
-const SignedOutMenu = ({ onSignIn, onSignUp, enableCaptcha }) => (
-  <Menu.Menu position="right">
-    <Menu.Item>
-      <LoginModal
-        enableCaptcha={enableCaptcha}
-        onSignIn={onSignIn}
-        onSignUp={onSignUp}
-      />
-    </Menu.Item>
-  </Menu.Menu>
-);
 
 const InnerMenu = styled(Menu)`
   height: ${({ theme }) => theme.sizes.menuHeight};
