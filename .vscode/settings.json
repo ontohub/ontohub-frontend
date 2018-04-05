@@ -20,5 +20,8 @@
   },
   "eslint.enable": true,
   "prettier.tabWidth": 2,
-  "prettier.proseWrap": true
+  "prettier.proseWrap": true,
+  "files.associations": {
+    "*.js": "javascriptreact"
+  }
 }
