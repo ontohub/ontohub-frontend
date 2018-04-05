@@ -1,5 +1,5 @@
 import React from "react";
-import { LoginModal } from "../LoginModal";
+import { LoginModal } from "../login-modal";
 
 describe("LoginModal", () => {
   let wrapper, onSignIn, onSignUp;

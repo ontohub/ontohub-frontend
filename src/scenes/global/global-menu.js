@@ -4,7 +4,7 @@ import { compose, graphql, withApollo } from "react-apollo";
 import { signIn, signOut } from "lib/session";
 import { Link } from "react-router-dom";
 import { Dropdown, Icon, Menu } from "semantic-ui-react";
-import { LoginModal } from "./components/LoginModal";
+import { LoginModal } from "./login-modal";
 import Gravatar from "react-gravatar";
 import styled from "styled-components";
 

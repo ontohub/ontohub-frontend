@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Dimmer, Grid, Header, Loader, Modal } from "semantic-ui-react";
-import { SignInForm } from "./SignInForm";
-import { SignUpForm } from "./SignUpForm";
+import { SignInForm } from "./sign-in-form";
+import { SignUpForm } from "./sign-up-form";
 
 export class LoginModal extends Component {
   constructor(props) {

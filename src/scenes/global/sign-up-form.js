@@ -1,11 +1,11 @@
 import React from "react";
-import { Field } from "./Field";
-import { PasswordStrengthBar } from "./PasswordStrengthBar";
-import { withRefs } from "./withRefs";
+import { Field } from "./sign-up-form/field";
+import { PasswordStrengthBar } from "./sign-up-form/password-strength-bar";
+import { withRefs } from "./sign-up-form/withRefs";
 import { compose } from "recompose";
 import { Button, Form } from "semantic-ui-react";
 import { Formik } from "formik";
-import { validate } from "./validation";
+import { validate } from "./sign-up-form/validation";
 import { setServerErrors } from "lib/validation";
 import ReCAPTCHA from "react-google-recaptcha";
 const grecaptchaSiteKey = process.env.REACT_APP_GRECAPTCHA_SITE_KEY;
