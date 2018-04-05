@@ -18,6 +18,7 @@ export class LoginModal extends Component {
   };
   onSignInSubmit = () => {
     this.setState({ loading: true });
+    return this.props.onSignIn();
   };
   onError = () => {
     this.setState({ loading: false });

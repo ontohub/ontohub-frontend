@@ -2,17 +2,20 @@ import React from "react";
 import { PureGlobalMenu as GlobalMenu } from "../global-menu";
 import { MemoryRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import { MeContext } from "../me";
 import theme from "config/theme";
 
 describe("GlobalMenu", () => {
   set("me", () => undefined);
   set("component", () =>
     render(
-      <Router>
-        <ThemeProvider theme={theme}>
-          <GlobalMenu me={me} />
-        </ThemeProvider>
-      </Router>
+      <MeContext.Provider value={me}>
+        <Router>
+          <ThemeProvider theme={theme}>
+            <GlobalMenu />
+          </ThemeProvider>
+        </Router>
+      </MeContext.Provider>
     )
   );
 

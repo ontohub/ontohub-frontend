@@ -5,7 +5,7 @@ describe("SignInForm", () => {
   let wrapper;
 
   beforeAll(() => {
-    wrapper = shallow(<SignInForm />);
+    wrapper = render(<SignInForm />);
   });
 
   it("matches the snapshot", () => {

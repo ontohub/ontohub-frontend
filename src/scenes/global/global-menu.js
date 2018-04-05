@@ -7,6 +7,7 @@ import { Menu } from "semantic-ui-react";
 import { SignedInMenu } from "./global-menu/signed-in-menu";
 import { SignedOutMenu } from "./global-menu/signed-out-menu";
 import styled from "styled-components";
+import { MeContext } from "./me";
 
 const enableCaptcha = process.env.REACT_APP_DISABLE_CAPTCHA !== "true";
 
@@ -19,27 +20,30 @@ const InnerMenu = styled(Menu)`
 const GlobalMenu = ({
   loading,
   error,
-  me,
   enableCaptcha,
   onSignIn,
   onSignOut,
   onSignUp,
   className
 }) => (
-  <div className={className}>
-    <InnerMenu inverted borderless fixed="top">
-      <Menu.Item header as={Link} to="/">
-        Ontohub
-      </Menu.Item>
-      {(me && <SignedInMenu me={me} onSignOut={onSignOut} />) || (
-        <SignedOutMenu
-          enableCaptcha={enableCaptcha}
-          onSignIn={onSignIn}
-          onSignUp={onSignUp}
-        />
-      )}
-    </InnerMenu>
-  </div>
+  <MeContext.Consumer>
+    {me => (
+      <div className={className}>
+        <InnerMenu inverted borderless fixed="top">
+          <Menu.Item header as={Link} to="/">
+            Ontohub
+          </Menu.Item>
+          {(me && <SignedInMenu me={me} onSignOut={onSignOut} />) || (
+            <SignedOutMenu
+              enableCaptcha={enableCaptcha}
+              onSignIn={onSignIn}
+              onSignUp={onSignUp}
+            />
+          )}
+        </InnerMenu>
+      </div>
+    )}
+  </MeContext.Consumer>
 );
 
 const FixedGlobalMenu = styled(GlobalMenu)`
