@@ -3,7 +3,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { HeadAndBody } from "lib/head-and-body";
 import { ThemeProvider } from "styled-components";
-import theme from "../../styles";
+import theme from "config/theme";
 import { withState } from "recompose";
 
 const Decorator = storyFn => (

@@ -1,4 +1,4 @@
-import { SignIn, SignOut, signIn, signOut } from "lib/session";
+import { SignIn, SignOut, signIn, signOut, mutation } from "lib/session";
 import { __mocks__ } from "react-apollo";
 
 const client = __mocks__.client;
@@ -6,7 +6,12 @@ const client = __mocks__.client;
 describe("Session helpers", () => {
   describe("SignIn", () => {
     it("saves the token and resets the store", () => {
-      render(<SignIn token="some-token" />);
+      mockResponse(mutation, {
+        data: { signIn: { jwt: "some-token" } },
+        called: true,
+        error: false
+      });
+      render(<SignIn />);
       expect(localStorage.setItem.mock.calls.length).toBe(1);
       expect(client.resetStore.mock.calls.length).toBe(1);
     });

@@ -1,4 +1,6 @@
-import { ApolloConsumer } from "react-apollo";
+import React from "react";
+import { ApolloConsumer, Mutation } from "react-apollo";
+import gql from "graphql-tag";
 
 const signOut = client => {
   localStorage.removeItem("auth-token");
@@ -12,13 +14,30 @@ const signIn = (client, token) => {
   }
 };
 
-const SignIn = ({ token }) => (
-  <ApolloConsumer>
-    {client => {
-      signIn(client, token);
-      return null;
-    }}
-  </ApolloConsumer>
+const mutation = gql`
+  mutation SignIn($username: String!, $password: String!) {
+    signIn(username: $username, password: $password) {
+      jwt
+      __typename
+    }
+  }
+`;
+
+const SignIn = ({ username, password }) => (
+  <Mutation mutation={mutation}>
+    {(mutate, { data, loading, error, called }) => (
+      <ApolloConsumer>
+        {client => {
+          if (!called && username && password) {
+            mutate({ variables: { username, password } });
+          } else if (called) {
+            signIn(client, data.signIn.jwt);
+          }
+          return null;
+        }}
+      </ApolloConsumer>
+    )}
+  </Mutation>
 );
 
 const SignOut = () => (
@@ -30,4 +49,4 @@ const SignOut = () => (
   </ApolloConsumer>
 );
 
-export { SignIn, SignOut, signIn, signOut };
+export { SignIn, SignOut, signIn, signOut, mutation };

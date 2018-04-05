@@ -3,7 +3,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import { ThemeProvider } from "styled-components";
-import theme from "../../styles";
+import theme from "config/theme";
 import { Icon, Input, Header as SemHeader, Menu } from "semantic-ui-react";
 import { Header } from "lib/header";
 import { PaddedContainer } from "lib/padded-container";
