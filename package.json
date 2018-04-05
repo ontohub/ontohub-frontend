@@ -74,11 +74,8 @@
       "src/**/*.js",
       "!src/*.js",
       "!src/**/__stories__/*.js",
-      "!src/**/components/index.js",
-      "!src/**/scenes/index.js",
-      "!src/**/containers/*.js",
-      "!src/apollo/**/*.js",
-      "!src/helpers/index.js"
+      "!src/config/**/*.js",
+      "!src/lib/test-helpers/**/*.js"
     ]
   }
 }
