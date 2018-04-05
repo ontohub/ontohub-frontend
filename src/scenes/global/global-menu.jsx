@@ -1,9 +1,14 @@
 import React from "react";
+import { signInMutation, signUpMutation } from "config/apollo/queries";
+import { compose, graphql, withApollo } from "react-apollo";
+import { signIn, signOut } from "lib/session";
 import { Link } from "react-router-dom";
 import { Dropdown, Icon, Menu } from "semantic-ui-react";
-import { LoginModal } from "./LoginModal";
+import { LoginModal } from "./components/LoginModal";
 import Gravatar from "react-gravatar";
 import styled from "styled-components";
+
+const enableCaptcha = process.env.REACT_APP_DISABLE_CAPTCHA !== "true";
 
 const SignedInMenu = ({ me, onSignOut }) => (
   <Menu.Menu position="right">
@@ -101,4 +106,47 @@ const FixedGlobalMenu = styled(GlobalMenu)`
   z-index: 99999999;
 `;
 
-export { FixedGlobalMenu as GlobalMenu };
+const GlobalMenuWithData = compose(
+  withApollo,
+  graphql(signInMutation, {
+    props: props => ({
+      ...props.ownProps,
+      onSignIn: (username, password) =>
+        props
+          .mutate({
+            variables: { username, password }
+          })
+          .then(response => {
+            const signInData = response.data.signIn;
+            if (signInData) {
+              return signIn(props.ownProps.client, signInData.jwt);
+            } else {
+              throw new Error("Sign in failed");
+            }
+          })
+    })
+  }),
+  graphql(signUpMutation, {
+    props: props => ({
+      ...props.ownProps,
+      client: undefined,
+      enableCaptcha: enableCaptcha,
+      onSignUp: (username, email, password, captcha) =>
+        props
+          .mutate({
+            variables: { user: { username, email, password }, captcha }
+          })
+          .then(response => {
+            const signUpData = response.data.signUp;
+            if (signUpData) {
+              return signIn(props.ownProps.client, signUpData.jwt);
+            } else {
+              throw new Error("Sign up failed");
+            }
+          }),
+      onSignOut: () => signOut(props.ownProps.client)
+    })
+  })
+)(FixedGlobalMenu);
+
+export { FixedGlobalMenu as PureGlobalMenu, GlobalMenuWithData as GlobalMenu };

@@ -3,7 +3,7 @@ import { graphql } from "react-apollo";
 import { HeadAndBody } from "lib/head-and-body";
 import { VersionWarning } from "scenes/global/components/VersionWarning";
 import { currentUserQuery } from "config/apollo/queries";
-import { GlobalMenu } from "scenes/global/containers";
+import { GlobalMenu } from "scenes/global/global-menu";
 import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import { routes } from "config/routes";
