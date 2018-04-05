@@ -1,14 +1,9 @@
 import { graphql } from "react-apollo";
 import { organizationalUnitQuery, repositoryQuery } from "config/apollo/queries";
 
-import {
-  Home,
-  HomeHeader,
-  OrganizationalUnit,
-  OrganizationalUnitHeader,
-  Repository,
-  RepositoryHeader
-} from "./scenes";
+import Home from "scenes/home";
+import OrganizationalUnit from "scenes/organizational-unit";
+import Repository from "scenes/repository";
 
 export const routes = [
   {
@@ -41,8 +36,8 @@ export const routes = [
   },
   {
     path: "/:organizationalUnitId/:repositoryId/rev/:revision",
-    header: RepositoryHeader,
-    main: Repository,
+    header: Repository.Header,
+    main: Repository.Body,
     graphql: graphql(repositoryQuery, {
       options: ({
         match: { params: { organizationalUnitId, repositoryId, revision } }
@@ -56,8 +51,8 @@ export const routes = [
   },
   {
     path: "/:organizationalUnitId/:repositoryId",
-    header: RepositoryHeader,
-    main: Repository,
+    header: Repository.Header,
+    main: Repository.Body,
     graphql: graphql(repositoryQuery, {
       options: ({
         match: { params: { organizationalUnitId, repositoryId } }

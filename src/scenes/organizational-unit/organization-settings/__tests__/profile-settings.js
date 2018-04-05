@@ -1,4 +1,4 @@
-import { PureProfileSettings } from "../ProfileSettings";
+import { PureProfileSettings } from "../profile-settings";
 
 describe("PureProfileSettings", () => {
   set("component", () => (

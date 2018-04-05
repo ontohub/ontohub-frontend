@@ -1,4 +1,4 @@
-import { OrganizationSettings } from "..";
+import { OrganizationSettings } from "../organization-settings";
 import { ApolloProvider } from "react-apollo";
 
 describe("OrganizationSettings", () => {

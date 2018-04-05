@@ -1,4 +1,4 @@
-import { OrganizationalUnit } from ".";
+import { OrganizationalUnit } from "../organizational-unit";
 
 describe("OrganizationalUnit", () => {
   set("component", () => (

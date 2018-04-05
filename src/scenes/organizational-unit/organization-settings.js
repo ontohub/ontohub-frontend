@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { NavLink as Link, Route, Switch, Redirect } from "react-router-dom";
 import { Container, Grid, Menu } from "semantic-ui-react";
-import { ProfileSettings } from "./ProfileSettings";
-import { MemberSettings } from "./MemberSettings";
+import { ProfileSettings } from "./organization-settings/profile-settings";
+import { MemberSettings } from "./organization-settings/member-settings";
 import { dropRight } from "lodash";
 
 export const OrganizationSettings = ({

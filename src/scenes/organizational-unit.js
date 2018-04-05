@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Container, Item, Icon } from "semantic-ui-react";
-import { Header, OrganizationSettings } from "./components";
+import { Header } from "./organizational-unit/header";
+import { OrganizationSettings } from "./organizational-unit/organization-settings";
 import { Link, Switch, Route, Redirect } from "react-router-dom";
 import Gravatar from "react-gravatar";
 

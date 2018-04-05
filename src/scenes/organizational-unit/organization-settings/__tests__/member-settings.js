@@ -1,4 +1,4 @@
-import { PureMemberSettings, MemberSettings } from "../MemberSettings";
+import { PureMemberSettings, MemberSettings } from "../member-settings";
 
 describe("PureMemberSettings", () => {
   set("component", () => (
