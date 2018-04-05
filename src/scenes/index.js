@@ -1,4 +1,4 @@
-export { Home, Header as HomeHeader } from "./Home";
+export { default as Home } from "./home";
 export {
   OrganizationalUnit,
   Header as OrganizationalUnitHeader

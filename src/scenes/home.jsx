@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon, Message, Container } from "semantic-ui-react";
-import { Header } from "./components";
+import { Header } from "./home/header";
 
 const Home = () => (
   <Container text>
@@ -20,4 +20,4 @@ const Home = () => (
 
 export { Header, Home };
 
-export default Home;
+export default { Body: Home, Header };

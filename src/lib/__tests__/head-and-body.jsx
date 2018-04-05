@@ -1,4 +1,4 @@
-import { HeadAndBody } from "../HeadAndBody";
+import { HeadAndBody } from "lib/head-and-body";
 import { ThemeProvider } from "styled-components";
 
 describe("HeadAndBody", () => {

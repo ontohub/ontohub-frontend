@@ -5,7 +5,8 @@ import { storiesOf } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 import theme from "../../styles";
 import { Icon, Input, Header as SemHeader, Menu } from "semantic-ui-react";
-import Header, { PaddedContainer } from "../Header";
+import { Header } from "lib/header";
+import { PaddedContainer } from "lib/padded-container";
 
 const Decorator = storyFn => (
   <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>

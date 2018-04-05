@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeadAndBody applies the HOC to head and body 1`] = `
+Array [
+  .c0 {
+  background-color: #000;
+  color: !important;
+  margin-bottom: 1em;
+  margin-top: -100vh;
+  padding-top: 100vh;
+}
+
+.c1 {
+  max-width: 700px;
+  margin: auto;
+}
+
+<div
+    class="c0"
+>
+    <div
+        class="c1"
+    >
+        <h1>
+            Head
+        </h1>
+    </div>
+</div>,
+  <div>
+    Body
+</div>,
+]
+`;

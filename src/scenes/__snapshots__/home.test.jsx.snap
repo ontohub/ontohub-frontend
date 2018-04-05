@@ -34,12 +34,12 @@ exports[`Home Body matches the snapshot 1`] = `
 `;
 
 exports[`Home Header matches the snapshot 1`] = `
-.c1 {
-  font-weight: bold;
-}
-
 .c0 {
   padding-bottom: 1em;
+}
+
+.c1 {
+  font-weight: bold;
 }
 
 <div

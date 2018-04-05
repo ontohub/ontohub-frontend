@@ -1,7 +1,7 @@
 import React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { HeadAndBody } from "../HeadAndBody";
+import { HeadAndBody } from "lib/head-and-body";
 import { ThemeProvider } from "styled-components";
 import theme from "../../styles";
 import { withState } from "recompose";

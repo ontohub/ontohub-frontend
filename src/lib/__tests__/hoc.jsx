@@ -1,4 +1,4 @@
-import { HOC } from "../HOC";
+import { HOC } from "lib/hoc";
 
 describe("HOC", () => {
   set("component", () => (

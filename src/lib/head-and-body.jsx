@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
-import { HOC } from "./HOC";
-import { Header } from ".";
+import { HOC } from "lib/hoc";
+import { Header } from "lib/header";
 
-export const HeadAndBody = ({ hoc, head: Head, body: Body, ...props }) => (
+const HeadAndBody = ({ hoc, head: Head, body: Body, ...props }) => (
   <HOC
     hoc={hoc}
     component={props => (
@@ -17,4 +17,4 @@ export const HeadAndBody = ({ hoc, head: Head, body: Body, ...props }) => (
   />
 );
 
-export default HeadAndBody;
+export { HeadAndBody };
