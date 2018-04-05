@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "react-apollo";
 import { HeadAndBody } from "lib/head-and-body";
-import { VersionWarning } from "scenes/global/components/VersionWarning";
+import { VersionWarning } from "scenes/global/version-warning";
 import { currentUserQuery } from "config/apollo/queries";
 import { GlobalMenu } from "scenes/global/global-menu";
 import { Switch, Route } from "react-router-dom";
