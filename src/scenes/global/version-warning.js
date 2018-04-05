@@ -43,16 +43,20 @@ const VersionWarning = ({ requirement }) => (
             content="This could mean that the backend is currently offline"
           />
         );
+      } else if (loading) {
+        return null;
       }
-      const validVersion = loading || satisfies(data.version, requirement);
+      const { tag, commitsSinceTag } = data.version;
+      const version = `${tag}-${commitsSinceTag}`;
+      const validVersion = satisfies(version, requirement);
 
       return validVersion ? null : (
         <WarningMessage
           header="The connected backend does not meet the version requirement"
           content={
             <p>
-              Expected version <code>{data.version}</code> to satisfy
-              requirement <code>{requirement}</code>
+              Expected version <code>{version}</code> to satisfy requirement{" "}
+              <code>{requirement}</code>
               . Be aware that this may cause problems.
             </p>
           }

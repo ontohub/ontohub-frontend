@@ -1,5 +1,5 @@
 import React from "react";
-import { WarningMessage, VersionWarning } from "../version-warning";
+import { WarningMessage, VersionWarning, query } from "../version-warning";
 
 describe("WarningMessage", () => {
   set("component", () =>
@@ -18,23 +18,34 @@ describe("VersionWarning", () => {
 
   describe("version could not be determined", () => {
     it("shows an error message", () => {
+      mockResponse(query, { error: true });
       expect(component).toMatchSnapshot();
     });
   });
 
-  describe("version satisfies requirement", () => {
-    set("version", () => "v0.0.0-88");
+  describe("successful version retrieval", () => {
+    describe("version satisfies requirement", () => {
+      set("tag", () => "v0.0.0");
+      set("commitsSinceTag", () => 88);
 
-    it("is hidden", () => {
-      expect(component).toBe(null);
+      it("is hidden", () => {
+        mockResponse(query, {
+          data: { version: { tag, commitsSinceTag } }
+        });
+        expect(component).toMatchSnapshot();
+      });
     });
-  });
 
-  describe("version does not satisfy requirement", () => {
-    set("version", () => "v0.0.0-65");
+    describe("version does not satisfy requirement", () => {
+      set("tag", () => "v0.0.0");
+      set("commitsSinceTag", () => 65);
 
-    it("matches the snapshot", () => {
-      expect(component).toMatchSnapshot();
+      it("matches the snapshot", () => {
+        mockResponse(query, {
+          data: { version: { tag, commitsSinceTag } }
+        });
+        expect(component).toMatchSnapshot();
+      });
     });
   });
 });

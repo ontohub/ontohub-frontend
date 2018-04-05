@@ -1,17 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VersionWarning version could not be determined shows an error message 1`] = `
-<WarningMessage
-  content="This could mean that the backend is currently offline"
-  header="Could not determine backend version"
-  icon="plug"
-  warning={true}
-/>
-`;
+exports[`VersionWarning successful version retrieval version does not satisfy requirement matches the snapshot 1`] = `
+.c0 {
+  position: fixed !important;
+  margin: -1px !important;
+  border-radius: 0 !important;
+  bottom: 0;
+  width: calc(100% + 2px) !important;
+}
 
-exports[`VersionWarning version does not satisfy requirement matches the snapshot 1`] = `
-<WarningMessage
-  content={
+<div
+  class="ui icon negative message c0"
+>
+  <i
+    aria-hidden="true"
+    class="warning sign icon"
+  >
+    
+  </i>
+  <div
+    class="content"
+  >
+    <div
+      class="header"
+    >
+      The connected backend does not meet the version requirement
+    </div>
     <p>
       Expected version 
       <code>
@@ -23,9 +37,43 @@ exports[`VersionWarning version does not satisfy requirement matches the snapsho
       </code>
       . Be aware that this may cause problems.
     </p>
-  }
-  header="The connected backend does not meet the version requirement"
-/>
+  </div>
+</div>
+`;
+
+exports[`VersionWarning successful version retrieval version satisfies requirement is hidden 1`] = `null`;
+
+exports[`VersionWarning version could not be determined shows an error message 1`] = `
+.c0 {
+  position: fixed !important;
+  margin: -1px !important;
+  border-radius: 0 !important;
+  bottom: 0;
+  width: calc(100% + 2px) !important;
+}
+
+<div
+  class="ui icon warning message c0"
+>
+  <i
+    aria-hidden="true"
+    class="plug icon"
+  >
+    
+  </i>
+  <div
+    class="content"
+  >
+    <div
+      class="header"
+    >
+      Could not determine backend version
+    </div>
+    <p>
+      This could mean that the backend is currently offline
+    </p>
+  </div>
+</div>
 `;
 
 exports[`WarningMessage matches the snapshot 1`] = `
