@@ -1,49 +1,40 @@
 import React from "react";
-import {
-  WarningMessage,
-  PureVersionWarning as VersionWarning
-} from "../version-warning";
+import { WarningMessage, VersionWarning } from "../version-warning";
 
 describe("WarningMessage", () => {
-  it("matches the snapshot", () => {
-    const component = shallow(
+  set("component", () =>
+    shallow(
       <WarningMessage header="Message header" content="Message content" />
-    );
-    expect(component.getElement()).toMatchSnapshot();
+    )
+  );
+  it("matches the snapshot", () => {
+    expect(component).toMatchSnapshot();
   });
 });
 
 describe("VersionWarning", () => {
-  let requirement = "> v0.0.0-65";
+  set("component", () => render(<VersionWarning requirement={requirement} />));
+  set("requirement", () => "> v0.0.0-65");
 
   describe("version could not be determined", () => {
     it("shows an error message", () => {
-      const component = shallow(
-        <VersionWarning requirement={requirement} error />
-      );
-      expect(component.getElement()).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe("version satisfies requirement", () => {
-    let version = "v0.0.0-88";
+    set("version", () => "v0.0.0-88");
 
     it("is hidden", () => {
-      const component = shallow(
-        <VersionWarning requirement={requirement} version={version} />
-      );
-      expect(component.getElement()).toBe(null);
+      expect(component).toBe(null);
     });
   });
 
   describe("version does not satisfy requirement", () => {
-    let version = "v0.0.0-65";
+    set("version", () => "v0.0.0-65");
 
     it("matches the snapshot", () => {
-      const component = shallow(
-        <VersionWarning requirement={requirement} version={version} />
-      );
-      expect(component.getElement()).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 });

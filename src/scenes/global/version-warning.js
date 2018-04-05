@@ -1,8 +1,18 @@
 import React, { Component } from "react";
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
 import { Message } from "semantic-ui-react";
 import { satisfies } from "semver";
 import styled from "styled-components";
-import { withVersionQuery } from "config/apollo/queries";
+
+const query = gql`
+  query GetVersion {
+    version {
+      tag
+      commitsSinceTag
+    }
+  }
+`;
 
 const BottomMessage = styled(Message)`
   position: fixed !important;
@@ -12,46 +22,44 @@ const BottomMessage = styled(Message)`
   width: calc(100% + 2px) !important;
 `;
 
-const WarningMessage = ({ icon, warning, ...props }: {}) => (
+const WarningMessage = ({ icon, warning, ...props } = {}) => (
   <BottomMessage
     negative={!warning}
-    warning={warning}
+    warning={!!warning}
     icon={icon || "warning sign"}
     {...props}
   />
 );
 
-export class PureVersionWarning extends Component {
-  render() {
-    if (this.props.error) {
-      return (
+const VersionWarning = ({ requirement }) => (
+  <Query query={query}>
+    {({ error, loading, data }) => {
+      if (error) {
+        return (
+          <WarningMessage
+            icon="plug"
+            warning
+            header="Could not determine backend version"
+            content="This could mean that the backend is currently offline"
+          />
+        );
+      }
+      const validVersion = loading || satisfies(data.version, requirement);
+
+      return validVersion ? null : (
         <WarningMessage
-          icon="plug"
-          warning
-          header="Could not determine backend version"
-          content="This could mean that the backend is currently offline"
+          header="The connected backend does not meet the version requirement"
+          content={
+            <p>
+              Expected version <code>{data.version}</code> to satisfy
+              requirement <code>{requirement}</code>
+              . Be aware that this may cause problems.
+            </p>
+          }
         />
       );
-    }
-    const validVersion =
-      this.props.loading ||
-      satisfies(this.props.version, this.props.requirement);
+    }}
+  </Query>
+);
 
-    return validVersion ? null : (
-      <WarningMessage
-        header="The connected backend does not meet the version requirement"
-        content={
-          <p>
-            Expected version <code>{this.props.version}</code> to satisfy
-            requirement <code>{this.props.requirement}</code>
-            . Be aware that this may cause problems.
-          </p>
-        }
-      />
-    );
-  }
-}
-
-const VersionWarningWithData = withVersionQuery(PureVersionWarning);
-
-export { VersionWarningWithData as VersionWarning, WarningMessage };
+export { VersionWarning, WarningMessage, query };

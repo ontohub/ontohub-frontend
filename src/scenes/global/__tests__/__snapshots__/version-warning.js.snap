@@ -34,6 +34,6 @@ exports[`WarningMessage matches the snapshot 1`] = `
   header="Message header"
   icon="warning sign"
   negative={true}
-  warning={undefined}
+  warning={false}
 />
 `;
