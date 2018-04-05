@@ -2,7 +2,7 @@ import React from "react";
 import { GlobalMenu } from "./global-menu";
 import { MemoryRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import theme from "../../styles";
+import theme from "config/theme";
 
 describe("GlobalMenu", () => {
   describe("signed out user", () => {

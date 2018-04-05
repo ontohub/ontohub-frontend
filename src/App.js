@@ -6,8 +6,8 @@ import { currentUserQuery } from "config/apollo/queries";
 import { GlobalMenu } from "./containers";
 import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import routes from "./routes";
-import config from "./config.json";
+import routes from "config/routes";
+import config from "../package.json";
 
 const backendVersion = config.ontohub.backendVersion;
 

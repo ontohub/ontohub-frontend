@@ -5,7 +5,7 @@ import {
   isUsernameAvailable
 } from "../validation";
 
-jest.mock("../../../apollo", () => ({
+jest.mock("config/apollo", () => ({
   Client: {
     query: ({ variables: { id } }) => {
       if (id === "bob") {

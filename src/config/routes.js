@@ -1,5 +1,4 @@
 import { graphql } from "react-apollo";
-import { organizationalUnitQuery, repositoryQuery } from "./apollo/queries";
 import { organizationalUnitQuery, repositoryQuery } from "config/apollo/queries";
 
 import {
