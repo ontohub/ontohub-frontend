@@ -1,7 +1,7 @@
 import React from "react";
-import Field from "./Field";
-import PasswordStrengthBar from "./PasswordStrengthBar";
-import withRefs from "./withRefs";
+import { Field } from "./Field";
+import { PasswordStrengthBar } from "./PasswordStrengthBar";
+import { withRefs } from "./withRefs";
 import { compose } from "recompose";
 import { Button, Form } from "semantic-ui-react";
 import { Formik } from "formik";
@@ -10,7 +10,7 @@ import { setServerErrors } from "lib/validation";
 import ReCAPTCHA from "react-google-recaptcha";
 const grecaptchaSiteKey = process.env.REACT_APP_GRECAPTCHA_SITE_KEY;
 
-export const SignUpForm = ({
+export const PureSignUpForm = ({
   captcha: Captcha,
   errors,
   onBlur,
@@ -120,7 +120,7 @@ const FormikSignUpForm = ({
       touched,
       values
     }) => (
-      <SignUpForm
+      <PureSignUpForm
         captcha={
           enableCaptcha &&
           initialValues !== values && (
@@ -160,4 +160,4 @@ const FormikSignUpFormWithRefs = compose(
   withRefs({ captcha: "registerCaptcha", values: "setValues" })
 )(FormikSignUpForm);
 
-export default FormikSignUpFormWithRefs;
+export { FormikSignUpFormWithRefs as SignUpForm };

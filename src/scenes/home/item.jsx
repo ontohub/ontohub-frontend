@@ -16,5 +16,3 @@ export const Item = ({ icon, header, content }) => (
     </List.Content>
   </List.Item>
 );
-
-export default Item;

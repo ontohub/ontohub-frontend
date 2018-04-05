@@ -1,5 +1,8 @@
 import React from "react";
-import { WarningMessage, VersionWarning } from "../VersionWarning";
+import {
+  WarningMessage,
+  PureVersionWarning as VersionWarning
+} from "../VersionWarning";
 
 describe("WarningMessage", () => {
   it("matches the snapshot", () => {

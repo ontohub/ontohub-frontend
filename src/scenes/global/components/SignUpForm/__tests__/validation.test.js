@@ -6,7 +6,7 @@ import {
 } from "../validation";
 
 jest.mock("config/apollo", () => ({
-  Client: {
+  client: {
     query: ({ variables: { id } }) => {
       if (id === "bob") {
         return Promise.reject();

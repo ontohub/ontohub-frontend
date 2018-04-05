@@ -6,7 +6,7 @@ import { render, mount, shallow } from "enzyme";
 import "jest-styled-components";
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
-import Factories from "lib/test-helpers/factories";
+import { Factories } from "lib/test-helpers/factories";
 
 configure({ adapter: new Adapter() });
 

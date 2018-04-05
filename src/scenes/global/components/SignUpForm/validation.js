@@ -1,11 +1,11 @@
-import { Client, userQuery } from "config/apollo";
+import { client, userQuery } from "config/apollo";
 import { get, isEmpty, filter, pick } from "lodash";
 import debounce from "debounce-promise";
 
 export const isUsernameAvailable = id =>
-  Client.query({ query: userQuery, variables: { id: id } }).then(
-    data => !get(data, "data.organizationalUnit", null)
-  );
+  client
+    .query({ query: userQuery, variables: { id: id } })
+    .then(data => !get(data, "data.organizationalUnit", null));
 
 const isUsernameAvailableDebounced = debounce(isUsernameAvailable, 500, {
   leading: true

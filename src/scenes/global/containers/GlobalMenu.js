@@ -48,4 +48,4 @@ const GlobalMenuWithData = compose(
   })
 )(GlobalMenu);
 
-export default GlobalMenuWithData;
+export { GlobalMenuWithData as GlobalMenu };

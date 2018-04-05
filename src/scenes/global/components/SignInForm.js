@@ -59,5 +59,3 @@ export const SignInForm = ({ onSubmit, onSuccess, onError }) => (
     )}
   />
 );
-
-export default SignInForm;

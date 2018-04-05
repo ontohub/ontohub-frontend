@@ -21,9 +21,7 @@ const WarningMessage = ({ icon, warning, ...props }: {}) => (
   />
 );
 
-export { WarningMessage };
-
-export class VersionWarning extends Component {
+export class PureVersionWarning extends Component {
   render() {
     if (this.props.error) {
       return (
@@ -54,6 +52,6 @@ export class VersionWarning extends Component {
   }
 }
 
-export const VersionWarningWithData = withVersionQuery(VersionWarning);
+const VersionWarningWithData = withVersionQuery(PureVersionWarning);
 
-export default VersionWarningWithData;
+export { VersionWarningWithData as VersionWarning, WarningMessage };

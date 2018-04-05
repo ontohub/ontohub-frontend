@@ -10,7 +10,7 @@ import {
   RepositoryHeader
 } from "./scenes";
 
-export default [
+export const routes = [
   {
     path: "/",
     exact: true,

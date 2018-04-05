@@ -23,5 +23,3 @@ export const Header = () => (
     </List>
   </PaddedContainer>
 );
-
-export default Header;

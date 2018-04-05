@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Dimmer, Grid, Header, Loader, Modal } from "semantic-ui-react";
-import SignInForm from "./SignInForm";
-import SignUpForm from "./SignUpForm";
+import { SignInForm } from "./SignInForm";
+import { SignUpForm } from "./SignUpForm";
 
 export class LoginModal extends Component {
   constructor(props) {
@@ -83,5 +83,3 @@ export class LoginModal extends Component {
     );
   }
 }
-
-export default LoginModal;

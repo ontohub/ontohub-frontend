@@ -1,4 +1,4 @@
-export { Client } from "./client";
+export { client } from "./client";
 export {
   currentUserQuery,
   lsFilesQuery,

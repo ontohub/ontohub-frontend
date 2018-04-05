@@ -3,7 +3,7 @@ import {
   InMemoryCache,
   IntrospectionFragmentMatcher
 } from "apollo-cache-inmemory";
-import link from "./links";
+import { link } from "./links";
 
 const fragmentMatcher = new IntrospectionFragmentMatcher({
   introspectionQueryResultData: {
@@ -19,11 +19,9 @@ const fragmentMatcher = new IntrospectionFragmentMatcher({
   }
 });
 
-export const Client = new ApolloClient({
+export const client = new ApolloClient({
   link,
   cache: new InMemoryCache({
     fragmentMatcher
   })
 });
-
-export default Client;

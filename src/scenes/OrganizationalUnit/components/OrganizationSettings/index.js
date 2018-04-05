@@ -57,5 +57,3 @@ export const OrganizationSettings = ({
     </Grid>
   </Fragment>
 );
-
-export default OrganizationSettings;

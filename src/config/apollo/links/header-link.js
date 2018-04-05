@@ -1,6 +1,6 @@
 import { ApolloLink } from "apollo-link";
 
-export default new ApolloLink((operation, forward) => {
+export const link = new ApolloLink((operation, forward) => {
   const authToken = localStorage.getItem("auth-token");
   operation.setContext({
     headers: {

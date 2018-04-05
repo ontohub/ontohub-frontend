@@ -12,5 +12,3 @@ export const PasswordStrengthBar = ({ score }) => (
     color={["red", "orange", "yellow", "olive", "green"][score]}
   />
 );
-
-export default PasswordStrengthBar;

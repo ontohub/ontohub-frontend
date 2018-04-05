@@ -1,5 +1,5 @@
 import { ApolloLink } from "apollo-link";
-import HTTPLink from "./http-link";
-import HeaderLink from "./header-link";
+import { link as httpLink } from "./http-link";
+import { link as headerLink } from "./header-link";
 
-export default ApolloLink.from([HeaderLink, HTTPLink]);
+export const link = ApolloLink.from([headerLink, httpLink]);

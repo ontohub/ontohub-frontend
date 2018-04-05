@@ -19,5 +19,3 @@ export const withVersionQuery = graphql(versionQuery, {
     version: `${tag}-${commitsSinceTag}`
   })
 });
-
-export default versionQuery;

@@ -19,5 +19,3 @@ export const withRefs = refsMap => BaseComponent => {
     />
   );
 };
-
-export default withRefs;

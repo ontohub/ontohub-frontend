@@ -1,5 +1,5 @@
 import React from "react";
-import { SignUpForm } from "..";
+import { PureSignUpForm as SignUpForm } from "..";
 
 const shallowRender = props => mount(<SignUpForm {...props} />);
 

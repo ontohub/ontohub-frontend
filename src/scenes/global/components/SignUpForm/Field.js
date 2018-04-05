@@ -33,5 +33,3 @@ export const Field = ({
       )}
   </Form.Field>
 );
-
-export default Field;

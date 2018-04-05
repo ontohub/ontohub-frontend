@@ -1,12 +1,12 @@
 import React from "react";
 import { graphql } from "react-apollo";
 import { HeadAndBody } from "lib/head-and-body";
-import { VersionWarning } from "./components/VersionWarning";
+import { VersionWarning } from "scenes/global/components/VersionWarning";
 import { currentUserQuery } from "config/apollo/queries";
-import { GlobalMenu } from "./containers";
+import { GlobalMenu } from "scenes/global/containers";
 import { Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import routes from "config/routes";
+import { routes } from "config/routes";
 import config from "../package.json";
 
 const backendVersion = config.ontohub.backendVersion;
@@ -51,4 +51,4 @@ const AppWithData = graphql(currentUserQuery, {
   })
 })(StyledApp);
 
-export default AppWithData;
+export { AppWithData as App };
