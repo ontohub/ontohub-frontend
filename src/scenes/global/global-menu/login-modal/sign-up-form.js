@@ -11,17 +11,35 @@ import ReCAPTCHA from "react-google-recaptcha";
 const grecaptchaSiteKey = process.env.REACT_APP_GRECAPTCHA_SITE_KEY;
 
 export const PureSignUpForm = ({
-  captcha: Captcha,
   errors,
   onBlur,
   onChange,
   onSubmit,
   submitEnabled = true,
   touched,
-  values
+  values,
+  registerCaptcha,
+  refs,
+  setErrors,
+  setSubmitting,
+  onError
 }) => (
   <Form onSubmit={submitEnabled ? onSubmit : undefined}>
-    {Captcha || null}
+    {initialValues !== values ? (
+      <ReCAPTCHA
+        sitekey={grecaptchaSiteKey}
+        ref={registerCaptcha}
+        size="invisible"
+        badge="bottomleft"
+        onChange={async captcha => {
+          try {
+            await onSubmit({ ...refs.values, captcha });
+          } catch (e) {
+            setServerErrors(setErrors, setSubmitting, onError);
+          }
+        }}
+      />
+    ) : null}
     <Form.Group widths="equal">
       <Field
         errors={errors.name}
@@ -99,14 +117,16 @@ const FormikSignUpForm = ({
 }) => (
   <Formik
     initialValues={initialValues}
-    onSubmit={(values, { setErrors, setSubmitting }) => {
+    onSubmit={async (values, { setErrors, setSubmitting }) => {
       if (refs.captcha && enableCaptcha) {
         refs.captcha.reset();
         refs.captcha.execute();
       } else {
-        onSubmit({ ...values, captcha: "skip" }).catch(
-          setServerErrors(setErrors, setSubmitting, onError)
-        );
+        try {
+          await onSubmit({ ...values, captcha: "skip" });
+        } catch (e) {
+          setServerErrors(setErrors, setSubmitting, onError);
+        }
       }
     }}
     render={({
@@ -121,29 +141,17 @@ const FormikSignUpForm = ({
       values
     }) => (
       <PureSignUpForm
-        captcha={
-          enableCaptcha &&
-          initialValues !== values && (
-            <ReCAPTCHA
-              sitekey={grecaptchaSiteKey}
-              ref={registerCaptcha}
-              size="invisible"
-              badge="bottomleft"
-              onChange={captcha => {
-                onSubmit({ ...refs.values, captcha }).catch(
-                  setServerErrors(setErrors, setSubmitting, onError)
-                );
-              }}
-            />
-          )
-        }
         errors={errors}
+        onError={onError}
+        setErrors={setErrors}
+        setSubmitting={setSubmitting}
+        refs={refs}
         onBlur={handleBlur}
+        registerCaptcha={registerCaptcha}
         onChange={(e, ...args) => {
-          const fieldName = e.target.name;
-          const fieldValue = e.target.value;
-          setFieldTouched(fieldName, true);
-          setValues({ ...refs.values, [fieldName]: fieldValue });
+          const { name, value } = e.target;
+          setFieldTouched(name, true);
+          setValues({ ...refs.values, [name]: value });
           return handleChange(e, ...args);
         }}
         onSubmit={handleSubmit}

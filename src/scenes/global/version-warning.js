@@ -32,7 +32,7 @@ const WarningMessage = ({ icon, warning, ...props } = {}) => (
 );
 
 const VersionWarning = ({ requirement }) => (
-  <Query query={query}>
+  <Query query={query} pollInterval={30000}>
     {({ error, loading, data }) => {
       if (error) {
         return (

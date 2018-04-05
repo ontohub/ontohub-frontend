@@ -1,5 +1,5 @@
 import React from "react";
-import { signInMutation, signUpMutation } from "config/apollo/queries";
+import { signUpMutation } from "config/apollo/queries";
 import { compose, graphql, withApollo } from "react-apollo";
 import { signIn, signOut } from "lib/session";
 import { Link } from "react-router-dom";
@@ -54,24 +54,6 @@ const FixedGlobalMenu = styled(GlobalMenu)`
 
 const GlobalMenuWithData = compose(
   withApollo,
-  graphql(signInMutation, {
-    props: props => ({
-      ...props.ownProps,
-      onSignIn: (username, password) =>
-        props
-          .mutate({
-            variables: { username, password }
-          })
-          .then(response => {
-            const signInData = response.data.signIn;
-            if (signInData) {
-              return signIn(props.ownProps.client, signInData.jwt);
-            } else {
-              throw new Error("Sign in failed");
-            }
-          })
-    })
-  }),
   graphql(signUpMutation, {
     props: props => ({
       ...props.ownProps,

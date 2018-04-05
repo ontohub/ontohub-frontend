@@ -10,29 +10,24 @@ export class LoginModal extends Component {
       open: this.props.open,
       loading: false
     };
-    this.onSignInSubmit = this.onSignInSubmit.bind(this);
-    this.onSignUpSubmit = this.onSignUpSubmit.bind(this);
-    this.onError = this.onError.bind(this);
-    this.onClose = this.onClose.bind(this);
-    this.onOpen = this.onOpen.bind(this);
   }
-  onSignInSubmit(username, password) {
-    this.setState({ loading: true });
-    return this.props.onSignIn(username, password);
-  }
-  onSignUpSubmit({ name, email, password, captcha }) {
+
+  onSignUpSubmit = ({ name, email, password, captcha }) => {
     this.setState({ loading: true });
     return this.props.onSignUp(name, email, password, captcha);
-  }
-  onError() {
+  };
+  onSignInSubmit = () => {
+    this.setState({ loading: true });
+  };
+  onError = () => {
     this.setState({ loading: false });
-  }
-  onClose() {
+  };
+  onClose = () => {
     this.setState({ open: false });
-  }
-  onOpen() {
+  };
+  onOpen = () => {
     this.setState({ open: true });
-  }
+  };
   render() {
     return (
       <Modal
@@ -58,9 +53,9 @@ export class LoginModal extends Component {
             <Grid.Row>
               <Grid.Column>
                 <SignInForm
-                  onSubmit={this.onSignInSubmit}
                   onSuccess={this.onClose}
                   onError={this.onError}
+                  onSubmit={this.onSignInSubmit}
                 />
               </Grid.Column>
             </Grid.Row>
