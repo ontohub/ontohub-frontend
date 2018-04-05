@@ -6,7 +6,7 @@ import { compose } from "recompose";
 import { Button, Form } from "semantic-ui-react";
 import { Formik } from "formik";
 import { validate } from "./validation";
-import { setServerErrors } from "../../helpers";
+import { setServerErrors } from "lib/validation";
 import ReCAPTCHA from "react-google-recaptcha";
 const grecaptchaSiteKey = process.env.REACT_APP_GRECAPTCHA_SITE_KEY;
 

@@ -1,7 +1,7 @@
 import { signInMutation, signUpMutation } from "../apollo/queries";
 import { compose, graphql, withApollo } from "react-apollo";
 import { GlobalMenu } from "../scenes/global/global-menu";
-import { signIn, signOut } from "../helpers";
+import { signIn, signOut } from "lib/session";
 
 const enableCaptcha = process.env.REACT_APP_DISABLE_CAPTCHA !== "true";
 

@@ -1,4 +1,4 @@
-import { setServerErrors } from "../validation";
+import { setServerErrors } from "lib/validation";
 
 describe("setServerErrors", () => {
   let setErrors;

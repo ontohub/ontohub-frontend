@@ -1,4 +1,4 @@
-import { signIn, signOut } from "../session";
+import { signIn, signOut } from "lib/session";
 
 describe("Session helpers", () => {
   let client;
