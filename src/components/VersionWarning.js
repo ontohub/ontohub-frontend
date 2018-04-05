@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Message } from "semantic-ui-react";
 import { satisfies } from "semver";
 import styled from "styled-components";
-import { withVersionQuery } from "../apollo/queries";
+import { withVersionQuery } from "config/apollo/queries";
 
 const BottomMessage = styled(Message)`
   position: fixed !important;

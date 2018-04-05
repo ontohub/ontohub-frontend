@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, Header } from "./home";
+import { Home, Header } from "../home";
 import { ThemeProvider } from "styled-components";
 
 describe("Home", () => {

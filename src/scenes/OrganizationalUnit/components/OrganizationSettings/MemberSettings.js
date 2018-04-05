@@ -17,7 +17,7 @@ import { compose, withState } from "recompose";
 import {
   withAddOrganizationMemberMutation,
   withRemoveOrganizationMemberMutation
-} from "../../../../apollo/queries";
+} from "config/apollo/queries";
 
 const membershipRoles = [
   { key: "read", value: "read", text: "Read" },

@@ -126,4 +126,4 @@ const OrganizationalUnit = ({
 
 export { Header, OrganizationalUnit };
 
-export default OrganizationalUnit;
+export default { Header, Body: OrganizationalUnit };

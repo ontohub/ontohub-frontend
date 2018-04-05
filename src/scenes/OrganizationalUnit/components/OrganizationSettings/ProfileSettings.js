@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { Button, Form, Header, Message } from "semantic-ui-react";
-import { withSaveOrganizationMutation } from "../../../../apollo/queries";
+import { withSaveOrganizationMutation } from "config/apollo/queries";
 import { withFormik } from "formik";
-import { Field } from "../../../../components/SignUpForm/Field";
+import { Field } from "components/SignUpForm/Field";
 import { capitalize } from "lodash";
 import { compose } from "recompose";
 

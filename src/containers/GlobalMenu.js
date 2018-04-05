@@ -1,4 +1,4 @@
-import { signInMutation, signUpMutation } from "../apollo/queries";
+import { signInMutation, signUpMutation } from "config/apollo/queries";
 import { compose, graphql, withApollo } from "react-apollo";
 import { GlobalMenu } from "../scenes/global/global-menu";
 import { signIn, signOut } from "lib/session";

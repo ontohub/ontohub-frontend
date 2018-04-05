@@ -1,4 +1,4 @@
-import { Client, userQuery } from "../../apollo";
+import { Client, userQuery } from "config/apollo";
 import { get, isEmpty, filter, pick } from "lodash";
 import debounce from "debounce-promise";
 
