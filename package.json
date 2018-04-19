@@ -45,7 +45,7 @@
     "jest-styled-components": "^5.0.1",
     "prettier": "1.11.1",
     "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.3.1",
+    "react-test-renderer": "^16.3.2",
     "serve": "^6.5.3",
     "stampit": "^4.1.1"
   },
