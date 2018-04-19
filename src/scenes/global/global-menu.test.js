@@ -1,5 +1,5 @@
 import React from "react";
-import GlobalMenu from "../GlobalMenu";
+import { GlobalMenu } from "./global-menu";
 import { MemoryRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import theme from "../../styles";

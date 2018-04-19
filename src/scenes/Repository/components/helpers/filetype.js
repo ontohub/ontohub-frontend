@@ -1,0 +1,103 @@
+import { last } from "lodash";
+
+export const fileExtension = name => last(name.split(".")).toLowerCase();
+
+export const fileType = name => {
+  switch (fileExtension(name)) {
+    case "md":
+      return "markdown";
+    case "txt":
+      return "text";
+    case "pdf":
+      return "pdf";
+    case "bat":
+    case "bmp":
+    case "bpg":
+    case "exif":
+    case "gif":
+    case "heif":
+    case "jfif":
+    case "jpeg":
+    case "jpeg2000":
+    case "jpg":
+    case "pbm":
+    case "pgm":
+    case "png":
+    case "pnm":
+    case "ppm":
+    case "svg":
+    case "tiff":
+    case "webp":
+      return "image";
+    case "3gp":
+    case "asf":
+    case "avi":
+    case "flv":
+    case "gifv":
+    case "mkv":
+    case "mov":
+    case "mp4":
+    case "mpeg":
+    case "mpg":
+    case "mwv":
+    case "qt":
+    case "ts":
+    case "vob":
+    case "webm":
+      return "video";
+    case "aac":
+    case "flac":
+    case "mp3":
+    case "ogg":
+    case "wav":
+      return "audio";
+    case "doc":
+    case "docx":
+      return "word";
+    case "xls":
+    case "xlsx":
+      return "excel";
+    case "ppt":
+    case "pptx":
+      return "powerpoint";
+    case "7z":
+    case "bz2":
+    case "gz":
+    case "rar":
+    case "tar":
+    case "xz":
+    case "zip":
+      return "archive";
+    case "casl":
+    case "dol":
+    case "hascasl":
+    case "het":
+    case "owl":
+    case "omn":
+    case "obo":
+    case "hs":
+    case "exp":
+    case "maude":
+    case "elf":
+    case "hol":
+    case "isa":
+    case "thy":
+    case "prf":
+    case "omdoc":
+    case "hpf":
+    case "clf":
+    case "clif":
+    case "xml":
+    case "fcstd":
+    case "rdf":
+    case "xmi":
+    case "qvt":
+    case "p":
+    case "tptp":
+    case "gen_trm":
+    case "baf":
+      return "code";
+    default:
+      return null;
+  }
+};

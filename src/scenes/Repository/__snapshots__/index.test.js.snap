@@ -1,0 +1,1151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Repository empty repository matches the snapshot 1`] = `
+<div
+  class="ui text container"
+>
+  <div
+    class="ui tiny info message"
+  >
+    <div
+      class="header"
+    >
+      This repository is empty
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Repository non-empty repository with revision matches the snapshot 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  margin-top: -0px;
+  padding-top: 0px;
+  position: relative;
+  width: 100%;
+  will-change: overflow;
+}
+
+.c0 ::-webkit-scrollbar {
+  width: 0.3em;
+  height: 0.3em;
+}
+
+.c2 {
+  box-sizing: border-box;
+  overflow: auto;
+  height: auto;
+}
+
+.c5 {
+  box-sizing: border-box;
+  overflow: auto;
+  height: auto;
+  will-change: width;
+  -webkit-transition: width 400ms ease-in-out;
+  transition: width 400ms ease-in-out;
+}
+
+.c10 {
+  box-sizing: border-box;
+  overflow: auto;
+  height: auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  will-change: left,right;
+}
+
+.c11 {
+  box-sizing: border-box;
+  overflow: auto;
+  height: auto;
+  will-change: width;
+  -webkit-transition: width 400ms ease-in-out;
+  transition: width 400ms ease-in-out;
+}
+
+.c6 {
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  will-change: left;
+}
+
+.c8 {
+  box-sizing: border-box;
+  overflow: auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  will-change: left,height;
+  -webkit-transition: height 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
+}
+
+.c7 {
+  box-sizing: border-box;
+  overflow: auto;
+  will-change: left,height;
+  -webkit-transition: height 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 .subtree-container-height {
+  -webkit-transition: height 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:48em) {
+  .c1 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (min-width:48em) and (max-width:61.9375em) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:62em) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (min-width:48em) and (max-width:61.9375em) {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (min-width:62em) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1 c0"
+  >
+    <div
+      class="accordion ui fluid styled c2"
+    >
+      <div
+        class="active title"
+        handlerid="mobileLeftSegmentSwitcher"
+        segment="left"
+      >
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        Files
+      </div>
+      <div
+        class="content active"
+      >
+        <div
+          aria-disabled="false"
+          aria-expanded="false"
+          class="ui fluid selection dropdown"
+          role="listbox"
+          tabindex="0"
+        >
+          <div
+            aria-live="polite"
+            class="text"
+            role="alert"
+          >
+            
+          </div>
+          <i
+            aria-hidden="true"
+            class="dropdown icon"
+          >
+            
+          </i>
+          <div
+            class="menu transition"
+          >
+            <div
+              aria-checked="false"
+              aria-selected="true"
+              class="selected item"
+              role="option"
+              style="pointer-events:all"
+            >
+              <span
+                class="text"
+              >
+                master
+              </span>
+            </div>
+            <div
+              aria-checked="false"
+              aria-selected="false"
+              class="item"
+              role="option"
+              style="pointer-events:all"
+            >
+              <span
+                class="text"
+              >
+                develop
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          style="width:100%"
+        >
+          <span>
+            <div
+              class="c3"
+            >
+              <div
+                class="ui list"
+                role="list"
+              >
+                
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div
+        class="title"
+        handlerid="mobileCenterSegmentSwitcher"
+        segment="center"
+      >
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        Details
+      </div>
+      <div
+        class="content"
+      >
+        
+      </div>
+      <div
+        class="title"
+        handlerid="mobileRightSegmentSwitcher"
+        segment="right"
+      >
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        Context
+      </div>
+      <div
+        class="content"
+      >
+        
+      </div>
+    </div>
+  </div>
+  <div
+    class="c4 c0"
+  >
+    <div
+      class="c5"
+      style="width:15.625em"
+    >
+      <div
+        aria-disabled="false"
+        aria-expanded="false"
+        class="ui fluid selection dropdown"
+        role="listbox"
+        tabindex="0"
+      >
+        <div
+          aria-live="polite"
+          class="text"
+          role="alert"
+        >
+          
+        </div>
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        <div
+          class="menu transition"
+        >
+          <div
+            aria-checked="false"
+            aria-selected="true"
+            class="selected item"
+            role="option"
+            style="pointer-events:all"
+          >
+            <span
+              class="text"
+            >
+              master
+            </span>
+          </div>
+          <div
+            aria-checked="false"
+            aria-selected="false"
+            class="item"
+            role="option"
+            style="pointer-events:all"
+          >
+            <span
+              class="text"
+            >
+              develop
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        style="width:100%"
+      >
+        <span>
+          <div
+            class="c3"
+          >
+            <div
+              class="ui list"
+              role="list"
+            >
+              
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="ui active basic right attached button"
+      role="button"
+      style="padding:2px 0;box-sizing:border-box;border-radius:0"
+      tabindex="0"
+    >
+      <div
+        style="position:relative"
+      >
+        <i
+          aria-hidden="true"
+          class="chevron left icon"
+        >
+          
+        </i>
+        <div
+          style="writing-mode:vertical-lr;padding:2px;margin-top:1ex"
+        >
+          Files
+        </div>
+      </div>
+    </div>
+    <div
+      class="c6"
+      style="left:15.625em"
+    >
+      <div
+        class="c7"
+        style="left:15.625em;height:0em"
+      >
+        <div>
+          This is the context
+        </div>
+      </div>
+      <div
+        class="ui basic bottom attached button"
+        role="button"
+        style="padding:2px 0;box-sizing:border-box;border-radius:0"
+        tabindex="0"
+      >
+        <div
+          style="position:relative"
+        >
+          <i
+            aria-hidden="true"
+            class="chevron down icon"
+          >
+            
+          </i>
+          <span
+            style="padding:2px"
+          >
+            Context
+          </span>
+        </div>
+      </div>
+      <div
+        class="c8"
+        style="left:15.625em;height:calc(100% - 0em)"
+      >
+        <div
+          class="ui text container"
+        >
+          <pre>
+            
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="c9 c0"
+  >
+    <div
+      class="c5"
+      style="width:15.625em"
+    >
+      <div
+        aria-disabled="false"
+        aria-expanded="false"
+        class="ui fluid selection dropdown"
+        role="listbox"
+        tabindex="0"
+      >
+        <div
+          aria-live="polite"
+          class="text"
+          role="alert"
+        >
+          
+        </div>
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        <div
+          class="menu transition"
+        >
+          <div
+            aria-checked="false"
+            aria-selected="true"
+            class="selected item"
+            role="option"
+            style="pointer-events:all"
+          >
+            <span
+              class="text"
+            >
+              master
+            </span>
+          </div>
+          <div
+            aria-checked="false"
+            aria-selected="false"
+            class="item"
+            role="option"
+            style="pointer-events:all"
+          >
+            <span
+              class="text"
+            >
+              develop
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        style="width:100%"
+      >
+        <span>
+          <div
+            class="c3"
+          >
+            <div
+              class="ui list"
+              role="list"
+            >
+              
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="ui active basic right attached button"
+      role="button"
+      style="padding:2px 0;box-sizing:border-box;border-radius:0"
+      tabindex="0"
+    >
+      <div
+        style="position:relative"
+      >
+        <i
+          aria-hidden="true"
+          class="chevron left icon"
+        >
+          
+        </i>
+        <div
+          style="writing-mode:vertical-lr;padding:2px;margin-top:1ex"
+        >
+          Files
+        </div>
+      </div>
+    </div>
+    <div
+      class="c10"
+      style="left:15.625em;right:0em"
+    >
+      <div
+        class="ui text container"
+      >
+        <pre>
+          
+        </pre>
+      </div>
+    </div>
+    <div
+      class="ui basic left attached button"
+      role="button"
+      style="padding:2px 0;box-sizing:border-box;border-radius:0"
+      tabindex="0"
+    >
+      <div
+        style="position:relative"
+      >
+        <i
+          aria-hidden="true"
+          class="chevron left icon"
+        >
+          
+        </i>
+        <div
+          style="writing-mode:vertical-lr;padding:2px;margin-top:1ex"
+        >
+          Context
+        </div>
+      </div>
+    </div>
+    <div
+      class="c11"
+      style="width:0em"
+    >
+      <div>
+        This is the context
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Repository non-empty repository without revision matches the snapshot 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  margin-top: -0px;
+  padding-top: 0px;
+  position: relative;
+  width: 100%;
+  will-change: overflow;
+}
+
+.c0 ::-webkit-scrollbar {
+  width: 0.3em;
+  height: 0.3em;
+}
+
+.c2 {
+  box-sizing: border-box;
+  overflow: auto;
+  height: auto;
+}
+
+.c5 {
+  box-sizing: border-box;
+  overflow: auto;
+  height: auto;
+  will-change: width;
+  -webkit-transition: width 400ms ease-in-out;
+  transition: width 400ms ease-in-out;
+}
+
+.c10 {
+  box-sizing: border-box;
+  overflow: auto;
+  height: auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  will-change: left,right;
+}
+
+.c11 {
+  box-sizing: border-box;
+  overflow: auto;
+  height: auto;
+  will-change: width;
+  -webkit-transition: width 400ms ease-in-out;
+  transition: width 400ms ease-in-out;
+}
+
+.c6 {
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  will-change: left;
+}
+
+.c8 {
+  box-sizing: border-box;
+  overflow: auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  will-change: left,height;
+  -webkit-transition: height 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
+}
+
+.c7 {
+  box-sizing: border-box;
+  overflow: auto;
+  will-change: left,height;
+  -webkit-transition: height 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 .subtree-container-height {
+  -webkit-transition: height 400ms ease-in-out;
+  transition: height 400ms ease-in-out;
+}
+
+@media (max-width:47.9375em) {
+  .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:48em) {
+  .c1 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (min-width:48em) and (max-width:61.9375em) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:62em) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375em) {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (min-width:48em) and (max-width:61.9375em) {
+  .c9 {
+    display: none;
+  }
+}
+
+@media (min-width:62em) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1 c0"
+  >
+    <div
+      class="accordion ui fluid styled c2"
+    >
+      <div
+        class="active title"
+        handlerid="mobileLeftSegmentSwitcher"
+        segment="left"
+      >
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        Files
+      </div>
+      <div
+        class="content active"
+      >
+        <div
+          aria-disabled="false"
+          aria-expanded="false"
+          class="ui fluid selection dropdown"
+          role="listbox"
+          tabindex="0"
+        >
+          <div
+            aria-live="polite"
+            class="text"
+            role="alert"
+          >
+            master
+          </div>
+          <i
+            aria-hidden="true"
+            class="dropdown icon"
+          >
+            
+          </i>
+          <div
+            class="menu transition"
+          >
+            <div
+              aria-checked="true"
+              aria-selected="true"
+              class="active selected item"
+              role="option"
+              style="pointer-events:all"
+            >
+              <span
+                class="text"
+              >
+                master
+              </span>
+            </div>
+            <div
+              aria-checked="false"
+              aria-selected="false"
+              class="item"
+              role="option"
+              style="pointer-events:all"
+            >
+              <span
+                class="text"
+              >
+                develop
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          style="width:100%"
+        >
+          <span>
+            <div
+              class="c3"
+            >
+              <div
+                class="ui list"
+                role="list"
+              >
+                
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div
+        class="title"
+        handlerid="mobileCenterSegmentSwitcher"
+        segment="center"
+      >
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        Details
+      </div>
+      <div
+        class="content"
+      >
+        
+      </div>
+      <div
+        class="title"
+        handlerid="mobileRightSegmentSwitcher"
+        segment="right"
+      >
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        Context
+      </div>
+      <div
+        class="content"
+      >
+        
+      </div>
+    </div>
+  </div>
+  <div
+    class="c4 c0"
+  >
+    <div
+      class="c5"
+      style="width:15.625em"
+    >
+      <div
+        aria-disabled="false"
+        aria-expanded="false"
+        class="ui fluid selection dropdown"
+        role="listbox"
+        tabindex="0"
+      >
+        <div
+          aria-live="polite"
+          class="text"
+          role="alert"
+        >
+          master
+        </div>
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        <div
+          class="menu transition"
+        >
+          <div
+            aria-checked="true"
+            aria-selected="true"
+            class="active selected item"
+            role="option"
+            style="pointer-events:all"
+          >
+            <span
+              class="text"
+            >
+              master
+            </span>
+          </div>
+          <div
+            aria-checked="false"
+            aria-selected="false"
+            class="item"
+            role="option"
+            style="pointer-events:all"
+          >
+            <span
+              class="text"
+            >
+              develop
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        style="width:100%"
+      >
+        <span>
+          <div
+            class="c3"
+          >
+            <div
+              class="ui list"
+              role="list"
+            >
+              
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="ui active basic right attached button"
+      role="button"
+      style="padding:2px 0;box-sizing:border-box;border-radius:0"
+      tabindex="0"
+    >
+      <div
+        style="position:relative"
+      >
+        <i
+          aria-hidden="true"
+          class="chevron left icon"
+        >
+          
+        </i>
+        <div
+          style="writing-mode:vertical-lr;padding:2px;margin-top:1ex"
+        >
+          Files
+        </div>
+      </div>
+    </div>
+    <div
+      class="c6"
+      style="left:15.625em"
+    >
+      <div
+        class="c7"
+        style="left:15.625em;height:0em"
+      >
+        <div>
+          This is the context
+        </div>
+      </div>
+      <div
+        class="ui basic bottom attached button"
+        role="button"
+        style="padding:2px 0;box-sizing:border-box;border-radius:0"
+        tabindex="0"
+      >
+        <div
+          style="position:relative"
+        >
+          <i
+            aria-hidden="true"
+            class="chevron down icon"
+          >
+            
+          </i>
+          <span
+            style="padding:2px"
+          >
+            Context
+          </span>
+        </div>
+      </div>
+      <div
+        class="c8"
+        style="left:15.625em;height:calc(100% - 0em)"
+      >
+        <div
+          class="ui text container"
+        >
+          <pre>
+            
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="c9 c0"
+  >
+    <div
+      class="c5"
+      style="width:15.625em"
+    >
+      <div
+        aria-disabled="false"
+        aria-expanded="false"
+        class="ui fluid selection dropdown"
+        role="listbox"
+        tabindex="0"
+      >
+        <div
+          aria-live="polite"
+          class="text"
+          role="alert"
+        >
+          master
+        </div>
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        >
+          
+        </i>
+        <div
+          class="menu transition"
+        >
+          <div
+            aria-checked="true"
+            aria-selected="true"
+            class="active selected item"
+            role="option"
+            style="pointer-events:all"
+          >
+            <span
+              class="text"
+            >
+              master
+            </span>
+          </div>
+          <div
+            aria-checked="false"
+            aria-selected="false"
+            class="item"
+            role="option"
+            style="pointer-events:all"
+          >
+            <span
+              class="text"
+            >
+              develop
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        style="width:100%"
+      >
+        <span>
+          <div
+            class="c3"
+          >
+            <div
+              class="ui list"
+              role="list"
+            >
+              
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="ui active basic right attached button"
+      role="button"
+      style="padding:2px 0;box-sizing:border-box;border-radius:0"
+      tabindex="0"
+    >
+      <div
+        style="position:relative"
+      >
+        <i
+          aria-hidden="true"
+          class="chevron left icon"
+        >
+          
+        </i>
+        <div
+          style="writing-mode:vertical-lr;padding:2px;margin-top:1ex"
+        >
+          Files
+        </div>
+      </div>
+    </div>
+    <div
+      class="c10"
+      style="left:15.625em;right:0em"
+    >
+      <div
+        class="ui text container"
+      >
+        <pre>
+          
+        </pre>
+      </div>
+    </div>
+    <div
+      class="ui basic left attached button"
+      role="button"
+      style="padding:2px 0;box-sizing:border-box;border-radius:0"
+      tabindex="0"
+    >
+      <div
+        style="position:relative"
+      >
+        <i
+          aria-hidden="true"
+          class="chevron left icon"
+        >
+          
+        </i>
+        <div
+          style="writing-mode:vertical-lr;padding:2px;margin-top:1ex"
+        >
+          Context
+        </div>
+      </div>
+    </div>
+    <div
+      class="c11"
+      style="width:0em"
+    >
+      <div>
+        This is the context
+      </div>
+    </div>
+  </div>
+</div>
+`;
