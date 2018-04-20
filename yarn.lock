@@ -5849,7 +5849,7 @@ lowercase-keys@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
 
-lowlight@^1.0.0:
+lowlight@^1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/lowlight/-/lowlight-1.9.1.tgz#ed7c3dffc36f8c1f263735c0fe0c907847c11250"
   dependencies:
@@ -7522,12 +7522,12 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.2.tgz#7279047275bd727a912e25f734c0559527e84eff"
 
-react-lowlight@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-lowlight/-/react-lowlight-1.1.1.tgz#27cfa2894d27872a6de6967534852829148a82fa"
+react-lowlight@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-lowlight/-/react-lowlight-2.0.0.tgz#3c9fa072c6516add8552f9470287e24e13d38eff"
   dependencies:
-    lowlight "^1.0.0"
-    prop-types "^15.5.8"
+    lowlight "^1.9.1"
+    prop-types "^15.6.0"
 
 react-markdown@^3.1.4:
   version "3.3.0"
