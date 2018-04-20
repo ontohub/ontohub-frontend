@@ -15,8 +15,8 @@ export const routes = [
   {
     path: "/:organizationalUnitId",
     exact: true,
-    header: OrganizationalUnitHeader,
-    main: OrganizationalUnit,
+    header: OrganizationalUnit.Header,
+    main: OrganizationalUnit.Body,
     graphql: graphql(organizationalUnitQuery, {
       options: ({ match: { params: { organizationalUnitId } } }) => ({
         variables: { id: organizationalUnitId }
