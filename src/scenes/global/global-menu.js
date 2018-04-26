@@ -1,4 +1,5 @@
 import React from "react";
+import { MeContext } from "./me";
 import { signUpMutation } from "config/apollo/queries";
 import { compose, graphql, withApollo } from "react-apollo";
 import { signIn, signOut } from "lib/session";
@@ -7,7 +8,6 @@ import { Menu } from "semantic-ui-react";
 import { SignedInMenu } from "./global-menu/signed-in-menu";
 import { SignedOutMenu } from "./global-menu/signed-out-menu";
 import styled from "styled-components";
-import { MeContext } from "./me";
 
 const enableCaptcha = process.env.REACT_APP_DISABLE_CAPTCHA !== "true";
 
@@ -20,30 +20,31 @@ const InnerMenu = styled(Menu)`
 const GlobalMenu = ({
   loading,
   error,
+  me,
   enableCaptcha,
   onSignIn,
   onSignOut,
   onSignUp,
   className
 }) => (
-  <MeContext.Consumer>
-    {me => (
-      <div className={className}>
-        <InnerMenu inverted borderless fixed="top">
-          <Menu.Item header as={Link} to="/">
-            Ontohub
-          </Menu.Item>
-          {(me && <SignedInMenu me={me} onSignOut={onSignOut} />) || (
+  <div className={className}>
+    <InnerMenu inverted borderless fixed="top">
+      <Menu.Item header as={Link} to="/">
+        Ontohub
+      </Menu.Item>
+      <MeContext.Consumer>
+        {me =>
+          (me && <SignedInMenu me={me} onSignOut={onSignOut} />) || (
             <SignedOutMenu
               enableCaptcha={enableCaptcha}
               onSignIn={onSignIn}
               onSignUp={onSignUp}
             />
-          )}
-        </InnerMenu>
-      </div>
-    )}
-  </MeContext.Consumer>
+          )
+        }
+      </MeContext.Consumer>
+    </InnerMenu>
+  </div>
 );
 
 const FixedGlobalMenu = styled(GlobalMenu)`
@@ -59,7 +60,7 @@ const FixedGlobalMenu = styled(GlobalMenu)`
 const GlobalMenuWithData = compose(
   withApollo,
   graphql(signUpMutation, {
-    props: /* istanbul ignore next */ props => ({
+    props: props => ({
       ...props.ownProps,
       client: undefined,
       enableCaptcha: enableCaptcha,
