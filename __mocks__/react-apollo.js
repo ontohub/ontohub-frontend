@@ -25,7 +25,6 @@ const Query = function({ children, query }) {
 
 const Mutation = function({ children, mutation }) {
   const response = getResponse(mutation) || {};
-  const { data = undefined, loading = false, called = false } = response;
 
   return children(() => {
     response.called = true;
