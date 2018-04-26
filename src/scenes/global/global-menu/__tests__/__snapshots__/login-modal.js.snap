@@ -26,6 +26,7 @@ exports[`LoginModal matches the snapshot 1`] = `
         icon="sign in"
         id="login-modal-sign-in-button"
         primary={true}
+        role="button"
       />
     }
   >
@@ -274,6 +275,7 @@ exports[`LoginModal matches the snapshot 1`] = `
           icon="sign in"
           id="login-modal-sign-in-button"
           primary={true}
+          role="button"
         />
       }
     >
@@ -291,6 +293,7 @@ exports[`LoginModal matches the snapshot 1`] = `
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           primary={true}
+          role="button"
         >
           <button
             className="ui primary button"

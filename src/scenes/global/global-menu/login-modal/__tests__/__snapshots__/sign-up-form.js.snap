@@ -31,14 +31,6 @@ exports[`SignUpForm error state matches the snapshot 1`] = `
       className="ui form"
       onSubmit={[Function]}
     >
-      <Component
-        badge="bottomleft"
-        onChange={[Function]}
-        sitekey="6LewQh8UAAAAAMok-W-6CiQN5buROVD3uRaaKJWU"
-        size="invisible"
-      >
-        <div />
-      </Component>
       <FormGroup
         widths="equal"
       >
@@ -231,6 +223,7 @@ exports[`SignUpForm error state matches the snapshot 1`] = `
         disabled={false}
         floated="right"
         icon="add user"
+        role="button"
         secondary={true}
         type="submit"
       >
@@ -286,14 +279,9 @@ exports[`SignUpForm initial state can render a passed element (e.g. a captcha) 1
       className="ui form"
       onSubmit={[Function]}
     >
-      <Component
-        badge="bottomleft"
-        onChange={[Function]}
-        sitekey="6LewQh8UAAAAAMok-W-6CiQN5buROVD3uRaaKJWU"
-        size="invisible"
-      >
-        <div />
-      </Component>
+      <div
+        id="captcha-element"
+      />
       <FormGroup
         widths="equal"
       >
@@ -465,6 +453,7 @@ exports[`SignUpForm initial state can render a passed element (e.g. a captcha) 1
         disabled={false}
         floated="right"
         icon="add user"
+        role="button"
         secondary={true}
         type="submit"
       >
@@ -516,14 +505,6 @@ exports[`SignUpForm initial state matches the snapshot 1`] = `
       className="ui form"
       onSubmit={[Function]}
     >
-      <Component
-        badge="bottomleft"
-        onChange={[Function]}
-        sitekey="6LewQh8UAAAAAMok-W-6CiQN5buROVD3uRaaKJWU"
-        size="invisible"
-      >
-        <div />
-      </Component>
       <FormGroup
         widths="equal"
       >
@@ -703,6 +684,7 @@ exports[`SignUpForm initial state matches the snapshot 1`] = `
         disabled={false}
         floated="right"
         icon="add user"
+        role="button"
         secondary={true}
         type="submit"
       >

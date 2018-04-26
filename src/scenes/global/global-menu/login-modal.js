@@ -13,12 +13,15 @@ export class LoginModal extends Component {
   }
 
   onSignUpSubmit = ({ name, email, password, captcha }) => {
-    this.setState({ loading: true });
+    this.onStartSubmit();
     return this.props.onSignUp(name, email, password, captcha);
   };
   onSignInSubmit = () => {
     this.setState({ loading: true });
     return Promise.resolve();
+  };
+  onStartSubmit = () => {
+    this.setState({ loading: true });
   };
   onError = () => {
     this.setState({ loading: false });
@@ -68,6 +71,7 @@ export class LoginModal extends Component {
                 <SignUpForm
                   enableCaptcha={this.props.enableCaptcha}
                   onSubmit={this.onSignUpSubmit}
+                  onStartSubmit={this.onStartSubmit}
                   onSuccess={this.onClose}
                   onError={this.onError}
                 />

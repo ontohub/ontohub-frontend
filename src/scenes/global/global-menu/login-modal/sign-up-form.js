@@ -11,37 +11,17 @@ import ReCAPTCHA from "react-google-recaptcha";
 const grecaptchaSiteKey = process.env.REACT_APP_GRECAPTCHA_SITE_KEY;
 
 export const PureSignUpForm = ({
+  captcha: Captcha,
   errors,
   onBlur,
   onChange,
   onSubmit,
   submitEnabled = true,
   touched,
-  values,
-  registerCaptcha,
-  refs,
-  setErrors,
-  setSubmitting,
-  onError
+  values
 }) => (
   <Form onSubmit={submitEnabled ? onSubmit : undefined}>
-    {initialValues !== values ? (
-      <ReCAPTCHA
-        sitekey={grecaptchaSiteKey}
-        ref={registerCaptcha}
-        size="invisible"
-        badge="bottomleft"
-        onChange={
-          /* istanbul ignore next */ async captcha => {
-            try {
-              await onSubmit({ ...refs.values, captcha });
-            } catch (e) {
-              setServerErrors(setErrors, setSubmitting, onError);
-            }
-          }
-        }
-      />
-    ) : null}
+    {Captcha || null}
     <Form.Group widths="equal">
       <Field
         errors={errors.name}
@@ -115,20 +95,20 @@ const FormikSignUpForm = ({
   onSubmit,
   refs,
   registerCaptcha,
-  setValues
+  setValues,
+  onStartSubmit
 }) => (
   <Formik
     initialValues={initialValues}
-    onSubmit={async (values, { setErrors, setSubmitting }) => {
+    onSubmit={(values, { setErrors, setSubmitting }) => {
+      onStartSubmit();
       if (refs.captcha && enableCaptcha) {
         refs.captcha.reset();
         refs.captcha.execute();
       } else {
-        try {
-          await onSubmit({ ...values, captcha: "skip" });
-        } catch (e) {
-          setServerErrors(setErrors, setSubmitting, onError);
-        }
+        onSubmit({ ...values, captcha: "skip" }).catch(
+          setServerErrors(setErrors, setSubmitting, onError)
+        );
       }
     }}
     render={({
@@ -143,17 +123,29 @@ const FormikSignUpForm = ({
       values
     }) => (
       <PureSignUpForm
+        captcha={
+          enableCaptcha &&
+          initialValues !== values && (
+            <ReCAPTCHA
+              sitekey={grecaptchaSiteKey}
+              ref={registerCaptcha}
+              size="invisible"
+              badge="bottomleft"
+              onChange={captcha => {
+                onSubmit({ ...refs.values, captcha }).catch(
+                  setServerErrors(setErrors, setSubmitting, onError)
+                );
+              }}
+            />
+          )
+        }
         errors={errors}
-        onError={onError}
-        setErrors={setErrors}
-        setSubmitting={setSubmitting}
-        refs={refs}
         onBlur={handleBlur}
-        registerCaptcha={registerCaptcha}
         onChange={(e, ...args) => {
-          const { name, value } = e.target;
-          setFieldTouched(name, true);
-          setValues({ ...refs.values, [name]: value });
+          const fieldName = e.target.name;
+          const fieldValue = e.target.value;
+          setFieldTouched(fieldName, true);
+          setValues({ ...refs.values, [fieldName]: fieldValue });
           return handleChange(e, ...args);
         }}
         onSubmit={handleSubmit}
@@ -166,8 +158,6 @@ const FormikSignUpForm = ({
   />
 );
 
-const FormikSignUpFormWithRefs = compose(
+export const SignUpForm = compose(
   withRefs({ captcha: "registerCaptcha", values: "setValues" })
 )(FormikSignUpForm);
-
-export { FormikSignUpFormWithRefs as SignUpForm };

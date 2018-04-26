@@ -51,6 +51,7 @@ exports[`Editor Editing Mode matches the snapshot 1`] = `
               content="Editing Mode"
               icon="edit"
               onClick={[Function]}
+              role="button"
             >
               <button
                 className="ui green button"
@@ -86,6 +87,7 @@ exports[`Editor Editing Mode matches the snapshot 1`] = `
                   data-testid="reset-button"
                   icon="trash outline"
                   onClick={[Function]}
+                  role="button"
                 />
               }
             >
@@ -110,6 +112,7 @@ exports[`Editor Editing Mode matches the snapshot 1`] = `
                     data-testid="reset-button"
                     icon="trash outline"
                     onClick={[Function]}
+                    role="button"
                   />
                 }
               >
@@ -127,6 +130,7 @@ exports[`Editor Editing Mode matches the snapshot 1`] = `
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    role="button"
                   >
                     <button
                       className="ui red button"
@@ -269,6 +273,7 @@ exports[`Editor Editing Mode matches the snapshot after clicking the toggle 1`] 
               content="Reading Mode"
               icon="eye"
               onClick={[Function]}
+              role="button"
             >
               <button
                 className="ui blue button"
@@ -403,6 +408,7 @@ exports[`Editor Reading Mode matches the snapshot 1`] = `
               content="Reading Mode"
               icon="eye"
               onClick={[Function]}
+              role="button"
             >
               <button
                 className="ui blue button"
@@ -537,6 +543,7 @@ exports[`Editor Reading Mode matches the snapshot after clicking the toggle 1`] 
               content="Editing Mode"
               icon="edit"
               onClick={[Function]}
+              role="button"
             >
               <button
                 className="ui green button"
@@ -572,6 +579,7 @@ exports[`Editor Reading Mode matches the snapshot after clicking the toggle 1`] 
                   data-testid="reset-button"
                   icon="trash outline"
                   onClick={[Function]}
+                  role="button"
                 />
               }
             >
@@ -596,6 +604,7 @@ exports[`Editor Reading Mode matches the snapshot after clicking the toggle 1`] 
                     data-testid="reset-button"
                     icon="trash outline"
                     onClick={[Function]}
+                    role="button"
                   />
                 }
               >
@@ -613,6 +622,7 @@ exports[`Editor Reading Mode matches the snapshot after clicking the toggle 1`] 
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    role="button"
                   >
                     <button
                       className="ui red button"

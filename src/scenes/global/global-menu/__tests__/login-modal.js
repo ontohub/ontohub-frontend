@@ -22,11 +22,6 @@ describe("LoginModal", () => {
         wrapper.instance().onSignInSubmit();
         expect(wrapper.state("loading")).toBeTruthy();
       });
-
-      it("calls the passed function", () => {
-        wrapper.instance().onSignInSubmit();
-        expect(onSignIn.mock.calls.length).toBe(1);
-      });
     });
     describe("onSignUpSubmit", () => {
       it("sets the state to loading", () => {
