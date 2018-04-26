@@ -31,13 +31,15 @@ export const PureSignUpForm = ({
         ref={registerCaptcha}
         size="invisible"
         badge="bottomleft"
-        onChange={async captcha => {
-          try {
-            await onSubmit({ ...refs.values, captcha });
-          } catch (e) {
-            setServerErrors(setErrors, setSubmitting, onError);
+        onChange={
+          /* istanbul ignore next */ async captcha => {
+            try {
+              await onSubmit({ ...refs.values, captcha });
+            } catch (e) {
+              setServerErrors(setErrors, setSubmitting, onError);
+            }
           }
-        }}
+        }
       />
     ) : null}
     <Form.Group widths="equal">

@@ -16,6 +16,15 @@ describe("Session helpers", () => {
       expect(client.resetStore.mock.calls.length).toBe(1);
     });
 
+    it("calls the mutation", () => {
+      mockResponse(mutation, {
+        called: false
+      });
+      render(<SignIn username="ada" password="changemenow" />);
+      expect(localStorage.setItem.mock.calls.length).toBe(0);
+      expect(client.resetStore.mock.calls.length).toBe(0);
+    });
+
     it("does nothing if no token was passed", () => {
       render(<SignIn />);
       expect(localStorage.setItem.mock.calls.length).toBe(0);

@@ -13,19 +13,28 @@ export const SignInForm = ({ onSubmit, onSuccess, onError }) => (
         {mutate => (
           <Formik
             initialValues={initialValues}
-            onSubmit={async ({ username, password }, { setErrors }) => {
-              try {
-                onSubmit();
-                const { data: { signIn: { jwt } } } = await mutate({
-                  variables: { username, password }
-                });
-                signIn(client, jwt);
-                return onSuccess();
-              } catch (e) {
-                setErrors({ password: "Incorrect username or password" });
-                return onError();
+            onSubmit={
+              /* istanbul ignore next */ async (
+                { username, password },
+                { setErrors }
+              ) => {
+                try {
+                  onSubmit();
+                  const {
+                    data: {
+                      signIn: { jwt }
+                    }
+                  } = await mutate({
+                    variables: { username, password }
+                  });
+                  signIn(client, jwt);
+                  return onSuccess();
+                } catch (e) {
+                  setErrors({ password: "Incorrect username or password" });
+                  return onError();
+                }
               }
-            }}
+            }
           >
             {({ values, errors, handleChange, handleSubmit }) => (
               <Form error={!!errors.password} onSubmit={handleSubmit}>

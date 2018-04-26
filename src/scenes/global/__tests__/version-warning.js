@@ -1,4 +1,3 @@
-import React from "react";
 import { WarningMessage, VersionWarning, query } from "../version-warning";
 
 describe("WarningMessage", () => {
@@ -19,6 +18,13 @@ describe("VersionWarning", () => {
   describe("version could not be determined", () => {
     it("shows an error message", () => {
       mockResponse(query, { error: true });
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe("version is being loaded", () => {
+    it("shows no message", () => {
+      mockResponse(query, { loading: true });
       expect(component).toMatchSnapshot();
     });
   });

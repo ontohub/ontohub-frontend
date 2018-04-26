@@ -8,6 +8,7 @@ export const withRefs = refsMap => BaseComponent => {
       {...props}
       refs={refs}
       {...Object.keys(refsMap).reduce(
+        /* istanbul ignore next */
         (acc, refName) => ({
           ...acc,
           [refsMap[refName]]: element => {

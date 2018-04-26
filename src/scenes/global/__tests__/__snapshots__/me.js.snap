@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeProvider Loaded data matches the snapshot 1`] = `
+Array [
+  <h1>
+    ada
+</h1>,
+  <h2>
+    14758f1afd44c09b7992073ccf00b43d
+</h2>,
+]
+`;
+
+exports[`MeProvider no data loaded matches the snapshot 1`] = `
+Array [
+  <h1>
+    
+</h1>,
+  <h2>
+    
+</h2>,
+]
+`;

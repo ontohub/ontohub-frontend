@@ -76,6 +76,8 @@ exports[`VersionWarning version could not be determined shows an error message 1
 </div>
 `;
 
+exports[`VersionWarning version is being loaded shows no message 1`] = `null`;
+
 exports[`WarningMessage matches the snapshot 1`] = `
 <Styled(Message)
   content="Message content"

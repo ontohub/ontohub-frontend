@@ -59,7 +59,7 @@ const FixedGlobalMenu = styled(GlobalMenu)`
 const GlobalMenuWithData = compose(
   withApollo,
   graphql(signUpMutation, {
-    props: props => ({
+    props: /* istanbul ignore next */ props => ({
       ...props.ownProps,
       client: undefined,
       enableCaptcha: enableCaptcha,
