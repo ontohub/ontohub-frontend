@@ -45,7 +45,7 @@
     "@storybook/addon-actions": "^3.4.0",
     "@storybook/addon-info": "^3.4.0",
     "@storybook/react": "^3.4.0",
-    "codecov": "^3.0.0",
+    "codecov": "^3.0.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
