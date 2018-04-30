@@ -42,7 +42,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-actions": "^3.4.3",
     "@storybook/addon-info": "^3.4.0",
     "@storybook/react": "^3.4.0",
     "codecov": "^3.0.1",
