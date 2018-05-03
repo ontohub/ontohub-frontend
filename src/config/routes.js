@@ -1,5 +1,8 @@
 import { graphql } from "react-apollo";
-import { organizationalUnitQuery, repositoryQuery } from "config/apollo/queries";
+import {
+  organizationalUnitQuery,
+  repositoryQuery
+} from "config/apollo/queries";
 
 import Home from "scenes/home";
 import OrganizationalUnit from "scenes/organizational-unit";
@@ -18,18 +21,26 @@ export const routes = [
     header: OrganizationalUnit.Header,
     main: OrganizationalUnit.Body,
     graphql: graphql(organizationalUnitQuery, {
-      options: ({ match: { params: { organizationalUnitId } } }) => ({
+      options: ({
+        match: {
+          params: { organizationalUnitId }
+        }
+      }) => ({
         variables: { id: organizationalUnitId }
       })
     })
   },
   {
     path:
-      "/:organizationalUnitId/(repositories|organizations|members|settings)?",
+      "/:organizationalUnitId/(repositories|organizations|members|settings)",
     header: OrganizationalUnit.Header,
     main: OrganizationalUnit.Body,
     graphql: graphql(organizationalUnitQuery, {
-      options: ({ match: { params: { organizationalUnitId } } }) => ({
+      options: ({
+        match: {
+          params: { organizationalUnitId }
+        }
+      }) => ({
         variables: { id: organizationalUnitId }
       })
     })
@@ -40,7 +51,9 @@ export const routes = [
     main: Repository.Body,
     graphql: graphql(repositoryQuery, {
       options: ({
-        match: { params: { organizationalUnitId, repositoryId, revision } }
+        match: {
+          params: { organizationalUnitId, repositoryId, revision }
+        }
       }) => ({
         variables: {
           id: `${organizationalUnitId}/${repositoryId}`,
@@ -55,7 +68,9 @@ export const routes = [
     main: Repository.Body,
     graphql: graphql(repositoryQuery, {
       options: ({
-        match: { params: { organizationalUnitId, repositoryId } }
+        match: {
+          params: { organizationalUnitId, repositoryId }
+        }
       }) => ({
         variables: {
           id: `${organizationalUnitId}/${repositoryId}`
