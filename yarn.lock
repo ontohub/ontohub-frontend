@@ -7465,9 +7465,9 @@ react-fuzzy@^0.5.2:
     fuse.js "^3.0.1"
     prop-types "^15.5.9"
 
-react-google-recaptcha@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/react-google-recaptcha/-/react-google-recaptcha-0.11.0.tgz#2c71382022da6addcae4b1a0b51577b07c644a07"
+react-google-recaptcha@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha/-/react-google-recaptcha-0.11.1.tgz#0b9c8bd7acdaf6ea29daa1fe231388473a8d36d4"
   dependencies:
     prop-types ">=15.5.0"
 
