@@ -16,6 +16,9 @@ exports[`LoginModal matches the snapshot 1`] = `
     size="small"
     style={
       Object {
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "marginTop": 50,
         "overflow": "hidden",
       }
     }
@@ -45,7 +48,7 @@ exports[`LoginModal matches the snapshot 1`] = `
           >
             <div
               class="ui small modal transition visible active"
-              style="overflow: hidden;"
+              style="margin-top: 50px; overflow: hidden; margin-left: auto; margin-right: auto;"
             >
               <i
                 aria-hidden="true"

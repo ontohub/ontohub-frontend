@@ -38,7 +38,12 @@ export class LoginModal extends Component {
         size="small"
         open={this.state.open}
         closeIcon
-        style={{ overflow: "hidden" }}
+        style={{
+          overflow: "hidden",
+          marginTop: 50,
+          marginLeft: "auto",
+          marginRight: "auto"
+        }}
         trigger={
           <Button
             primary
