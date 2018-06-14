@@ -1,0 +1,713 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUpForm error state matches the snapshot 1`] = `
+<Component
+  errors={
+    Object {
+      "name": Array [
+        "Name is already taken",
+      ],
+    }
+  }
+  onChange={[Function]}
+  touched={
+    Object {
+      "name": true,
+    }
+  }
+  values={
+    Object {
+      "confirmPassword": "",
+      "email": "",
+      "name": "ada",
+      "password": "",
+    }
+  }
+>
+  <Form
+    as="form"
+  >
+    <form
+      className="ui form"
+      onSubmit={[Function]}
+    >
+      <FormGroup
+        widths="equal"
+      >
+        <div
+          className="equal width fields"
+        >
+          <Component
+            errors={
+              Array [
+                "Name is already taken",
+              ]
+            }
+            fieldId="sign-up-username"
+            label="Username"
+            name="name"
+            onChange={[Function]}
+            touched={true}
+            value="ada"
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-username"
+                >
+                  Username
+                </label>
+                <input
+                  id="sign-up-username"
+                  name="name"
+                  onChange={[Function]}
+                  placeholder="Username"
+                  value="ada"
+                />
+                <Label
+                  color="red"
+                  pointing={true}
+                >
+                  <div
+                    className="ui red pointing label"
+                    onClick={[Function]}
+                  >
+                    <div
+                      key="Name is already taken"
+                    >
+                      Name is already taken
+                    </div>
+                  </div>
+                </Label>
+              </div>
+            </FormField>
+          </Component>
+          <Component
+            fieldId="sign-up-email"
+            label="Email"
+            name="email"
+            onChange={[Function]}
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-email"
+                >
+                  Email
+                </label>
+                <input
+                  id="sign-up-email"
+                  name="email"
+                  onChange={[Function]}
+                  placeholder="Email"
+                  value=""
+                />
+              </div>
+            </FormField>
+          </Component>
+        </div>
+      </FormGroup>
+      <FormGroup
+        widths="equal"
+      >
+        <div
+          className="equal width fields"
+        >
+          <Component
+            bar={
+              <Unknown
+                score={0}
+              />
+            }
+            fieldId="sign-up-password"
+            label="Password"
+            name="password"
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-password"
+                >
+                  Password
+                </label>
+                <input
+                  id="sign-up-password"
+                  name="password"
+                  onChange={[Function]}
+                  placeholder="Password"
+                  type="password"
+                  value=""
+                />
+                <Component
+                  score={0}
+                >
+                  <Progress
+                    attached="bottom"
+                    color="red"
+                    percent={0}
+                    style={
+                      Object {
+                        "marginTop": -3,
+                      }
+                    }
+                    title="Password strength: Very weak"
+                  >
+                    <div
+                      className="ui red bottom attached progress"
+                      data-percent={0}
+                      style={
+                        Object {
+                          "marginTop": -3,
+                        }
+                      }
+                      title="Password strength: Very weak"
+                    >
+                      <div
+                        className="bar"
+                        style={
+                          Object {
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </div>
+                  </Progress>
+                </Component>
+              </div>
+            </FormField>
+          </Component>
+          <Component
+            fieldId="sign-up-password-confirm"
+            label="Password confirmation"
+            name="confirmPassword"
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-password-confirm"
+                >
+                  Password confirmation
+                </label>
+                <input
+                  id="sign-up-password-confirm"
+                  name="confirmPassword"
+                  onChange={[Function]}
+                  placeholder="Password confirmation"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </FormField>
+          </Component>
+        </div>
+      </FormGroup>
+      <Button
+        as="button"
+        basic={true}
+        content="Create account"
+        disabled={false}
+        floated="right"
+        icon="add user"
+        role="button"
+        secondary={true}
+        type="submit"
+      >
+        <button
+          className="ui basic secondary right floated button"
+          onClick={[Function]}
+          role="button"
+          type="submit"
+        >
+          <Icon
+            as="i"
+            key="add user"
+            name="add user"
+          >
+            <i
+              aria-hidden="true"
+              className="add user icon"
+            />
+          </Icon>
+          Create account
+        </button>
+      </Button>
+    </form>
+  </Form>
+</Component>
+`;
+
+exports[`SignUpForm initial state can render a passed element (e.g. a captcha) 1`] = `
+<Component
+  captcha={
+    <div
+      id="captcha-element"
+    />
+  }
+  errors={Object {}}
+  onChange={[Function]}
+  onSubmit={[Function]}
+  touched={Object {}}
+  values={
+    Object {
+      "confirmPassword": "",
+      "email": "",
+      "name": "",
+      "password": "",
+    }
+  }
+>
+  <Form
+    as="form"
+    onSubmit={[Function]}
+  >
+    <form
+      className="ui form"
+      onSubmit={[Function]}
+    >
+      <div
+        id="captcha-element"
+      />
+      <FormGroup
+        widths="equal"
+      >
+        <div
+          className="equal width fields"
+        >
+          <Component
+            fieldId="sign-up-username"
+            label="Username"
+            name="name"
+            onChange={[Function]}
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-username"
+                >
+                  Username
+                </label>
+                <input
+                  id="sign-up-username"
+                  name="name"
+                  onChange={[Function]}
+                  placeholder="Username"
+                  value=""
+                />
+              </div>
+            </FormField>
+          </Component>
+          <Component
+            fieldId="sign-up-email"
+            label="Email"
+            name="email"
+            onChange={[Function]}
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-email"
+                >
+                  Email
+                </label>
+                <input
+                  id="sign-up-email"
+                  name="email"
+                  onChange={[Function]}
+                  placeholder="Email"
+                  value=""
+                />
+              </div>
+            </FormField>
+          </Component>
+        </div>
+      </FormGroup>
+      <FormGroup
+        widths="equal"
+      >
+        <div
+          className="equal width fields"
+        >
+          <Component
+            bar={
+              <Unknown
+                score={0}
+              />
+            }
+            fieldId="sign-up-password"
+            label="Password"
+            name="password"
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-password"
+                >
+                  Password
+                </label>
+                <input
+                  id="sign-up-password"
+                  name="password"
+                  onChange={[Function]}
+                  placeholder="Password"
+                  type="password"
+                  value=""
+                />
+                <Component
+                  score={0}
+                >
+                  <Progress
+                    attached="bottom"
+                    color="red"
+                    percent={0}
+                    style={
+                      Object {
+                        "marginTop": -3,
+                      }
+                    }
+                    title="Password strength: Very weak"
+                  >
+                    <div
+                      className="ui red bottom attached progress"
+                      data-percent={0}
+                      style={
+                        Object {
+                          "marginTop": -3,
+                        }
+                      }
+                      title="Password strength: Very weak"
+                    >
+                      <div
+                        className="bar"
+                        style={
+                          Object {
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </div>
+                  </Progress>
+                </Component>
+              </div>
+            </FormField>
+          </Component>
+          <Component
+            fieldId="sign-up-password-confirm"
+            label="Password confirmation"
+            name="confirmPassword"
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-password-confirm"
+                >
+                  Password confirmation
+                </label>
+                <input
+                  id="sign-up-password-confirm"
+                  name="confirmPassword"
+                  onChange={[Function]}
+                  placeholder="Password confirmation"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </FormField>
+          </Component>
+        </div>
+      </FormGroup>
+      <Button
+        as="button"
+        basic={true}
+        content="Create account"
+        disabled={false}
+        floated="right"
+        icon="add user"
+        role="button"
+        secondary={true}
+        type="submit"
+      >
+        <button
+          className="ui basic secondary right floated button"
+          onClick={[Function]}
+          role="button"
+          type="submit"
+        >
+          <Icon
+            as="i"
+            key="add user"
+            name="add user"
+          >
+            <i
+              aria-hidden="true"
+              className="add user icon"
+            />
+          </Icon>
+          Create account
+        </button>
+      </Button>
+    </form>
+  </Form>
+</Component>
+`;
+
+exports[`SignUpForm initial state matches the snapshot 1`] = `
+<Component
+  errors={Object {}}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onSubmit={[Function]}
+  touched={Object {}}
+  values={
+    Object {
+      "confirmPassword": "",
+      "email": "",
+      "name": "",
+      "password": "",
+    }
+  }
+>
+  <Form
+    as="form"
+    onSubmit={[Function]}
+  >
+    <form
+      className="ui form"
+      onSubmit={[Function]}
+    >
+      <FormGroup
+        widths="equal"
+      >
+        <div
+          className="equal width fields"
+        >
+          <Component
+            fieldId="sign-up-username"
+            label="Username"
+            name="name"
+            onBlur={[Function]}
+            onChange={[Function]}
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-username"
+                >
+                  Username
+                </label>
+                <input
+                  id="sign-up-username"
+                  name="name"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Username"
+                  value=""
+                />
+              </div>
+            </FormField>
+          </Component>
+          <Component
+            fieldId="sign-up-email"
+            label="Email"
+            name="email"
+            onBlur={[Function]}
+            onChange={[Function]}
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-email"
+                >
+                  Email
+                </label>
+                <input
+                  id="sign-up-email"
+                  name="email"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Email"
+                  value=""
+                />
+              </div>
+            </FormField>
+          </Component>
+        </div>
+      </FormGroup>
+      <FormGroup
+        widths="equal"
+      >
+        <div
+          className="equal width fields"
+        >
+          <Component
+            bar={
+              <Unknown
+                score={0}
+              />
+            }
+            fieldId="sign-up-password"
+            label="Password"
+            name="password"
+            onBlur={[Function]}
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-password"
+                >
+                  Password
+                </label>
+                <input
+                  id="sign-up-password"
+                  name="password"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Password"
+                  type="password"
+                  value=""
+                />
+                <Component
+                  score={0}
+                >
+                  <Progress
+                    attached="bottom"
+                    color="red"
+                    percent={0}
+                    style={
+                      Object {
+                        "marginTop": -3,
+                      }
+                    }
+                    title="Password strength: Very weak"
+                  >
+                    <div
+                      className="ui red bottom attached progress"
+                      data-percent={0}
+                      style={
+                        Object {
+                          "marginTop": -3,
+                        }
+                      }
+                      title="Password strength: Very weak"
+                    >
+                      <div
+                        className="bar"
+                        style={
+                          Object {
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </div>
+                  </Progress>
+                </Component>
+              </div>
+            </FormField>
+          </Component>
+          <Component
+            fieldId="sign-up-password-confirm"
+            label="Password confirmation"
+            name="confirmPassword"
+            onBlur={[Function]}
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <FormField>
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor="sign-up-password-confirm"
+                >
+                  Password confirmation
+                </label>
+                <input
+                  id="sign-up-password-confirm"
+                  name="confirmPassword"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Password confirmation"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </FormField>
+          </Component>
+        </div>
+      </FormGroup>
+      <Button
+        as="button"
+        basic={true}
+        content="Create account"
+        disabled={false}
+        floated="right"
+        icon="add user"
+        role="button"
+        secondary={true}
+        type="submit"
+      >
+        <button
+          className="ui basic secondary right floated button"
+          onClick={[Function]}
+          role="button"
+          type="submit"
+        >
+          <Icon
+            as="i"
+            key="add user"
+            name="add user"
+          >
+            <i
+              aria-hidden="true"
+              className="add user icon"
+            />
+          </Icon>
+          Create account
+        </button>
+      </Button>
+    </form>
+  </Form>
+</Component>
+`;

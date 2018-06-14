@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInForm matches the snapshot 1`] = `
+<form
+  class="ui form"
+>
+  <div
+    class="ui error icon message"
+  >
+    <i
+      aria-hidden="true"
+      class="warning sign icon"
+    >
+      
+    </i>
+  </div>
+  <div
+    class="equal width fields"
+  >
+    <div
+      class="field"
+    >
+      <label
+        for="sign-in-username"
+      >
+        Username
+      </label>
+      <input
+        id="sign-in-username"
+        name="username"
+        placeholder="Username"
+        type="text"
+        value="ada"
+      >
+        
+      </input>
+    </div>
+    <div
+      class="field"
+    >
+      <label
+        for="sign-in-password"
+      >
+        Password
+      </label>
+      <input
+        id="sign-in-password"
+        name="password"
+        placeholder="Password"
+        type="password"
+        value="changemenow"
+      >
+        
+      </input>
+    </div>
+  </div>
+  <button
+    class="ui primary right floated button"
+    id="sign-in-form-sign-in-button"
+    role="button"
+    type="submit"
+  >
+    <i
+      aria-hidden="true"
+      class="sign in icon"
+    >
+      
+    </i>
+    Sign in
+  </button>
+</form>
+`;

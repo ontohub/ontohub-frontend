@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaddedContainer matches the snapshot 1`] = `
+.c0 {
+  padding-bottom: 1em;
+}
+
+<div
+  class="ui container c0"
+>
+  Header content
+</div>
+`;
