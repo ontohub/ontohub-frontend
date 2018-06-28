@@ -23,7 +23,7 @@
     "mime-types": "^2.1.17",
     "react": "^16.3.2",
     "react-ace": "^6.1.0",
-    "react-apollo": "^2.1.2",
+    "react-apollo": "^2.1.5",
     "react-async-script": "^0.9.1",
     "react-css-transition-replace": "^3.0.3",
     "react-dom": "^16.3.1",
