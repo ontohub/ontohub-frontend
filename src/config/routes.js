@@ -6,6 +6,7 @@ import {
 
 import Home from "scenes/home";
 import OrganizationalUnit from "scenes/organizational-unit";
+import NewRepository from "scenes/new-repository";
 import Repository from "scenes/repository";
 
 export const routes = [
@@ -14,6 +15,12 @@ export const routes = [
     exact: true,
     header: Home.Header,
     main: Home.Body
+  },
+  {
+    path: "/new/repository",
+    exact: true,
+    header: NewRepository.Header,
+    main: NewRepository.Body
   },
   {
     path: "/:organizationalUnitId",
