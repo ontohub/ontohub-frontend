@@ -7247,9 +7247,9 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
-stampit@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/stampit/-/stampit-4.1.1.tgz#e1827c1f094077d00153ef818234b91e580cecb8"
+stampit@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/stampit/-/stampit-4.1.2.tgz#d0341e4bff03ee185068c2fe35e8f8ce1502d9f1"
 
 state-toggle@^1.0.0:
   version "1.0.1"
