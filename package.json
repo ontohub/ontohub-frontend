@@ -8,7 +8,7 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "apollo-cache-inmemory": "^1.2.5",
-    "apollo-client": "^2.3.4",
+    "apollo-client": "^2.5.0",
     "apollo-link-batch-http": "^1.2.1",
     "apollo-link-error": "^1.1.0",
     "b64-to-blob": "^1.2.19",
