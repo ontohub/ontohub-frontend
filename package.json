@@ -31,7 +31,7 @@
     "react-gravatar": "^2.6.3",
     "react-height": "^3.0.0",
     "react-lowlight": "^2.0.0",
-    "react-markdown": "^3.3.2",
+    "react-markdown": "^4.1.0",
     "react-pdf-js": "^3.0.8",
     "react-router-dom": "^4.2.2",
     "recompose": "^0.27.0",
